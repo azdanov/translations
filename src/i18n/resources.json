@@ -1,0 +1,20 @@
+{
+  "en": {
+    "translation": {
+      "home": "Home",
+      "languages": "English - Estonian",
+      "dictionary": "Dictionary",
+      "search": "Search for a word",
+      "find": "Find"
+    }
+  },
+  "et": {
+    "translation": {
+      "home": "Avaleht",
+      "languages": "Inglise - Eesti",
+      "dictionary": "Sõnastik",
+      "search": "Otsi sõna",
+      "find": "Leida"
+    }
+  }
+}
