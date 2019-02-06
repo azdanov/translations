@@ -13,16 +13,17 @@ export const Search: React.FC = (): JSX.Element => {
 
   const handleClick = (event: SyntheticEvent<HTMLInputElement, MouseEvent>): void => {
     event.preventDefault()
-    fetch()
+    translate(term)
   }
 
   const handleSubmit = (event: FormEvent): void => {
     event.preventDefault()
-    fetch()
+    translate(term)
   }
 
-  const fetch = (): void => {
-    console.log(term)
+  // TODO: Extract
+  const translate = (word: string): void => {
+    console.log(word)
   }
 
   return (

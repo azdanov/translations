@@ -1,6 +1,7 @@
 {
   "en": {
     "translation": {
+      "translations": "Translations",
       "home": "Home",
       "languages": "English - Estonian",
       "dictionary": "Dictionary",
@@ -10,6 +11,7 @@
   },
   "et": {
     "translation": {
+      "translations": "Tõlked",
       "home": "Avaleht",
       "languages": "Inglise - Eesti",
       "dictionary": "Sõnastik",
