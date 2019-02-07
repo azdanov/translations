@@ -5,8 +5,7 @@
       "home": "Home",
       "languages": "English - Estonian",
       "dictionary": "Dictionary",
-      "search": "Search for a word",
-      "find": "Find"
+      "search": "Search for a word"
     }
   },
   "et": {
@@ -15,8 +14,7 @@
       "home": "Avaleht",
       "languages": "Inglise - Eesti",
       "dictionary": "Sõnastik",
-      "search": "Otsi sõna",
-      "find": "Leida"
+      "search": "Otsi sõna"
     }
   }
 }

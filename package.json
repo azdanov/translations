@@ -70,6 +70,7 @@
     "parser": "@typescript-eslint/parser",
     "extends": [
       "airbnb",
+      "react-app",
       "plugin:jest/recommended",
       "plugin:unicorn/recommended",
       "plugin:@typescript-eslint/recommended",

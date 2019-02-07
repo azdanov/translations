@@ -28,17 +28,24 @@ export const Search: React.FC = (): JSX.Element => {
 
   return (
     <Segment basic>
-      <Grid centered columns={3}>
-        <Grid.Column>
+      <Grid centered>
+        <Grid.Column
+          textAlign="center"
+          mobile={14}
+          tablet={9}
+          computer={7}
+          widescreen={5}
+        >
           <form onSubmit={handleSubmit}>
             <Input
               fluid
+              size="large"
               value={term}
               icon={{
                 name: 'search',
                 circular: true,
                 link: true,
-                'aria-label': t('find'),
+                'aria-hidden': 'true',
                 onClick: handleClick,
               }}
               onChange={handleChange}
