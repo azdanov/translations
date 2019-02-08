@@ -1,8 +1,8 @@
 import React, { ChangeEvent, FormEvent, SyntheticEvent, useState } from 'react'
-import { Grid, Input, Segment } from 'semantic-ui-react'
+import { Input, Container } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next'
 
-export const Search: React.FC = (): JSX.Element => {
+export const Search: React.FC<{ loading: boolean }> = ({ loading }): JSX.Element => {
   const [term, changeTerm] = useState('')
   const [t] = useTranslation()
 
@@ -13,11 +13,21 @@ export const Search: React.FC = (): JSX.Element => {
 
   const handleClick = (event: SyntheticEvent<HTMLInputElement, MouseEvent>): void => {
     event.preventDefault()
+
+    if (loading) {
+      return
+    }
+
     translate(term)
   }
 
   const handleSubmit = (event: FormEvent): void => {
     event.preventDefault()
+
+    if (loading) {
+      return
+    }
+
     translate(term)
   }
 
@@ -27,33 +37,24 @@ export const Search: React.FC = (): JSX.Element => {
   }
 
   return (
-    <Segment basic>
-      <Grid centered>
-        <Grid.Column
-          textAlign="center"
-          mobile={14}
-          tablet={9}
-          computer={7}
-          widescreen={5}
-        >
-          <form onSubmit={handleSubmit}>
-            <Input
-              fluid
-              size="large"
-              value={term}
-              icon={{
-                name: 'search',
-                circular: true,
-                link: true,
-                'aria-hidden': 'true',
-                onClick: handleClick,
-              }}
-              onChange={handleChange}
-              placeholder={`${t('search')} ...`}
-            />
-          </form>
-        </Grid.Column>
-      </Grid>
-    </Segment>
+    <Container fluid>
+      <form onSubmit={handleSubmit}>
+        <Input
+          fluid
+          loading={loading}
+          size="large"
+          value={term}
+          icon={{
+            name: 'search',
+            circular: true,
+            link: true,
+            'aria-hidden': 'true',
+            onClick: handleClick,
+          }}
+          onChange={handleChange}
+          placeholder={`${t('search')} …`}
+        />
+      </form>
+    </Container>
   )
 }

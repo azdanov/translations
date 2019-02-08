@@ -1,20 +1,24 @@
 {
   "en": {
     "translation": {
-      "translations": "Translations",
+      "dictionary": "Dictionary",
       "home": "Home",
       "languages": "English - Estonian",
-      "dictionary": "Dictionary",
-      "search": "Search for a word"
+      "loading": "Loading",
+      "results": "Results",
+      "search": "Search for a word",
+      "translations": "Translations"
     }
   },
   "et": {
     "translation": {
-      "translations": "Tõlked",
+      "dictionary": "Sõnastik",
       "home": "Avaleht",
       "languages": "Inglise - Eesti",
-      "dictionary": "Sõnastik",
-      "search": "Otsi sõna"
+      "loading": "Laadimine",
+      "results": "Tulemused",
+      "search": "Otsi sõna",
+      "translations": "Tõlked"
     }
   }
 }

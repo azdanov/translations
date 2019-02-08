@@ -1,13 +1,15 @@
 import React from 'react'
-import { Icon, Container } from 'semantic-ui-react'
+import { Icon, Container, Segment } from 'semantic-ui-react'
 
-export const Footer: React.FC = (): JSX.Element => {
+export const Footer: React.FC<{ className: string }> = ({ className }): JSX.Element => {
   const year = new Date().getFullYear()
   return (
-    <div className="footer">
-      <Container text textAlign="center">
-        <Icon name="copyright outline" /> {year}
-      </Container>
-    </div>
+    <Container text textAlign="center" className={className}>
+      <Segment basic>
+        <div style={{ opacity: 0.6 }}>
+          <Icon name="copyright outline" /> {year}
+        </div>
+      </Segment>
+    </Container>
   )
 }
