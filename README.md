@@ -1,4 +1,4 @@
-# Translations &middot; [![Netlify Status](https://api.netlify.com/api/v1/badges/93c1247d-4c97-476c-b6ab-f178c980dd1e/deploy-status)](https://app.netlify.com/sites/translations/deploys) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/vue-chat/blob/master/LICENSE)
+# Translations &middot; [![Netlify Status](https://api.netlify.com/api/v1/badges/93c1247d-4c97-476c-b6ab-f178c980dd1e/deploy-status)](https://app.netlify.com/sites/translations/deploys) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/your/vue-chat/blob/master/LICENSE)
 
 An English - Estonian dictionary built with React and Netlify Functions. [Live version](https://translations.netlify.com).
 
