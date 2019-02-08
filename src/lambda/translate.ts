@@ -42,10 +42,7 @@ export const handle = middy(fetchTranslation)
     const { origin } = handler.event.headers
 
     if (origin !== process.env.REACT_APP_NETLIFY_URL) {
-      const error = new createError.Forbidden('Access Denied')
-      // eslint-disable-next-line lodash/prefer-lodash-method
-      handler.event.headers = Object.assign({}, handler.event.headers)
-      throw error
+      throw new createError.Forbidden('Access Denied')
     }
 
     next()
