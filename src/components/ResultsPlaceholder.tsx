@@ -1,10 +1,11 @@
-import { Container, List, Placeholder, Header } from 'semantic-ui-react'
-import React from 'react'
 import { times } from 'lodash'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { Container, Header, List, Placeholder } from 'semantic-ui-react'
 
 export const ResultsPlaceholder: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
+
   return (
     <Container text>
       <Header as="h2" size="small">{`${t('loading')} …`}</Header>
@@ -14,11 +15,11 @@ export const ResultsPlaceholder: React.FC = (): JSX.Element => {
             <List.Item key={i}>
               <List.Header>
                 <Placeholder>
-                  <Placeholder.Line length={i % 2 ? 'short' : 'very short'} />
+                  <Placeholder.Line length={isEven(i) ? 'short' : 'very short'} />
                 </Placeholder>
               </List.Header>
               <Placeholder>
-                <Placeholder.Line length={i % 2 ? 'long' : 'very long'} />
+                <Placeholder.Line length={isEven(i) ? 'long' : 'very long'} />
               </Placeholder>
             </List.Item>
           )
@@ -26,4 +27,8 @@ export const ResultsPlaceholder: React.FC = (): JSX.Element => {
       </List>
     </Container>
   )
+}
+
+const isEven = (n: number): boolean => {
+  return n % 2 === 0
 }

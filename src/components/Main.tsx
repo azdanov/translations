@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Segment, Grid } from 'semantic-ui-react'
-import { Search } from './Search'
-import { Results } from './Results'
+import { Grid, Segment } from 'semantic-ui-react'
 import { useFetchTranslation } from '../hooks/useFetchTranslation'
 import { Result } from './App'
+import { Results } from './Results'
+import { Search } from './Search'
 
 export const Main: React.FC = (): JSX.Element => {
   const [loading, setLoading] = useState(false)

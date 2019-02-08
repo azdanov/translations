@@ -1,7 +1,7 @@
-import { Container, List, Header } from 'semantic-ui-react'
+import { isEmpty } from 'lodash'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { isEmpty } from 'lodash'
+import { Container, Header, List } from 'semantic-ui-react'
 import { Result } from './App'
 import { ResultsPlaceholder } from './ResultsPlaceholder'
 
@@ -43,7 +43,7 @@ export const Results: React.FC<{ results?: Result[]; loading: boolean }> = ({
 
 const addNextSeparator = (index: number): JSX.Element | null => {
   return index ? (
-    <span aria-hidden style={{ userSelect: 'none', margin: '0 0.3em' }}>
+    <span aria-hidden style={{ userSelect: 'none', margin: '0 0.35em' }}>
       |
     </span>
   ) : null

@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, SyntheticEvent, useState } from 'react'
-import { Input, Container } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next'
+import { Container, Input } from 'semantic-ui-react'
 
 interface Props {
   loading: boolean
@@ -18,7 +18,9 @@ export const Search: React.FC<Props> = ({
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault()
-    setTerm(event.currentTarget.value)
+    const word = event.currentTarget.value
+
+    setTerm(word)
   }
 
   const handleClick = (event: SyntheticEvent<HTMLInputElement, MouseEvent>): void => {
@@ -35,7 +37,6 @@ export const Search: React.FC<Props> = ({
     setSearch(word)
   }
 
-  // TODO: Add validation
   return (
     <Container fluid>
       <form onSubmit={handleSubmit}>

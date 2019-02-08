@@ -113,6 +113,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config): void {
       const contentType = response.headers.get('content-type')
       if (
         response.status === 404 ||
+        // eslint-disable-next-line lodash/prefer-includes
         (contentType != null && contentType.indexOf('javascript') === -1)
       ) {
         // No service worker found. Probably a different app. Reload the page.

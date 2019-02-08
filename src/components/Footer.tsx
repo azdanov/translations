@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Container, Segment } from 'semantic-ui-react'
+import { Container, Icon, Segment } from 'semantic-ui-react'
 
 export const Footer: React.FC<{ className: string }> = ({ className }): JSX.Element => {
   const year = new Date().getFullYear()

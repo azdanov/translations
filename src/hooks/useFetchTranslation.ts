@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
-import { isEmpty, noop } from 'lodash'
 import ky from 'ky'
+import { isEmpty, noop } from 'lodash'
+import { useEffect } from 'react'
 import { Result } from '../components/App'
 
 export const useFetchTranslation = (

@@ -1,6 +1,6 @@
 import i18next from 'i18next'
-import { initReactI18next } from 'react-i18next'
 import LngDetector from 'i18next-browser-languagedetector'
+import { initReactI18next } from 'react-i18next'
 import resources from './resources.json'
 
 export const EN = 'en'
