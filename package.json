@@ -123,6 +123,7 @@
   ],
   "dependencies": {
     "aws-lambda": "^0.1.2",
+    "http-errors": "^1.7.1",
     "http-proxy-middleware": "^0.19.1",
     "i18next": "^14.1.1",
     "i18next-browser-languagedetector": "^2.2.4",
@@ -144,6 +145,7 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.1.0",
     "@types/aws-lambda": "^8.10.19",
+    "@types/http-errors": "^1.6.1",
     "@types/http-proxy-middleware": "^0.19.2",
     "@types/i18next": "^12.1.0",
     "@types/i18next-browser-languagedetector": "^2.0.1",

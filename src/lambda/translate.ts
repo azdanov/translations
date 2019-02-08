@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import { APIGatewayEvent, Handler } from 'aws-lambda'
+import createError from 'http-errors'
 import middy from 'middy'
 import { httpErrorHandler, jsonBodyParser, validator } from 'middy/middlewares'
 import { Article, queryTranslation } from '../utils/queryTranslation'
@@ -9,13 +10,15 @@ interface Response {
   body: string
 }
 
-const fetchTranslation: Handler = ({
-  body,
-}: APIGatewayEvent & { body: { word: string } }): Promise<Response> =>
-  queryTranslation(body.word).then((translation: Article[]) => ({
+const fetchTranslation: Handler = (
+  event: APIGatewayEvent & { body: { word: string } },
+): Promise<Response> => {
+  console.log(event.headers.origin)
+  return queryTranslation(event.body.word).then((translation: Article[]) => ({
     statusCode: 200,
     body: JSON.stringify(translation),
   }))
+}
 
 const inputSchema = {
   required: ['body'],
@@ -34,7 +37,19 @@ const inputSchema = {
   },
 }
 
-export const handler = middy(fetchTranslation)
+export const handle = middy(fetchTranslation)
+  .before((handler, next) => {
+    const { origin } = handler.event.headers
+
+    if (origin !== process.env.REACT_APP_NETLIFY_URL) {
+      const error = new createError.Forbidden('Access Denied')
+      // eslint-disable-next-line lodash/prefer-lodash-method
+      handler.event.headers = Object.assign({}, handler.event.headers)
+      throw error
+    }
+
+    next()
+  })
   .use(jsonBodyParser())
   .use(validator({ inputSchema }))
   .use(httpErrorHandler())
