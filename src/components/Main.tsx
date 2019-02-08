@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Grid, Segment } from 'semantic-ui-react'
 import { useFetchTranslation } from '../hooks/useFetchTranslation'
-import { Result } from './App'
+import { Article } from '../utils/queryTranslation'
 import { Results } from './Results'
 import { Search } from './Search'
 
 export const Main: React.FC = (): JSX.Element => {
   const [loading, setLoading] = useState(false)
-  const [results, setResults] = useState([] as Result[])
+  const [results, setResults] = useState([] as Article[])
   const [search, setSearch] = useState('')
 
   useFetchTranslation(search, setResults, setLoading)

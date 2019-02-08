@@ -2,10 +2,10 @@ import { isEmpty } from 'lodash'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container, Header, List } from 'semantic-ui-react'
-import { Result } from './App'
+import { Article } from '../utils/queryTranslation'
 import { ResultsPlaceholder } from './ResultsPlaceholder'
 
-export const Results: React.FC<{ results?: Result[]; loading: boolean }> = ({
+export const Results: React.FC<{ results?: Article[]; loading: boolean }> = ({
   results,
   loading,
 }): JSX.Element | null => {

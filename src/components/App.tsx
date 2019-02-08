@@ -7,11 +7,6 @@ import { Hero } from './Hero'
 import { Main } from './Main'
 import { NavBar } from './NavBar'
 
-export interface Result {
-  en: string
-  et: string[]
-}
-
 const App: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
 

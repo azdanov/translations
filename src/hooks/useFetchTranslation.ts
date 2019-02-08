@@ -1,33 +1,35 @@
 import ky from 'ky'
 import { isEmpty, noop } from 'lodash'
 import { useEffect } from 'react'
-import { Result } from '../components/App'
+import { Article } from '../utils/queryTranslation'
 
 export const useFetchTranslation = (
-  term: string,
-  setResults: (results: Result[]) => void,
+  word: string,
+  setResults: (results: Article[]) => void,
   setLoading: (state: boolean) => void,
 ): void => {
   useEffect(() => {
-    if (isEmpty(term)) return noop
+    if (isEmpty(word)) return noop
 
     const controller = new AbortController()
 
-    ky(term, {
+    ky('', {
+      method: 'post',
+      json: { word },
       signal: controller.signal,
       hooks: { beforeRequest: [() => setLoading(true)] },
       prefixUrl: process.env.REACT_APP_API,
     })
       .then(res => res.json())
-      .then(data => {
-        setResults(data)
+      .then((translation: Article[]) => {
+        setResults(translation)
         setLoading(false)
       })
       .catch(error => {
         if (error instanceof DOMException) {
           // eslint-disable-next-line no-console
           console.info('Request cancelled by the user.')
-          setResults([] as Result[])
+          setResults([])
         } else {
           // eslint-disable-next-line no-console
           console.error('Unexpected:', error)
@@ -36,5 +38,5 @@ export const useFetchTranslation = (
       })
 
     return (): void => controller.abort()
-  }, [term, setResults, setLoading])
+  }, [word, setResults, setLoading])
 }
