@@ -122,7 +122,6 @@
     "src/setupProxy.js"
   ],
   "dependencies": {
-    "@middy/function-shield": "^1.0.0-alpha.22",
     "aws-lambda": "^0.1.2",
     "http-proxy-middleware": "^0.19.1",
     "i18next": "^14.1.1",
