@@ -1,5 +1,5 @@
 {
-  "data": [
+  "bus": [
     {
       "en": "bus",
       "et": ["buss (er linnaliini)", "siin", "bussiga vedama"]
@@ -67,6 +67,252 @@
     {
       "en": "trolley bus",
       "et": ["trollibuss"]
+    }
+  ],
+  "car": [
+    {
+      "en": "air cushion car",
+      "et": ["hõljukauto"]
+    },
+    {
+      "en": "armored car",
+      "et": ["soomusauto"]
+    },
+    {
+      "en": "armoured car",
+      "et": ["soomusauto"]
+    },
+    {
+      "en": "baggage car",
+      "et": ["pagasivagun"]
+    },
+    {
+      "en": "buffet car",
+      "et": ["restoranvagun"]
+    },
+    {
+      "en": "bumper car",
+      "et": ["elektriauto (atraktsioon lõbustuspargis)"]
+    },
+    {
+      "en": "by car",
+      "et": ["autoga"]
+    },
+    {
+      "en": "cable car",
+      "et": ["tõstuk (köisraudteel)", "köisraudtee vagun"]
+    },
+    {
+      "en": "car",
+      "et": ["auto", "vagun", "gondel"]
+    },
+    {
+      "en": "car battery",
+      "et": ["aku"]
+    },
+    {
+      "en": "car body",
+      "et": ["autokere"]
+    },
+    {
+      "en": "car boot sale",
+      "et": ["vanakraamimüük auto kapotilt"]
+    },
+    {
+      "en": "car brake",
+      "et": ["autopidur"]
+    },
+    {
+      "en": "car carrier",
+      "et": ["autotreiler"]
+    },
+    {
+      "en": "car crash",
+      "et": ["autoavarii"]
+    },
+    {
+      "en": "car ferry",
+      "et": ["autopraam"]
+    },
+    {
+      "en": "car insurance",
+      "et": ["autokindlustus"]
+    },
+    {
+      "en": "car maker",
+      "et": ["autotootja"]
+    },
+    {
+      "en": "car mileage",
+      "et": ["läbisõit"]
+    },
+    {
+      "en": "car park",
+      "et": ["parkla", "parkimismaja"]
+    },
+    {
+      "en": "car phone",
+      "et": ["autotelefon"]
+    },
+    {
+      "en": "car pool",
+      "et": ["auto ühiskasutus"]
+    },
+    {
+      "en": "car race",
+      "et": ["autovõidusõit"]
+    },
+    {
+      "en": "car wash",
+      "et": ["autopesu", "autopesula"]
+    },
+    {
+      "en": "car wheel",
+      "et": ["autoratas"]
+    },
+    {
+      "en": "cattle car",
+      "et": ["loomavagun"]
+    },
+    {
+      "en": "chair car",
+      "et": ["-", "marsruuttakso"]
+    },
+    {
+      "en": "coal car",
+      "et": ["söevagun"]
+    },
+    {
+      "en": "compact car",
+      "et": ["väikeauto"]
+    },
+    {
+      "en": "dining car",
+      "et": ["restoranvagun"]
+    },
+    {
+      "en": "dome car",
+      "et": ["klaasvagun (kumera pleksiklaasist katusega)"]
+    },
+    {
+      "en": "drawing-room car",
+      "et": ["kupeevagun", "salongvagun"]
+    },
+    {
+      "en": "dump car",
+      "et": ["kallur"]
+    },
+    {
+      "en": "dumping car",
+      "et": ["kallur"]
+    },
+    {
+      "en": "electric car",
+      "et": ["elektriauto"]
+    },
+    {
+      "en": "elevator car",
+      "et": ["liftikabiin"]
+    },
+    {
+      "en": "estate car",
+      "et": ["kombiauto"]
+    },
+    {
+      "en": "fill up the car",
+      "et": ["tankima"]
+    },
+    {
+      "en": "freight car",
+      "et": ["kaubavagun"]
+    },
+    {
+      "en": "gondola car",
+      "et": ["poolvagun", "lahtine vagun"]
+    },
+    {
+      "en": "hired car",
+      "et": ["üüriauto"]
+    },
+    {
+      "en": "hopper car",
+      "et": ["punkervagun"]
+    },
+    {
+      "en": "house car",
+      "et": ["kinnine kaubavagun"]
+    },
+    {
+      "en": "matchbox car",
+      "et": ["mudelauto"]
+    },
+    {
+      "en": "motor car",
+      "et": ["auto"]
+    },
+    {
+      "en": "parlor car",
+      "et": ["salongvagun"]
+    },
+    {
+      "en": "patrol car",
+      "et": ["patrullauto"]
+    },
+    {
+      "en": "piggyback car",
+      "et": ["autovagun"]
+    },
+    {
+      "en": "police car",
+      "et": ["politseiauto"]
+    },
+    {
+      "en": "race car",
+      "et": ["võidusõiduauto"]
+    },
+    {
+      "en": "racing car",
+      "et": ["võidusõiduauto"]
+    },
+    {
+      "en": "railway car",
+      "et": ["raudteevagun"]
+    },
+    {
+      "en": "restaurant car",
+      "et": ["restoranvagun"]
+    },
+    {
+      "en": "side car",
+      "et": ["(mootorratta) külgkorv"]
+    },
+    {
+      "en": "sleeping car",
+      "et": ["magamisvagun"]
+    },
+    {
+      "en": "sport car",
+      "et": ["sportauto"]
+    },
+    {
+      "en": "sports car",
+      "et": ["sportauto"]
+    },
+    {
+      "en": "tank car",
+      "et": ["tsisternvagun"]
+    },
+    {
+      "en": "tow car",
+      "et": ["puksiirauto"]
+    },
+    {
+      "en": "trolley car",
+      "et": ["trollibuss"]
+    },
+    {
+      "en": "vintage car",
+      "et": ["vana tüüpi auto", "„veteranauto“"]
     }
   ]
 }
