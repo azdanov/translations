@@ -1,12 +1,11 @@
-import { Container, Grid, Segment } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
-import React, { useState } from 'react'
+import React from 'react'
+import { Main } from './Main/Main'
 import { Footer } from './Footer/Footer'
 import { Hero } from './Hero/Hero'
 import { NavBar } from './NavBar/NavBar'
-import { Results } from './Results/Results'
-import { Search } from './Search/Search'
 
 export interface Result {
   en: string
@@ -14,7 +13,6 @@ export interface Result {
 }
 
 const App: React.FC = (): JSX.Element => {
-  const [loading] = useState(false)
   const [t] = useTranslation()
 
   return (
@@ -25,18 +23,7 @@ const App: React.FC = (): JSX.Element => {
         </Helmet>
         <NavBar />
         <Hero />
-        <Segment basic>
-          <Grid centered>
-            <Grid.Column mobile={14} tablet={9} computer={8}>
-              <Search loading={loading} />
-            </Grid.Column>
-            <Grid.Row>
-              <Grid.Column mobile={14} tablet={9} computer={8}>
-                <Results loading={loading} />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Segment>
+        <Main />
       </Container>
       <Footer className="footer" />
     </>

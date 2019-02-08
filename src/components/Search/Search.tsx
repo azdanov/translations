@@ -2,38 +2,38 @@ import React, { ChangeEvent, FormEvent, SyntheticEvent, useState } from 'react'
 import { Input, Container } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next'
 
-export const Search: React.FC<{ loading: boolean }> = ({ loading }): JSX.Element => {
-  const [term, changeTerm] = useState('')
+interface Props {
+  loading: boolean
+  search: string
+  setSearch: (search: string) => void
+}
+
+export const Search: React.FC<Props> = ({
+  loading,
+  search,
+  setSearch,
+}): JSX.Element => {
+  const [term, setTerm] = useState(search)
   const [t] = useTranslation()
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault()
-    changeTerm(event.currentTarget.value)
+    setTerm(event.currentTarget.value)
   }
 
   const handleClick = (event: SyntheticEvent<HTMLInputElement, MouseEvent>): void => {
     event.preventDefault()
-
-    if (loading) {
-      return
-    }
-
-    translate(term)
+    handleSetSearch(term)
   }
 
   const handleSubmit = (event: FormEvent): void => {
     event.preventDefault()
-
-    if (loading) {
-      return
-    }
-
-    translate(term)
+    handleSetSearch(term)
   }
 
-  // TODO: Extract
-  const translate = (word: string): void => {
-    console.log(word)
+  const handleSetSearch = (word: string): void => {
+    if (loading) return
+    setSearch(word)
   }
 
   return (
