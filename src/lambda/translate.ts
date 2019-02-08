@@ -34,7 +34,7 @@ const inputSchema = {
   },
 }
 
-export const handle = middy(fetchTranslation)
+export const handler = middy(fetchTranslation)
   .use(jsonBodyParser())
   .use(validator({ inputSchema }))
   .use(httpErrorHandler())
