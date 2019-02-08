@@ -1,8 +1,8 @@
 import React, { SyntheticEvent, useState } from 'react'
 import { Menu } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next'
-import { SvgGlobe } from '../../icons/globe'
-import { EN, ET } from '../../i18n'
+import { SvgGlobe } from './Globe'
+import { EN, ET } from '../i18n'
 
 export const NavBar: React.FC = (): JSX.Element => {
   const [t, i18n] = useTranslation()

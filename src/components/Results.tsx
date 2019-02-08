@@ -1,7 +1,8 @@
 import { Container, List, Header } from 'semantic-ui-react'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Result } from '../App'
+import { isEmpty } from 'lodash'
+import { Result } from './App'
 import { ResultsPlaceholder } from './ResultsPlaceholder'
 
 export const Results: React.FC<{ results?: Result[]; loading: boolean }> = ({
@@ -14,7 +15,7 @@ export const Results: React.FC<{ results?: Result[]; loading: boolean }> = ({
     return <ResultsPlaceholder />
   }
 
-  if (!results) {
+  if (!results || isEmpty(results)) {
     return null
   }
 

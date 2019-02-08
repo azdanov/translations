@@ -52,7 +52,8 @@
       "@typescript-eslint",
       "jest",
       "unicorn",
-      "lodash"
+      "lodash",
+      "react-hooks"
     ],
     "rules": {
       "@typescript-eslint/no-use-before-define": "off",
@@ -63,6 +64,14 @@
       "jest/lowercase-name": [
         "error"
       ],
+      "jest/no-test-return-statement": "error",
+      "jest/prefer-spy-on": "error",
+      "jest/prefer-to-be-null": "error",
+      "jest/prefer-to-be-undefined": "error",
+      "jest/prefer-to-contain": "error",
+      "jest/prefer-to-have-length": "error",
+      "jest/prefer-todo": "error",
+      "jest/require-tothrow-message": "error",
       "lodash/import-scope": [
         "error",
         "member"
@@ -75,17 +84,10 @@
           ]
         }
       ],
-      "jest/no-test-return-statement": "error",
-      "jest/prefer-spy-on": "error",
-      "jest/prefer-to-be-null": "error",
-      "jest/prefer-to-be-undefined": "error",
-      "jest/prefer-to-contain": "error",
-      "jest/prefer-to-have-length": "error",
-      "jest/prefer-todo": "error",
-      "jest/require-tothrow-message": "error",
       "no-param-reassign": "off",
       "no-underscore-dangle": "off",
       "no-use-before-define": "off",
+      "react-hooks/rules-of-hooks": "error",
       "react/jsx-filename-extension": [
         "warn",
         {
@@ -148,6 +150,7 @@
     "eslint-plugin-lodash": "^5.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.11.0",
+    "eslint-plugin-react-hooks": "^1.0.1",
     "eslint-plugin-unicorn": "^7.1.0",
     "json-server": "^0.14.2",
     "prettier": "^1.16.4",

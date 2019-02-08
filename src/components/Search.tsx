@@ -32,10 +32,10 @@ export const Search: React.FC<Props> = ({
   }
 
   const handleSetSearch = (word: string): void => {
-    if (loading) return
     setSearch(word)
   }
 
+  // TODO: Add validation
   return (
     <Container fluid>
       <form onSubmit={handleSubmit}>
