@@ -15,6 +15,14 @@ const App: React.FC = (): JSX.Element => {
       <Container className="content">
         <Helmet>
           <title>{t('translations')}</title>
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="https://translations.netlify.com/" />
+          <meta name="twitter:title" content="Translations" />
+          <meta
+            name="twitter:description"
+            content="English - Estonian dictionary made in React with help of the Netlify Functions."
+          />
+          <meta name="twitter:image" content="/android-chrome-512x512.png" />
         </Helmet>
         <NavBar />
         <Hero />
