@@ -9,4 +9,8 @@ import * as serviceWorker from './utils/serviceWorker'
 ReactDOM.render(<App />, document.querySelector('#root'))
 
 // @see https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-serviceWorker.unregister()
+if (process.env.NODE_ENV === 'production') {
+  serviceWorker.register()
+} else {
+  serviceWorker.unregister()
+}
