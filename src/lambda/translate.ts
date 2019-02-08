@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import { APIGatewayEvent, Handler } from 'aws-lambda'
-import createError from 'http-errors'
 import middy from 'middy'
 import { httpErrorHandler, jsonBodyParser, validator } from 'middy/middlewares'
 import { Article, queryTranslation } from '../utils/queryTranslation'
@@ -12,13 +11,11 @@ interface Response {
 
 const fetchTranslation: Handler = (
   event: APIGatewayEvent & { body: { word: string } },
-): Promise<Response> => {
-  console.log(event.headers.origin)
-  return queryTranslation(event.body.word).then((translation: Article[]) => ({
+): Promise<Response> =>
+  queryTranslation(event.body.word).then((translation: Article[]) => ({
     statusCode: 200,
     body: JSON.stringify(translation),
   }))
-}
 
 const inputSchema = {
   required: ['body'],
@@ -38,15 +35,6 @@ const inputSchema = {
 }
 
 export const handle = middy(fetchTranslation)
-  .before((handler, next) => {
-    const { origin } = handler.event.headers
-
-    if (origin !== process.env.REACT_APP_NETLIFY_URL) {
-      throw new createError.Forbidden('Access Denied')
-    }
-
-    next()
-  })
   .use(jsonBodyParser())
   .use(validator({ inputSchema }))
   .use(httpErrorHandler())
