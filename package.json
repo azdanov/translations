@@ -113,6 +113,9 @@
       }
     }
   },
+  "eslintIgnore": [
+    "src/react-app-env.d.ts"
+  ],
   "dependencies": {
     "@types/i18next": "^12.1.0",
     "@types/i18next-browser-languagedetector": "^2.0.1",
