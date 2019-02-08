@@ -4,16 +4,16 @@ import { useEffect } from 'react'
 import { Result } from '../components/App'
 
 export const useFetchTranslation = (
-  search: string,
+  term: string,
   setResults: (results: Result[]) => void,
   setLoading: (state: boolean) => void,
 ): void => {
   useEffect(() => {
-    if (isEmpty(search)) return noop
+    if (isEmpty(term)) return noop
 
     const controller = new AbortController()
 
-    ky('', {
+    ky(term, {
       signal: controller.signal,
       hooks: { beforeRequest: [() => setLoading(true)] },
       prefixUrl: process.env.REACT_APP_API,
@@ -36,5 +36,5 @@ export const useFetchTranslation = (
       })
 
     return (): void => controller.abort()
-  }, [search, setResults, setLoading])
+  }, [term, setResults, setLoading])
 }
