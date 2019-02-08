@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/camelcase */
+import functionShield from '@middy/function-shield'
 import { APIGatewayEvent, Handler } from 'aws-lambda'
 import middy from 'middy'
 import { httpErrorHandler, jsonBodyParser, validator } from 'middy/middlewares'
@@ -34,6 +36,18 @@ const inputSchema = {
 }
 
 export const handler = middy(fetchTranslation)
+  .use(
+    // @ts-ignore
+    functionShield({
+      policy: {
+        outbound_connectivity: 'block',
+        read_write_tmp: 'block',
+        create_child_process: 'block',
+        read_handler: 'block',
+      },
+      token: process.env.LAMBDA_FUNCTION_SHIELD_TOKEN,
+    }),
+  )
   .use(jsonBodyParser())
   .use(validator({ inputSchema }))
   .use(httpErrorHandler())
