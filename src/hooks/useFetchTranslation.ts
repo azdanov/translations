@@ -13,9 +13,8 @@ export const useFetchTranslation = (
 
     const controller = new AbortController()
 
-    ky('', {
-      method: 'post',
-      json: { word },
+    ky(word, {
+      method: 'get',
       signal: controller.signal,
       hooks: { beforeRequest: [() => setLoading(true)] },
       prefixUrl: process.env.REACT_APP_API,
