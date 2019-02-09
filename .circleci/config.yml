@@ -14,3 +14,4 @@ workflows:
             - cypress/install
           executor: cypress/browsers-chrome69
           browser: chrome
+          start: 'yarn test'
