@@ -4,10 +4,11 @@ orbs:
 workflows:
   build:
     jobs:
+      - cypress/install
       - cypress/run:
-          executor: cypress/browsers-chrome69
-          browser: chrome
+          requires:
+            - cypress/install
           parallel: true
           parallelism: 4
-          group: 'Chrome tests'
+          group: '4x test'
           start: 'npm test'
