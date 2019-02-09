@@ -9,4 +9,6 @@ workflows:
           requires:
             - cypress/install
           parallel: true
-          start: 'npm test'
+          parallelism: 4
+          group: '4x test'
+          start: 'npm run test:e2e'
