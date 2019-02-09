@@ -2,7 +2,7 @@ describe('translation', () => {
   before(() => {
     cy.visit('/')
     // eslint-disable-next-line cypress/no-unnecessary-waiting
-    cy.wait(100) // Issues with i18next, doesn't change fast enough
+    cy.wait(500) // Issues with i18next, doesn't change fast enough
     cy.getByText('Eesti').click({ force: true })
   })
 

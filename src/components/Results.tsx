@@ -2,7 +2,7 @@ import { isEmpty } from 'lodash'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container, Header, List } from 'semantic-ui-react'
-import { Article } from "../types/Article";
+import { Article } from '../types/Article'
 import { ResultsPlaceholder } from './ResultsPlaceholder'
 
 export const Results: React.FC<{ results?: Article[]; loading: boolean }> = ({
