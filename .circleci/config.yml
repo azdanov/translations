@@ -6,9 +6,9 @@ workflows:
     jobs:
       - cypress/install
       - cypress/run:
+          group: '4x test'
           requires:
             - cypress/install
           parallel: true
           parallelism: 4
-          group: '4x test'
           start: 'npm run test:ci'
