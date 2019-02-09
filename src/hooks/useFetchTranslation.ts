@@ -1,7 +1,7 @@
 import ky from 'ky'
 import { isEmpty, noop } from 'lodash'
 import { useEffect } from 'react'
-import { Article } from '../utils/queryTranslation'
+import { Article } from '../types/Article'
 
 export const useFetchTranslation = (
   word: string,

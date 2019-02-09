@@ -5,6 +5,7 @@ import App from './components/App'
 import './i18n'
 import './index.css'
 import * as serviceWorker from './utils/serviceWorker'
+import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
 
 ReactDOM.render(<App />, document.querySelector('#root'))
 

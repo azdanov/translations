@@ -1,21 +1,35 @@
 import { APIGatewayEvent, Handler } from 'aws-lambda'
 import middy from 'middy'
-import { httpErrorHandler } from 'middy/middlewares'
-import { queryTranslation } from '../utils/queryTranslation'
+import { isEmpty } from 'lodash'
+import createError from 'http-errors'
+import { queryTranslation } from './utils/queryTranslation'
+import { errorHandler } from './utils/errorHandler'
 
-interface Response {
+export interface Response {
   statusCode: number
   body: string
 }
 
-const fetchTranslation: Handler = async (
-  event: APIGatewayEvent,
-): Promise<Response | null> => {
+const fetchTranslation: Handler = async (event: APIGatewayEvent): Promise<Response> => {
   const word = event.path.split('/').pop()
 
-  if (!word) return null
+  if (!word) {
+    throw new createError.BadRequest('Word not specified')
+  }
 
-  const translation = await queryTranslation(word)
+  let translation
+  try {
+    translation = await queryTranslation(word)
+
+    if (isEmpty(translation)) {
+      throw new createError.NotFound()
+    }
+  } catch (error) {
+    const { statusCode, statusMessage } = error
+    const body = statusCode === 404 ? 'Translation not found' : statusMessage
+
+    throw createError(statusCode, body)
+  }
 
   return {
     statusCode: 200,
@@ -23,4 +37,4 @@ const fetchTranslation: Handler = async (
   }
 }
 
-export const handler = middy(fetchTranslation).use(httpErrorHandler())
+export const handler = middy(fetchTranslation).use(errorHandler())

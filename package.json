@@ -6,21 +6,21 @@
     "build": "concurrently build:*",
     "build:app": "react-scripts build",
     "build:lambda": "netlify-lambda build src/lambda",
+    "check:types": "tsc",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "eject": "react-scripts eject",
     "json": "json-server --port 3030 --watch src/fixtures/data.json",
     "start": "concurrently yarn:start:app yarn:start:lambda",
     "start:app": "react-scripts start",
-    "start:env": "nodenv --env .env.test --exec \"concurrently --raw yarn:json yarn:start:raw\"",
+    "start:env": "nodenv --env .env.test --exec \"concurrently yarn:json yarn:start\"",
     "start:lambda": "netlify-lambda --config webpack.functions.js serve src/lambda",
-    "start:raw": "concurrently --raw yarn:start:app yarn:start:lambda",
     "test": "concurrently --kill-others --success=first yarn:start:env yarn:test:run",
     "test:run": "run-s test:wait cypress:run",
-    "test:wait": "concurrently --raw yarn:wait:*",
+    "test:wait": "concurrently yarn:wait:*",
     "wait:app": "wait-on http-get://localhost:3000",
     "wait:json": "wait-on http-get://localhost:3030/car",
-    "wait:lambda": "wait-on http-get://localhost:9000/.netlify/functions/translate"
+    "wait:lambda": "wait-on http-get://localhost:9000/.netlify/functions/translate/car"
   },
   "browserslist": [
     ">0.2%",
@@ -95,7 +95,8 @@
         {
           "ignoreMethods": [
             "map",
-            "split"
+            "split",
+            "includes"
           ]
         }
       ],
@@ -130,10 +131,15 @@
   },
   "eslintIgnore": [
     "src/react-app-env.d.ts",
-    "src/setupProxy.js"
+    "src/setupProxy.js",
+    "lambda/**/*",
+    "build/**/*"
   ],
   "dependencies": {
+    "abortcontroller-polyfill": "^1.2.3",
     "aws-lambda": "^0.1.2",
+    "got": "^9.6.0",
+    "http-errors": "^1.7.1",
     "http-proxy-middleware": "^0.19.1",
     "i18next": "^14.1.1",
     "i18next-browser-languagedetector": "^2.2.4",
@@ -155,6 +161,8 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.1.0",
     "@types/aws-lambda": "^8.10.19",
+    "@types/got": "^9.4.0",
+    "@types/http-errors": "^1.6.1",
     "@types/http-proxy-middleware": "^0.19.2",
     "@types/i18next": "^12.1.0",
     "@types/i18next-browser-languagedetector": "^2.0.1",
@@ -194,6 +202,6 @@
     "wait-on": "^3.2.0"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=11"
   }
 }
