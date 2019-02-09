@@ -8,10 +8,9 @@ workflows:
           yarn: true
           build: 'yarn'
       - cypress/run:
+          name: 'Chrome'
           yarn: true
           requires:
             - cypress/install
-          parallel: true
-          parallelism: 4
-          group: 'all tests'
-          start: 'yarn test'
+          executor: cypress/browsers-chrome69
+          browser: chrome
