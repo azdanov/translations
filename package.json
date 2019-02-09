@@ -3,15 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "run-p build:**",
+    "build": "concurrently build:*",
     "build:app": "react-scripts build",
     "build:lambda": "netlify-lambda build src/lambda",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "eject": "react-scripts eject",
-    "json-server": "json-server --port 3001 --watch src/fixtures/data.json",
-    "start": "run-p start:**",
+    "json": "json-server --port 3030 --watch src/fixtures/data.json",
+    "start": "concurrently yarn:start:app yarn:start:lambda",
     "start:app": "react-scripts start",
+    "start:env": "nodenv --env .env.test --exec \"concurrently --raw yarn:json yarn:start:raw\"",
     "start:lambda": "netlify-lambda --config webpack.functions.js serve src/lambda",
-    "test": "react-scripts test"
+    "start:raw": "concurrently --raw yarn:start:app yarn:start:lambda",
+    "test": "concurrently --kill-others --success=first yarn:start:env yarn:test:run",
+    "test:run": "run-s test:wait cypress:run",
+    "test:wait": "concurrently --raw yarn:wait:*",
+    "wait:app": "wait-on http-get://localhost:3000",
+    "wait:json": "wait-on http-get://localhost:3030/car",
+    "wait:lambda": "wait-on http-get://localhost:9000/.netlify/functions/translate"
   },
   "browserslist": [
     ">0.2%",
@@ -59,6 +68,7 @@
       "lodash",
       "react-hooks"
     ],
+    "root": true,
     "rules": {
       "@typescript-eslint/no-use-before-define": "off",
       "import/prefer-default-export": "off",
@@ -159,10 +169,14 @@
     "@types/typescript": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^1.3.0",
     "@typescript-eslint/parser": "^1.3.0",
+    "concurrently": "^4.1.0",
+    "cypress": "^3.1.5",
+    "cypress-testing-library": "^2.3.5",
     "dotenv-webpack": "^1.7.0",
     "eslint": "5.6.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-cypress": "^2.2.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^22.2.2",
     "eslint-plugin-jsx-a11y": "^6.1.1",
@@ -173,9 +187,11 @@
     "eslint-plugin-unicorn": "^7.1.0",
     "json-server": "^0.14.2",
     "netlify-lambda": "^1.3.3",
+    "node-env-run": "^3.0.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
-    "react-testing-library": "^5.5.3"
+    "react-testing-library": "^5.5.3",
+    "wait-on": "^3.2.0"
   },
   "engines": {
     "node": ">=11.9"

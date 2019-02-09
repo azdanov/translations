@@ -51,6 +51,7 @@ export const Search: React.FC<Props> = ({
             link: true,
             'aria-hidden': 'true',
             onClick: handleClick,
+            'data-testid': 'search-action',
           }}
           onChange={handleChange}
           placeholder={`${t('search')} …`}
