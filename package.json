@@ -19,7 +19,7 @@
     "test": "concurrently --kill-others --success=first npm:start:env npm:test:run",
     "test:ci": "concurrently --kill-others --success=first npm:start:env npm:test:run:ci",
     "test:run": "run-s test:wait cypress:run",
-    "test:run:ci": "run-s test:wait cypress:parallel",
+    "test:run:ci": "run-s test:wait cypress:ci",
     "test:wait": "concurrently npm:wait:*",
     "wait:app": "wait-on http://localhost:3000",
     "wait:json": "wait-on http://localhost:3030/car",
