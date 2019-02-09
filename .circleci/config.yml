@@ -9,6 +9,4 @@ workflows:
           requires:
             - cypress/install
           parallel: true
-          parallelism: 4
-          group: '4x test'
           start: 'npm test'
