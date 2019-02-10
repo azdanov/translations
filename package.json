@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npx concurrently npm:build:*",
     "build:app": "react-scripts build",
-    "build:lambda": "npx netlify-lambda build src/lambda/controllers",
+    "build:lambda": "NODE_ENV=production npx netlify-lambda build src/lambda/controllers",
     "check:types": "tsc",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
