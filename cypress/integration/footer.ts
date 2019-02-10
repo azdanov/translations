@@ -4,6 +4,6 @@ describe('footer', () => {
   })
 
   it('should exist with current year', () => {
-    cy.queryByText(`${new Date().getFullYear()}`).should('exist')
+    cy.contains(`${new Date().getFullYear()}`).should('exist')
   })
 })

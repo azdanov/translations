@@ -4,7 +4,7 @@ describe('hero', () => {
   })
 
   it('should have hero text', () => {
-    cy.queryByText('English - Estonian').should('exist')
-    cy.queryByText('Dictionary').should('exist')
+    cy.contains('English - Estonian').should('exist')
+    cy.contains('Dictionary').should('exist')
   })
 })
