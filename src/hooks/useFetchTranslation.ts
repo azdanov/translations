@@ -29,7 +29,7 @@ export const useFetchTranslation = (
     })
       .then(res => res.json())
       .then((translation: Article[]) => {
-        localCache.set(word, translation, 60 * 24)
+        localCache.set(word, translation, 60 * 24 * 7)
         setResults(translation)
         setLoading(false)
       })
