@@ -1,6 +1,5 @@
 {
-  "extends": [
-    "config:base"
-  ],
-  "ignoreDeps": ["eslint"]
+  "extends": ["config:base"],
+  "ignoreDeps": ["eslint"],
+  "automerge": true
 }
