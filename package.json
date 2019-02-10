@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npx concurrently npm:build:*",
     "build:app": "react-scripts build",
-    "build:lambda": "netlify-lambda build src/lambda/controllers",
+    "build:lambda": "npx netlify-lambda build src/lambda/controllers",
     "check:types": "tsc",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
@@ -14,7 +14,7 @@
     "start": "concurrently npm:start:app npm:start:lambda",
     "start:app": "react-scripts start",
     "start:env": "nodenv --env .env.test --exec \"concurrently npm:json npm:start\"",
-    "start:lambda": "netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
+    "start:lambda": "npx netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
     "test": "concurrently --kill-others --success=first npm:start:env npm:test:run",
     "test:run": "npm-run-all wait --parallel cypress:run unit:no-watch",
     "wait": "concurrently npm:wait:*",
