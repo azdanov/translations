@@ -1,5 +1,6 @@
 import ky from 'ky'
 import { isEmpty, noop } from 'lodash'
+import localCache from 'lscache'
 import { useEffect } from 'react'
 import { Article } from '../types/Article'
 
@@ -11,6 +12,13 @@ export const useFetchTranslation = (
   useEffect(() => {
     if (isEmpty(word)) return noop
 
+    const cached: Article[] | null = localCache.get(word)
+
+    if (cached) {
+      setResults(cached)
+      return noop
+    }
+
     const controller = new AbortController()
 
     ky(word, {
@@ -21,6 +29,7 @@ export const useFetchTranslation = (
     })
       .then(res => res.json())
       .then((translation: Article[]) => {
+        localCache.set(word, translation, 60 * 24)
         setResults(translation)
         setLoading(false)
       })
