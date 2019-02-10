@@ -6,9 +6,8 @@ App:
   English:
     ☐ Word of the day / random 5 words (2 lambdas)
   Modal:
-    ☐ English word meaning modal next to search results
+    ☐ English word meaning modal next to search results?
     ☐ Search history modal (with clickthrough)
-    ☐ Search history modal
   UX:
     ☐ Message when no results found
     ☐ Regex validation for search form
