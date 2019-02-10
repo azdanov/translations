@@ -3,7 +3,7 @@ import { HttpError } from 'http-errors'
 import middy from 'middy'
 import { Response } from '../controllers/translate'
 
-export const errorHandler: middy.Middleware<
+export const handleErrors: middy.Middleware<
   null,
   Handler,
   Response

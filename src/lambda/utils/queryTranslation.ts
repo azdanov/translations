@@ -13,10 +13,8 @@ interface Articles {
 }
 
 export const queryTranslation = async (word: string): Promise<Article[]> => {
-  const api = new URL(
-    `${process.env.LAMBDA_TRANSLATION_API}/${word +
-      process.env.LAMBDA_TRANSLATION_API_PARAMS}`,
-  )
+  const api = `${process.env.LAMBDA_TRANSLATION_API}/${word +
+    process.env.LAMBDA_TRANSLATION_API_PARAMS}`
 
   const response = await got(api)
   const contentType = response.headers['content-type']

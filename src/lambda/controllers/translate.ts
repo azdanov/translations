@@ -2,9 +2,7 @@ import { APIGatewayEvent, Handler } from 'aws-lambda'
 import createError from 'http-errors'
 import { isEmpty } from 'lodash'
 import middy from 'middy'
-// @ts-ignore
-import { httpSecurityHeaders } from 'middy/middlewares'
-import { errorHandler } from '../utils/errorHandler'
+import { handleErrors } from '../utils/handleErrors'
 import { queryTranslation } from '../utils/queryTranslation'
 
 export interface Response {
@@ -39,6 +37,4 @@ const fetchTranslation: Handler = async (event: APIGatewayEvent): Promise<Respon
   }
 }
 
-export const handler = middy(fetchTranslation)
-  .use(httpSecurityHeaders())
-  .use(errorHandler())
+export const handler = middy(fetchTranslation).use(handleErrors())
