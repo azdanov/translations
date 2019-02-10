@@ -14,7 +14,7 @@ App:
   DX:
     ✔ CircleCI @done(19-02-09 22:38)
     ✔ Renovate @done(19-02-10 17:56)
-    ✘ Writing tests (Jest) [Cypress is enough] @cancelled(19-02-10 22:20)
+    ✔ Writing tests (Jest) @done(19-02-11 00:20)
     ✔ Writing tests (Cypress) @done(19-02-09 09:56)
     ✔ Husky with formatting + linting + tsc check + tests on push @done(19-02-10 22:29)
   Performance:

@@ -10,7 +10,9 @@ export interface Response {
   body: string
 }
 
-const fetchTranslation: Handler = async (event: APIGatewayEvent): Promise<Response> => {
+export const fetchTranslation: Handler = async (
+  event: APIGatewayEvent,
+): Promise<Response> => {
   const word = event.path.split('/').pop()
 
   if (!word) {
