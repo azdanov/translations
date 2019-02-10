@@ -12,7 +12,7 @@ i18next
   .init({
     resources,
     fallbackLng: EN,
-    debug: process.env.NODE_ENV !== 'production',
+    debug: process.env.NODE_ENV === 'development',
     keySeparator: false,
     interpolation: {
       escapeValue: false,

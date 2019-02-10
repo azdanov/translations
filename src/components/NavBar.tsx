@@ -13,7 +13,7 @@ export const NavBar: React.FC = (): JSX.Element => {
     const { language } = event.currentTarget.dataset
 
     if (language) {
-      i18n.changeLanguage(language).then(() => setActiveItem(language))
+      i18n.changeLanguage(language, () => setActiveItem(language))
     }
   }
 

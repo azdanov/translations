@@ -1,7 +1,9 @@
 import React from 'react'
 import { Container, Icon, Segment } from 'semantic-ui-react'
 
-export const Footer: React.FC<{ className: string }> = ({ className }): JSX.Element => {
+export const Footer: React.FC<{ className?: string }> = ({
+  className = 'footer',
+}): JSX.Element => {
   const year = new Date().getFullYear()
   return (
     <Container text textAlign="center" className={className}>

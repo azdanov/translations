@@ -19,7 +19,6 @@ export const Search: React.FC<Props> = ({
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault()
     const word = event.currentTarget.value
-
     setTerm(word)
   }
 
