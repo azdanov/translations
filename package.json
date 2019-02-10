@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "concurrently npm:build:*",
+    "build": "npx concurrently npm:build:*",
     "build:app": "react-scripts build",
     "build:lambda": "netlify-lambda build src/lambda/controllers",
     "check:types": "tsc",
