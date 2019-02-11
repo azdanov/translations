@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/azdanov/translations/compare/v1.0.0...v1.1.0) (2019-02-11)
+
+
+### Features
+
+* **project:** add word of the day panel + lambda ([b453f89](https://github.com/azdanov/translations/commit/b453f89))
+
 # 1.0.0 (2019-02-11)
 
 
