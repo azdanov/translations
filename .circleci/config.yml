@@ -12,6 +12,7 @@ workflows:
   build:
     jobs:
       - cypress/run:
+          name: 'main'
           start: 'npm test'
       - release:
           filters:
@@ -19,4 +20,4 @@ workflows:
               only:
                 - master
           requires:
-            - 1 machine
+            - main
