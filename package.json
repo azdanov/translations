@@ -1,7 +1,11 @@
 {
   "name": "translations",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azdanov/translations.git"
+  },
   "scripts": {
     "build": "npx concurrently npm:build:*",
     "build:app": "react-scripts build",
@@ -11,15 +15,16 @@
     "cypress:run": "cypress run",
     "eject": "react-scripts eject",
     "json": "json-server --delay 100 --port 3030 --watch src/fixtures/data.json",
+    "semantic-release": "semantic-release",
     "start": "concurrently npm:start:app npm:start:lambda",
     "start:app": "react-scripts start",
     "start:env": "nodenv --env .env.test --exec \"concurrently npm:json npm:start\"",
     "start:lambda": "npx netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
     "test": "concurrently --kill-others --success=first npm:start:env npm:test:run",
     "test:run": "npm-run-all wait --parallel cypress:run unit:no-watch",
-    "wait": "concurrently npm:wait:*",
     "unit": "react-scripts test",
     "unit:no-watch": "react-scripts test --no-watch",
+    "wait": "concurrently npm:wait:*",
     "wait:app": "wait-on http://localhost:3000",
     "wait:json": "wait-on http://localhost:3030/car",
     "wait:lambda": "wait-on http://localhost:9000/.netlify/functions/translate/car"
@@ -225,9 +230,28 @@
     "npm-run-all": "4.1.5",
     "prettier": "1.16.4",
     "react-testing-library": "5.5.4",
+    "semantic-release": "15.13.3",
     "wait-on": "3.2.0"
   },
   "engines": {
     "node": ">=10"
+  },
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "success": [
+      "@semantic-release/github"
+    ],
+    "npmPublish": false,
+    "branch": "master"
   }
 }
