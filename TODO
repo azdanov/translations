@@ -3,19 +3,21 @@ App:
     ☐ Additional estonian api for translations (More estonian definitions)
     ☐ Other translation direction Estonian - English
   English:
-    ☐ Short word meaning @try
-    ☐ Word of the day / random 5 words (2 lambdas)
+    ☐ Short word meaning near word @meaning @lambda
+    ☐ Word of the day @lambda
+    ☐ Random 5 words @lambda
   Modal:
-    ☐ Settings modal @try
+    ☐ Settings modal
+    ☐ English word meaning @meaning
     ☐ Search history modal (with clickthrough)
   UX:
-    ☐ English word meaning next to result (toggle via settings) @try
     ☐ Click on a result to to do a search if different from current
     ☐ Add clear button
     ☐ Message when no results found
     ☐ Regex validation for search form
   Performance:
-    ☐ Add front controller for lambdas + securify middleware for others
+    ☐ Add front controller for lambdas
+    ☐ Securify middleware for others
   Trivia:
     ☐ About page with description, credits (Add Reach Router)
     ☐ Copyright notices for dict and words (As Icons with text?)
