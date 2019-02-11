@@ -1,4 +1,5 @@
 import got from 'got'
+import createHttpError from 'http-errors'
 import { isEmpty, reject } from 'lodash'
 import matchSorter from 'match-sorter'
 import scrapeIt from 'scrape-it'
@@ -13,8 +14,10 @@ interface Articles {
 }
 
 export const queryTranslation = async (word: string): Promise<Article[]> => {
-  const api = `${process.env.LAMBDA_TRANSLATION_API}/${word +
-    process.env.LAMBDA_TRANSLATION_API_PARAMS}`
+  if (!process.env.LAMBDA_TRANSLATE_API)
+    throw new createHttpError.InternalServerError('No ENV specified')
+
+  const api = process.env.LAMBDA_TRANSLATE_API.replace('%WORD%', word)
 
   const response = await got(api)
   const contentType = response.headers['content-type']

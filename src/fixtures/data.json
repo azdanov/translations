@@ -314,5 +314,71 @@
       "en": "vintage car",
       "et": ["vana tüüpi auto", "„veteranauto“"]
     }
-  ]
+  ],
+  "day": {
+    "id": 521856,
+    "word": "ogive",
+    "publishDate": "2019-02-10T03:00:00.000+0000",
+    "note": "The word 'ogive' was borrowed from a French word meaning 'a rib of a vault'.",
+    "contentProvider": {
+      "name": "wordnik",
+      "id": 711
+    },
+    "examples": [
+      {
+        "url": "http://nasawatch.com/archives/2009/06/would-you-bring-back-nglt-or-sli.html",
+        "text": "I personally thought it should have been the concept chosen over Lockheed's double-ogive concept which was trouble just waiting to happen.",
+        "title": "Would You Bring Back NGLT-or SLI? - NASA Watch",
+        "id": 845826134
+      },
+      {
+        "url": "http://superversive.livejournal.com/2006/06/18/",
+        "text": "I was woolgathering industriously in my study: not the bleak corner of a windowless basement room, fenced off by cheap shelving, where I do most of my actual work, but the Platonic study in my mind, with the cherry-panelled walls and tall ogive windows, wingback chairs before the roaring fireplace, and fine old books in rank upon rank clear up to the fifteen-foot ceiling.",
+        "title": "A Witness comes to visit",
+        "id": 827248422
+      },
+      {
+        "text": "Above them reared a wall surmounted by slim towers, ivory-hued, playfully filigreed, a high ogive gate at its middle that shimmered like mother-of-pearl.",
+        "title": "Operation Luna",
+        "id": 1073181794
+      },
+      {
+        "text": "The central point of the ogive was not directly above me, though; my bed had been placed a few feet off-center.",
+        "title": "Dragonfly in Amber",
+        "id": 1080247978
+      },
+      {
+        "text": "She was looking out an open ogive window, into the salt breeze and onward to surf on the reefs beyond the bay.",
+        "title": "The Game Of Empire",
+        "id": 1057278621
+      },
+      {
+        "text": "They will capture him and lose him, wound him, take him for killed in action, and he will go on, headlong, a raving snowman over the winter marshes-there'll be no wind adjustment, no field-change to the bottleneck fairing or deadly ogive of their Parabellum rounds that can ever bring him down.",
+        "title": "Gravity's Rainbow",
+        "id": 1086925514
+      }
+    ],
+    "definitions": [
+      {
+        "text": "The curve of a cumulative distribution function.",
+        "source": "wiktionary",
+        "partOfSpeech": "noun"
+      },
+      {
+        "text": "A Gothic pointed arch, or a rib of a Gothic vault.",
+        "source": "wiktionary",
+        "partOfSpeech": "noun"
+      },
+      {
+        "text": "The pointed, curved nose of a bullet, missile, or rocket.",
+        "source": "wiktionary",
+        "partOfSpeech": "noun"
+      },
+      {
+        "text": "A three-dimensional wave-bulge, characteristic of glaciers that have experienced extreme underlying topographic change.",
+        "source": "wiktionary",
+        "partOfSpeech": "noun"
+      }
+    ]
+  }
 }

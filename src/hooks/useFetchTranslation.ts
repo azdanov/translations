@@ -25,7 +25,7 @@ export const useFetchTranslation = (
       method: 'get',
       signal: controller.signal,
       hooks: { beforeRequest: [() => setLoading(true)] },
-      prefixUrl: process.env.REACT_APP_API,
+      prefixUrl: process.env.REACT_APP_TRANSLATE_API,
     })
       .then(res => res.json())
       .then((translation: Article[]) => {

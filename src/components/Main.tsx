@@ -4,6 +4,7 @@ import { useFetchTranslation } from '../hooks/useFetchTranslation'
 import { Article } from '../types/Article'
 import { Results } from './Results'
 import { Search } from './Search'
+import { WordOfTheDay } from './WordOfTheDay'
 
 export const Main: React.FC = (): JSX.Element => {
   const [loading, setLoading] = useState(false)
@@ -21,6 +22,11 @@ export const Main: React.FC = (): JSX.Element => {
         <Grid.Row>
           <Grid.Column mobile={14} tablet={9} computer={8}>
             <Results loading={loading} results={results} />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column mobile={14} tablet={9} computer={8}>
+            <WordOfTheDay show={results.length === 0} />
           </Grid.Column>
         </Grid.Row>
       </Grid>

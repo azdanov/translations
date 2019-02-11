@@ -18,8 +18,10 @@
     "semantic-release": "semantic-release",
     "start": "concurrently npm:start:app npm:start:lambda",
     "start:app": "react-scripts start",
-    "start:env": "nodenv --env .env.test --exec \"concurrently npm:json npm:start\"",
+    "start:env": "nodenv --env .env.test --exec \"concurrently npm:json npm:start:test\"",
     "start:lambda": "npx netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
+    "start:lambda:test": "NODE_ENV=test npx netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
+    "start:test": "concurrently npm:start:app npm:start:lambda:test",
     "test": "concurrently --kill-others --success=first npm:start:env npm:test:run",
     "test:run": "npm-run-all wait --parallel cypress:run unit:no-watch",
     "unit": "react-scripts test",
@@ -125,7 +127,8 @@
           "ignoreMethods": [
             "map",
             "split",
-            "includes"
+            "includes",
+            "replace"
           ]
         }
       ],

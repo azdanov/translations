@@ -1,4 +1,4 @@
-import { reject, isEmpty } from 'lodash'
+import { isEmpty, reject } from 'lodash'
 import matchSorter from 'match-sorter'
 
 const mockBody = [
