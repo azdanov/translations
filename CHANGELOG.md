@@ -1,3 +1,16 @@
+# [1.6.0](https://github.com/azdanov/translations/compare/v1.5.0...v1.6.0) (2019-02-12)
+
+
+### Bug Fixes
+
+* **App:** use better approach due to library issues ([76ebeee](https://github.com/azdanov/translations/commit/76ebeee))
+
+
+### Features
+
+* **app:** update service-worker to query for reload on all instances ([2546d47](https://github.com/azdanov/translations/commit/2546d47))
+* **Toast:** add button message ([5a79b12](https://github.com/azdanov/translations/commit/5a79b12))
+
 # [1.5.0](https://github.com/azdanov/translations/compare/v1.4.0...v1.5.0) (2019-02-12)
 
 
