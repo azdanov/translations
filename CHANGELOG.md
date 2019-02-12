@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/azdanov/translations/compare/v1.1.0...v1.2.0) (2019-02-12)
+
+
+### Features
+
+* sanity check ([514c1a4](https://github.com/azdanov/translations/commit/514c1a4))
+
 # [1.1.0](https://github.com/azdanov/translations/compare/v1.0.0...v1.1.0) (2019-02-12)
 
 
