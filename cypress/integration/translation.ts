@@ -3,12 +3,14 @@ describe('translation', () => {
     cy.visit('/')
     // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(300) // Issues with i18next, doesn't change fast enough
+    cy.contains('Language').click()
     cy.contains('Eesti').click()
   })
 
   it('should have elements translated', () => {
     cy.title().should('eq', 'Avaleht | Tõlked')
     cy.contains('Avaleht').should('exist')
+    cy.contains('Keel').should('exist')
     cy.contains('Inglise - Eesti').should('exist')
     cy.contains('Sõnastik').should('exist')
     cy.get('[placeholder="Otsi sõna …"]').should('exist')
