@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/azdanov/translations/compare/v1.3.0...v1.4.0) (2019-02-12)
+
+
+### Bug Fixes
+
+* **Main:** remove excessive whitespace after Search ([7e01f97](https://github.com/azdanov/translations/commit/7e01f97))
+
+
+### Features
+
+* **NavBar:** group languages in dropdown, add translations ([555e8a8](https://github.com/azdanov/translations/commit/555e8a8))
+
 # [1.3.0](https://github.com/azdanov/translations/compare/v1.2.1...v1.3.0) (2019-02-12)
 
 
