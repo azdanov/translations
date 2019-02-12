@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '11'
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+install:
+  - npm ci
+before_script:
+  - npx cypress verify
+script:
+  - npm test
+after_success:
+  - npx semantic-release
