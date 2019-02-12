@@ -2,13 +2,13 @@
 
 An English - Estonian dictionary built with React and Netlify Functions. [Live version](https://translations.netlify.com).
 
-![translations](https://user-images.githubusercontent.com/6123841/52497071-c8508e00-2bdd-11e9-822d-1c44cc8c5a2d.png)
+[![Translations App](https://user-images.githubusercontent.com/6123841/52656669-7ec6b280-2eff-11e9-89d1-22fb18edffa9.png)](https://translations.netlify.com)
 
 ## Setup
 
 ### Clone the project
 
-```sh
+```bash
 https://github.com/azdanov/translations.git
 cd translations
 cp .env.example .env
