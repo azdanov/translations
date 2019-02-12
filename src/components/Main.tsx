@@ -5,6 +5,7 @@ import { Article } from '../types/Article'
 import { WordOfTheDay } from './WordOfTheDay'
 import { Search } from './Search'
 import { Results } from './Results'
+import { Hero } from './Hero'
 
 export const Main: React.FC = (): JSX.Element => {
   const [loading, setLoading] = useState(false)
@@ -15,6 +16,7 @@ export const Main: React.FC = (): JSX.Element => {
 
   return (
     <Segment basic>
+      <Hero />
       <Grid centered>
         <Grid.Column mobile={14} tablet={9} computer={8}>
           <Search loading={loading} search={search} setSearch={setSearch} />
