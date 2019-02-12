@@ -26,8 +26,15 @@ export const App: React.FC = (): JSX.Element => {
             <NavBar />
             <React.Suspense fallback={null}>
               <Switch>
-                <Route exact path="/" render={() => <Main />} />
-                <Route path="/about" render={() => <About />} />
+                <Route
+                  exact
+                  path="/"
+                  render={() => /* FIXME: react-router-dom 4.4+ */ <Main />}
+                />
+                <Route
+                  path="/about"
+                  render={() => /* FIXME: react-router-dom 4.4+ */ <About />}
+                />
                 <Route component={NoMatch} />
               </Switch>
             </React.Suspense>
