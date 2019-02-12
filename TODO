@@ -17,6 +17,8 @@ App:
   Trivia:
     ☐ About page with description, credits (Add Reach Router)
     ☐ Copyright notices for dict and words (As Icons with text?)
+  Performance:
+    ☐ Add service worker with an autoupdate similar to gatsby
 
 Archive:
   ✔ Word of the day @lambda @done(19-02-11 19:06) @project(App.English)
