@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/azdanov/translations/compare/v1.2.1...v1.3.0) (2019-02-12)
+
+
+### Features
+
+* **About:** create About page ([b6a2e5f](https://github.com/azdanov/translations/commit/b6a2e5f))
+* **App:** add Router ([9f7ef69](https://github.com/azdanov/translations/commit/9f7ef69))
+* **App:** use better title ([b911a23](https://github.com/azdanov/translations/commit/b911a23))
+* **i18n:** add new translations ([8f6c02c](https://github.com/azdanov/translations/commit/8f6c02c))
+* **images:** add images for attributions ([075310e](https://github.com/azdanov/translations/commit/075310e))
+* **NavBar:** add NavLinks for Menu ([22f25fe](https://github.com/azdanov/translations/commit/22f25fe))
+* **NoMatch:** create 404 page ([4d9e0a8](https://github.com/azdanov/translations/commit/4d9e0a8))
+* **WordOfTheDay:** open link in new tab ([00089de](https://github.com/azdanov/translations/commit/00089de))
+
 ## [1.2.1](https://github.com/azdanov/translations/compare/v1.2.0...v1.2.1) (2019-02-12)
 
 
