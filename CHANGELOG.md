@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/azdanov/translations/compare/v1.4.0...v1.5.0) (2019-02-12)
+
+
+### Features
+
+* **NavBar:** better a11y for dropdown ([09023e6](https://github.com/azdanov/translations/commit/09023e6))
+
 # [1.4.0](https://github.com/azdanov/translations/compare/v1.3.0...v1.4.0) (2019-02-12)
 
 
