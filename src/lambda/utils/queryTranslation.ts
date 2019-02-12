@@ -42,3 +42,5 @@ export const queryTranslation = async (word: string): Promise<Article[]> => {
 
   return matchSorter(translation, word, { keys: ['en', 'et'] })
 }
+
+export default queryTranslation
