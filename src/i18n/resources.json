@@ -1,11 +1,18 @@
 {
   "en": {
     "translation": {
+      "about": "About",
+      "about description": "Simple English to Estonian dictionary with some extra functionality. Built with modern tools for speed and ease of use. Has offline capabilities, which help in case of slow internet.",
+      "about this": "About this app",
+      "attributions": "Attributions",
       "definition": "Definition",
       "dictionary": "Dictionary",
+      "for developer": "For developers",
       "home": "Home",
       "languages": "English - Estonian",
       "loading": "Loading",
+      "not found": "Not Found",
+      "not found description": "The page you were looking for is not here… Try going: ",
       "results": "Results",
       "search": "Search for a word",
       "sw-install": "App is ready for offline use.",
@@ -15,11 +22,18 @@
   },
   "et": {
     "translation": {
+      "about": "Sellest",
+      "about description": "Lihtne inglise-eesti sõnastik, millel on mõned lisafunktsioonid. Ehitatud kaasaegsete tööriistadega kiiruse ja kasutusmugavuse tagamiseks. On võrguühenduseta võimeid, mis aitavad aeglase interneti korral.",
+      "about this": "Selle äppi kohta",
+      "attributions": "Omistamine",
       "definition": "Määratlus",
       "dictionary": "Sõnastik",
+      "for developer": "Arendajatele",
       "home": "Avaleht",
       "languages": "Inglise - Eesti",
       "loading": "Laadimine",
+      "not found": "Ei leitud",
+      "not found description": "Lehekülg, mida te otsisite, pole siin… Proovige minna: ",
       "results": "Tulemused",
       "search": "Otsi sõna",
       "sw-install": "Äpp on võrguühenduseta kasutamiseks valmis.",
