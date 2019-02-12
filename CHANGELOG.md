@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # [1.1.0](https://github.com/azdanov/translations/compare/v1.0.0...v1.1.0) (2019-02-12)
 
 
@@ -79,6 +80,8 @@
 
 
 
+=======
+>>>>>>> Stashed changes
 # 1.0.0 (2019-02-11)
 
 
