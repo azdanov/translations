@@ -11,6 +11,21 @@
 ### Features
 
 * **project:** add word of the day panel + lambda ([b453f89](https://github.com/azdanov/translations/commit/b453f89))
+* **WorfOfTheDay:** add link to wordnik for word ([ab38c83](https://github.com/azdanov/translations/commit/ab38c83))
+
+# [1.1.0](https://github.com/azdanov/translations/compare/v1.0.0...v1.1.0) (2019-02-12)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([9b4f4ad](https://github.com/azdanov/translations/commit/9b4f4ad))
+* **deps:** update dependency i18next to v15.0.2 ([eaea108](https://github.com/azdanov/translations/commit/eaea108))
+* **deps:** update dependency react-i18next to v10.0.5 ([04475cd](https://github.com/azdanov/translations/commit/04475cd))
+
+
+### Features
+
+* **project:** add word of the day panel + lambda ([b453f89](https://github.com/azdanov/translations/commit/b453f89))
 
 # [1.1.0](https://github.com/azdanov/translations/compare/v1.0.0...v1.1.0) (2019-02-11)
 
