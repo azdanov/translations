@@ -36,7 +36,11 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
         {isReady ? (
           <>
             <Header as="h3" size="medium">
-              <Header.Content>{result.word}</Header.Content>
+              <Header.Content>
+                <a href={`https://www.wordnik.com/words/${result.word}`}>
+                  {result.word}
+                </a>
+              </Header.Content>
               <Header.Subheader>{result.note}</Header.Subheader>
             </Header>
             <p>{t('definition')}:</p>
