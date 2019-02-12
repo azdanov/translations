@@ -13,15 +13,8 @@ test('should show install message with ok button', () => {
   expect(getByText('OK')).toBeInTheDocument()
 })
 
-test('should show update message with ok button', () => {
-  const { getByText } = render(<ServiceWorkerMessage update />)
-
-  expect(getByText('sw-update')).toBeInTheDocument()
-  expect(getByText('OK')).toBeInTheDocument()
-})
-
 test('should hide when button is clicked', () => {
-  const { getByText, container } = render(<ServiceWorkerMessage update />)
+  const { getByText, container } = render(<ServiceWorkerMessage />)
 
   act(() => {
     fireEvent.click(getByText('OK'))

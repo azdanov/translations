@@ -7,9 +7,10 @@
     "url": "https://github.com/azdanov/translations.git"
   },
   "scripts": {
-    "build": "npx concurrently npm:build:*",
+    "build": "npx concurrently npm:build:prod npm:build:lambda",
     "build:app": "react-scripts build",
     "build:lambda": "NODE_ENV=production npx netlify-lambda build src/lambda/controllers",
+    "build:prod": "run-s build:app sw",
     "check:types": "tsc",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
@@ -22,7 +23,8 @@
     "start:lambda": "npx netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
     "start:lambda:test": "NODE_ENV=test npx netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
     "start:test": "concurrently npm:start:app npm:start:lambda:test",
-    "test": "concurrently --kill-others --success=first npm:start:env npm:test:run",
+    "sw": "node modifyServiceWorker.js",
+    "test": "concurrently -k -s=first npm:start:env npm:test:run",
     "test:run": "npm-run-all wait --parallel cypress:run unit:no-watch",
     "unit": "react-scripts test",
     "unit:no-watch": "react-scripts test --no-watch",
@@ -189,6 +191,7 @@
     "scrape-it": "5.1.4",
     "semantic-ui-css": "2.4.1",
     "semantic-ui-react": "0.85.0",
+    "sw-precache": "^5.2.1",
     "typescript": "3.3.3"
   },
   "devDependencies": {
