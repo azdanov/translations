@@ -7,6 +7,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
+      - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run: npx semantic-release
 workflows:
   build:
