@@ -1,5 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
 import { Menu } from 'semantic-ui-react'
 import { EN, ET } from '../i18n'
 import { Globe } from './Globe'
@@ -22,7 +23,8 @@ export const NavBar: React.FC = (): JSX.Element => {
       <Menu.Item>
         <Globe width="3em" height="3em" />
       </Menu.Item>
-      <Menu.Item name={t('home')} href="/" />
+      <Menu.Item as={NavLink} name={t('home')} href="/" to="/" exact />
+      <Menu.Item as={NavLink} name={t('about')} href="/about" to="/about" />
       <Menu.Menu position="right">
         <Menu.Item
           data-language={EN}

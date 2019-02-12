@@ -14,13 +14,12 @@ App:
     ☐ Add clear button
     ☐ Message when no results found
     ☐ Regex validation for search form
-  Trivia:
-    ☐ About page with description, credits (Add Reach Router) @critical 
-    ☐ Copyright notices for dict and words (As Icons with text?) @critical 
   Performance:
     ☐ Use React.lazy and React.Suspense for heavy components
 
 Archive:
+  ✔ About page with description, credits (Add Reach Router) @done(19-02-12 18:37) @project(App.Trivia)
+  ✔ Copyright notices for dict and words (As Icons with text?) @done(19-02-12 18:37) @project(App.Trivia)
   ✔ Add service worker with message toast @done(19-02-12 11:02) @project(App.Performance)
   ✔ Word of the day @lambda @done(19-02-11 19:06) @project(App.English)
   ✘ Add front controller for lambdas @cancelled(19-02-11 19:06) @project(App.Performance)
