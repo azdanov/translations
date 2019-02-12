@@ -7,6 +7,6 @@ export const ServiceWorkerMessage: React.FC = (): JSX.Element => {
   const [show, setShow] = useState(true)
 
   return (
-    <>{show && <Toast message={t('sw-update')} onConfirm={() => setShow(false)} />}</>
+    <>{show && <Toast message={t('sw-install')} onConfirm={() => setShow(false)} />}</>
   )
 }
