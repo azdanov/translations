@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, SyntheticEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Container, Input } from 'semantic-ui-react'
+import { Input } from 'semantic-ui-react'
 
 interface Props {
   loading: boolean
@@ -37,26 +37,24 @@ export const Search: React.FC<Props> = ({
   }
 
   return (
-    <Container fluid>
-      <form onSubmit={handleSubmit}>
-        <Input
-          fluid
-          loading={loading}
-          size="large"
-          value={term}
-          icon={{
-            name: 'search',
-            circular: true,
-            link: true,
-            'aria-hidden': 'true',
-            onClick: handleClick,
-            'data-testid': 'search-action',
-          }}
-          onChange={handleChange}
-          placeholder={`${t('search')} …`}
-        />
-      </form>
-    </Container>
+    <form onSubmit={handleSubmit}>
+      <Input
+        fluid
+        loading={loading}
+        size="large"
+        value={term}
+        icon={{
+          name: 'search',
+          circular: true,
+          link: true,
+          'aria-hidden': 'true',
+          onClick: handleClick,
+          'data-testid': 'search-action',
+        }}
+        onChange={handleChange}
+        placeholder={`${t('search')} …`}
+      />
+    </form>
   )
 }
 
