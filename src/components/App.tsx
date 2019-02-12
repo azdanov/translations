@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Container, Loader } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import { Footer } from './Footer'
 import { NavBar } from './NavBar'
 import { NoMatch } from './NoMatch'
@@ -24,10 +24,10 @@ export const App: React.FC = (): JSX.Element => {
         <Router>
           <>
             <NavBar />
-            <React.Suspense fallback={<Loader active inline="centered" />}>
+            <React.Suspense fallback={null}>
               <Switch>
-                <Route exact path="/" component={Main} />
-                <Route path="/about" component={About} />
+                <Route exact path="/" render={() => <Main />} />
+                <Route path="/about" render={() => <About />} />
                 <Route component={NoMatch} />
               </Switch>
             </React.Suspense>
