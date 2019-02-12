@@ -14,7 +14,9 @@ export const App: React.FC = (): JSX.Element => {
     <>
       <Container className="content">
         <Helmet>
-          <title>{t('translations')}</title>
+          <title>
+            {t('home')} | {t('translations')}
+          </title>
         </Helmet>
         <NavBar />
         <Hero />
