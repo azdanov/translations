@@ -11,6 +11,7 @@ i18next
   .use(LngDetector)
   .init({
     resources,
+    lng: process.env.NODE_ENV === 'test' ? 'cimode' : undefined,
     fallbackLng: EN,
     debug: process.env.NODE_ENV === 'development',
     keySeparator: false,
