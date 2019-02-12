@@ -17,10 +17,9 @@ App:
   Trivia:
     ☐ About page with description, credits (Add Reach Router)
     ☐ Copyright notices for dict and words (As Icons with text?)
-  Performance:
-    ☐ Add service worker with an autoupdate similar to gatsby
 
 Archive:
+  ✔ Add service worker with message toast @done(19-02-12 11:02) @project(App.Performance)
   ✔ Word of the day @lambda @done(19-02-11 19:06) @project(App.English)
   ✘ Add front controller for lambdas @cancelled(19-02-11 19:06) @project(App.Performance)
   ✘ Securify middleware for others @cancelled(19-02-11 19:06) @project(App.Performance)
