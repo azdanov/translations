@@ -191,7 +191,6 @@
     "scrape-it": "5.1.4",
     "semantic-ui-css": "2.4.1",
     "semantic-ui-react": "0.85.0",
-    "sw-precache": "^5.2.1",
     "typescript": "3.3.3"
   },
   "devDependencies": {
