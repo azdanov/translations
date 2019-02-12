@@ -1,3 +1,24 @@
+# [1.1.0](https://github.com/azdanov/translations/compare/v1.0.0...v1.1.0) (2019-02-12)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([9b4f4ad](https://github.com/azdanov/translations/commit/9b4f4ad))
+* **deps:** update dependency i18next to v15.0.2 ([eaea108](https://github.com/azdanov/translations/commit/eaea108))
+* **deps:** update dependency react-i18next to v10.0.5 ([04475cd](https://github.com/azdanov/translations/commit/04475cd))
+
+
+### Features
+
+* bump[#2](https://github.com/azdanov/translations/issues/2) ([f499e8c](https://github.com/azdanov/translations/commit/f499e8c))
+* **project:** add word of the day panel + lambda ([b453f89](https://github.com/azdanov/translations/commit/b453f89))
+* **sw:** make service worker update itself automatically ([68a7a7f](https://github.com/azdanov/translations/commit/68a7a7f))
+* bump ([4b03986](https://github.com/azdanov/translations/commit/4b03986))
+* **project:** show toasts for SW messages ([db48723](https://github.com/azdanov/translations/commit/db48723))
+* **ServiceWorkerMessage:** add SW notifications ([82d8905](https://github.com/azdanov/translations/commit/82d8905))
+* **Toast:** add toast ([9f78a7e](https://github.com/azdanov/translations/commit/9f78a7e))
+* **WorfOfTheDay:** add link to wordnik for word ([ab38c83](https://github.com/azdanov/translations/commit/ab38c83))
+
 <<<<<<< Updated upstream
 # [1.1.0](https://github.com/azdanov/translations/compare/v1.0.0...v1.1.0) (2019-02-12)
 
