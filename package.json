@@ -19,7 +19,7 @@
     "semantic-release": "semantic-release",
     "start": "concurrently npm:start:app npm:start:lambda",
     "start:app": "react-scripts start",
-    "start:env": "nodenv --env .env.test --exec \"concurrently npm:json npm:start:test\"",
+    "start:env": "nodenv --env .env.test --exec \"concurrently npm:json npm:start:test\" || true",
     "start:lambda": "npx netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
     "start:lambda:test": "NODE_ENV=test npx netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
     "start:test": "concurrently npm:start:app npm:start:lambda:test",
