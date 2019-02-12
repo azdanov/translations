@@ -6,26 +6,43 @@ An English - Estonian dictionary built with React and Netlify Functions. [Live v
 
 ## Setup
 
-1. Clone the project.
+### Clone the project
+
 ```sh
 https://github.com/azdanov/translations.git
 cd translations
 cp .env.example .env
 ```
 
-2. NPM Scripts:
-```sh
-# Project setup
-yarn
+### NPM Scripts
+
+```bash
+# Setup
+npm install
 
 # Compiles and hot-reloads for development
-yarn start
+npm start
+
+# Use environment from .env.test + json-server with src/fixtures/data.json
+npm run start:env
 
 # Compiles and minifies for production
-yarn build
+npm build
 
 # Run your tests
-yarn test
+npm test
+
+# Open cypress
+npm run cypress:open
+
+# Run jest
+npm run unit
+
+# Run cypress once
+npm run cypress:run
+
+# Run jest once
+npm run unit:no-watch
 ```
 
 ## Learn React
