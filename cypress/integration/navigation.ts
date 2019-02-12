@@ -1,9 +1,7 @@
 describe('navigation', () => {
-  beforeEach(() => {
+  it('should have title, language and home', () => {
     cy.visit('/')
-  })
 
-  it('should have title, language, home and url', () => {
     cy.title().should('eq', 'Home | Translations')
 
     cy.contains('Language').should('exist')
@@ -12,9 +10,11 @@ describe('navigation', () => {
     cy.contains('Eesti').should('exist')
 
     cy.contains('Home').should('exist')
-    cy.contains('Home').click()
-    cy.location().should(loc => {
-      expect(loc.pathname).to.eq('/')
-    })
+  })
+
+  it('should title in about', () => {
+    cy.visit('/about')
+
+    cy.title().should('eq', 'About | Translations')
   })
 })

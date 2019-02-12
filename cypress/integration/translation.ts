@@ -16,6 +16,9 @@ describe('translation', () => {
     cy.get('[placeholder="Otsi sõna …"]').should('exist')
     cy.contains('Päeva sõna').should('exist')
     cy.contains('Määratlus:').should('exist')
+
+    cy.visit('/about')
+    cy.title().should('eq', 'Sellest | Tõlked')
   })
 
   it('should show results', () => {
