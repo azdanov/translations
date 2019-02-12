@@ -7,7 +7,7 @@ import { Hero } from './Hero'
 import { Main } from './Main'
 import { NavBar } from './NavBar'
 
-const App: React.FC = (): JSX.Element => {
+export const App: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
 
   return (

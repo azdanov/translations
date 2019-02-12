@@ -59,3 +59,5 @@ export const Search: React.FC<Props> = ({
     </Container>
   )
 }
+
+export default Search

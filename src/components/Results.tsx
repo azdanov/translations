@@ -48,3 +48,5 @@ const addNextSeparator = (index: number): JSX.Element | null => {
     </span>
   ) : null
 }
+
+export default Results

@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Grid, Segment } from 'semantic-ui-react'
 import { useFetchTranslation } from '../hooks/useFetchTranslation'
 import { Article } from '../types/Article'
-import { Results } from './Results'
-import { Search } from './Search'
 import { WordOfTheDay } from './WordOfTheDay'
+import { Search } from './Search'
+import { Results } from './Results'
 
 export const Main: React.FC = (): JSX.Element => {
   const [loading, setLoading] = useState(false)
@@ -33,3 +33,5 @@ export const Main: React.FC = (): JSX.Element => {
     </Segment>
   )
 }
+
+export default Main

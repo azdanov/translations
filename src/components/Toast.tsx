@@ -14,3 +14,5 @@ export const Toast: React.FC<{ message: string; onConfirm: () => void }> = ({
     </Button>
   </Segment>
 )
+
+export default Toast

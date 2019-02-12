@@ -10,3 +10,5 @@ export const ServiceWorkerMessage: React.FC = (): JSX.Element => {
     <>{show && <Toast message={t('sw-install')} onConfirm={() => setShow(false)} />}</>
   )
 }
+
+export default ServiceWorkerMessage

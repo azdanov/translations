@@ -14,3 +14,5 @@ export const Hero: React.FC = (): JSX.Element => {
     </Header>
   )
 }
+
+export default Hero

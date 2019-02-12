@@ -70,3 +70,5 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
     </>
   )
 }
+
+export default WordOfTheDay

@@ -2,7 +2,7 @@ import React, { SyntheticEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Menu } from 'semantic-ui-react'
 import { EN, ET } from '../i18n'
-import { SvgGlobe } from './Globe'
+import { Globe } from './Globe'
 
 export const NavBar: React.FC = (): JSX.Element => {
   const [t, i18n] = useTranslation()
@@ -20,7 +20,7 @@ export const NavBar: React.FC = (): JSX.Element => {
   return (
     <Menu secondary>
       <Menu.Item>
-        <SvgGlobe width="3em" height="3em" />
+        <Globe width="3em" height="3em" />
       </Menu.Item>
       <Menu.Item name={t('home')} href="/" />
       <Menu.Menu position="right">
@@ -42,3 +42,5 @@ export const NavBar: React.FC = (): JSX.Element => {
     </Menu>
   )
 }
+
+export default NavBar
