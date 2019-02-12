@@ -9,15 +9,15 @@ import { ServiceWorkerMessage } from './components/ServiceWorkerMessage'
 import * as serviceWorker from './utils/serviceWorker'
 
 const root = document.querySelector('#root')
-const portal = document.querySelector('#portal') as Element
+const worker = document.querySelector('#worker') as Element
 
 ReactDOM.render(<App />, root)
 
 serviceWorker.register({
   onSuccess: () => {
-    ReactDOM.render(<ServiceWorkerMessage />, portal)
+    ReactDOM.render(<ServiceWorkerMessage />, worker)
   },
   onUpdate: () => {
-    ReactDOM.render(<ServiceWorkerMessage update />, portal)
+    ReactDOM.render(<ServiceWorkerMessage update />, worker)
   },
 })
