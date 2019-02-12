@@ -7,9 +7,15 @@ fs.readFile('build/service-worker.js', 'utf8', (err, data) => {
     return console.error(err)
   }
 
+  const snippet = `
+addEventListener('message', messageEvent => {
+  if (messageEvent.data === 'skipWaiting') return skipWaiting();
+});
+  `
+
   const result = data.replace(
     'workbox.clientsClaim();',
-    'workbox.skipWaiting();\nworkbox.clientsClaim();',
+    `workbox.clientsClaim();\n${snippet}`,
   )
 
   fs.writeFile('build/service-worker.js', result, 'utf8', readError => {

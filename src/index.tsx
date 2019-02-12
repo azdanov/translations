@@ -17,4 +17,7 @@ serviceWorker.register({
   onSuccess: () => {
     ReactDOM.render(<ServiceWorkerMessage />, worker)
   },
+  onUpdate: register => {
+    ReactDOM.render(<ServiceWorkerMessage update register={register} />, worker)
+  },
 })

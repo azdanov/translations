@@ -17,7 +17,9 @@
       "results": "Results",
       "search": "Search for a word",
       "sw-install": "App is ready for offline use.",
+      "sw-update": "A new update is available for this app. Please save any data before continuing.",
       "translations": "Translations",
+      "update": "Update",
       "word of the day": "Word of the day"
     }
   },
@@ -39,7 +41,9 @@
       "results": "Tulemused",
       "search": "Otsi sõna",
       "sw-install": "Äpp on võrguühenduseta kasutamiseks valmis.",
+      "sw-update": "Selle äppi jaoks on saadaval uus värskendus. Enne jätkamist salvestage andmed.",
       "translations": "Tõlked",
+      "update": "Värskenda",
       "word of the day": "Päeva sõna"
     }
   }
