@@ -24,7 +24,7 @@
     "start:lambda:test": "NODE_ENV=test npx netlify-lambda --config webpack.functions.js serve src/lambda/controllers",
     "start:test": "concurrently npm:start:app npm:start:lambda:test",
     "sw": "node modifyServiceWorker.js",
-    "test": "concurrently -k -s=first npm:start:env npm:test:run",
+    "test": "concurrently -r -k -s=first npm:start:env npm:test:run",
     "test:run": "npm-run-all wait --parallel cypress:run unit:no-watch",
     "unit": "react-scripts test",
     "unit:no-watch": "react-scripts test --no-watch",
