@@ -14,6 +14,8 @@ export const Main: React.FC = (): JSX.Element => {
 
   useFetchTranslation(search, setResults, setLoading)
 
+  const showResults = results.length > 0 || loading
+
   return (
     <Segment basic>
       <Hero />
@@ -21,11 +23,13 @@ export const Main: React.FC = (): JSX.Element => {
         <Grid.Column mobile={14} tablet={9} computer={8}>
           <Search loading={loading} search={search} setSearch={setSearch} />
         </Grid.Column>
-        <Grid.Row>
-          <Grid.Column mobile={14} tablet={9} computer={8}>
-            <Results loading={loading} results={results} />
-          </Grid.Column>
-        </Grid.Row>
+        {showResults && (
+          <Grid.Row>
+            <Grid.Column mobile={14} tablet={9} computer={8}>
+              <Results loading={loading} results={results} />
+            </Grid.Column>
+          </Grid.Row>
+        )}
         <Grid.Row>
           <Grid.Column mobile={14} tablet={9} computer={8}>
             <WordOfTheDay show={results.length === 0} />
