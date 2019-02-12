@@ -8,6 +8,8 @@
       "loading": "Loading",
       "results": "Results",
       "search": "Search for a word",
+      "sw-install": "App is ready for offline use.",
+      "sw-update": "App update is available! Please close all tabs where this app is open to get the new version.",
       "translations": "Translations",
       "word of the day": "Word of the day"
     }
@@ -21,6 +23,8 @@
       "loading": "Laadimine",
       "results": "Tulemused",
       "search": "Otsi sõna",
+      "sw-install": "Äpp on võrguühenduseta kasutamiseks valmis.",
+      "sw-update": "Äpp värskendus on saadaval! Uue versiooni saamiseks sulgege kõik vahekaardid, kus see äpp on avatud.",
       "translations": "Tõlked",
       "word of the day": "Päeva sõna"
     }
