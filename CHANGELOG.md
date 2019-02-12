@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/azdanov/translations/compare/v1.2.0...v1.2.1) (2019-02-12)
+
+
+### Bug Fixes
+
+* **Search:** fix extra padding by removing container ([3e354e1](https://github.com/azdanov/translations/commit/3e354e1))
+
 # [1.2.0](https://github.com/azdanov/translations/compare/v1.1.0...v1.2.0) (2019-02-12)
 
 
