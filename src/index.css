@@ -9,6 +9,7 @@ body,
 #root {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .content {
@@ -17,4 +18,18 @@ body,
 
 .footer {
   flex-shrink: 0;
+}
+
+#portal {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+}
+
+#portal > *:first-child {
+  margin: 0 auto;
+}
+
+.ui.button.toast {
+  cursor: initial;
 }

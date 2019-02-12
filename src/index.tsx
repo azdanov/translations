@@ -5,8 +5,19 @@ import 'semantic-ui-css/semantic.min.css'
 import App from './components/App'
 import './i18n'
 import './index.css'
+import { ServiceWorkerMessage } from './components/ServiceWorkerMessage'
 import * as serviceWorker from './utils/serviceWorker'
 
-ReactDOM.render(<App />, document.querySelector('#root'))
+const root = document.querySelector('#root')
+const portal = document.querySelector('#portal') as Element
 
-serviceWorker.unregister()
+ReactDOM.render(<App />, root)
+
+serviceWorker.register({
+  onSuccess: () => {
+    ReactDOM.render(<ServiceWorkerMessage />, portal)
+  },
+  onUpdate: () => {
+    ReactDOM.render(<ServiceWorkerMessage update />, portal)
+  },
+})
