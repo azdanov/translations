@@ -1,9 +1,9 @@
 describe('translation', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit('/')
     // eslint-disable-next-line cypress/no-unnecessary-waiting
-    cy.wait(500) // Issues with i18next, doesn't change fast enough
-    cy.contains('Eesti').click({ force: true })
+    cy.wait(300) // Issues with i18next, doesn't change fast enough
+    cy.contains('Eesti').click()
   })
 
   it('should have home', () => {
@@ -27,5 +27,13 @@ describe('translation', () => {
     cy.contains('Laadimine …').should('exist')
     cy.contains('Tulemused: 61').should('exist')
     cy.contains('auto').should('exist')
+  })
+
+  it('should show word of the day', () => {
+    cy.contains('Päeva sõna').should('exist')
+  })
+
+  it('should show definition', () => {
+    cy.contains('Määratlus:').should('exist')
   })
 })
