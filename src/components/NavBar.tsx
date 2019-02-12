@@ -1,7 +1,7 @@
 import React, { SyntheticEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
-import { Menu, Dropdown } from 'semantic-ui-react'
+import { Dropdown, Menu } from 'semantic-ui-react'
 import { EN, ET } from '../i18n'
 import { Globe } from './Globe'
 

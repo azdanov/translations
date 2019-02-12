@@ -3,9 +3,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import 'semantic-ui-css/semantic.min.css'
 import App from './components/App'
+import { ServiceWorkerMessage } from './components/ServiceWorkerMessage'
 import './i18n'
 import './index.css'
-import { ServiceWorkerMessage } from './components/ServiceWorkerMessage'
 import * as serviceWorker from './utils/serviceWorker'
 
 const root = document.querySelector('#root')

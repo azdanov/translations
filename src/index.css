@@ -21,8 +21,8 @@ body,
 }
 
 #portal {
-  position: absolute;
   bottom: 1rem;
+  position: absolute;
   width: 100%;
 }
 
