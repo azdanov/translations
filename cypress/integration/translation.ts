@@ -7,7 +7,7 @@ describe('translation', () => {
   })
 
   it('should have elements translated', () => {
-    cy.title().should('eq', 'Tõlked')
+    cy.title().should('eq', 'Avaleht | Tõlked')
     cy.contains('Avaleht').should('exist')
     cy.contains('Inglise - Eesti').should('exist')
     cy.contains('Sõnastik').should('exist')

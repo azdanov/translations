@@ -8,6 +8,6 @@ describe('navigation', () => {
     cy.location().should(loc => {
       expect(loc.pathname).to.eq('/')
     })
-    cy.title().should('eq', 'Translations')
+    cy.title().should('eq', 'Home | Translations')
   })
 })
