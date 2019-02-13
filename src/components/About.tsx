@@ -22,9 +22,14 @@ export const About: React.FC = (): JSX.Element => {
         </Grid.Column>
         <Grid.Row>
           <Grid.Column mobile={14} tablet={9} computer={8}>
-            <p>{t('about description')}</p>
             <p>
-              {t('for developer')}:{' '}
+              <strong>{t('description')}:</strong> {t('about description')}
+            </p>
+            <p>
+              <strong>{t('disclaimer')}:</strong> {t('about disclaimer')}
+            </p>
+            <p>
+              <strong>{t('for developer')}:</strong>{' '}
               <a
                 href="https://github.com/azdanov/translations"
                 rel="noopener noreferrer"

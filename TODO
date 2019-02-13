@@ -11,10 +11,11 @@ App:
     ☐ Search history modal (with clickthrough)
   UX:
     ☐ Click on a result to to do a search if different from current
-    ☐ Add clear button
-    ☐ Message when no results found
-    ☐ Regex validation for search form
-    ☐ Investigate loading flash from Home to About
+    ☐ Add clear button @high 
+    ☐ Message when no results found @critical 
+    ☐ Regex validation for search form @critical 
+    ☐ Investigate loading flash from Home to About @low 
+    ☐ Hide word of the day when loading || results @today 
 
 Archive:
   ✔ Use React.lazy and React.Suspense for heavy components @done(19-02-12 18:55) @project(App.Performance)
