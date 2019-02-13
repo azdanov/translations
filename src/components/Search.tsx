@@ -1,4 +1,10 @@
-import React, { ChangeEvent, FormEvent, SyntheticEvent, useState } from 'react'
+import React, {
+  ChangeEvent,
+  FormEvent,
+  SyntheticEvent,
+  useState,
+  MutableRefObject,
+} from 'react'
 import { useTranslation } from 'react-i18next'
 import { Input } from 'semantic-ui-react'
 
@@ -6,12 +12,14 @@ interface Props {
   loading: boolean
   search: string
   setSearch: (search: string) => void
+  searchEl: MutableRefObject<Input | null>
 }
 
 export const Search: React.FC<Props> = ({
   loading,
   search,
   setSearch,
+  searchEl,
 }): JSX.Element => {
   const [term, setTerm] = useState(search)
   const [t] = useTranslation()
@@ -39,7 +47,9 @@ export const Search: React.FC<Props> = ({
   return (
     <form onSubmit={handleSubmit}>
       <Input
+        id="search"
         fluid
+        ref={searchEl}
         loading={loading}
         size="large"
         value={term}

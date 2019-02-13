@@ -10,12 +10,13 @@ App:
     ☐ English word meaning @meaning
     ☐ Search history modal (with clickthrough)
   UX:
-    ☐ Click on a result to to do a search if different from current
-    ☐ Add clear button @high 
+    ☐ Click on a result to to do a search if different from current @think
+    ✔ Add clear button @done(19-02-13 23:01)
     ☐ Message when no results found @critical 
     ☐ Regex validation for search form @critical 
   Tests:
-    ☐ Test for new About
+    ☐ Test for About
+    ☐ Test for Search (cypress)
     ☐ Test service worker update
 Archive:
   ✔ Make dropdown better for a11y @done(19-02-13 20:56) @project(App.UX)

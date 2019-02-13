@@ -1,14 +1,17 @@
 import { isEmpty } from 'lodash'
-import React from 'react'
+import React, { MutableRefObject } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Container, Header, List } from 'semantic-ui-react'
+import { Header, List, Label, Segment, Icon, Input } from 'semantic-ui-react'
 import Article from '../types/Article'
 import { ResultsPlaceholder } from './ResultsPlaceholder'
 
-export const Results: React.FC<{ results?: Article[]; loading: boolean }> = ({
-  results,
-  loading,
-}): JSX.Element | null => {
+export const Results: React.FC<{
+  results?: Article[]
+  loading: boolean
+  setSearch: (term: string) => void
+  setResults: (results: Article[]) => void
+  searchEl: MutableRefObject<Input | null>
+}> = ({ results, loading, setSearch, setResults, searchEl }): JSX.Element | null => {
   const [t] = useTranslation()
 
   if (loading) {
@@ -20,24 +23,43 @@ export const Results: React.FC<{ results?: Article[]; loading: boolean }> = ({
   }
 
   return (
-    <Container text fluid>
-      <Header as="h2" size="small">
+    <>
+      <Header as="h2" size="medium" attached="top">
         {t('results')}: {results.length}
       </Header>
-      <List relaxed>
-        {results.map(result => (
-          <List.Item key={result.en}>
-            <List.Header>{result.en}</List.Header>
-            {result.et.map((et, index) => (
-              <span key={et}>
-                {addNextSeparator(index)}
-                {et}
-              </span>
-            ))}
-          </List.Item>
-        ))}
-      </List>
-    </Container>
+      <Segment attached="bottom">
+        <Label
+          floating
+          as="a"
+          href="#search"
+          tabIndex="0"
+          className="right aligned"
+          onClick={() => {
+            setResults([])
+            setSearch('')
+            if (searchEl && searchEl.current) {
+              searchEl.current.focus()
+            }
+          }}
+        >
+          {t('close results')}
+          <Icon name="delete" />
+        </Label>
+        <List relaxed>
+          {results.map(result => (
+            <List.Item key={result.en}>
+              <List.Header>{result.en}</List.Header>
+              {result.et.map((et, index) => (
+                <span key={et}>
+                  {addNextSeparator(index)}
+                  {et}
+                </span>
+              ))}
+            </List.Item>
+          ))}
+        </List>
+      </Segment>
+    </>
   )
 }
 
