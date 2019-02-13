@@ -202,7 +202,7 @@
     "@types/http-errors": "1.6.1",
     "@types/http-proxy-middleware": "0.19.2",
     "@types/i18next": "12.1.0",
-    "@types/i18next-browser-languagedetector": "2.0.1",
+    "@types/i18next-browser-languagedetector": "2.0.2",
     "@types/jest": "24.0.3",
     "@types/lodash": "4.14.120",
     "@types/lscache": "1.0.29",
