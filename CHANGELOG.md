@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/azdanov/translations/compare/v1.11.0...v1.12.0) (2019-02-13)
+
+
+### Features
+
+* **NavBar:** use Reach Menu for better dropdown ([0e080d3](https://github.com/azdanov/translations/commit/0e080d3))
+
 # [1.11.0](https://github.com/azdanov/translations/compare/v1.10.0...v1.11.0) (2019-02-13)
 
 
