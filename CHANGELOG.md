@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/azdanov/translations/compare/v1.13.1...v1.13.2) (2019-02-13)
+
+
+### Bug Fixes
+
+* **Results:** fix overflow on small screen ([48a578a](https://github.com/azdanov/translations/commit/48a578a))
+
 ## [1.13.1](https://github.com/azdanov/translations/compare/v1.13.0...v1.13.1) (2019-02-13)
 
 
