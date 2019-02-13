@@ -11,14 +11,14 @@ App:
     ☐ Search history modal (with clickthrough)
   UX:
     ☐ Click on a result to to do a search if different from current @think
-    ✔ Add clear button @done(19-02-13 23:01)
-    ☐ Message when no results found @critical 
     ☐ Regex validation for search form @critical 
   Tests:
     ☐ Test for About
     ☐ Test for Search (cypress)
     ☐ Test service worker update
 Archive:
+  ✔ Add clear button @done(19-02-13 23:01) @project(App.UX)
+  ✔ Message when no results found @done(19-02-14 01:10) @project(App.UX)
   ✔ Make dropdown better for a11y @done(19-02-13 20:56) @project(App.UX)
   ✔ Hide word of the day when loading || results @done(19-02-13 20:55) @project(App.UX)
   ✔ Investigate loading flash from Home to About @done(19-02-13 15:31) @project(App.UX)

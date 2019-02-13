@@ -16,12 +16,12 @@ export const useFetchTranslation = (
     ;(async () => {
       if (isEmpty(word)) return
 
-      // const cached: Article[] | null = localCache.get(word)
-      //
-      // if (cached) {
-      //   setResults(cached)
-      //   return
-      // }
+      const cached: Article[] | null = localCache.get(word)
+
+      if (cached) {
+        setResults(cached)
+        return
+      }
 
       setError('')
 
