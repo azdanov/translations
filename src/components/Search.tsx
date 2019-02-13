@@ -43,6 +43,7 @@ export const Search: React.FC<Props> = ({
         loading={loading}
         size="large"
         value={term}
+        aria-label={t('search')}
         icon={{
           name: 'search',
           circular: true,
