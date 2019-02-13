@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/azdanov/translations/compare/v1.8.0...v1.8.1) (2019-02-13)
+
+
+### Bug Fixes
+
+* **WordOfTheDay:** add delay to prevent flicker ([558750a](https://github.com/azdanov/translations/commit/558750a))
+
 # [1.8.0](https://github.com/azdanov/translations/compare/v1.7.0...v1.8.0) (2019-02-13)
 
 
