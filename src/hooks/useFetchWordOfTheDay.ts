@@ -17,7 +17,9 @@ export const useFetchWordOfTheDay = (
     const cached: WordOfTheDayResult | null = localCache.get(key)
 
     if (cached) {
-      setResult(cached)
+      setTimeout(function stopPlaceholderFlicker() {
+        setResult(cached)
+      }, 300)
       return
     }
 
@@ -38,3 +40,5 @@ export const useFetchWordOfTheDay = (
       })
   }, [setResult, setLoading])
 }
+
+export default useFetchWordOfTheDay

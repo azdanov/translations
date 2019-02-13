@@ -57,8 +57,8 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
         ) : (
           <Placeholder>
             <Placeholder.Header>
-              <Placeholder.Line />
-              <Placeholder.Line />
+              <Placeholder.Line length="short" />
+              <Placeholder.Line length="very long" />
             </Placeholder.Header>
             <Placeholder.Paragraph>
               <Placeholder.Line />
