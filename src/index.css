@@ -33,3 +33,31 @@ body,
 .ui.button.toast {
   cursor: initial;
 }
+
+.ui.dropdown.item:focus {
+  background: #0000000d;
+  color: #000000f2;
+}
+
+[data-reach-menu-list] {
+  margin-top: 0.35714286em;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #22242626;
+  color: #000000de;
+  border-radius: 0.28571429rem;
+}
+
+[data-reach-menu-item] {
+  padding: 0.67857143em 1em;
+  font-size: 1rem;
+}
+
+[data-reach-menu-item][data-selected] {
+  background: #0000000d;
+  color: #000000f2;
+}
+
+[data-reach-menu-item][data-current='true'] {
+  font-weight: bold;
+}

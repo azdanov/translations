@@ -1,7 +1,8 @@
-import React, { SyntheticEvent, useState } from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
-import { Dropdown, DropdownProps, Menu } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
+import { Menu as ReachMenu, MenuList, MenuButton, MenuItem } from '@reach/menu-button'
 import { EN, ET } from '../i18n'
 import { Globe } from './Globe'
 
@@ -9,16 +10,10 @@ export const NavBar: React.FC = (): JSX.Element => {
   const [t, i18n] = useTranslation()
   const [activeLanguage, setActiveLanguage] = useState(i18n.language)
 
-  function handleItemClick(
-    event: SyntheticEvent<HTMLElement, Event>,
-    data: DropdownProps,
-  ): void {
-    event.preventDefault()
-    const language = String(data.value)
+  function handleSelect(language: string): void {
+    if (language === i18n.language) return
 
-    if (language) {
-      i18n.changeLanguage(language, () => setActiveLanguage(language))
-    }
+    i18n.changeLanguage(language, () => setActiveLanguage(language))
   }
 
   return (
@@ -32,14 +27,26 @@ export const NavBar: React.FC = (): JSX.Element => {
       </Menu>
 
       <Menu.Menu position="right">
-        <Dropdown
-          item
-          value={activeLanguage}
-          onChange={handleItemClick}
-          text={t('language')}
-          options={[{ text: 'English', value: EN }, { text: 'Eesti', value: ET }]}
-          style={{ marginBottom: '0.3rem' }}
-        />
+        <ReachMenu>
+          <MenuButton className="ui dropdown item" style={{ marginBottom: '0.1rem' }}>
+            <div className="text">{t('language')}</div>{' '}
+            <span aria-hidden className="dropdown icon" />
+          </MenuButton>
+          <MenuList>
+            <MenuItem
+              data-current={activeLanguage === EN}
+              onSelect={() => handleSelect(EN)}
+            >
+              <span className="text">English</span>
+            </MenuItem>
+            <MenuItem
+              data-current={activeLanguage === ET}
+              onSelect={() => handleSelect(ET)}
+            >
+              <span className="text">Eesti</span>
+            </MenuItem>
+          </MenuList>
+        </ReachMenu>
       </Menu.Menu>
     </Menu>
   )
