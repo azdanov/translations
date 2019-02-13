@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/azdanov/translations/compare/v1.13.2...v1.14.0) (2019-02-13)
+
+
+### Features
+
+* **About:** make h2 larger ([97d841b](https://github.com/azdanov/translations/commit/97d841b))
+
 ## [1.13.2](https://github.com/azdanov/translations/compare/v1.13.1...v1.13.2) (2019-02-13)
 
 
