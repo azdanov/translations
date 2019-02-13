@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/azdanov/translations/compare/v1.13.0...v1.13.1) (2019-02-13)
+
+
+### Bug Fixes
+
+* **useFetchTranslation:** uncomment code ([50bbbd8](https://github.com/azdanov/translations/commit/50bbbd8))
+
 # [1.13.0](https://github.com/azdanov/translations/compare/v1.12.1...v1.13.0) (2019-02-13)
 
 
