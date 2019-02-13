@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/azdanov/translations/compare/v1.7.0...v1.8.0) (2019-02-13)
+
+
+### Features
+
+* **About:** add disclaimer, and list headers with translations ([add8b4b](https://github.com/azdanov/translations/commit/add8b4b))
+
 # [1.7.0](https://github.com/azdanov/translations/compare/v1.6.1...v1.7.0) (2019-02-13)
 
 
