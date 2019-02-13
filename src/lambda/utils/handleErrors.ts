@@ -19,3 +19,5 @@ export const handleErrors: middy.Middleware<
     return next(handler.error)
   },
 })
+
+export default handleErrors

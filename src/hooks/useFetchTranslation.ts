@@ -2,7 +2,7 @@ import ky from 'ky'
 import { isEmpty, noop } from 'lodash'
 import localCache from 'lscache'
 import { useEffect } from 'react'
-import { Article } from '../types/Article'
+import Article from '../types/Article'
 
 export const useFetchTranslation = (
   word: string,
@@ -48,3 +48,5 @@ export const useFetchTranslation = (
     return (): void => controller.abort()
   }, [word, setResults, setLoading])
 }
+
+export default useFetchTranslation

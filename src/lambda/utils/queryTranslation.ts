@@ -3,7 +3,7 @@ import createHttpError from 'http-errors'
 import { isEmpty, reject } from 'lodash'
 import matchSorter from 'match-sorter'
 import scrapeIt from 'scrape-it'
-import { Article } from '../../types/Article'
+import Article from '../../types/Article'
 
 interface Translation {
   articles: Articles
