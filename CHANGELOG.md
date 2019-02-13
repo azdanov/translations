@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/azdanov/translations/compare/v1.9.0...v1.10.0) (2019-02-13)
+
+
+### Bug Fixes
+
+* **Search:** add aria-label to input ([10bf141](https://github.com/azdanov/translations/commit/10bf141))
+
+
+### Features
+
+* **index:** add meta description ([fd192ac](https://github.com/azdanov/translations/commit/fd192ac))
+
 # [1.9.0](https://github.com/azdanov/translations/compare/v1.8.1...v1.9.0) (2019-02-13)
 
 
