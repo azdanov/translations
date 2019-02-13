@@ -1,11 +1,11 @@
+import '@reach/menu-button/styles.css'
 import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
+import 'fomantic-ui-css/semantic.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'fomantic-ui-css/semantic.css'
 import { App } from './components/App'
 import { ServiceWorkerMessage } from './components/ServiceWorkerMessage'
 import './i18n'
-import '@reach/menu-button/styles.css'
 import './index.css'
 import * as serviceWorker from './utils/serviceWorker'
 

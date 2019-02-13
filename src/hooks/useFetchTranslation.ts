@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 import ky from 'ky'
-import { isEmpty, noop } from 'lodash'
+import { isEmpty } from 'lodash'
 import localCache from 'lscache'
 import { useEffect } from 'react'
 import Article from '../types/Article'
@@ -8,44 +9,52 @@ export const useFetchTranslation = (
   word: string,
   setResults: (results: Article[]) => void,
   setLoading: (state: boolean) => void,
+  setError: (error: string) => void,
 ): void => {
   useEffect(() => {
-    if (isEmpty(word)) return noop
-
-    const cached: Article[] | null = localCache.get(word)
-
-    if (cached) {
-      setResults(cached)
-      return noop
-    }
-
     const controller = new AbortController()
+    ;(async () => {
+      if (isEmpty(word)) return
 
-    ky(word, {
-      method: 'get',
-      signal: controller.signal,
-      hooks: { beforeRequest: [() => setLoading(true)] },
-      prefixUrl: process.env.REACT_APP_TRANSLATE_API,
-    })
-      .then(res => res.json())
-      .then((translation: Article[]) => {
-        localCache.set(word, translation, 60 * 24 * 7)
-        setResults(translation)
+      // const cached: Article[] | null = localCache.get(word)
+      //
+      // if (cached) {
+      //   setResults(cached)
+      //   return
+      // }
+
+      setError('')
+
+      try {
+        const response = await ky(word, {
+          method: 'get',
+          signal: controller.signal,
+          hooks: { beforeRequest: [() => setLoading(true)] },
+          prefixUrl: process.env.REACT_APP_TRANSLATE_API,
+        })
+
+        // @see https://github.com/sindresorhus/ky/issues/96
+        if (!response.ok) {
+          const message = await response.text()
+          throw new Error(message)
+        }
+
+        const body = await response.json()
+
+        localCache.set(word, body, 60 * 24 * 7)
+        setResults(body)
         setLoading(false)
-      })
-      .catch(error => {
+      } catch (error) {
         if (error instanceof DOMException) {
-          // eslint-disable-next-line no-console
           console.info('Request cancelled by the user.')
-          setResults([])
         } else {
-          // eslint-disable-next-line no-console
-          console.error('Unexpected:', error)
+          setError(error.message)
           setLoading(false)
         }
-      })
-
-    return (): void => controller.abort()
+        setResults([])
+      }
+    })()
+    return () => controller.abort()
   }, [word, setResults, setLoading])
 }
 

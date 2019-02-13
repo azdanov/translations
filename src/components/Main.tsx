@@ -1,8 +1,9 @@
-import React, { useState, useRef } from 'react'
-import { Grid, Segment, Input } from 'semantic-ui-react'
+import React, { useRef, useState } from 'react'
+import { Grid, Input, Segment } from 'semantic-ui-react'
 import { useFetchTranslation } from '../hooks/useFetchTranslation'
 import Article from '../types/Article'
 import { Hero } from './Hero'
+import { Message } from './Message'
 import { Results } from './Results'
 import { Search } from './Search'
 import { WordOfTheDay } from './WordOfTheDay'
@@ -11,11 +12,12 @@ export const Main: React.FC = (): JSX.Element => {
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState([] as Article[])
   const [search, setSearch] = useState('')
+  const [error, setError] = useState('')
   const searchEl = useRef<Input>(null)
 
-  useFetchTranslation(search, setResults, setLoading)
+  useFetchTranslation(search, setResults, setLoading, setError)
 
-  const showResults = results.length > 0 || loading
+  const showResults = (results.length > 0 || loading) && !error
 
   return (
     <Segment basic>
@@ -25,19 +27,31 @@ export const Main: React.FC = (): JSX.Element => {
           <Search
             loading={loading}
             search={search}
-            setSearch={setSearch}
             searchEl={searchEl}
+            setSearch={setSearch}
           />
         </Grid.Column>
         {showResults && (
           <Grid.Row>
             <Grid.Column mobile={14} tablet={9} computer={8}>
               <Results
-                searchEl={searchEl}
                 loading={loading}
                 results={results}
-                setSearch={setSearch}
+                searchEl={searchEl}
                 setResults={setResults}
+                setSearch={setSearch}
+              />
+            </Grid.Column>
+          </Grid.Row>
+        )}
+        {Boolean(error) && (
+          <Grid.Row>
+            <Grid.Column mobile={14} tablet={9} computer={8}>
+              <Message
+                error={error}
+                searchEl={searchEl}
+                setError={setError}
+                setSearch={setSearch}
               />
             </Grid.Column>
           </Grid.Row>

@@ -40,17 +40,17 @@ body,
 }
 
 [data-reach-menu-list] {
-  margin-top: 0.35714286em;
-  padding: 0;
   background: #fff;
   border: 1px solid #22242626;
-  color: #000000de;
   border-radius: 0.28571429rem;
+  color: #000000de;
+  margin-top: 0.35714286em;
+  padding: 0;
 }
 
 [data-reach-menu-item] {
-  padding: 0.67857143em 1em;
   font-size: 1rem;
+  padding: 0.67857143em 1em;
 }
 
 [data-reach-menu-item][data-selected] {

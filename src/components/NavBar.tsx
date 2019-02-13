@@ -1,8 +1,8 @@
+import { Menu as ReachMenu, MenuButton, MenuItem, MenuList } from '@reach/menu-button'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { Menu } from 'semantic-ui-react'
-import { Menu as ReachMenu, MenuList, MenuButton, MenuItem } from '@reach/menu-button'
 import { EN, ET } from '../i18n'
 import { Globe } from './Globe'
 

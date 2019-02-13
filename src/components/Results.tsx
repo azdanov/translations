@@ -1,7 +1,7 @@
 import { isEmpty } from 'lodash'
 import React, { MutableRefObject } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Header, List, Label, Segment, Icon, Input } from 'semantic-ui-react'
+import { Header, Icon, Input, Label, List, Segment } from 'semantic-ui-react'
 import Article from '../types/Article'
 import { ResultsPlaceholder } from './ResultsPlaceholder'
 
@@ -31,10 +31,11 @@ export const Results: React.FC<{
         <Label
           floating
           as="a"
-          href="#search"
+          href="#"
           tabIndex="0"
           className="right aligned"
-          onClick={() => {
+          onClick={event => {
+            event.preventDefault()
             setResults([])
             setSearch('')
             if (searchEl && searchEl.current) {
@@ -46,17 +47,18 @@ export const Results: React.FC<{
           <Icon name="delete" />
         </Label>
         <List relaxed>
-          {results.map(result => (
-            <List.Item key={result.en}>
-              <List.Header>{result.en}</List.Header>
-              {result.et.map((et, index) => (
-                <span key={et}>
-                  {addNextSeparator(index)}
-                  {et}
-                </span>
-              ))}
-            </List.Item>
-          ))}
+          {results.length &&
+            results.map(result => (
+              <List.Item key={result.en}>
+                <List.Header>{result.en}</List.Header>
+                {result.et.map((et, index) => (
+                  <span key={et}>
+                    {addNextSeparator(index)}
+                    {et}
+                  </span>
+                ))}
+              </List.Item>
+            ))}
         </List>
       </Segment>
     </>

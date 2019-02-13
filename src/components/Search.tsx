@@ -1,9 +1,9 @@
 import React, {
   ChangeEvent,
   FormEvent,
+  MutableRefObject,
   SyntheticEvent,
   useState,
-  MutableRefObject,
 } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Input } from 'semantic-ui-react'
@@ -45,9 +45,8 @@ export const Search: React.FC<Props> = ({
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} autoComplete="off">
       <Input
-        id="search"
         fluid
         ref={searchEl}
         loading={loading}
