@@ -32,7 +32,7 @@ export const Main: React.FC = (): JSX.Element => {
         )}
         <Grid.Row>
           <Grid.Column mobile={14} tablet={9} computer={8}>
-            <WordOfTheDay show={results.length === 0} />
+            <WordOfTheDay show={!loading && results.length === 0} />
           </Grid.Column>
         </Grid.Row>
       </Grid>
