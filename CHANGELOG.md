@@ -1,3 +1,16 @@
+# [1.9.0](https://github.com/azdanov/translations/compare/v1.8.1...v1.9.0) (2019-02-13)
+
+
+### Bug Fixes
+
+* **deps:** pin dependency fomantic-ui-css to 2.7.2 ([0458814](https://github.com/azdanov/translations/commit/0458814))
+* **deps:** update dependency i18next to v15.0.3 ([5361384](https://github.com/azdanov/translations/commit/5361384))
+
+
+### Features
+
+* **useFetchWordOfTheDay:** replace timeout with useLayoutEffect ([be4fba2](https://github.com/azdanov/translations/commit/be4fba2))
+
 ## [1.8.1](https://github.com/azdanov/translations/compare/v1.8.0...v1.8.1) (2019-02-13)
 
 
