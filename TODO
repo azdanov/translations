@@ -14,10 +14,12 @@ App:
     ☐ Add clear button @high 
     ☐ Message when no results found @critical 
     ☐ Regex validation for search form @critical 
-    ☐ Investigate loading flash from Home to About @low 
     ☐ Hide word of the day when loading || results @today 
-
+  Tests:
+    ☐ Test for new About
+    ☐ Test service worker update
 Archive:
+  ✔ Investigate loading flash from Home to About @done(19-02-13 15:31) @project(App.UX)
   ✔ Use React.lazy and React.Suspense for heavy components @done(19-02-12 18:55) @project(App.Performance)
   ✔ About page with description, credits (Add Reach Router) @done(19-02-12 18:37) @project(App.Trivia)
   ✔ Copyright notices for dict and words (As Icons with text?) @done(19-02-12 18:37) @project(App.Trivia)

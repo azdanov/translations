@@ -1,6 +1,6 @@
 import ky from 'ky'
 import localCache from 'lscache'
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { WordOfTheDayResult } from '../components/WordOfTheDay'
 
 const key = 'wordOfTheDay'
@@ -9,7 +9,7 @@ export const useFetchWordOfTheDay = (
   setResult: (results: WordOfTheDayResult) => void,
   setLoading: (state: boolean) => void,
 ): void => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const api = process.env.REACT_APP_WORDNIK_DAY_API
 
     if (!api) return
@@ -17,9 +17,7 @@ export const useFetchWordOfTheDay = (
     const cached: WordOfTheDayResult | null = localCache.get(key)
 
     if (cached) {
-      setTimeout(function stopPlaceholderFlicker() {
-        setResult(cached)
-      }, 300)
+      setResult(cached)
       return
     }
 
