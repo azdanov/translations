@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/azdanov/translations/compare/v1.10.0...v1.11.0) (2019-02-13)
+
+
+### Features
+
+* **index:** add link preconnect to fonts.gstatic.com ([356a184](https://github.com/azdanov/translations/commit/356a184))
+
 # [1.10.0](https://github.com/azdanov/translations/compare/v1.9.0...v1.10.0) (2019-02-13)
 
 
