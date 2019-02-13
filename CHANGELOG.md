@@ -1,3 +1,11 @@
+# [1.13.0](https://github.com/azdanov/translations/compare/v1.12.1...v1.13.0) (2019-02-13)
+
+
+### Features
+
+* **Main:** add clear results button with focusing back to search ([75df7dc](https://github.com/azdanov/translations/commit/75df7dc))
+* **Main:** add close icons and Message to show errors ([255bfbd](https://github.com/azdanov/translations/commit/255bfbd))
+
 ## [1.12.1](https://github.com/azdanov/translations/compare/v1.12.0...v1.12.1) (2019-02-13)
 
 
