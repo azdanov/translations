@@ -168,7 +168,7 @@
     "build/**/*"
   ],
   "dependencies": {
-    "@reach/menu-button": "^0.1.8",
+    "@reach/menu-button": "0.1.8",
     "abortcontroller-polyfill": "1.2.3",
     "aws-lambda": "0.1.2",
     "fomantic-ui-css": "2.7.2",
