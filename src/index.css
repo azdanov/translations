@@ -20,13 +20,13 @@ body,
   flex-shrink: 0;
 }
 
-#portal {
+#worker {
   bottom: 1rem;
   position: absolute;
   width: 100%;
 }
 
-#portal > *:first-child {
+#worker > *:first-child {
   margin: 0 auto;
 }
 
