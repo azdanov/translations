@@ -4,11 +4,7 @@ import { isEmpty } from 'lodash'
 import middy from 'middy'
 import { handleErrors } from '../utils/handleErrors'
 import { queryTranslation } from '../utils/queryTranslation'
-
-export interface Response {
-  statusCode: number
-  body: string
-}
+import Response from '../contracts/ResponseContract'
 
 export const fetchTranslation: Handler = async (
   event: APIGatewayEvent,

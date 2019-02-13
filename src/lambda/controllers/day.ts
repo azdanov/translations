@@ -3,11 +3,7 @@ import got from 'got'
 import createError from 'http-errors'
 import middy from 'middy'
 import { handleErrors } from '../utils/handleErrors'
-
-export interface Response {
-  statusCode: number
-  body: string
-}
+import Response from '../contracts/ResponseContract'
 
 export const fetchWordOfTheDay: Handler = async (): Promise<Response> => {
   if (!process.env.LAMBDA_WORDNIK_DAY_API)

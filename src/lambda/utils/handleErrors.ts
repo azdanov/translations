@@ -1,7 +1,7 @@
 import { Handler } from 'aws-lambda'
 import { HttpError } from 'http-errors'
 import middy from 'middy'
-import { Response } from '../controllers/translate'
+import Response from '../contracts/ResponseContract'
 
 export const handleErrors: middy.Middleware<
   null,
