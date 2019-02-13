@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/azdanov/translations/compare/v1.6.0...v1.6.1) (2019-02-13)
+
+
+### Bug Fixes
+
+* **index.css:** #portal was used insteaad of #worker ([ce434f2](https://github.com/azdanov/translations/commit/ce434f2))
+
 # [1.6.0](https://github.com/azdanov/translations/compare/v1.5.0...v1.6.0) (2019-02-12)
 
 
