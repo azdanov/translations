@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/azdanov/translations/compare/v1.6.1...v1.7.0) (2019-02-13)
+
+
+### Features
+
+* **project:** replace semantic-ui with fomantic-ui, adjust NavBar ([5061a6d](https://github.com/azdanov/translations/commit/5061a6d))
+
 ## [1.6.1](https://github.com/azdanov/translations/compare/v1.6.0...v1.6.1) (2019-02-13)
 
 
