@@ -42,7 +42,7 @@ export const About: React.FC = (): JSX.Element => {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column mobile={14} tablet={9} computer={8}>
-            <Header as="h2" size="medium" textAlign="center">
+            <Header as="h2" size="large" textAlign="center">
               <Header.Content>{t('attributions')}</Header.Content>
             </Header>
             <Segment basic textAlign="center">
