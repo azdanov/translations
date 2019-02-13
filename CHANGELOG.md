@@ -1,3 +1,11 @@
+## [1.12.1](https://github.com/azdanov/translations/compare/v1.12.0...v1.12.1) (2019-02-13)
+
+
+### Bug Fixes
+
+* **deps:** pin dependency [@reach](https://github.com/reach)/menu-button to 0.1.8 ([55526cf](https://github.com/azdanov/translations/commit/55526cf))
+* **Main:** hide WordOfTheDay immediately on search ([733e08b](https://github.com/azdanov/translations/commit/733e08b))
+
 # [1.12.0](https://github.com/azdanov/translations/compare/v1.11.0...v1.12.0) (2019-02-13)
 
 
