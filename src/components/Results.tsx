@@ -49,14 +49,16 @@ export const Results: React.FC<{
         <List relaxed>
           {results.length &&
             results.map(result => (
-              <List.Item key={result.en}>
+              <List.Item lang="en" key={result.en}>
                 <List.Header>{result.en}</List.Header>
-                {result.et.map((et, index) => (
-                  <span key={et}>
-                    {addNextSeparator(index)}
-                    {et}
-                  </span>
-                ))}
+                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                  {result.et.map((et, index, array) => (
+                    <span key={et}>
+                      <span lang="et">{et}</span>
+                      {addSeparator(index < array.length - 1)}
+                    </span>
+                  ))}
+                </div>
               </List.Item>
             ))}
         </List>
@@ -65,12 +67,11 @@ export const Results: React.FC<{
   )
 }
 
-const addNextSeparator = (index: number): JSX.Element | null => {
-  return index ? (
+const addSeparator = (add: boolean): JSX.Element | null =>
+  add ? (
     <span aria-hidden style={{ userSelect: 'none', margin: '0 0.35em' }}>
       |
     </span>
   ) : null
-}
 
 export default Results
