@@ -22,12 +22,15 @@ export const NavBar: React.FC = (): JSX.Element => {
   }
 
   return (
-    <Menu secondary>
-      <Menu.Item>
+    <Menu secondary style={{ marginTop: '0.5rem' }}>
+      <Menu.Item fitted="vertically">
         <Globe width="3em" height="3em" />
       </Menu.Item>
-      <Menu.Item as={NavLink} name={t('home')} href="/" to="/" exact />
-      <Menu.Item as={NavLink} name={t('about')} href="/about" to="/about" />
+      <Menu secondary pointing style={{ marginBottom: '0.3rem' }}>
+        <Menu.Item as={NavLink} name={t('home')} href="/" to="/" exact />
+        <Menu.Item as={NavLink} name={t('about')} href="/about" to="/about" />
+      </Menu>
+
       <Menu.Menu position="right">
         <Dropdown
           item
@@ -35,6 +38,7 @@ export const NavBar: React.FC = (): JSX.Element => {
           onChange={handleItemClick}
           text={t('language')}
           options={[{ text: 'English', value: EN }, { text: 'Eesti', value: ET }]}
+          style={{ marginBottom: '0.3rem' }}
         />
       </Menu.Menu>
     </Menu>

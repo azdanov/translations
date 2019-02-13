@@ -171,6 +171,7 @@
   "dependencies": {
     "abortcontroller-polyfill": "1.2.3",
     "aws-lambda": "0.1.2",
+    "fomantic-ui-css": "^2.7.2",
     "got": "9.6.0",
     "http-errors": "1.7.1",
     "http-proxy-middleware": "0.19.1",
@@ -189,7 +190,6 @@
     "react-scripts": "2.1.5",
     "react-use": "5.3.0",
     "scrape-it": "5.1.4",
-    "semantic-ui-css": "2.4.1",
     "semantic-ui-react": "0.85.0",
     "typescript": "3.3.3"
   },

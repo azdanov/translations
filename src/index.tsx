@@ -1,7 +1,7 @@
 import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'semantic-ui-css/semantic.min.css'
+import 'fomantic-ui-css/semantic.css';
 import { App } from './components/App'
 import { ServiceWorkerMessage } from './components/ServiceWorkerMessage'
 import './i18n'
