@@ -24,8 +24,17 @@ export const Results: React.FC<{
 
   return (
     <>
-      <Header as="h2" size="medium" attached="top" style={{ opacity: 0.8 }}>
-        {t('results')}: {results.length}
+      <Header
+        as="h2"
+        attached="top"
+        style={{
+          backgroundColor: '#fff',
+          borderBottom: '1px solid #e8e8e8',
+          fontSize: '1rem',
+          fontWeight: 'normal',
+        }}
+      >
+        {results.length} {t('results found')}
       </Header>
       <Segment attached="bottom">
         <Label
@@ -46,7 +55,9 @@ export const Results: React.FC<{
           {t('close results')}
           <Icon name="delete" />
         </Label>
-        <List relaxed>{results.length && results.map(createList)}</List>
+        <List relaxed style={{ marginTop: 0 }}>
+          {results.length && results.map(createList)}
+        </List>
       </Segment>
     </>
   )

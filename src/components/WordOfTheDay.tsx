@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Header, List, Placeholder, Segment, Label } from 'semantic-ui-react'
+import { Header, List, Placeholder, Segment } from 'semantic-ui-react'
 import { useFetchWordOfTheDay } from '../hooks/useFetchWordOfTheDay'
 
 export interface WordOfTheDayResult {
@@ -30,14 +30,19 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
 
   return (
     <>
-      <Segment
-        padded
-        loading={loading}
-        style={{ boxShadow: 'none', border: '1px solid #22242616' }}
+      <Header
+        as="h2"
+        attached="top"
+        style={{
+          backgroundColor: '#fff',
+          borderBottom: '1px solid #e8e8e8',
+          fontSize: '1rem',
+          fontWeight: 'normal',
+        }}
       >
-        <Label as="h2" attached="top" style={{ backgroundColor: '#e8e8e8dd' }}>
-          {t('word of the day')}
-        </Label>
+        {t('word of the day')}
+      </Header>
+      <Segment attached="bottom" loading={loading}>
         {isReady ? (
           <>
             <Header as="h3" size="medium">

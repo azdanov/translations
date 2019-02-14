@@ -8,7 +8,7 @@ App:
     ☐ Add settings (clear cache, clear history)
     ☐ Regex validation for search form @critical 
     ☐ Add font size settings for main area
-    ☐ Make URL saveable. When user navigates to http://localhost:3000/en/cat for example.
+    ☐ Make URL saveable. When user navigates to http://localhost:3000/en/cat for example. Add Persistance.
   Tests:
     ☐ Dedupe array in: {en: string, et: Array}
     ☐ Test for About
