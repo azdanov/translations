@@ -175,7 +175,7 @@
     "got": "9.6.0",
     "http-errors": "1.7.1",
     "http-proxy-middleware": "0.19.1",
-    "i18next": "15.0.3",
+    "i18next": "15.0.4",
     "i18next-browser-languagedetector": "3.0.0",
     "ky": "0.8.0",
     "lodash": "4.17.11",
