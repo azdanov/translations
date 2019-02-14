@@ -20,10 +20,10 @@ cp .env.example .env
 # Setup
 npm install
 
-# Compiles and hot-reloads for development
+# Compiles and hot-reloads will use .env with 'production' variables
 npm start
 
-# Use environment from .env.test + json-server with src/fixtures/data.json
+# Use local environment from .env.test + json-server with src/fixtures/data.json
 npm run start:env
 
 # Compiles and minifies for production
@@ -45,8 +45,8 @@ npm run cypress:run
 npm run unit:no-watch
 ```
 
-## Learn React
+## More Information
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+About React you can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started) and [React documentation](https://reactjs.org/).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+About [Netlify](https://www.netlify.com/docs/welcome/) and [Netlify Functions](https://www.netlify.com/docs/functions/).

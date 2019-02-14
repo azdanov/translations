@@ -20,6 +20,8 @@ body,
   flex-shrink: 0;
 }
 
+/* Service Worker Toast Message */
+
 #worker {
   bottom: 1rem;
   position: absolute;
@@ -33,6 +35,8 @@ body,
 .ui.button.toast {
   cursor: initial;
 }
+
+/* Reach UI Dropdown */
 
 .ui.dropdown.item:focus {
   background: #0000000d;
