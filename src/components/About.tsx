@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Divider, Grid, Header, Image, Segment } from 'semantic-ui-react'
-import eki from '../images/eki.jpg'
+import glosbe from '../images/glosbe.png'
 import wordnik from '../images/wordnik.png'
 
 export const About: React.FC = (): JSX.Element => {
@@ -47,11 +47,11 @@ export const About: React.FC = (): JSX.Element => {
             </Header>
             <Segment basic textAlign="center">
               <Image
-                src={eki}
+                src={glosbe}
                 as="a"
                 size="medium"
                 rel="noopener noreferrer"
-                href="http://portaal.eki.ee/"
+                href="https://glosbe.com/"
                 target="_blank"
               />
               <Divider hidden />
