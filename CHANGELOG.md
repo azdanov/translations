@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/azdanov/translations/compare/v1.16.0...v1.17.0) (2019-02-14)
+
+
+### Features
+
+* **images:** change image ([1f4a7f9](https://github.com/azdanov/translations/commit/1f4a7f9))
+
 # [1.16.0](https://github.com/azdanov/translations/compare/v1.15.0...v1.16.0) (2019-02-14)
 
 
