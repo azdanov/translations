@@ -185,7 +185,7 @@
     "react": "16.8.1",
     "react-dom": "16.8.1",
     "react-helmet": "5.2.0",
-    "react-i18next": "10.0.5",
+    "react-i18next": "10.1.1",
     "react-router-dom": "4.3.1",
     "react-scripts": "2.1.5",
     "react-use": "5.3.0",
