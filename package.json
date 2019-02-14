@@ -169,6 +169,7 @@
   ],
   "dependencies": {
     "@reach/menu-button": "0.1.8",
+    "@reach/visually-hidden": "0.1.2",
     "abortcontroller-polyfill": "1.2.3",
     "aws-lambda": "0.1.2",
     "fomantic-ui-css": "2.7.2",

@@ -1,17 +1,33 @@
-import React from 'react'
+import Hidden from '@reach/visually-hidden'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Header } from 'semantic-ui-react'
+import { Button, Header, Icon } from 'semantic-ui-react'
 
 export const Hero: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
+  const [[first, second], setOrder] = useState(['english', 'estonian'])
 
   return (
-    <Header as="h1" textAlign="center">
-      <Header.Content>
-        {t('languages')}
-        <Header.Subheader>{t('dictionary')}</Header.Subheader>
-      </Header.Content>
-    </Header>
+    <>
+      <Header as="h1" textAlign="center" className="hero">
+        <Header.Content>
+          <span>{t(first)}</span> - <span>{t(second)}</span>
+          <Header.Subheader>
+            {t('dictionary')}
+            <Button
+              icon
+              className="tertiary"
+              onClick={() => {
+                setOrder([second, first])
+              }}
+            >
+              <Hidden>{t('change direction')}</Hidden>
+              <Icon name="exchange" />
+            </Button>
+          </Header.Subheader>
+        </Header.Content>
+      </Header>
+    </>
   )
 }
 
