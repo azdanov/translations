@@ -6,6 +6,7 @@ App:
   UX:
     ☐ Regex validation for search form @critical 
   Tests:
+    ☐ Dedupe array in: {en: string, et: Array}
     ☐ Test for About
     ☐ Test for Search (cypress)
     ☐ Test service worker update
