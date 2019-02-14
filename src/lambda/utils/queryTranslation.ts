@@ -27,8 +27,8 @@ function pickApis(lang: EN | ET, word: string): { api: string; similar: string }
   if (
     !process.env.LAMBDA_TRANSLATE_EN_API ||
     !process.env.LAMBDA_TRANSLATE_ET_API ||
-    !process.env.LAMBDA_TRANSLATE_EKI_API ||
-    !process.env.LAMBDA_TRANSLATE_GLOSBE_EN_API
+    !process.env.LAMBDA_SIMILAR_ET_API ||
+    !process.env.LAMBDA_SIMILAR_EN_API
   )
     throw new createHttpError.InternalServerError('No ENV specified')
 
@@ -40,10 +40,10 @@ function pickApis(lang: EN | ET, word: string): { api: string; similar: string }
 
   if (lang === english) {
     api = process.env.LAMBDA_TRANSLATE_EN_API.replace('%WORD%', word)
-    similar = process.env.LAMBDA_TRANSLATE_EKI_API.replace('%WORD%', word)
+    similar = process.env.LAMBDA_SIMILAR_EN_API.replace('%WORD%', word)
   } else {
     api = process.env.LAMBDA_TRANSLATE_ET_API.replace('%WORD%', word)
-    similar = process.env.LAMBDA_TRANSLATE_GLOSBE_EN_API.replace('%WORD%', word)
+    similar = process.env.LAMBDA_SIMILAR_ET_API.replace('%WORD%', word)
   }
 
   return { api, similar }
@@ -70,11 +70,11 @@ function parseResponse(
 
     const { articles } = scrapeIt.scrapeHTML<Translation>(similarResponse.body, {
       articles: {
-        listItem: '.tervikart',
+        listItem: '#simmilarPhrasesTable .tableRow',
         data: {
-          en: '.m',
+          en: 'dt',
           et: {
-            listItem: '.x',
+            listItem: 'dd',
           },
         },
       },
@@ -104,8 +104,8 @@ function parseResponse(
       articles: {
         listItem: '#simmilarPhrasesTable .tableRow',
         data: {
-          en: 'dt',
-          et: {
+          et: 'dt',
+          en: {
             listItem: 'dd',
           },
         },

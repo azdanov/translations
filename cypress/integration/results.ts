@@ -8,7 +8,7 @@ describe('results', () => {
       .click()
       .type('car{enter}')
 
-    cy.contains('Results: 61').should('exist')
+    cy.contains('Results').should('exist')
     cy.contains('auto').should('exist')
   })
 
@@ -19,7 +19,7 @@ describe('results', () => {
 
     cy.get('[data-testid=search-action]').click()
 
-    cy.contains('Results: 61').should('exist')
+    cy.contains('Results').should('exist')
     cy.contains('auto').should('exist')
   })
 
