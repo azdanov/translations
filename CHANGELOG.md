@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/azdanov/translations/compare/v1.14.1...v1.14.2) (2019-02-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-i18next to v10.1.1 ([48c0e61](https://github.com/azdanov/translations/commit/48c0e61))
+
 ## [1.14.1](https://github.com/azdanov/translations/compare/v1.14.0...v1.14.1) (2019-02-14)
 
 
