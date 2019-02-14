@@ -50,5 +50,19 @@ test('should return results for scraped and json', async () => {
 
   const results = await queryTranslation(mockWord, EN)
 
-  expect(results).toEqual(mockBody.concat(mockBody))
+  expect(results).toEqual([
+    {
+      en: 'car',
+      et: [
+        'vagun',
+        'auto',
+        'gondel',
+        'sõiduauto',
+        'vagun',
+        'auto',
+        'gondel',
+        'sõiduauto',
+      ],
+    },
+  ])
 })
