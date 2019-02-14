@@ -2,6 +2,8 @@
 const { paths } = require('@craco/craco')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const glob = require('glob-all')
+const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   webpack: {
@@ -81,6 +83,19 @@ module.exports = {
           'very',
           'wide',
         ],
+      }),
+      new HtmlCriticalWebpackPlugin({
+        base: path.resolve(__dirname, 'build'),
+        src: 'index.html',
+        dest: 'index.html',
+        inline: true,
+        minify: true,
+        extract: true,
+        width: 1300,
+        height: 900,
+        penthouse: {
+          blockJSRequests: false,
+        },
       }),
     ],
   },
