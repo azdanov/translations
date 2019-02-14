@@ -4,8 +4,8 @@ import { Icon, Input, Label, Message as UIMessage } from 'semantic-ui-react'
 
 interface Props {
   error: string
-  setError: (error: string) => void
-  setSearch: (search: string) => void
+  setError: React.Dispatch<React.SetStateAction<string>>
+  setSearch: React.Dispatch<React.SetStateAction<string>>
   searchEl: MutableRefObject<Input | null>
 }
 

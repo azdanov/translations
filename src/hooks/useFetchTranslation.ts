@@ -2,28 +2,32 @@
 import ky from 'ky'
 import { isEmpty } from 'lodash'
 import localCache from 'lscache'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Article from '../types/Article'
+import { Order } from '../types/Languages'
 
 export const useFetchTranslation = (
   word: string,
-  setResults: (results: Article[]) => void,
-  setLoading: (state: boolean) => void,
-  setError: (error: string) => void,
+  order: Order,
+  setResults: React.Dispatch<React.SetStateAction<Article[]>>,
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>,
+  setError: React.Dispatch<React.SetStateAction<string>>,
 ): void => {
   useEffect(() => {
     const controller = new AbortController()
     ;(async () => {
       if (isEmpty(word)) return
 
+      word = setPrefix(order, word)
+
       const cached: Article[] | null = localCache.get(word)
+
+      setError('')
 
       if (cached) {
         setResults(cached)
         return
       }
-
-      setError('')
 
       try {
         const response = await ky(word, {
@@ -56,6 +60,15 @@ export const useFetchTranslation = (
     })()
     return () => controller.abort()
   }, [word, setResults, setLoading])
+}
+
+function setPrefix(order: Order, word: string): string {
+  if (order[0] === 'english') {
+    word = `en/${word}`
+  } else {
+    word = `et/${word}`
+  }
+  return word
 }
 
 export default useFetchTranslation

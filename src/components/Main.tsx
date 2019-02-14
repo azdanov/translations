@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react'
+import { useLocalStorage } from 'react-use'
 import { Grid, Input, Segment } from 'semantic-ui-react'
 import { useFetchTranslation } from '../hooks/useFetchTranslation'
 import Article from '../types/Article'
+import { Order } from '../types/Languages'
 import { Hero } from './Hero'
 import { Message } from './Message'
 import { Results } from './Results'
@@ -9,19 +11,26 @@ import { Search } from './Search'
 import { WordOfTheDay } from './WordOfTheDay'
 
 export const Main: React.FC = (): JSX.Element => {
+  const [order, setOrder] = useLocalStorage<Order>('direction', ['english', 'estonian'])
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState([] as Article[])
   const [search, setSearch] = useState('')
   const [error, setError] = useState('')
+
   const searchEl = useRef<Input>(null)
 
-  useFetchTranslation(search, setResults, setLoading, setError)
+  useFetchTranslation(search, order, setResults, setLoading, setError)
 
   const showResults = (results.length > 0 || loading) && !error
 
   return (
     <Segment basic>
-      <Hero />
+      <Hero
+        order={order}
+        setOrder={setOrder}
+        setResults={setResults}
+        setSearch={setSearch}
+      />
       <Grid centered>
         <Grid.Column mobile={14} tablet={9} computer={8}>
           <Search

@@ -15,7 +15,7 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "eject": "react-scripts eject",
-    "json": "json-server --delay 100 --port 3030 --watch src/fixtures/data.json",
+    "json": "json-server --delay 100 --port 3030 --static src/fixtures/scrape --watch src/fixtures/data.json",
     "semantic-release": "semantic-release",
     "start": "concurrently npm:start:app npm:start:lambda",
     "start:app": "react-scripts start",
@@ -31,7 +31,7 @@
     "wait": "concurrently npm:wait:*",
     "wait:app": "wait-on http://localhost:3000",
     "wait:json": "wait-on http://localhost:3030/car",
-    "wait:lambda": "wait-on http://localhost:9000/.netlify/functions/translate/car"
+    "wait:lambda": "wait-on http://localhost:9000/.netlify/functions/translate/en/car"
   },
   "husky": {
     "hooks": {

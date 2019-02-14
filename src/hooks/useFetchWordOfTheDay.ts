@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import ky from 'ky'
 import localCache from 'lscache'
 import { useLayoutEffect } from 'react'
@@ -6,8 +7,8 @@ import { WordOfTheDayResult } from '../components/WordOfTheDay'
 const key = 'wordOfTheDay'
 
 export const useFetchWordOfTheDay = (
-  setResult: (results: WordOfTheDayResult) => void,
-  setLoading: (state: boolean) => void,
+  setResult: React.Dispatch<React.SetStateAction<WordOfTheDayResult>>,
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>,
 ): void => {
   useLayoutEffect(() => {
     const api = process.env.REACT_APP_WORDNIK_DAY_API
@@ -32,7 +33,6 @@ export const useFetchWordOfTheDay = (
         setLoading(false)
       })
       .catch(error => {
-        // eslint-disable-next-line no-console
         console.error(error)
         setLoading(false)
       })

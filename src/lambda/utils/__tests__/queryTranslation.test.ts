@@ -1,11 +1,7 @@
-import { isEmpty, reject } from 'lodash'
-import matchSorter from 'match-sorter'
+import mockFixture from '../../../fixtures/data.json'
+import { EN } from '../../../i18n'
 
-const mockBody = [
-  { en: 'cart', et: ['käru'] },
-  { en: 'car', et: ['auto'] },
-  { en: '', et: [] },
-]
+const mockBody = [{ en: 'car', et: ['vagun', 'auto', 'gondel', 'sõiduauto'] }]
 
 const mockWord = 'car'
 
@@ -13,31 +9,37 @@ beforeEach(() => {
   jest.resetModules()
 })
 
-test('should return results for proper json endpoint', async () => {
+test('should return results only for json', async () => {
   // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
   const { queryTranslation } = require('../queryTranslation')
 
   jest.mock('got', () =>
     jest.fn(() => ({
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(mockBody),
+      body: JSON.stringify(mockFixture.car),
     })),
   )
 
-  const results = await queryTranslation(mockWord)
+  const results = await queryTranslation(mockWord, EN)
 
   expect(results).toEqual(mockBody)
 })
 
-test('should return results for scraped endpoint', async () => {
+test('should return results for scraped and json', async () => {
   // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
   const { queryTranslation } = require('../queryTranslation')
 
   jest.mock('got', () =>
-    jest.fn(() => ({
-      headers: { 'content-type': 'text/plain' },
-      body: JSON.stringify(mockBody),
-    })),
+    jest
+      .fn()
+      .mockResolvedValueOnce({
+        headers: { 'content-type': 'text/json' },
+        body: JSON.stringify(mockFixture.car),
+      })
+      .mockResolvedValueOnce({
+        headers: { 'content-type': 'text/plain' },
+        body: '<html></html>',
+      }),
   )
 
   jest.mock('scrape-it', () => ({
@@ -46,13 +48,7 @@ test('should return results for scraped endpoint', async () => {
     namedExport: jest.fn(),
   }))
 
-  const cleanResults = matchSorter(
-    reject(mockBody, item => isEmpty(item.en) || isEmpty(item.et)),
-    mockWord,
-    { keys: ['en', 'et'] },
-  )
+  const results = await queryTranslation(mockWord, EN)
 
-  const results = await queryTranslation(mockWord)
-
-  expect(results).toEqual(cleanResults)
+  expect(results).toEqual(mockBody.concat(mockBody))
 })

@@ -68,12 +68,16 @@ body,
 
 /* Hero Swap Button */
 
-.hero .ui.icon.button.tertiary:active {
+.hero .ui.tertiary.button {
+  box-shadow: inset 0 -0.12em 0 #22242626;
+}
+
+.hero .ui.tertiary.button:active {
   box-shadow: inset 0 -0.12em 0 #999999;
 }
 
 .hero .ui.tertiary.button:focus,
-.ui.tertiary.button:hover {
+.hero .ui.tertiary.button:hover {
   box-shadow: inset 0 -0.12em 0 #666666;
   color: #333;
   background: none;

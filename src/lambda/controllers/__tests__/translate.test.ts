@@ -26,7 +26,7 @@ test('should get an error when no translation is found', async () => {
 
   try {
     await fetchTranslation(
-      { path: 'localhost:3000/translate/car' },
+      { path: 'localhost:3000/translate/en/car' },
       handlerContext,
       handlerCallback,
     )
@@ -46,7 +46,7 @@ test('should get results', async () => {
   }))
 
   const results = await fetchTranslation(
-    { path: 'localhost:3000/translate/car' },
+    { path: 'localhost:3000/translate/en/car' },
     handlerContext,
     handlerCallback,
   )

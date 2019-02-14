@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import 'jest-dom/extend-expect'
 import { noop } from 'lodash'
 import React from 'react'
@@ -8,18 +9,21 @@ import { Search } from '../Search'
 afterEach(cleanup)
 
 test('should have search placeholder and action', () => {
+  const searchEl: any = jest.fn()
   const { getByPlaceholderText, getByTestId } = render(
-    <Search loading={false} search="" setSearch={noop} />,
+    <Search searchEl={searchEl} loading={false} search="" setSearch={noop} />,
   )
 
   expect(getByPlaceholderText('search …')).toBeInTheDocument()
   expect(getByTestId('search-action')).toBeInTheDocument()
+  expect(searchEl).toHaveBeenCalled()
 })
 
 test('should search on submit', () => {
+  const searchEl: any = jest.fn()
   const mockSetSearch = jest.fn()
   const { getByPlaceholderText } = render(
-    <Search loading={false} search="" setSearch={mockSetSearch} />,
+    <Search searchEl={searchEl} loading={false} search="" setSearch={mockSetSearch} />,
   )
 
   act(() => {
@@ -28,12 +32,14 @@ test('should search on submit', () => {
   })
 
   expect(mockSetSearch).toHaveBeenCalled()
+  expect(searchEl).toHaveBeenCalled()
 })
 
 test('should search on click', () => {
+  const searchEl: any = jest.fn()
   const mockSetSearch = jest.fn()
   const { getByPlaceholderText, getByTestId } = render(
-    <Search loading={false} search="" setSearch={mockSetSearch} />,
+    <Search searchEl={searchEl} loading={false} search="" setSearch={mockSetSearch} />,
   )
 
   act(() => {
@@ -42,4 +48,5 @@ test('should search on click', () => {
   })
 
   expect(mockSetSearch).toHaveBeenCalled()
+  expect(searchEl).toHaveBeenCalled()
 })

@@ -1,320 +1,1056 @@
 {
-  "bus": [
-    {
-      "en": "bus",
-      "et": ["buss (er linnaliini)", "siin", "bussiga vedama"]
-    },
-    {
-      "en": "bus bar",
-      "et": ["siin"]
-    },
-    {
-      "en": "bus boy",
-      "et": ["kelneriabi (katab laudu, koristab nõud)"]
-    },
-    {
-      "en": "bus driver",
-      "et": ["bussijuht"]
-    },
-    {
-      "en": "bus girl",
-      "et": ["kelneriabi (katab laudu, koristab nõud)"]
-    },
-    {
-      "en": "bus line",
-      "et": ["bussifirma"]
-    },
-    {
-      "en": "bus shelter",
-      "et": ["(bussi) ootepaviljon"]
-    },
-    {
-      "en": "bus station",
-      "et": ["bussijaam"]
-    },
-    {
-      "en": "bus stop",
-      "et": ["bussipeatus"]
-    },
-    {
-      "en": "by bus",
-      "et": ["bussiga"]
-    },
-    {
-      "en": "camping bus",
-      "et": ["vagunelamu"]
-    },
-    {
-      "en": "chartered bus",
-      "et": ["üüribuss"]
-    },
-    {
-      "en": "miss the bus",
-      "et": ["bussist maha jääma", "arengust maha jääma"]
-    },
-    {
-      "en": "motor bus",
-      "et": ["buss"]
-    },
-    {
-      "en": "passenger bus",
-      "et": ["reisibuss"]
-    },
-    {
-      "en": "school bus",
-      "et": ["koolibuss"]
-    },
-    {
-      "en": "trolley bus",
-      "et": ["trollibuss"]
+  "auto": {
+    "result": "ok",
+    "tuc": [
+      {
+        "phrase": {
+          "text": "car",
+          "language": "en"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A four-wheeled motor vehicle used for land transport, usually propelled by a gasoline or diesel internal combustion engine."
+          },
+          {
+            "language": "et",
+            "text": "automobile, a vehicle steered by a driver"
+          },
+          {
+            "language": "en",
+            "text": "automobile, a vehicle steered by a driver"
+          }
+        ],
+        "meaningId": 6895167406216376964,
+        "authors": [1]
+      },
+      {
+        "phrase": {
+          "text": "automobile",
+          "language": "en"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A four-wheeled motor vehicle used for land transport, usually propelled by a gasoline or diesel internal combustion engine."
+          },
+          {
+            "language": "et",
+            "text": "passenger vehicle"
+          },
+          {
+            "language": "en",
+            "text": "passenger vehicle"
+          }
+        ],
+        "meaningId": 1388952357875781176,
+        "authors": [83058]
+      },
+      {
+        "phrase": {
+          "text": "motor car",
+          "language": "en"
+        },
+        "meaningId": 6326048006246153269,
+        "authors": [25018]
+      },
+      {
+        "phrase": {
+          "text": "auto",
+          "language": "en"
+        },
+        "meaningId": 2450173659371682816,
+        "authors": [25018]
+      },
+      {
+        "phrase": {
+          "text": "automative",
+          "language": "en"
+        },
+        "meaningId": 1547470182811825249,
+        "authors": [64617]
+      },
+      {
+        "phrase": {
+          "text": "automotive",
+          "language": "en"
+        },
+        "meaningId": -122554633195376758,
+        "authors": [25018]
+      },
+      {
+        "phrase": {
+          "text": "motorcar",
+          "language": "en"
+        },
+        "meaningId": -7817224245404494382,
+        "authors": [25018]
+      },
+      {
+        "phrase": {
+          "text": "vehicle",
+          "language": "en"
+        },
+        "meaningId": 5154821913398997656,
+        "authors": [83064]
+      },
+      {
+        "phrase": {
+          "text": "wheels",
+          "language": "en"
+        },
+        "meaningId": 1789039763650514302,
+        "authors": [25018]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(at second or later mention) any motor vehicle, including trucks, vans, and fire engines."
+          },
+          {
+            "language": "en",
+            "text": "car, automobile"
+          }
+        ],
+        "meaningId": 2661802937948367316,
+        "authors": [93107]
+      }
+    ],
+    "phrase": "auto",
+    "from": "et",
+    "dest": "en",
+    "authors": {
+      "1": {
+        "U": "http://en.wiktionary.org",
+        "id": 1,
+        "N": "en.wiktionary.org",
+        "url": "https://glosbe.com/source/1"
+      },
+      "93107": {
+        "U": "",
+        "id": 93107,
+        "N": "enwiki-01-2017-defs",
+        "url": "https://glosbe.com/source/93107"
+      },
+      "83058": {
+        "U": "",
+        "id": 83058,
+        "N": "Dbnary: Wiktionary as Linguistic Linked Open Data",
+        "url": "https://glosbe.com/source/83058"
+      },
+      "64617": {
+        "U": "http://www.eki.ee/dict/ies/",
+        "id": 64617,
+        "N": "Indrek Hein",
+        "url": "https://glosbe.com/source/64617"
+      },
+      "83064": {
+        "U": "",
+        "id": 83064,
+        "N": "Dbnary: Wiktionary as Linguistic Linked Open Data",
+        "url": "https://glosbe.com/source/83064"
+      },
+      "25018": {
+        "U": "http://glosbe.com",
+        "id": 25018,
+        "N": "GlosbeResearch",
+        "url": "https://glosbe.com/source/25018"
+      }
     }
-  ],
-  "car": [
-    {
-      "en": "air cushion car",
-      "et": ["hõljukauto"]
-    },
-    {
-      "en": "armored car",
-      "et": ["soomusauto"]
-    },
-    {
-      "en": "armoured car",
-      "et": ["soomusauto"]
-    },
-    {
-      "en": "baggage car",
-      "et": ["pagasivagun"]
-    },
-    {
-      "en": "buffet car",
-      "et": ["restoranvagun"]
-    },
-    {
-      "en": "bumper car",
-      "et": ["elektriauto (atraktsioon lõbustuspargis)"]
-    },
-    {
-      "en": "by car",
-      "et": ["autoga"]
-    },
-    {
-      "en": "cable car",
-      "et": ["tõstuk (köisraudteel)", "köisraudtee vagun"]
-    },
-    {
-      "en": "car",
-      "et": ["auto", "vagun", "gondel"]
-    },
-    {
-      "en": "car battery",
-      "et": ["aku"]
-    },
-    {
-      "en": "car body",
-      "et": ["autokere"]
-    },
-    {
-      "en": "car boot sale",
-      "et": ["vanakraamimüük auto kapotilt"]
-    },
-    {
-      "en": "car brake",
-      "et": ["autopidur"]
-    },
-    {
-      "en": "car carrier",
-      "et": ["autotreiler"]
-    },
-    {
-      "en": "car crash",
-      "et": ["autoavarii"]
-    },
-    {
-      "en": "car ferry",
-      "et": ["autopraam"]
-    },
-    {
-      "en": "car insurance",
-      "et": ["autokindlustus"]
-    },
-    {
-      "en": "car maker",
-      "et": ["autotootja"]
-    },
-    {
-      "en": "car mileage",
-      "et": ["läbisõit"]
-    },
-    {
-      "en": "car park",
-      "et": ["parkla", "parkimismaja"]
-    },
-    {
-      "en": "car phone",
-      "et": ["autotelefon"]
-    },
-    {
-      "en": "car pool",
-      "et": ["auto ühiskasutus"]
-    },
-    {
-      "en": "car race",
-      "et": ["autovõidusõit"]
-    },
-    {
-      "en": "car wash",
-      "et": ["autopesu", "autopesula"]
-    },
-    {
-      "en": "car wheel",
-      "et": ["autoratas"]
-    },
-    {
-      "en": "cattle car",
-      "et": ["loomavagun"]
-    },
-    {
-      "en": "chair car",
-      "et": ["-", "marsruuttakso"]
-    },
-    {
-      "en": "coal car",
-      "et": ["söevagun"]
-    },
-    {
-      "en": "compact car",
-      "et": ["väikeauto"]
-    },
-    {
-      "en": "dining car",
-      "et": ["restoranvagun"]
-    },
-    {
-      "en": "dome car",
-      "et": ["klaasvagun (kumera pleksiklaasist katusega)"]
-    },
-    {
-      "en": "drawing-room car",
-      "et": ["kupeevagun", "salongvagun"]
-    },
-    {
-      "en": "dump car",
-      "et": ["kallur"]
-    },
-    {
-      "en": "dumping car",
-      "et": ["kallur"]
-    },
-    {
-      "en": "electric car",
-      "et": ["elektriauto"]
-    },
-    {
-      "en": "elevator car",
-      "et": ["liftikabiin"]
-    },
-    {
-      "en": "estate car",
-      "et": ["kombiauto"]
-    },
-    {
-      "en": "fill up the car",
-      "et": ["tankima"]
-    },
-    {
-      "en": "freight car",
-      "et": ["kaubavagun"]
-    },
-    {
-      "en": "gondola car",
-      "et": ["poolvagun", "lahtine vagun"]
-    },
-    {
-      "en": "hired car",
-      "et": ["üüriauto"]
-    },
-    {
-      "en": "hopper car",
-      "et": ["punkervagun"]
-    },
-    {
-      "en": "house car",
-      "et": ["kinnine kaubavagun"]
-    },
-    {
-      "en": "matchbox car",
-      "et": ["mudelauto"]
-    },
-    {
-      "en": "motor car",
-      "et": ["auto"]
-    },
-    {
-      "en": "parlor car",
-      "et": ["salongvagun"]
-    },
-    {
-      "en": "patrol car",
-      "et": ["patrullauto"]
-    },
-    {
-      "en": "piggyback car",
-      "et": ["autovagun"]
-    },
-    {
-      "en": "police car",
-      "et": ["politseiauto"]
-    },
-    {
-      "en": "race car",
-      "et": ["võidusõiduauto"]
-    },
-    {
-      "en": "racing car",
-      "et": ["võidusõiduauto"]
-    },
-    {
-      "en": "railway car",
-      "et": ["raudteevagun"]
-    },
-    {
-      "en": "restaurant car",
-      "et": ["restoranvagun"]
-    },
-    {
-      "en": "side car",
-      "et": ["(mootorratta) külgkorv"]
-    },
-    {
-      "en": "sleeping car",
-      "et": ["magamisvagun"]
-    },
-    {
-      "en": "sport car",
-      "et": ["sportauto"]
-    },
-    {
-      "en": "sports car",
-      "et": ["sportauto"]
-    },
-    {
-      "en": "tank car",
-      "et": ["tsisternvagun"]
-    },
-    {
-      "en": "tow car",
-      "et": ["puksiirauto"]
-    },
-    {
-      "en": "trolley car",
-      "et": ["trollibuss"]
-    },
-    {
-      "en": "vintage car",
-      "et": ["vana tüüpi auto", "„veteranauto“"]
+  },
+  "buss": {
+    "result": "ok",
+    "tuc": [
+      {
+        "phrase": {
+          "text": "bus",
+          "language": "en"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "vehicle"
+          },
+          {
+            "language": "en",
+            "text": "A large, long-bodied motor vehicle equipped with seating for passengers, usually operating as part of a scheduled service."
+          },
+          {
+            "language": "et",
+            "text": "vehicle"
+          }
+        ],
+        "meaningId": 7342573602029904497,
+        "authors": [1]
+      },
+      {
+        "phrase": {
+          "text": "coach",
+          "language": "en"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A large, long-bodied motor vehicle equipped with seating for passengers, usually operating as part of a scheduled service."
+          }
+        ],
+        "meaningId": -6119922198506745894,
+        "authors": [25018]
+      },
+      {
+        "phrase": {
+          "text": "mobile",
+          "language": "en"
+        },
+        "meaningId": -1490928897284703844,
+        "authors": [64617]
+      },
+      {
+        "phrase": {
+          "text": "motor bus",
+          "language": "en"
+        },
+        "meaningId": -746693172783413523,
+        "authors": [25018]
+      },
+      {
+        "phrase": {
+          "text": "motor coach",
+          "language": "en"
+        },
+        "meaningId": -2518366031975493030,
+        "authors": [86934]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "bus, a vehicle to transport people"
+          }
+        ],
+        "meaningId": -4593808696615892067,
+        "authors": [93107]
+      }
+    ],
+    "phrase": "buss",
+    "from": "et",
+    "dest": "en",
+    "authors": {
+      "1": {
+        "U": "http://en.wiktionary.org",
+        "id": 1,
+        "N": "en.wiktionary.org",
+        "url": "https://glosbe.com/source/1"
+      },
+      "93107": {
+        "U": "",
+        "id": 93107,
+        "N": "enwiki-01-2017-defs",
+        "url": "https://glosbe.com/source/93107"
+      },
+      "86934": {
+        "U": "",
+        "id": 86934,
+        "N": "Glosbe Research",
+        "url": "https://glosbe.com/source/86934"
+      },
+      "64617": {
+        "U": "http://www.eki.ee/dict/ies/",
+        "id": 64617,
+        "N": "Indrek Hein",
+        "url": "https://glosbe.com/source/64617"
+      },
+      "25018": {
+        "U": "http://glosbe.com",
+        "id": 25018,
+        "N": "GlosbeResearch",
+        "url": "https://glosbe.com/source/25018"
+      }
     }
-  ],
+  },
+  "car": {
+    "result": "ok",
+    "tuc": [
+      {
+        "phrase": {
+          "text": "vagun",
+          "language": "et"
+        },
+        "meanings": [
+          {
+            "language": "et",
+            "text": "passenger-carrying unit in a subway or elevated train, whether powered or not"
+          },
+          {
+            "language": "en",
+            "text": "moving, load-carrying component of an elevator"
+          },
+          {
+            "language": "et",
+            "text": "moving, load-carrying component of an elevator"
+          },
+          {
+            "language": "en",
+            "text": "passenger-carrying unit in a subway or elevated train, whether powered or not"
+          },
+          {
+            "language": "en",
+            "text": "railway carriage, a nonpowered unit in a railroad train"
+          }
+        ],
+        "meaningId": -742881893528923256,
+        "authors": [1]
+      },
+      {
+        "phrase": {
+          "text": "auto",
+          "language": "et"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A four-wheeled motor vehicle used for land transport, usually propelled by a gasoline or diesel internal combustion engine."
+          },
+          {
+            "language": "et",
+            "text": "automobile, a vehicle steered by a driver"
+          },
+          {
+            "language": "en",
+            "text": "automobile, a vehicle steered by a driver"
+          }
+        ],
+        "meaningId": 6895167406216376964,
+        "authors": [1]
+      },
+      {
+        "phrase": {
+          "text": "gondel",
+          "language": "et"
+        },
+        "meaningId": 5538423087836591432,
+        "authors": [86934]
+      },
+      {
+        "phrase": {
+          "text": "sõiduauto",
+          "language": "et"
+        },
+        "meaningId": -8036584351102693220,
+        "authors": [25018]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "The moving, load-carrying component of an elevator or other cable-drawn transport mechanism."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "the compartment that is suspended from an airship and that carries personnel and the cargo and the power plant"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(rail transport, chiefly North America) An unpowered unit in a railroad train."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A wheeled vehicle that moves independently, with at least three wheels, powered mechanically, steered by a driver and mostly for personal transportation; a motorcar or automobile."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "a motor vehicle with four wheels; usually propelled by an internal combustion engine; &quot;he needs a car to get to work&quot;"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "where passengers ride up and down; &quot;the car was on the top floor&quot;"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A wheeled vehicle, drawn by a horse or other animal."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(rail transport) an individual vehicle, powered or unpowered, in a multiple unit."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A wheeled vehicle that moves independently, steered by a driver mostly for personal transportation; a motor car or automobile"
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "The part of an airship, such as a balloon or dirigible, which houses the passengers and control apparatus."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "An unpowered unit in a railroad train."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(sailing) A sliding fitting that runs along a track."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "The aggregate of desirable characteristics of a car."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(computing) The first part of a cons in LISP. The first element of a list."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A floating perforated box for living fish."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "The first part of a cons in LISP. The first element of a list"
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "an individual vehicle, powered or unpowered, in a multiple unit."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A rough unit of quantity approximating the amount which would fill a railroad car."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "a conveyance for passengers or freight on a cable railway; &quot;they took a cable car to the top of the mountain&quot;"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(dated) A wheeled vehicle, drawn by a horse or other animal"
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "The passenger-carrying portion of certain amusement park rides, such as Ferris wheels."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A sliding fitting that runs along a track."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(rail transport) A passenger-carrying unit in a subway or elevated train, whether powered or not."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(uncountable, US) The aggregate of desirable characteristics of a car."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "( <i>rail transport</i>) A passenger-carrying unit in a subway or elevated train, whether powered or not."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "a wheeled vehicle adapted to the rails of railroad; &quot;three cars had jumped the rails&quot;"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      }
+    ],
+    "phrase": "car",
+    "from": "en",
+    "dest": "et",
+    "authors": {
+      "1": {
+        "U": "http://en.wiktionary.org",
+        "id": 1,
+        "N": "en.wiktionary.org",
+        "url": "https://glosbe.com/source/1"
+      },
+      "86934": {
+        "U": "",
+        "id": 86934,
+        "N": "Glosbe Research",
+        "url": "https://glosbe.com/source/86934"
+      },
+      "93369": {
+        "U": "http://plwordnet.pwr.wroc.pl/wordnet/",
+        "id": 93369,
+        "N": "plwordnet-defs",
+        "url": "https://glosbe.com/source/93369"
+      },
+      "91945": {
+        "U": "https://en.wiktionary.org",
+        "id": 91945,
+        "N": "en.wiktionary.2016",
+        "url": "https://glosbe.com/source/91945"
+      },
+      "25018": {
+        "U": "http://glosbe.com",
+        "id": 25018,
+        "N": "GlosbeResearch",
+        "url": "https://glosbe.com/source/25018"
+      }
+    }
+  },
+  "bus": {
+    "result": "ok",
+    "tuc": [
+      {
+        "phrase": {
+          "text": "autobuss",
+          "language": "et"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "vehicle"
+          },
+          {
+            "language": "et",
+            "text": "vehicle"
+          }
+        ],
+        "meaningId": 7212486836191242183,
+        "authors": [1]
+      },
+      {
+        "phrase": {
+          "text": "buss",
+          "language": "et"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "vehicle"
+          },
+          {
+            "language": "en",
+            "text": "A large, long-bodied motor vehicle equipped with seating for passengers, usually operating as part of a scheduled service."
+          },
+          {
+            "language": "et",
+            "text": "vehicle"
+          }
+        ],
+        "meaningId": 7342573602029904497,
+        "authors": [1]
+      },
+      {
+        "phrase": {
+          "text": "siin",
+          "language": "et"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A communication line used for data transfer among the components of a computer system."
+          }
+        ],
+        "meaningId": -9028577314697185894,
+        "authors": [64617]
+      },
+      {
+        "phrase": {
+          "text": "Buss",
+          "language": "et"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "large road vehicle for transporting people"
+          }
+        ],
+        "meaningId": -5017844945917519497,
+        "authors": [122622]
+      },
+      {
+        "phrase": {
+          "text": "Siin",
+          "language": "et"
+        },
+        "meanings": [
+          {
+            "language": "en",
+            "text": "communication system that transfers data between components inside a computer"
+          }
+        ],
+        "meaningId": 2260132610686624943,
+        "authors": [122622]
+      },
+      {
+        "phrase": {
+          "text": "autobus",
+          "language": "et"
+        },
+        "meaningId": -3975099511375503491,
+        "authors": [83062]
+      },
+      {
+        "phrase": {
+          "text": "bussiga vedama",
+          "language": "et"
+        },
+        "meaningId": -7999154124866225126,
+        "authors": [64617]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "a vehicle carrying many passengers; used for public transport; &quot;he always rode the bus to work&quot;"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "ride in a bus"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "send or move around by bus; &quot;The children were bussed to school&quot;"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "To clear meal remains from."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(medical industry, slang) An ambulance."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "electrical conductor"
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(transitive, automotive, transport, chiefly US) To transport students to school, often to achieve racial integration."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "transport students to school"
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "A motor vehicle for transporting large numbers of people along roads."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "travel by bus"
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "remove used dishes from the table in restaurants"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(transitive, automotive, transport) To transport via a motor bus."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(transitive, US, food service) To clear meal remains from."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(intransitive, automotive, transport) To travel by bus."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(intransitive, US, food service) To work at clearing the remains of meals from tables or counters; to work as a busboy."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "transport via a motor bus"
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "To travel by bus."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "To work at clearing the remains of meals from tables or counters; to work as a busboy."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "An ambulance."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "An electrical conductor or interface serving as a common connection for two or more circuits or components."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "an electrical conductor that makes a common connection between several circuits; &quot;the busbar in this computer can transmit data either way between any two components of the system&quot;"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "An electrical conductor serving as a common connection for two or more circuits."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "(automotive) A motor vehicle for transporting large numbers of people along roads."
+          }
+        ],
+        "meaningId": null,
+        "authors": [1]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "To transport via a motor bus."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "the topology of a network whose components are connected by a busbar"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "a car that is old and unreliable; &quot;the fenders had fallen off that old bus&quot;"
+          }
+        ],
+        "meaningId": null,
+        "authors": [93369]
+      },
+      {
+        "meanings": [
+          {
+            "language": "en",
+            "text": "To transport students to school, often to a more distant school for the purposes of achieving racial integration."
+          }
+        ],
+        "meaningId": null,
+        "authors": [91945]
+      }
+    ],
+    "phrase": "bus",
+    "from": "en",
+    "dest": "et",
+    "authors": {
+      "1": {
+        "U": "http://en.wiktionary.org",
+        "id": 1,
+        "N": "en.wiktionary.org",
+        "url": "https://glosbe.com/source/1"
+      },
+      "83062": {
+        "U": "",
+        "id": 83062,
+        "N": "Dbnary: Wiktionary as Linguistic Linked Open Data",
+        "url": "https://glosbe.com/source/83062"
+      },
+      "93369": {
+        "U": "http://plwordnet.pwr.wroc.pl/wordnet/",
+        "id": 93369,
+        "N": "plwordnet-defs",
+        "url": "https://glosbe.com/source/93369"
+      },
+      "91945": {
+        "U": "https://en.wiktionary.org",
+        "id": 91945,
+        "N": "en.wiktionary.2016",
+        "url": "https://glosbe.com/source/91945"
+      },
+      "64617": {
+        "U": "http://www.eki.ee/dict/ies/",
+        "id": 64617,
+        "N": "Indrek Hein",
+        "url": "https://glosbe.com/source/64617"
+      },
+      "122622": {
+        "U": "https://www.wikidata.org/",
+        "id": 122622,
+        "N": "wikidata",
+        "url": "https://glosbe.com/source/122622"
+      }
+    }
+  },
   "day": {
     "id": 521856,
     "word": "ogive",

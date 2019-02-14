@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-object-literal-type-assertion */
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Header, List, Placeholder, Segment } from 'semantic-ui-react'
@@ -16,7 +15,11 @@ interface Props {
 
 export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
   const [t] = useTranslation()
-  const [result, setResult] = useState({} as WordOfTheDayResult)
+  const [result, setResult] = useState<WordOfTheDayResult>({
+    word: '',
+    note: '',
+    definitions: [],
+  })
   const [loading, setLoading] = useState(false)
 
   useFetchWordOfTheDay(setResult, setLoading)

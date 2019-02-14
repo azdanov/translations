@@ -11,7 +11,7 @@ import { Input } from 'semantic-ui-react'
 interface Props {
   loading: boolean
   search: string
-  setSearch: (search: string) => void
+  setSearch: React.Dispatch<React.SetStateAction<string>>
   searchEl: MutableRefObject<Input | null>
 }
 

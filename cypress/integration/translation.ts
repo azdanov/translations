@@ -4,7 +4,7 @@ describe('translation', () => {
     // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(300) // Issues with i18next, doesn't change fast enough
     cy.contains('Language').click()
-    cy.contains('Eesti').click()
+    cy.contains('Eesti').click({ force: true })
   })
 
   it('should have elements translated', () => {
@@ -27,7 +27,7 @@ describe('translation', () => {
       .type('car{enter}')
 
     cy.contains('Laadimine …').should('exist')
-    cy.contains('Tulemused: 61').should('exist')
+    cy.contains('Tulemused').should('exist')
     cy.contains('auto').should('exist')
   })
 })
