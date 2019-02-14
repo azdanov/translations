@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/azdanov/translations/compare/v1.17.1...v1.18.0) (2019-02-14)
+
+
+### Features
+
+* **WOTD:** make header and segment less pronounced ([c646d35](https://github.com/azdanov/translations/commit/c646d35))
+
 ## [1.17.1](https://github.com/azdanov/translations/compare/v1.17.0...v1.17.1) (2019-02-14)
 
 
