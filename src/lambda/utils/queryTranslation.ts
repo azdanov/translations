@@ -1,7 +1,7 @@
 /* eslint-disable lodash/chaining */
 import got from 'got'
 import createHttpError from 'http-errors'
-import { mapValues, isEmpty, map, reject, groupBy, flattenDeep } from 'lodash'
+import { mapValues, isEmpty, isObject, map, reject, groupBy, flattenDeep } from 'lodash'
 import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
 import { EN as english, ET as estonian } from '../../i18n'
@@ -81,7 +81,10 @@ function parseResponse(
     })
 
     translation = translation.concat(
-      reject(articles, item => isEmpty(item.en) || isEmpty(item.et)),
+      reject(
+        articles,
+        item => isEmpty(item.en) || isEmpty(item.et) || isObject(item.et[0]),
+      ),
     )
 
     translation = dedupe(translation, 'en', 'et')
@@ -113,7 +116,10 @@ function parseResponse(
     })
 
     translation = translation.concat(
-      reject(articles, item => isEmpty(item.en) || isEmpty(item.et)),
+      reject(
+        articles,
+        item => isEmpty(item.en) || isEmpty(item.et) || isObject(item.et[0]),
+      ),
     )
 
     translation = dedupe(translation, 'et', 'en')
