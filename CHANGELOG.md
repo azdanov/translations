@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/azdanov/translations/compare/v1.18.0...v1.19.0) (2019-02-14)
+
+
+### Features
+
+* **Main:** offset headers and segments, make search clearer ([b63cb01](https://github.com/azdanov/translations/commit/b63cb01))
+
 # [1.18.0](https://github.com/azdanov/translations/compare/v1.17.1...v1.18.0) (2019-02-14)
 
 
