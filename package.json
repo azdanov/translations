@@ -208,7 +208,7 @@
     "@types/lodash": "4.14.121",
     "@types/lscache": "1.0.29",
     "@types/match-sorter": "2.3.0",
-    "@types/node": "11.9.3",
+    "@types/node": "11.9.4",
     "@types/react": "16.8.3",
     "@types/react-dom": "16.8.1",
     "@types/react-helmet": "5.0.8",
