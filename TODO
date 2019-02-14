@@ -1,18 +1,20 @@
 App:
-  Estonian:
-    ☐ Additional estonian api for translations (More estonian definitions)
-  Modal:
-    ☐ Search history modal (with clickthrough) or sidemenu
+  Language:
+    ☐ More english words, or meaning
+    ☐ More estonian words, or meaning
+  Sidebar:
+    ☐ Show sidebar with history
   UX:
+    ☐ Add settings (clear cache, clear history)
     ☐ Regex validation for search form @critical 
   Tests:
     ☐ Dedupe array in: {en: string, et: Array}
     ☐ Test for About
     ☐ Test for Search (cypress)
     ☐ Test service worker update
-  Trivia:
-    ☐ Add glosbe image with link
+    ☐ More tests
 Archive:
+  ✔ Add glosbe image with link @done(19-02-14 20:36) @project(App.Trivia)
   ✔ Other translation direction Estonian - English @done(19-02-14 16:13) @project(App.Estonian)
   ✔ Add clear button @done(19-02-13 23:01) @project(App.UX)
   ✔ Message when no results found @done(19-02-14 01:10) @project(App.UX)
