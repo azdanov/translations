@@ -1,3 +1,11 @@
+# [1.15.0](https://github.com/azdanov/translations/compare/v1.14.2...v1.15.0) (2019-02-14)
+
+
+### Features
+
+* **Hero:** add change button with its dependencies ([fb2847f](https://github.com/azdanov/translations/commit/fb2847f))
+* **project:** add estonian to english, update lambda to support this ([b309748](https://github.com/azdanov/translations/commit/b309748))
+
 ## [1.14.2](https://github.com/azdanov/translations/compare/v1.14.1...v1.14.2) (2019-02-14)
 
 
