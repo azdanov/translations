@@ -31,7 +31,7 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
   return (
     <>
       <Segment attached="top">
-        <Header as="h2" size="medium" textAlign="center">
+        <Header as="h2" size="medium" textAlign="center" style={{ opacity: 0.8 }}>
           {t('word of the day')}
         </Header>
       </Segment>

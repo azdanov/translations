@@ -7,12 +7,16 @@ App:
   UX:
     ☐ Add settings (clear cache, clear history)
     ☐ Regex validation for search form @critical 
+    ☐ Add font size settings for main area
+    ☐ Make URL saveable. When user navigates to http://localhost:3000/en/cat for example.
   Tests:
     ☐ Dedupe array in: {en: string, et: Array}
     ☐ Test for About
     ☐ Test for Search (cypress)
     ☐ Test service worker update
     ☐ More tests
+  Trivia:
+    ☐ Add statistics for total phrases
 Archive:
   ✔ Add glosbe image with link @done(19-02-14 20:36) @project(App.Trivia)
   ✔ Other translation direction Estonian - English @done(19-02-14 16:13) @project(App.Estonian)

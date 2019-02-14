@@ -24,7 +24,7 @@ export const Results: React.FC<{
 
   return (
     <>
-      <Header as="h2" size="medium" attached="top">
+      <Header as="h2" size="medium" attached="top" style={{ opacity: 0.8 }}>
         {t('results')}: {results.length}
       </Header>
       <Segment attached="bottom">
