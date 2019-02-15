@@ -1,3 +1,17 @@
+## [1.19.1](https://github.com/azdanov/translations/compare/v1.19.0...v1.19.1) (2019-02-15)
+
+
+### Bug Fixes
+
+* **NavBar:** fix flicker, due to critical css ([ccee6fe](https://github.com/azdanov/translations/commit/ccee6fe))
+
+
+### Performance Improvements
+
+* **critical:** add critical webpack plugin ([7950b1d](https://github.com/azdanov/translations/commit/7950b1d))
+* **css:** add purgecss to remove unused styles ([e44a05a](https://github.com/azdanov/translations/commit/e44a05a))
+* **project:** add prerender ([7ab5c8e](https://github.com/azdanov/translations/commit/7ab5c8e))
+
 # [1.19.0](https://github.com/azdanov/translations/compare/v1.18.0...v1.19.0) (2019-02-14)
 
 
