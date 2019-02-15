@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/azdanov/translations/compare/v1.23.1...v1.24.0) (2019-02-15)
+
+
+### Features
+
+* **project:** change icons ([aa86d6e](https://github.com/azdanov/translations/commit/aa86d6e))
+
 ## [1.23.1](https://github.com/azdanov/translations/compare/v1.23.0...v1.23.1) (2019-02-15)
 
 
