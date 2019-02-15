@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/azdanov/translations/compare/v1.22.0...v1.23.0) (2019-02-15)
+
+
+### Features
+
+* **About:** adjust layout ([de54b3d](https://github.com/azdanov/translations/commit/de54b3d))
+
 # [1.22.0](https://github.com/azdanov/translations/compare/v1.21.0...v1.22.0) (2019-02-15)
 
 
