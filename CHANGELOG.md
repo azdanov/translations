@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/azdanov/translations/compare/v1.24.0...v1.25.0) (2019-02-15)
+
+
+### Features
+
+* **project:** adjust colors, and weights ([5f92b33](https://github.com/azdanov/translations/commit/5f92b33))
+
 # [1.24.0](https://github.com/azdanov/translations/compare/v1.23.1...v1.24.0) (2019-02-15)
 
 
