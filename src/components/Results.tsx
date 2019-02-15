@@ -23,15 +23,7 @@ export const Results: React.FC<{
 
   return (
     <>
-      <h2
-        className="ui top attached header"
-        style={{
-          backgroundColor: '#fff',
-          borderBottom: '1px solid #e8e8e8',
-          fontSize: '1rem',
-          fontWeight: 'normal',
-        }}
-      >
+      <h2 className="ui top attached header">
         {results.length} {t('results found')}
       </h2>
       <div className="ui bottom attached segment">

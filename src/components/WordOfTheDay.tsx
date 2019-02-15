@@ -29,17 +29,7 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
 
   return (
     <>
-      <h2
-        className="ui top attached header"
-        style={{
-          backgroundColor: '#fff',
-          borderBottom: '1px solid #e8e8e8',
-          fontSize: '1rem',
-          fontWeight: 'normal',
-        }}
-      >
-        {t('word of the day')}
-      </h2>
+      <h2 className="ui top attached header">{t('word of the day')}</h2>
       <div className={`ui bottom attached segment ${loading ? 'loading' : ''}`}>
         {isReady ? (
           <>

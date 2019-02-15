@@ -18,16 +18,7 @@ export const About: React.FC = (): JSX.Element => {
               <div className="content">{t('about this')}</div>
             </h1>
           </div>
-          <h2
-            className="ui top attached header"
-            style={{
-              backgroundColor: '#fff',
-              borderBottom: '1px solid #e8e8e8',
-              fontSize: '1rem',
-            }}
-          >
-            {t('description')}
-          </h2>
+          <h2 className="ui top attached header">{t('description')}</h2>
           <div className="ui segment bottom attached bg-white">
             <p>{t('about description')}</p>
           </div>
@@ -35,16 +26,7 @@ export const About: React.FC = (): JSX.Element => {
       </div>
       <div className="row">
         <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-          <h2
-            className="ui top attached header"
-            style={{
-              backgroundColor: '#fff',
-              borderBottom: '1px solid #e8e8e8',
-              fontSize: '1rem',
-            }}
-          >
-            {t('disclaimer')}
-          </h2>
+          <h2 className="ui top attached header">{t('disclaimer')}</h2>
           <div className="ui segment bottom attached bg-white">
             <p>{t('about disclaimer')}</p>
           </div>
@@ -52,16 +34,7 @@ export const About: React.FC = (): JSX.Element => {
       </div>
       <div className="row">
         <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-          <h2
-            className="ui top attached header"
-            style={{
-              backgroundColor: '#fff',
-              borderBottom: '1px solid #e8e8e8',
-              fontSize: '1rem',
-            }}
-          >
-            {t('for developer')}
-          </h2>
+          <h2 className="ui top attached header">{t('for developer')}</h2>
           <div className="ui segment bottom attached bg-white">
             <p>
               {t('source code')}{' '}
@@ -79,16 +52,7 @@ export const About: React.FC = (): JSX.Element => {
       </div>
       <div className="row">
         <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-          <h2
-            className="ui top attached header"
-            style={{
-              backgroundColor: '#fff',
-              borderBottom: '1px solid #e8e8e8',
-              fontSize: '1rem',
-            }}
-          >
-            {t('attributions')}
-          </h2>
+          <h2 className="ui top attached header">{t('attributions')}</h2>
           <div className="ui basic center aligned padded segment bottom attached bg-white">
             <a
               rel="noopener noreferrer"
