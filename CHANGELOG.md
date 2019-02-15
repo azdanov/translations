@@ -1,3 +1,10 @@
+## [1.19.2](https://github.com/azdanov/translations/compare/v1.19.1...v1.19.2) (2019-02-15)
+
+
+### Bug Fixes
+
+* **deps:** update react monorepo to v16.8.2 ([f69e507](https://github.com/azdanov/translations/commit/f69e507))
+
 ## [1.19.1](https://github.com/azdanov/translations/compare/v1.19.0...v1.19.1) (2019-02-15)
 
 
