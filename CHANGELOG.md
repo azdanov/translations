@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/azdanov/translations/compare/v1.21.0...v1.22.0) (2019-02-15)
+
+
+### Features
+
+* **NavBar:** make smaller ([feb64e9](https://github.com/azdanov/translations/commit/feb64e9))
+
 # [1.21.0](https://github.com/azdanov/translations/compare/v1.20.0...v1.21.0) (2019-02-15)
 
 
