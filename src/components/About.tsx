@@ -13,7 +13,7 @@ export const About: React.FC = (): JSX.Element => {
     <>
       <div className="ui centered grid attached">
         <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-          <h1 className="ui center aligned header attached top">
+          <h1 className="ui center aligned header attached top bg-white">
             <div className="content">{t('about this')}</div>
           </h1>
           <div className="ui segment attached bottom bg-white">
@@ -34,10 +34,10 @@ export const About: React.FC = (): JSX.Element => {
               </a>
             </p>
           </div>
-          <h2 className="ui large center aligned header attached">
+          <h2 className="ui large center aligned header attached bg-white">
             <div className="content">{t('attributions')}</div>
           </h2>
-          <div className="ui basic center aligned segment attached bottom bg-white">
+          <div className="ui basic center aligned segment bottom attached bg-white">
             <a
               rel="noopener noreferrer"
               target="_blank"

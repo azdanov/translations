@@ -26,21 +26,25 @@ export const Main: React.FC = (): JSX.Element => {
   const showResults = (results.length > 0 || loading) && !error
 
   return (
-    <div className="ui basic segment">
-      <Hero
-        order={order}
-        setOrder={setOrder}
-        setResults={setResults}
-        setSearch={setSearch}
-      />
+    <div className="ui basic segment" style={{ marginTop: 0 }}>
+      <div className="ui basic segment padded">
+        <Hero
+          order={order}
+          setOrder={setOrder}
+          setResults={setResults}
+          setSearch={setSearch}
+        />
+      </div>
       <div className="ui centered grid">
-        <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-          <Search
-            loading={loading}
-            search={search}
-            searchEl={searchEl}
-            setSearch={setSearch}
-          />
+        <div className="row">
+          <div className="eight wide computer fourteen wide mobile nine wide tablet column">
+            <Search
+              loading={loading}
+              search={search}
+              searchEl={searchEl}
+              setSearch={setSearch}
+            />
+          </div>
         </div>
         {showResults && (
           <div className="row">

@@ -16,43 +16,53 @@ export const NavBar: React.FC = (): JSX.Element => {
   }
 
   return (
-    <div className="ui secondary menu" style={{ marginTop: '0.5rem' }}>
-      <div
-        className="vertically fitted item"
-        style={{ paddingTop: 0, paddingBottom: 0 }}
-      >
-        <Globe width="3em" height="3em" />
-      </div>
-      <div className="ui pointing secondary menu" style={{ marginBottom: '0.3rem' }}>
-        <NavLink className="item" href="/" to="/" exact>
-          {t('home')}
-        </NavLink>
-        <NavLink className="item" href="/about" to="/about">
-          {t('about')}
-        </NavLink>
-      </div>
+    <div className="ui centered grid">
+      <div className="eight wide computer fourteen wide mobile nine wide tablet column">
+        <div className="ui secondary menu" style={{ marginTop: '0.5rem' }}>
+          <div
+            className="fitted item"
+            style={{ padding: 0, paddingRight: '0.92857143em' }}
+          >
+            <Globe width="3em" height="3em" />
+          </div>
+          <div
+            className="ui pointing secondary menu"
+            style={{ marginBottom: '0.3rem' }}
+          >
+            <NavLink className="item" href="/" to="/" exact>
+              {t('home')}
+            </NavLink>
+            <NavLink className="item" href="/about" to="/about">
+              {t('about')}
+            </NavLink>
+          </div>
 
-      <div className="right menu">
-        <ReachMenu>
-          <MenuButton className="ui dropdown item" style={{ marginBottom: '0.1rem' }}>
-            <div className="text">{t('language')}</div>{' '}
-            <span aria-hidden className="dropdown icon" />
-          </MenuButton>
-          <MenuList>
-            <MenuItem
-              data-current={activeLanguage === EN}
-              onSelect={() => handleSelect(EN)}
-            >
-              <span className="text">English</span>
-            </MenuItem>
-            <MenuItem
-              data-current={activeLanguage === ET}
-              onSelect={() => handleSelect(ET)}
-            >
-              <span className="text">Eesti</span>
-            </MenuItem>
-          </MenuList>
-        </ReachMenu>
+          <div className="right menu">
+            <ReachMenu>
+              <MenuButton
+                className="ui dropdown item"
+                style={{ marginBottom: '0.1rem' }}
+              >
+                <div className="text">{t('language')}</div>{' '}
+                <span aria-hidden className="dropdown icon" />
+              </MenuButton>
+              <MenuList>
+                <MenuItem
+                  data-current={activeLanguage === EN}
+                  onSelect={() => handleSelect(EN)}
+                >
+                  <span className="text">English</span>
+                </MenuItem>
+                <MenuItem
+                  data-current={activeLanguage === ET}
+                  onSelect={() => handleSelect(ET)}
+                >
+                  <span className="text">Eesti</span>
+                </MenuItem>
+              </MenuList>
+            </ReachMenu>
+          </div>
+        </div>
       </div>
     </div>
   )
