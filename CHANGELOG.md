@@ -1,3 +1,10 @@
+## [1.25.1](https://github.com/azdanov/translations/compare/v1.25.0...v1.25.1) (2019-02-15)
+
+
+### Bug Fixes
+
+* **style:** add important since critical adjusts cascade ([c6b0e66](https://github.com/azdanov/translations/commit/c6b0e66))
+
 # [1.25.0](https://github.com/azdanov/translations/compare/v1.24.0...v1.25.0) (2019-02-15)
 
 
