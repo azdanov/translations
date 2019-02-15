@@ -40,7 +40,7 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
       >
         {t('word of the day')}
       </h2>
-      <div className={`ui bottom attached segment${loading ? 'loading' : ''}`}>
+      <div className={`ui bottom attached segment ${loading ? 'loading' : ''}`}>
         {isReady ? (
           <>
             <h3 className="ui medium header">
