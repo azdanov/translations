@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/azdanov/translations/compare/v1.20.0...v1.21.0) (2019-02-15)
+
+
+### Features
+
+* **project:** add bg-color ([c320ac9](https://github.com/azdanov/translations/commit/c320ac9))
+
 # [1.20.0](https://github.com/azdanov/translations/compare/v1.19.4...v1.20.0) (2019-02-15)
 
 
