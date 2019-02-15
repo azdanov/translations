@@ -19,6 +19,7 @@ App:
     ☐ Add statistics for total phrases
     ☐ Fix worker message, it should always be near the bottom of the screen
 Archive:
+  ✔ Use plugins for babel, webpack to speed up @done(19-02-15 15:59) @project(App.Performance)
   ✔ Add glosbe image with link @done(19-02-14 20:36) @project(App.Trivia)
   ✔ Other translation direction Estonian - English @done(19-02-14 16:13) @project(App.Estonian)
   ✔ Add clear button @done(19-02-13 23:01) @project(App.UX)
