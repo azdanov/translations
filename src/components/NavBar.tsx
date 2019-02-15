@@ -17,7 +17,10 @@ export const NavBar: React.FC = (): JSX.Element => {
 
   return (
     <div className="ui secondary menu" style={{ marginTop: '0.5rem' }}>
-      <div className="vertically fitted item">
+      <div
+        className="vertically fitted item"
+        style={{ paddingTop: 0, paddingBottom: 0 }}
+      >
         <Globe width="3em" height="3em" />
       </div>
       <div className="ui pointing secondary menu" style={{ marginBottom: '0.3rem' }}>
