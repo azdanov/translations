@@ -1,3 +1,10 @@
+# [1.27.0](https://github.com/azdanov/translations/compare/v1.26.0...v1.27.0) (2019-02-15)
+
+
+### Features
+
+* **project:** add styles ([d7d8b7b](https://github.com/azdanov/translations/commit/d7d8b7b))
+
 # [1.26.0](https://github.com/azdanov/translations/compare/v1.25.1...v1.26.0) (2019-02-15)
 
 
