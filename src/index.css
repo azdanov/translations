@@ -105,3 +105,13 @@ body,
 .word-of-the-day:hover {
   color: #1e70bf !important;
 }
+
+/* BG Color */
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+body {
+  background-color: #22242602;
+}
