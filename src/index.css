@@ -115,3 +115,10 @@ body,
 body {
   background-color: #22242602;
 }
+
+/* About */
+
+.about .row {
+  padding-top: 0 !important;
+  padding-bottom: 0.5rem !important;
+}

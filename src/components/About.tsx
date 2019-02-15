@@ -10,34 +10,86 @@ export const About: React.FC = (): JSX.Element => {
   useTitle(`${t('about')} | ${t('translations')}`)
 
   return (
-    <>
-      <div className="ui centered grid attached">
+    <div className="ui centered grid attached about">
+      <div className="row">
         <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-          <h1 className="ui center aligned header attached top bg-white">
-            <div className="content">{t('about this')}</div>
-          </h1>
-          <div className="ui segment attached bottom bg-white">
+          <div className="ui basic segment padded">
+            <h1 className="ui center aligned header">
+              <div className="content">{t('about this')}</div>
+            </h1>
+          </div>
+          <h2
+            className="ui top attached header"
+            style={{
+              backgroundColor: '#fff',
+              borderBottom: '1px solid #e8e8e8',
+              fontSize: '1rem',
+            }}
+          >
+            {t('description')}
+          </h2>
+          <div className="ui segment bottom attached bg-white">
+            <p>{t('about description')}</p>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="eight wide computer fourteen wide mobile nine wide tablet column">
+          <h2
+            className="ui top attached header"
+            style={{
+              backgroundColor: '#fff',
+              borderBottom: '1px solid #e8e8e8',
+              fontSize: '1rem',
+            }}
+          >
+            {t('disclaimer')}
+          </h2>
+          <div className="ui segment bottom attached bg-white">
+            <p>{t('about disclaimer')}</p>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="eight wide computer fourteen wide mobile nine wide tablet column">
+          <h2
+            className="ui top attached header"
+            style={{
+              backgroundColor: '#fff',
+              borderBottom: '1px solid #e8e8e8',
+              fontSize: '1rem',
+            }}
+          >
+            {t('for developer')}
+          </h2>
+          <div className="ui segment bottom attached bg-white">
             <p>
-              <strong>{t('description')}:</strong> {t('about description')}
-            </p>
-            <p>
-              <strong>{t('disclaimer')}:</strong> {t('about disclaimer')}
-            </p>
-            <p>
-              <strong>{t('for developer')}:</strong>{' '}
+              {t('source code')}{' '}
               <a
                 href="https://github.com/azdanov/translations"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                GitHub
+                {t('at github')}
               </a>
+              .
             </p>
           </div>
-          <h2 className="ui large center aligned header attached bg-white">
-            <div className="content">{t('attributions')}</div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="eight wide computer fourteen wide mobile nine wide tablet column">
+          <h2
+            className="ui top attached header"
+            style={{
+              backgroundColor: '#fff',
+              borderBottom: '1px solid #e8e8e8',
+              fontSize: '1rem',
+            }}
+          >
+            {t('attributions')}
           </h2>
-          <div className="ui basic center aligned segment bottom attached bg-white">
+          <div className="ui basic center aligned padded segment bottom attached bg-white">
             <a
               rel="noopener noreferrer"
               target="_blank"
@@ -58,7 +110,7 @@ export const About: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
