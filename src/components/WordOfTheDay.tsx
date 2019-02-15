@@ -48,6 +48,7 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
             <Header as="h3" size="medium">
               <Header.Content>
                 <a
+                  className="word-of-the-day"
                   href={`https://www.wordnik.com/words/${result.word}`}
                   rel="noopener noreferrer"
                   target="_blank"

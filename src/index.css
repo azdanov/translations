@@ -96,8 +96,12 @@ body,
   font-style: italic;
 }
 
-/* Link */
+/* Link (needs important because of critical css) */
 
-a {
-  color: #3c7ab7;
+.word-of-the-day {
+  color: #3c7ab7 !important;
+}
+
+.word-of-the-day:hover {
+  color: #1e70bf !important;
 }
