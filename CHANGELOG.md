@@ -1,3 +1,11 @@
+## [1.19.4](https://github.com/azdanov/translations/compare/v1.19.3...v1.19.4) (2019-02-15)
+
+
+### Performance Improvements
+
+* **project:** remove dependencies, add styled-components ([d1606e1](https://github.com/azdanov/translations/commit/d1606e1))
+* **project:** remove semantic-react, add webpack and babel plugins ([99fee54](https://github.com/azdanov/translations/commit/99fee54))
+
 ## [1.19.3](https://github.com/azdanov/translations/compare/v1.19.2...v1.19.3) (2019-02-15)
 
 ### Bug Fixes
