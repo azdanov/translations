@@ -105,7 +105,7 @@ module.exports = {
       ]
 
       if (env === 'production') {
-        return webpackConfig.concat(prodPlugins)
+        webpackConfig.plugins = webpackConfig.plugins.concat(prodPlugins)
       }
 
       return webpackConfig
