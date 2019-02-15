@@ -18,7 +18,7 @@ export const NavBar: React.FC = (): JSX.Element => {
 
   return (
     <Menu secondary style={{ marginTop: '0.5rem' }}>
-      <Menu.Item fitted="vertically">
+      <Menu.Item fitted="vertically" style={{ paddingTop: 0, paddingBottom: 0 }}>
         <Globe width="3em" height="3em" />
       </Menu.Item>
       <Menu secondary pointing style={{ marginBottom: '0.3rem' }}>
