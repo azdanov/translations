@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/azdanov/translations/compare/v1.19.4...v1.20.0) (2019-02-15)
+
+
+### Features
+
+* **ResultsPlaceholder:** add segment around placeholder ([f3cebf0](https://github.com/azdanov/translations/commit/f3cebf0))
+
 ## [1.19.4](https://github.com/azdanov/translations/compare/v1.19.3...v1.19.4) (2019-02-15)
 
 
