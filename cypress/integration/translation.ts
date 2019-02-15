@@ -3,8 +3,8 @@ describe('translation', () => {
     cy.visit('/')
     // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(300) // Issues with i18next, doesn't change fast enough
-    cy.contains('Language').click()
-    cy.contains('Eesti').click({ force: true })
+    cy.contains('language').click()
+    cy.contains('Eesti').click()
   })
 
   it('should have elements translated', () => {
@@ -18,6 +18,8 @@ describe('translation', () => {
     cy.contains('Määratlus:').should('exist')
 
     cy.visit('/about')
+    cy.contains('language').click()
+    cy.contains('Eesti').click()
     cy.title().should('eq', 'Sellest | Tõlked')
   })
 

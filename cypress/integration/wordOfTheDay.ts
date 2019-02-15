@@ -1,6 +1,8 @@
 describe('word of the day', () => {
   beforeEach(() => {
     cy.visit('/')
+    cy.contains('language').click()
+    cy.contains('English').click()
   })
 
   it('should show word of the day', () => {

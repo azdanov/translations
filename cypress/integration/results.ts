@@ -1,6 +1,8 @@
 describe('results', () => {
   beforeEach(() => {
     cy.visit('/')
+    cy.contains('language').click()
+    cy.contains('English').click()
   })
 
   it('should show results on enter', () => {
