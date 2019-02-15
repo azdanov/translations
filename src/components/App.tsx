@@ -1,26 +1,19 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
-import { useTranslation } from 'react-i18next'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
 import { Footer } from './Footer'
 import { NavBar } from './NavBar'
 import { NoMatch } from './NoMatch'
+import { GlobalStyle } from './GlobalStyle'
 
 const Main = React.lazy(() => import('./Main'))
 const About = React.lazy(() => import('./About'))
 
 export const App: React.FC = (): JSX.Element => {
-  const [t] = useTranslation()
-
   return (
     <>
+      <GlobalStyle />
       <Container className="content">
-        <Helmet>
-          <title>
-            {t('home')} | {t('translations')}
-          </title>
-        </Helmet>
         <Router>
           <>
             <NavBar />
@@ -29,11 +22,11 @@ export const App: React.FC = (): JSX.Element => {
                 <Route
                   exact
                   path="/"
-                  render={() => /* FIXME: react-router-dom 4.4+ */ <Main />}
+                  render={() => /* TODO: react-router-dom 4.4+ */ <Main />}
                 />
                 <Route
                   path="/about"
-                  render={() => /* FIXME: react-router-dom 4.4+ */ <About />}
+                  render={() => /* TODO: react-router-dom 4.4+ */ <About />}
                 />
                 <Route component={NoMatch} />
               </Switch>

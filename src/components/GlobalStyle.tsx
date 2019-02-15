@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components'
+
+export const GlobalStyle = createGlobalStyle`
 /* Sticky Footer */
 
 html,
@@ -105,3 +108,6 @@ body,
 .word-of-the-day:hover {
   color: #1e70bf !important;
 }
+
+`
+export default GlobalStyle

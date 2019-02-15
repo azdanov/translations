@@ -4,11 +4,16 @@ const glob = require('glob-all')
 const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const path = require('path')
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 module.exports = {
+  babel: {
+    plugins: ['babel-plugin-styled-components'],
+  },
   webpack: {
     configure: (webpackConfig, { env, paths }) => {
       const prodPlugins = [
+        // new BundleAnalyzerPlugin(),
         new PurgecssPlugin({
           paths: [
             paths.appHtml,

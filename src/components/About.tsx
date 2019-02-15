@@ -1,19 +1,17 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { Divider, Grid, Header, Image, Segment } from 'semantic-ui-react'
 import glosbe from '../images/glosbe.png'
 import wordnik from '../images/wordnik.png'
+import useTitle from '../hooks/useTitle'
 
 export const About: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
+
+  useTitle(`${t('about')} | ${t('translations')}`)
+
   return (
     <Segment basic>
-      <Helmet>
-        <title>
-          {t('about')} | {t('translations')}
-        </title>
-      </Helmet>
       <Grid centered>
         <Grid.Column mobile={14} tablet={9} computer={8}>
           <Header as="h1" textAlign="center">
