@@ -208,7 +208,7 @@
     "lscache": "1.3.0",
     "match-sorter": "2.3.0",
     "middy": "0.22.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "4.11.0",
     "react": "16.8.2",
     "react-dom": "16.8.2",
     "react-i18next": "10.1.2",
