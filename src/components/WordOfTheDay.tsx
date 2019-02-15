@@ -70,8 +70,6 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
             <div className="paragraph">
               <div className="short line" />
               <div className="very short line" />
-            </div>
-            <div className="paragraph">
               <div className="line" />
               <div className="line" />
               <div className="line" />

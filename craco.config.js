@@ -23,7 +23,7 @@ module.exports = {
           ],
           keyframes: true,
           fontFace: true,
-          whitelist: ['active', 'loading', 'short', 'very', 'long'],
+          whitelist: ['active'],
         }),
         new PrerenderSPAPlugin({
           routes: ['/'],
