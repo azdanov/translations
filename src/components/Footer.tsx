@@ -8,7 +8,7 @@ export const Footer: React.FC<{ className?: string }> = ({
   return (
     <Container text textAlign="center" className={className}>
       <Segment basic>
-        <div style={{ opacity: 0.6 }}>
+        <div style={{ color: 'rgba(0,0,0,.6)' }}>
           <Icon name="copyright outline" /> {year}
         </div>
       </Segment>
