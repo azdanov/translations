@@ -1,19 +1,21 @@
-/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
+/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires,global-require */
 const PurgecssPlugin = require('purgecss-webpack-plugin')
-const glob = require('glob-all')
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
+const glob = require('glob-all')
 const path = require('path')
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 module.exports = {
   babel: {
-    plugins: ['babel-plugin-styled-components'],
+    plugins: ['lodash'],
   },
   webpack: {
     configure: (webpackConfig, { env, paths }) => {
       const prodPlugins = [
-        // new BundleAnalyzerPlugin(),
+        // Enable/Disable before npm build
+        // new (require('webpack-bundle-analyzer')).BundleAnalyzerPlugin(),
+        new LodashModuleReplacementPlugin(),
         new PurgecssPlugin({
           paths: [
             paths.appHtml,

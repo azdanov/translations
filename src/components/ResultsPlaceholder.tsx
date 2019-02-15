@@ -1,31 +1,30 @@
 import { times } from 'lodash'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Container, Header, List, Placeholder } from 'semantic-ui-react'
 
 export const ResultsPlaceholder: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
 
   return (
-    <Container text>
-      <Header as="h2" size="small">{`${t('loading')} …`}</Header>
-      <List relaxed>
+    <div className="container text">
+      <h2 className="ui header small">{`${t('loading')} …`}</h2>
+      <div role="list" className="ui relaxed list">
         {times(4, i => {
           return (
-            <List.Item key={i}>
-              <List.Header>
-                <Placeholder>
-                  <Placeholder.Line length={isEven(i) ? 'short' : 'very short'} />
-                </Placeholder>
-              </List.Header>
-              <Placeholder>
-                <Placeholder.Line length={isEven(i) ? 'long' : 'very long'} />
-              </Placeholder>
-            </List.Item>
+            <div role="listitem" className="item" key={i}>
+              <div className="header">
+                <div className="ui placeholder">
+                  <div className={`line ${isEven(i) ? 'short' : 'very short'}`} />
+                </div>
+              </div>
+              <div className="ui placeholder">
+                <div className={`line ${isEven(i) ? 'long' : 'very long'}`} />
+              </div>
+            </div>
           )
         })}
-      </List>
-    </Container>
+      </div>
+    </div>
   )
 }
 

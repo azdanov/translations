@@ -1,12 +1,11 @@
 import React, { MutableRefObject } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Icon, Input, Label, Message as UIMessage } from 'semantic-ui-react'
 
 interface Props {
   error: string
   setError: React.Dispatch<React.SetStateAction<string>>
   setSearch: React.Dispatch<React.SetStateAction<string>>
-  searchEl: MutableRefObject<Input | null>
+  searchEl: MutableRefObject<HTMLInputElement | null>
 }
 
 export const Message: React.FC<Props> = ({
@@ -18,15 +17,13 @@ export const Message: React.FC<Props> = ({
   const [t] = useTranslation()
 
   return (
-    <UIMessage warning>
-      <UIMessage.Header>{t('error')}</UIMessage.Header>
-      <UIMessage.Content>
-        <Label
-          floating
-          as="a"
+    <div className="ui warning message">
+      <div className="header">{t('error')}</div>
+      <div className="content">
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a
           href="#"
-          tabIndex="0"
-          className="right aligned"
+          className="ui floating label right aligned"
           onClick={event => {
             event.preventDefault()
             setError('')
@@ -37,11 +34,11 @@ export const Message: React.FC<Props> = ({
           }}
         >
           {t('close')}
-          <Icon name="delete" />
-        </Label>
+          <i aria-hidden="true" className="delete icon" />
+        </a>
         {t(error)}
-      </UIMessage.Content>
-    </UIMessage>
+      </div>
+    </div>
   )
 }
 

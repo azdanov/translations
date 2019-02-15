@@ -1,19 +1,18 @@
 import React from 'react'
-import { Button, Label, Segment } from 'semantic-ui-react'
 
 export const Toast: React.FC<{
   message: string
   button?: string
   onConfirm: () => void
 }> = ({ message, button = 'OK', onConfirm }): JSX.Element => (
-  <Segment basic textAlign="center">
-    <Button as="div" labelPosition="left" tabIndex="-1" role="alert" className="toast">
-      <Label as="p" basic>
-        {message}
-      </Label>
-      <Button onClick={onConfirm}>{button}</Button>
-    </Button>
-  </Segment>
+  <div className="ui basic center aligned segment">
+    <div className="ui left labeled button toast" role="alert">
+      <p className="ui basic label">{message}</p>
+      <button type="button" className="ui button" onClick={onConfirm}>
+        {button}
+      </button>
+    </div>
+  </div>
 )
 
 export default Toast

@@ -1,8 +1,7 @@
 import Hidden from '@reach/visually-hidden'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Header, Icon } from 'semantic-ui-react'
-import Article from '../types/Article'
+import { Article } from '../types/Article'
 import { Order } from '../types/Languages'
 
 interface Props {
@@ -21,14 +20,14 @@ export const Hero: React.FC<Props> = ({
   const [t] = useTranslation()
 
   return (
-    <Header as="h1" textAlign="center" className="hero">
-      <Header.Content>
+    <h1 className="ui center aligned header hero">
+      <div className="content">
         <span>{t(first)}</span> - <span>{t(second)}</span>
-        <Header.Subheader>
+        <div className="sub header">
           {t('dictionary')}
-          <Button
-            icon
-            className="tertiary"
+          <button
+            type="button"
+            className="ui icon button tertiary"
             onClick={() => {
               setOrder([second, first] as Order)
               setResults([])
@@ -36,11 +35,11 @@ export const Hero: React.FC<Props> = ({
             }}
           >
             <Hidden>{t('change direction')}</Hidden>
-            <Icon name="exchange" />
-          </Button>
-        </Header.Subheader>
-      </Header.Content>
-    </Header>
+            <i aria-hidden="true" className="exchange icon" />
+          </button>
+        </div>
+      </div>
+    </h1>
   )
 }
 

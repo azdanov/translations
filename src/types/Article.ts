@@ -1,4 +1,4 @@
-export default interface Article {
+export interface Article {
   en: string | string[]
   et: string[] | string
 }

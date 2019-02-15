@@ -1,4 +1,5 @@
-import Article from './Article'
+import { Article } from './Article'
+
 import { EN, ET } from './Languages'
 
 export interface Translation {

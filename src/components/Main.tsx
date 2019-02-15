@@ -1,16 +1,15 @@
 import React, { useRef, useState } from 'react'
-import { Grid, Input, Segment } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next'
-import { useLocalStorage } from '../hooks/useLocalStorage'
-import { useFetchTranslation } from '../hooks/useFetchTranslation'
-import Article from '../types/Article'
-import { Order } from '../types/Languages'
-import { Hero } from './Hero'
-import { Message } from './Message'
-import { Results } from './Results'
-import { Search } from './Search'
-import { WordOfTheDay } from './WordOfTheDay'
+import useFetchTranslation from '../hooks/useFetchTranslation'
+import useLocalStorage from '../hooks/useLocalStorage'
 import useTitle from '../hooks/useTitle'
+import { Article } from '../types/Article'
+import { Order } from '../types/Languages'
+import Hero from './Hero'
+import Message from './Message'
+import Results from './Results'
+import Search from './Search'
+import WordOfTheDay from './WordOfTheDay'
 
 export const Main: React.FC = (): JSX.Element => {
   const [order, setOrder] = useLocalStorage<Order>('direction', ['english', 'estonian'])
@@ -19,7 +18,7 @@ export const Main: React.FC = (): JSX.Element => {
   const [search, setSearch] = useState('')
   const [error, setError] = useState('')
   const [t] = useTranslation()
-  const searchEl = useRef<Input>(null)
+  const searchEl = useRef<HTMLInputElement>(null)
 
   useTitle(`${t('home')} | ${t('translations')}`)
   useFetchTranslation(search, order, setResults, setLoading, setError)
@@ -27,25 +26,25 @@ export const Main: React.FC = (): JSX.Element => {
   const showResults = (results.length > 0 || loading) && !error
 
   return (
-    <Segment basic>
+    <div className="ui basic segment">
       <Hero
         order={order}
         setOrder={setOrder}
         setResults={setResults}
         setSearch={setSearch}
       />
-      <Grid centered>
-        <Grid.Column mobile={14} tablet={9} computer={8}>
+      <div className="ui centered grid">
+        <div className="eight wide computer fourteen wide mobile nine wide tablet column">
           <Search
             loading={loading}
             search={search}
             searchEl={searchEl}
             setSearch={setSearch}
           />
-        </Grid.Column>
+        </div>
         {showResults && (
-          <Grid.Row>
-            <Grid.Column mobile={14} tablet={9} computer={8}>
+          <div className="row">
+            <div className="eight wide computer fourteen wide mobile nine wide tablet column">
               <Results
                 loading={loading}
                 results={results}
@@ -53,28 +52,28 @@ export const Main: React.FC = (): JSX.Element => {
                 setResults={setResults}
                 setSearch={setSearch}
               />
-            </Grid.Column>
-          </Grid.Row>
+            </div>
+          </div>
         )}
         {Boolean(error) && (
-          <Grid.Row>
-            <Grid.Column mobile={14} tablet={9} computer={8}>
+          <div className="row">
+            <div className="eight wide computer fourteen wide mobile nine wide tablet column">
               <Message
                 error={error}
                 searchEl={searchEl}
                 setError={setError}
                 setSearch={setSearch}
               />
-            </Grid.Column>
-          </Grid.Row>
+            </div>
+          </div>
         )}
-        <Grid.Row>
-          <Grid.Column mobile={14} tablet={9} computer={8}>
+        <div className="row">
+          <div className="eight wide computer fourteen wide mobile nine wide tablet column">
             <WordOfTheDay show={!loading && results.length === 0} />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

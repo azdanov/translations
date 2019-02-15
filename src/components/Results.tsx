@@ -1,16 +1,15 @@
 import { isEmpty, isString } from 'lodash'
 import React, { MutableRefObject } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Header, Icon, Input, Label, List, Segment } from 'semantic-ui-react'
-import Article, { ArticleEN, ArticleET } from '../types/Article'
-import { ResultsPlaceholder } from './ResultsPlaceholder'
+import { Article, ArticleEN, ArticleET } from '../types/Article'
+import ResultsPlaceholder from './ResultsPlaceholder'
 
 export const Results: React.FC<{
   results?: Article[]
   loading: boolean
   setSearch: React.Dispatch<React.SetStateAction<string>>
   setResults: React.Dispatch<React.SetStateAction<Article[]>>
-  searchEl: MutableRefObject<Input | null>
+  searchEl: MutableRefObject<HTMLInputElement | null>
 }> = ({ results, loading, setSearch, setResults, searchEl }): JSX.Element | null => {
   const [t] = useTranslation()
 
@@ -24,9 +23,8 @@ export const Results: React.FC<{
 
   return (
     <>
-      <Header
-        as="h2"
-        attached="top"
+      <h2
+        className="ui top attached header"
         style={{
           backgroundColor: '#fff',
           borderBottom: '1px solid #e8e8e8',
@@ -35,14 +33,12 @@ export const Results: React.FC<{
         }}
       >
         {results.length} {t('results found')}
-      </Header>
-      <Segment attached="bottom">
-        <Label
-          floating
-          as="a"
+      </h2>
+      <div className="ui bottom attached segment">
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a
           href="#"
-          tabIndex="0"
-          className="right aligned"
+          className="ui floating label right aligned"
           onClick={event => {
             event.preventDefault()
             setResults([])
@@ -53,12 +49,12 @@ export const Results: React.FC<{
           }}
         >
           {t('close results')}
-          <Icon name="delete" />
-        </Label>
-        <List relaxed style={{ marginTop: 0 }}>
+          <i aria-hidden="true" className="delete icon" />
+        </a>
+        <div role="list" className="ui relaxed list" style={{ marginTop: 0 }}>
           {results.length && results.map(createList)}
-        </List>
-      </Segment>
+        </div>
+      </div>
     </>
   )
 }
@@ -67,8 +63,8 @@ const createList = (result: Article): JSX.Element | null => {
   if (isString(result.en)) {
     const r = result as ArticleEN
     return (
-      <List.Item lang="en" key={r.en}>
-        <List.Header>{r.en}</List.Header>
+      <div role="listitem" className="item" lang="en" key={r.en}>
+        <div className="header">{r.en}</div>
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {r.et.map((et, index, array) => (
             <span key={et}>
@@ -77,14 +73,14 @@ const createList = (result: Article): JSX.Element | null => {
             </span>
           ))}
         </div>
-      </List.Item>
+      </div>
     )
   }
   if (isString(result.et)) {
     const r = result as ArticleET
     return (
-      <List.Item lang="en" key={r.et}>
-        <List.Header>{r.et}</List.Header>
+      <div role="listitem" className="item" lang="et" key={r.et}>
+        <div className="header">{r.et}</div>
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {r.en.map((en, index, array) => (
             <span key={en}>
@@ -93,7 +89,7 @@ const createList = (result: Article): JSX.Element | null => {
             </span>
           ))}
         </div>
-      </List.Item>
+      </div>
     )
   }
   return null

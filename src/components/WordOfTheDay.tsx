@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Header, List, Placeholder, Segment } from 'semantic-ui-react'
-import { useFetchWordOfTheDay } from '../hooks/useFetchWordOfTheDay'
+import useFetchWordOfTheDay from '../hooks/useFetchWordOfTheDay'
 
 export interface WordOfTheDayResult {
   word: string
@@ -30,9 +29,8 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
 
   return (
     <>
-      <Header
-        as="h2"
-        attached="top"
+      <h2
+        className="ui top attached header"
         style={{
           backgroundColor: '#fff',
           borderBottom: '1px solid #e8e8e8',
@@ -41,12 +39,12 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
         }}
       >
         {t('word of the day')}
-      </Header>
-      <Segment attached="bottom" loading={loading}>
+      </h2>
+      <div className={`ui bottom attached segment${loading ? 'loading' : ''}`}>
         {isReady ? (
           <>
-            <Header as="h3" size="medium">
-              <Header.Content>
+            <h3 className="ui medium header">
+              <div className="content">
                 <a
                   className="word-of-the-day"
                   href={`https://www.wordnik.com/words/${result.word}`}
@@ -55,33 +53,35 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
                 >
                   {result.word}
                 </a>
-              </Header.Content>
-              <Header.Subheader>{result.note}</Header.Subheader>
-            </Header>
+              </div>
+              <div className="sub header">{result.note}</div>
+            </h3>
             <p>{t('definition')}:</p>
-            <List bulleted relaxed>
+            <div role="list" className="ui bulleted relaxed list">
               {result.definitions.map(definition => (
-                <List.Item key={definition.text}>{definition.text}</List.Item>
+                <div role="listitem" className="item" key={definition.text}>
+                  {definition.text}
+                </div>
               ))}
-            </List>
+            </div>
           </>
         ) : (
-          <Placeholder>
-            <Placeholder.Header>
-              <Placeholder.Line length="short" />
-              <Placeholder.Line length="very long" />
-            </Placeholder.Header>
-            <Placeholder.Paragraph>
-              <Placeholder.Line />
-              <Placeholder.Line />
-              <Placeholder.Line />
-              <Placeholder.Line />
-              <Placeholder.Line />
-              <Placeholder.Line />
-            </Placeholder.Paragraph>
-          </Placeholder>
+          <div className="ui placeholder">
+            <div className="paragraph">
+              <div className="short line" />
+              <div className="very short line" />
+            </div>
+            <div className="paragraph">
+              <div className="line" />
+              <div className="line" />
+              <div className="line" />
+              <div className="line" />
+              <div className="line" />
+              <div className="line" />
+            </div>
+          </div>
         )}
-      </Segment>
+      </div>
     </>
   )
 }

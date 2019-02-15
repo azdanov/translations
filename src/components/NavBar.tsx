@@ -2,9 +2,8 @@ import { Menu as ReachMenu, MenuButton, MenuItem, MenuList } from '@reach/menu-b
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
-import { Menu } from 'semantic-ui-react'
 import { EN, ET } from '../i18n'
-import { Globe } from './Globe'
+import Globe from './Globe'
 
 export const NavBar: React.FC = (): JSX.Element => {
   const [t, i18n] = useTranslation()
@@ -17,16 +16,20 @@ export const NavBar: React.FC = (): JSX.Element => {
   }
 
   return (
-    <Menu secondary style={{ marginTop: '0.5rem' }}>
-      <Menu.Item fitted="vertically" style={{ paddingTop: 0, paddingBottom: 0 }}>
+    <div className="ui secondary menu" style={{ marginTop: '0.5rem' }}>
+      <div className="vertically fitted item">
         <Globe width="3em" height="3em" />
-      </Menu.Item>
-      <Menu secondary pointing style={{ marginBottom: '0.3rem' }}>
-        <Menu.Item as={NavLink} name={t('home')} href="/" to="/" exact />
-        <Menu.Item as={NavLink} name={t('about')} href="/about" to="/about" />
-      </Menu>
+      </div>
+      <div className="ui pointing secondary menu" style={{ marginBottom: '0.3rem' }}>
+        <NavLink className="item" href="/" to="/" exact>
+          {t('home')}
+        </NavLink>
+        <NavLink className="item" href="/about" to="/about">
+          {t('about')}
+        </NavLink>
+      </div>
 
-      <Menu.Menu position="right">
+      <div className="right menu">
         <ReachMenu>
           <MenuButton className="ui dropdown item" style={{ marginBottom: '0.1rem' }}>
             <div className="text">{t('language')}</div>{' '}
@@ -47,8 +50,8 @@ export const NavBar: React.FC = (): JSX.Element => {
             </MenuItem>
           </MenuList>
         </ReachMenu>
-      </Menu.Menu>
-    </Menu>
+      </div>
+    </div>
   )
 }
 

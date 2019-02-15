@@ -6,13 +6,12 @@ import React, {
   useState,
 } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Input } from 'semantic-ui-react'
 
 interface Props {
   loading: boolean
   search: string
   setSearch: React.Dispatch<React.SetStateAction<string>>
-  searchEl: MutableRefObject<Input | null>
+  searchEl: MutableRefObject<HTMLInputElement | null>
 }
 
 export const Search: React.FC<Props> = ({
@@ -30,7 +29,7 @@ export const Search: React.FC<Props> = ({
     setTerm(word)
   }
 
-  const handleClick = (event: SyntheticEvent<HTMLInputElement, MouseEvent>): void => {
+  const handleClick = (event: SyntheticEvent<HTMLElement, MouseEvent>): void => {
     event.preventDefault()
     handleSetSearch(term)
   }
@@ -46,24 +45,22 @@ export const Search: React.FC<Props> = ({
 
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
-      <Input
-        fluid
-        ref={searchEl}
-        loading={loading}
-        size="large"
-        value={term}
-        aria-label={t('search')}
-        icon={{
-          name: 'search',
-          circular: true,
-          link: true,
-          'aria-hidden': 'true',
-          onClick: handleClick,
-          'data-testid': 'search-action',
-        }}
-        onChange={handleChange}
-        placeholder={`${t('search')} …`}
-      />
+      <div className={`ui large fluid icon input${loading ? ' loading' : ''}`}>
+        <input
+          ref={searchEl}
+          aria-label={t('search')}
+          placeholder={`${t('search')} …`}
+          type="text"
+          value={term}
+          onChange={handleChange}
+        />
+        <i
+          data-testid="search-action"
+          aria-hidden="true"
+          className="search circular link icon"
+          onClick={handleClick}
+        />
+      </div>
     </form>
   )
 }

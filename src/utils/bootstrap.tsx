@@ -1,3 +1,7 @@
+import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
+import '@reach/menu-button/styles.css'
+import 'fomantic-ui-css/semantic.css'
+import '../index.css'
 import '../i18n'
 import React from 'react'
 import { render } from 'react-dom'

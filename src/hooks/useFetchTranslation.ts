@@ -3,7 +3,7 @@ import ky from 'ky'
 import { isEmpty } from 'lodash'
 import localCache from 'lscache'
 import React, { useEffect } from 'react'
-import Article from '../types/Article'
+import { Article } from '../types/Article'
 import { Order } from '../types/Languages'
 
 export const useFetchTranslation = (

@@ -5,7 +5,7 @@ import { mapValues, isEmpty, isObject, map, reject, groupBy, flattenDeep } from 
 import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
 import { EN as english, ET as estonian } from '../../i18n'
-import Article from '../../types/Article'
+import { Article } from '../../types/Article'
 import { EN, ET } from '../../types/Languages'
 import { JsonBody, Translation } from '../../types/QueryTranslation'
 

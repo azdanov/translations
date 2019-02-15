@@ -1,9 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Divider, Grid, Header, Image, Segment } from 'semantic-ui-react'
+import useTitle from '../hooks/useTitle'
 import glosbe from '../images/glosbe.png'
 import wordnik from '../images/wordnik.png'
-import useTitle from '../hooks/useTitle'
 
 export const About: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
@@ -11,15 +10,15 @@ export const About: React.FC = (): JSX.Element => {
   useTitle(`${t('about')} | ${t('translations')}`)
 
   return (
-    <Segment basic>
-      <Grid centered>
-        <Grid.Column mobile={14} tablet={9} computer={8}>
-          <Header as="h1" textAlign="center">
-            <Header.Content>{t('about this')}</Header.Content>
-          </Header>
-        </Grid.Column>
-        <Grid.Row>
-          <Grid.Column mobile={14} tablet={9} computer={8}>
+    <div className="ui basic segment">
+      <div className="ui centered grid">
+        <div className="eight wide computer fourteen wide mobile nine wide tablet column">
+          <h1 className="ui center aligned header">
+            <div className="content">{t('about this')}</div>
+          </h1>
+        </div>
+        <div className="row">
+          <div className="eight wide computer fourteen wide mobile nine wide tablet column">
             <p>
               <strong>{t('description')}:</strong> {t('about description')}
             </p>
@@ -36,36 +35,36 @@ export const About: React.FC = (): JSX.Element => {
                 GitHub
               </a>
             </p>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column mobile={14} tablet={9} computer={8}>
-            <Header as="h2" size="large" textAlign="center">
-              <Header.Content>{t('attributions')}</Header.Content>
-            </Header>
-            <Segment basic textAlign="center">
-              <Image
-                src={glosbe}
-                as="a"
-                size="medium"
+          </div>
+        </div>
+        <div className="row">
+          <div className="eight wide computer fourteen wide mobile nine wide tablet column">
+            <h2 className="ui large center aligned header">
+              <div className="content">{t('attributions')}</div>
+            </h2>
+            <div className="ui basic center aligned segment">
+              <a
                 rel="noopener noreferrer"
+                target="_blank"
+                className="ui medium image"
                 href="https://glosbe.com/"
-                target="_blank"
-              />
-              <Divider hidden />
-              <Image
-                src={wordnik}
-                as="a"
-                size="medium"
+              >
+                <img alt="Glosbe Logo" src={glosbe} />
+              </a>
+              <div className="ui hidden divider" />
+              <a
                 rel="noopener noreferrer"
-                href="https://www.wordnik.com/"
                 target="_blank"
-              />
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
+                className="ui medium image"
+                href="https://www.wordnik.com/"
+              >
+                <img alt="Wordnik Logo" src={wordnik} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

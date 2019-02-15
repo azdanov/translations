@@ -1,10 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Container } from 'semantic-ui-react'
-import { Footer } from './Footer'
-import { NavBar } from './NavBar'
-import { NoMatch } from './NoMatch'
-import { GlobalStyle } from './GlobalStyle'
+import Footer from './Footer'
+import NavBar from './NavBar'
+import NoMatch from './NoMatch'
 
 const Main = React.lazy(() => import('./Main'))
 const About = React.lazy(() => import('./About'))
@@ -12,8 +10,7 @@ const About = React.lazy(() => import('./About'))
 export const App: React.FC = (): JSX.Element => {
   return (
     <>
-      <GlobalStyle />
-      <Container className="content">
+      <div className="ui container content">
         <Router>
           <>
             <NavBar />
@@ -33,8 +30,8 @@ export const App: React.FC = (): JSX.Element => {
             </React.Suspense>
           </>
         </Router>
-      </Container>
-      <Footer className="footer" />
+      </div>
+      <Footer />
     </>
   )
 }
