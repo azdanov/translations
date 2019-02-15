@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/azdanov/translations/compare/v1.25.1...v1.26.0) (2019-02-15)
+
+
+### Features
+
+* **images:** add hi-res logo ([5f180ef](https://github.com/azdanov/translations/commit/5f180ef))
+
 ## [1.25.1](https://github.com/azdanov/translations/compare/v1.25.0...v1.25.1) (2019-02-15)
 
 
