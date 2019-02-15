@@ -1,3 +1,11 @@
+## [1.23.1](https://github.com/azdanov/translations/compare/v1.23.0...v1.23.1) (2019-02-15)
+
+
+### Bug Fixes
+
+* try to break SW ([fbf2323](https://github.com/azdanov/translations/commit/fbf2323))
+* **webpack:** adjust critical css screen size ([9e598de](https://github.com/azdanov/translations/commit/9e598de))
+
 # [1.23.0](https://github.com/azdanov/translations/compare/v1.22.0...v1.23.0) (2019-02-15)
 
 
