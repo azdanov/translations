@@ -90,10 +90,6 @@ body,
 
 /* Search */
 
-.ui.input > input {
-  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.07);
-}
-
 .ui.input > input::placeholder {
   color: hsla(0, 0%, 0%, 0.4);
   font-size: 1.3rem;
@@ -103,12 +99,15 @@ body,
 
 /* Link (needs important because of critical css) */
 
+p > a,
 .word-of-the-day {
-  color: hsl(210, 51%, 48%) !important;
+  color: hsl(210, 51%, 46%) !important;
+  font-weight: bold;
 }
 
+p > a:hover,
 .word-of-the-day:hover {
-  color: hsl(210, 73%, 43%) !important;
+  text-decoration: underline;
 }
 
 /* BG Color */
@@ -118,7 +117,7 @@ body,
 }
 
 body {
-  background-color: hsl(0, 0%, 98%) !important;
+  background-color: hsl(195, 15%, 95%) !important;
 }
 
 /* About */

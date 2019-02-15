@@ -10,6 +10,14 @@ const About = React.lazy(() => import('./About'))
 export const App: React.FC = (): JSX.Element => {
   return (
     <>
+      <div
+        style={{
+          width: '100%',
+          height: '194px',
+          position: 'absolute',
+          background: 'white',
+        }}
+      />
       <div className="ui container content">
         <Router>
           <>

@@ -8,11 +8,7 @@ export interface WordOfTheDayResult {
   definitions: { text: string }[]
 }
 
-interface Props {
-  show: boolean
-}
-
-export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
+export const WordOfTheDay: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
   const [result, setResult] = useState<WordOfTheDayResult>({
     word: '',
@@ -22,8 +18,6 @@ export const WordOfTheDay: React.FC<Props> = ({ show }): JSX.Element | null => {
   const [loading, setLoading] = useState(false)
 
   useFetchWordOfTheDay(setResult, setLoading)
-
-  if (!show) return null
 
   const isReady = !loading && result.word && result.definitions && result.note
 

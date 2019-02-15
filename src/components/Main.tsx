@@ -24,6 +24,7 @@ export const Main: React.FC = (): JSX.Element => {
   useFetchTranslation(search, order, setResults, setLoading, setError)
 
   const showResults = (results.length > 0 || loading) && !error
+  const showWordOfTheDay = !loading && results.length === 0
 
   return (
     <div className="ui basic segment" style={{ marginTop: 0 }}>
@@ -71,11 +72,13 @@ export const Main: React.FC = (): JSX.Element => {
             </div>
           </div>
         )}
-        <div className="row">
-          <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-            <WordOfTheDay show={!loading && results.length === 0} />
+        {showWordOfTheDay && (
+          <div className="row">
+            <div className="eight wide computer fourteen wide mobile nine wide tablet column">
+              <WordOfTheDay />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )
