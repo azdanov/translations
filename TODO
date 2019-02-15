@@ -17,6 +17,7 @@ App:
     ☐ More tests
   Trivia:
     ☐ Add statistics for total phrases
+    ☐ Fix worker message, it should always be near the bottom of the screen
 Archive:
   ✔ Add glosbe image with link @done(19-02-14 20:36) @project(App.Trivia)
   ✔ Other translation direction Estonian - English @done(19-02-14 16:13) @project(App.Estonian)

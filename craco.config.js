@@ -3,6 +3,7 @@ const { paths } = require('@craco/craco')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const glob = require('glob-all')
 const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin')
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const path = require('path')
 
 module.exports = {
@@ -83,6 +84,10 @@ module.exports = {
           'very',
           'wide',
         ],
+      }),
+      new PrerenderSPAPlugin({
+        routes: ['/'],
+        staticDir: path.join(__dirname, 'build'),
       }),
       new HtmlCriticalWebpackPlugin({
         base: path.resolve(__dirname, 'build'),
