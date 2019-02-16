@@ -16,19 +16,13 @@ export const NavBar: React.FC = (): JSX.Element => {
   }
 
   return (
-    <div className="ui centered grid">
+    <div className="ui centered grid navbar">
       <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-        <div className="ui secondary menu" style={{ marginTop: '0.8rem' }}>
-          <div
-            className="fitted item"
-            style={{ padding: 0, paddingRight: '0.92857143em' }}
-          >
+        <div className="ui secondary menu">
+          <div className="fitted item">
             <Globe width="3em" height="3em" />
           </div>
-          <div
-            className="ui pointing secondary menu"
-            style={{ marginBottom: '0.3rem' }}
-          >
+          <div className="ui pointing secondary menu">
             <NavLink className="item" href="/" to="/" exact>
               {t('home')}
             </NavLink>
@@ -39,10 +33,7 @@ export const NavBar: React.FC = (): JSX.Element => {
 
           <div className="right menu">
             <ReachMenu>
-              <MenuButton
-                className="ui dropdown item"
-                style={{ marginBottom: '0.1rem' }}
-              >
+              <MenuButton className="ui dropdown item">
                 <div className="text">{t('language')}</div>{' '}
                 <span aria-hidden className="dropdown icon" />
               </MenuButton>

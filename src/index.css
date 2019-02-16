@@ -61,36 +61,6 @@ body,
   color: hsl(15, 86%, 30%);
 }
 
-/* Reach UI Dropdown */
-
-.ui.secondary.menu .dropdown.item:hover,
-.ui.dropdown.item:focus {
-  background: hsl(216, 33%, 97%);
-}
-
-[data-reach-menu-list] {
-  background: hsl(0, 0%, 100%);
-  border: 1px solid hsl(214, 15%, 91%);
-  border-radius: 0.28571429rem;
-  color: hsl(211, 12%, 43%);
-  margin-top: 0.35714286em;
-  padding: 0;
-}
-
-[data-reach-menu-item] {
-  font-size: 1rem;
-  padding: 0.67857143em 1em;
-}
-
-[data-reach-menu-item][data-selected] {
-  background: hsl(216, 33%, 97%);
-  color: hsl(209, 18%, 30%);
-}
-
-[data-reach-menu-item][data-current='true'] {
-  font-weight: bold;
-}
-
 /* Hero Swap Button */
 
 .hero .ui.tertiary.button {
@@ -186,6 +156,19 @@ p > a:hover,
 
 /* Menu */
 
+.navbar .ui.secondary.menu .fitted.item:first-child {
+  padding: 0;
+  padding-right: 0.92857143em;
+}
+
+.navbar .ui.secondary.menu {
+  margin-bottom: 0.3rem;
+}
+
+.navbar .column > .ui.secondary.menu {
+  margin-top: 0.8rem;
+}
+
 .ui.menu .item,
 .ui.secondary.pointing.menu .active.item {
   color: hsl(210, 24%, 16%);
@@ -201,6 +184,40 @@ p > a:hover,
 
 .ui.secondary.pointing.menu .active.item {
   border-color: hsl(209, 14%, 37%);
+}
+
+/* Reach UI Dropdown */
+
+.ui.secondary.menu .ui.dropdown.item {
+  margin-bottom: 0.5rem;
+}
+
+.ui.secondary.menu .dropdown.item:hover,
+.ui.dropdown.item:focus {
+  background: hsl(216, 33%, 97%);
+}
+
+[data-reach-menu-list] {
+  background: hsl(0, 0%, 100%);
+  border: 1px solid hsl(214, 15%, 91%);
+  border-radius: 0.28571429rem;
+  color: hsl(211, 12%, 43%);
+  margin-top: 0.35714286em;
+  padding: 0;
+}
+
+[data-reach-menu-item] {
+  font-size: 1rem;
+  padding: 0.67857143em 1em;
+}
+
+[data-reach-menu-item][data-selected] {
+  background: hsl(216, 33%, 97%);
+  color: hsl(209, 18%, 30%);
+}
+
+[data-reach-menu-item][data-current='true'] {
+  font-weight: bold;
 }
 
 /* Segment */
