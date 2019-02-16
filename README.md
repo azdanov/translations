@@ -2,7 +2,7 @@
 
 An English - Estonian dictionary built with React and Netlify Functions. [Live version](https://translations.netlify.com).
 
-[![Translations App](https://user-images.githubusercontent.com/6123841/52793035-75f7ed00-3075-11e9-86c3-3cbeb064c9f2.png)](https://translations.netlify.com)
+[![Translations App](https://user-images.githubusercontent.com/6123841/52893350-ffa5d880-31a3-11e9-9af1-f044d8cf4fd1.png)](https://translations.netlify.com)
 
 ## Setup
 
