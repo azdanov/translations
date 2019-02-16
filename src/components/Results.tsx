@@ -27,9 +27,8 @@ export const Results: React.FC<{
         {results.length} {t('results found')}
       </h2>
       <div className="ui bottom attached segment">
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a
-          href="#"
+        <button
+          type="button"
           className="ui floating label right aligned"
           onClick={event => {
             event.preventDefault()
@@ -42,7 +41,7 @@ export const Results: React.FC<{
         >
           {t('close results')}
           <i aria-hidden="true" className="delete icon" />
-        </a>
+        </button>
         <div role="list" className="ui relaxed list" style={{ marginTop: 0 }}>
           {results.length && results.map(createList)}
         </div>

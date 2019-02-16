@@ -13,7 +13,7 @@ export const App: React.FC = (): JSX.Element => {
       <div
         style={{
           width: '100%',
-          height: '194px',
+          height: '200px',
           position: 'absolute',
           background: 'white',
         }}

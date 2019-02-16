@@ -1,3 +1,10 @@
+/* Global */
+
+body {
+  background-color: hsl(216, 33%, 97%) !important;
+  color: hsl(209, 20%, 25%);
+}
+
 /* Sticky Footer */
 
 html,
@@ -10,6 +17,7 @@ body,
   display: flex;
   flex-direction: column;
   position: relative;
+  border-top: 3px solid hsl(214, 15%, 91%);
 }
 
 .content {
@@ -36,18 +44,35 @@ body,
   cursor: initial;
 }
 
+.toast .ui.basic.label:hover {
+  background-color: hsl(0, 0%, 100%);
+  cursor: initial;
+}
+
+/* Message */
+
+.ui.warning.message {
+  box-shadow: 0 0 0 1px hsl(48, 95%, 76%) inset, 0 0 0 0 rgba(0, 0, 0, 0);
+  background-color: hsl(49, 100%, 96%);
+  color: hsl(22, 82%, 39%);
+}
+
+.ui.warning.message .header {
+  color: hsl(15, 86%, 30%);
+}
+
 /* Reach UI Dropdown */
 
+.ui.secondary.menu .dropdown.item:hover,
 .ui.dropdown.item:focus {
-  background: hsla(0, 0%, 0%, 0.05);
-  color: hsla(0, 0%, 0%, 0.95);
+  background: hsl(216, 33%, 97%);
 }
 
 [data-reach-menu-list] {
   background: hsl(0, 0%, 100%);
-  border: 1px solid hsla(210, 6%, 14%, 0.14);
+  border: 1px solid hsl(214, 15%, 91%);
   border-radius: 0.28571429rem;
-  color: hsla(0, 0%, 0%, 0.47);
+  color: hsl(211, 12%, 43%);
   margin-top: 0.35714286em;
   padding: 0;
 }
@@ -58,8 +83,8 @@ body,
 }
 
 [data-reach-menu-item][data-selected] {
-  background: hsla(0, 0%, 0%, 0.03);
-  color: hsla(0, 0%, 0%, 0.57);
+  background: hsl(216, 33%, 97%);
+  color: hsl(209, 18%, 30%);
 }
 
 [data-reach-menu-item][data-current='true'] {
@@ -69,16 +94,16 @@ body,
 /* Hero Swap Button */
 
 .hero .ui.tertiary.button {
-  box-shadow: inset 0 -0.12em 0 hsla(210, 6%, 14%, 0.14);
+  box-shadow: inset 0 -0.12em 0 hsl(214, 15%, 91%);
 }
 
 .hero .ui.tertiary.button:active {
-  box-shadow: inset 0 -0.12em 0 hsl(0, 0%, 60%);
+  box-shadow: inset 0 -0.12em 0 hsl(211, 13%, 65%);
 }
 
 .hero .ui.tertiary.button:focus,
 .hero .ui.tertiary.button:hover {
-  box-shadow: inset 0 -0.12em 0 hsl(0, 0%, 40%);
+  box-shadow: inset 0 -0.12em 0 hsl(209, 14%, 37%);
   color: hsl(0, 0%, 20%);
   background: none;
 }
@@ -90,18 +115,34 @@ body,
 
 /* Search */
 
-.ui.input > input::placeholder {
-  color: hsla(0, 0%, 0%, 0.4);
-  font-size: 1.3rem;
-  letter-spacing: 0.01em;
-  font-style: italic;
+.ui.input,
+.ui.input > input {
+  color: hsl(209, 20%, 25%);
 }
 
-/* Link (needs important because of critical css) */
+.ui.input > input {
+  border: 1px solid hsl(214, 15%, 91%);
+}
+
+.ui.input > input:focus {
+  border-color: hsl(208, 88%, 62%);
+}
+
+.ui.input > input::placeholder {
+  color: hsl(211, 13%, 65%);
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
+}
+
+.ui.input > input:focus {
+  color: hsl(209, 14%, 37%);
+}
+
+/* Link */
 
 p > a,
 .word-of-the-day {
-  color: hsl(210, 51%, 46%) !important;
+  color: hsl(209, 14%, 37%) !important;
   font-weight: bold;
 }
 
@@ -116,10 +157,6 @@ p > a:hover,
   background-color: hsl(0, 0%, 100%) !important;
 }
 
-body {
-  background-color: hsl(195, 15%, 95%) !important;
-}
-
 /* About */
 
 .about .row {
@@ -129,9 +166,99 @@ body {
 
 /* Header */
 
+.ui.header {
+  color: hsl(210, 24%, 16%);
+}
+
+.ui.header .sub.header {
+  color: hsl(211, 12%, 43%);
+}
+
 .ui.top.attached.header {
   background-color: hsl(0, 0%, 100%);
-  border-bottom: 1px solid hsl(0, 0%, 91%);
   font-size: 1rem;
-  color: hsla(0, 0%, 0%, 0.6);
+  color: hsl(211, 12%, 43%);
+}
+
+.ui.attached.header {
+  border: 1px solid hsl(214, 15%, 91%);
+}
+
+/* Menu */
+
+.ui.menu .item,
+.ui.secondary.pointing.menu .active.item {
+  color: hsl(210, 24%, 16%);
+}
+
+.ui.secondary.pointing.menu {
+  border-bottom: 2px solid hsl(214, 15%, 91%);
+}
+
+.ui.secondary.pointing.menu a.item:active {
+  border-color: hsl(211, 13%, 65%);
+}
+
+.ui.secondary.pointing.menu .active.item {
+  border-color: hsl(209, 14%, 37%);
+}
+
+/* Segment */
+
+.ui.attached.segment {
+  border: 1px solid hsl(214, 15%, 91%);
+}
+
+/* Label */
+
+.ui.basic.label {
+  border: 1px solid hsl(214, 15%, 91%);
+}
+
+.ui.label {
+  border: 1px solid hsl(214, 15%, 91%);
+  background-color: hsl(214, 15%, 91%);
+  color: hsl(211, 12%, 43%);
+}
+
+.ui.label:hover {
+  background-color: hsl(210, 16%, 82%);
+  color: hsl(209, 20%, 25%);
+  cursor: pointer;
+}
+
+/* List */
+
+.ui.list > .item .header {
+  color: hsl(210, 24%, 16%);
+}
+
+/* Button */
+
+.ui.button {
+  background-color: hsl(214, 15%, 91%);
+  color: hsl(211, 12%, 43%);
+}
+
+.ui.button:focus,
+.ui.button:hover {
+  background-color: hsl(210, 16%, 82%);
+  color: hsl(209, 14%, 37%);
+}
+
+.ui.button:active {
+  background-color: hsl(211, 13%, 65%);
+  color: hsl(209, 18%, 30%);
+}
+
+/* Icon */
+
+i.circular.icon {
+  box-shadow: 0 0 0 0.1em hsl(214, 15%, 91%) inset;
+}
+
+i.circular.icon:hover {
+  transition: opacity 0.2s ease, box-shadow 0.2s ease;
+  opacity: 1 !important;
+  box-shadow: 0 0 0 0.1em hsl(210, 16%, 82%) inset;
 }

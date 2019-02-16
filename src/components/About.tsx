@@ -16,6 +16,7 @@ export const About: React.FC = (): JSX.Element => {
           <div className="ui basic segment padded">
             <h1 className="ui center aligned header">
               <div className="content">{t('about this')}</div>
+              <div className="sub header">{t('and trivia')}</div>
             </h1>
           </div>
           <h2 className="ui top attached header">{t('description')}</h2>

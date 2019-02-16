@@ -1,6 +1,7 @@
 {
   "en": {
     "translation": {
+      "and trivia": "And other trivia",
       "Translation not found": "Translation not found.",
       "about description": "Simple English to Estonian dictionary with some extra functionality. Built with modern tools for speed and ease of use. Has offline capabilities, which help in case of slow internet.",
       "about disclaimer": "This project is made for educational purpose only. All right belong to their respective owners.",
@@ -37,6 +38,7 @@
   },
   "et": {
     "translation": {
+      "and trivia": "Ja muud tühiasi",
       "Translation not found": "Tõlge ei leitud.",
       "about description": "Lihtne inglise-eesti sõnastik, millel on mõned lisafunktsioonid. Ehitatud kaasaegsete tööriistadega kiiruse ja kasutusmugavuse tagamiseks. On võrguühenduseta võimeid, mis aitavad aeglase interneti korral.",
       "about disclaimer": "See projekt on tehtud ainult haridusotstarbeks. Kõik õigused kuuluvad nende vastavatele omanikele.",

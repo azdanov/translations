@@ -20,9 +20,8 @@ export const Message: React.FC<Props> = ({
     <div className="ui warning message">
       <div className="header">{t('error')}</div>
       <div className="content">
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a
-          href="#"
+        <button
+          type="button"
           className="ui floating label right aligned"
           onClick={event => {
             event.preventDefault()
@@ -35,7 +34,7 @@ export const Message: React.FC<Props> = ({
         >
           {t('close')}
           <i aria-hidden="true" className="delete icon" />
-        </a>
+        </button>
         {t(error)}
       </div>
     </div>

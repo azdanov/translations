@@ -18,7 +18,7 @@ export const NavBar: React.FC = (): JSX.Element => {
   return (
     <div className="ui centered grid">
       <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-        <div className="ui secondary menu" style={{ marginTop: '0.5rem' }}>
+        <div className="ui secondary menu" style={{ marginTop: '0.8rem' }}>
           <div
             className="fitted item"
             style={{ padding: 0, paddingRight: '0.92857143em' }}

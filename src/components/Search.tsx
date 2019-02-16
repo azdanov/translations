@@ -45,7 +45,7 @@ export const Search: React.FC<Props> = ({
 
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
-      <div className={`ui large fluid icon input ${loading ? 'loading' : ''}`}>
+      <div className={`ui big fluid icon input ${loading ? 'loading' : ''}`}>
         <input
           ref={searchEl}
           aria-label={t('search')}
