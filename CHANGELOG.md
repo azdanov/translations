@@ -1,3 +1,10 @@
+## [1.28.2](https://github.com/azdanov/translations/compare/v1.28.1...v1.28.2) (2019-02-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency middy to v0.22.1 ([a72afdc](https://github.com/azdanov/translations/commit/a72afdc))
+
 ## [1.28.1](https://github.com/azdanov/translations/compare/v1.28.0...v1.28.1) (2019-02-16)
 
 
