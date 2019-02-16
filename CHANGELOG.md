@@ -1,3 +1,10 @@
+## [1.28.1](https://github.com/azdanov/translations/compare/v1.28.0...v1.28.1) (2019-02-16)
+
+
+### Bug Fixes
+
+* **NavBar:** line up menus, move styles to index.css ([ff9cc94](https://github.com/azdanov/translations/commit/ff9cc94))
+
 # [1.28.0](https://github.com/azdanov/translations/compare/v1.27.1...v1.28.0) (2019-02-16)
 
 
