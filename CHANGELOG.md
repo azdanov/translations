@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/azdanov/translations/compare/v1.27.1...v1.28.0) (2019-02-16)
+
+
+### Features
+
+* **project:** add unique styles ([5d0f7cc](https://github.com/azdanov/translations/commit/5d0f7cc))
+
 ## [1.27.1](https://github.com/azdanov/translations/compare/v1.27.0...v1.27.1) (2019-02-16)
 
 
