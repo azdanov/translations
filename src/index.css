@@ -237,18 +237,18 @@ p > a:hover,
 
 .ui.button {
   background-color: hsl(214, 15%, 91%);
-  color: hsl(211, 12%, 43%);
+  color: hsl(209, 14%, 37%);
 }
 
 .ui.button:focus,
 .ui.button:hover {
   background-color: hsl(210, 16%, 82%);
-  color: hsl(209, 14%, 37%);
+  color: hsl(209, 18%, 30%);
 }
 
 .ui.button:active {
   background-color: hsl(211, 13%, 65%);
-  color: hsl(209, 18%, 30%);
+  color: hsl(209, 20%, 25%);
 }
 
 /* Icon */
