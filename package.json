@@ -201,7 +201,7 @@
     "aws-lambda": "0.1.2",
     "fomantic-ui-css": "2.7.2",
     "got": "9.6.0",
-    "history": "^4.7.2",
+    "history": "4.7.2",
     "http-errors": "1.7.1",
     "http-proxy-middleware": "0.19.1",
     "i18next": "15.0.4",
