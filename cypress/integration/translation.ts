@@ -1,10 +1,10 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 describe('translation', () => {
   beforeEach(() => {
     cy.visit('/')
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(300) // Issues with i18next, doesn't change fast enough
     cy.contains('language').click()
-    cy.contains('Eesti').click()
+    cy.contains('Eesti').click({ force: true })
   })
 
   it('should have elements translated', () => {

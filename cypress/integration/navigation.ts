@@ -23,30 +23,35 @@ describe('navigation', () => {
 
   it('should have proper back and forward', () => {
     cy.visit('/')
+    cy.contains('language').click()
+    cy.contains('English').click({ force: true })
 
-    cy.get('[placeholder="search …"]')
+    cy.get('[placeholder="Search for a word …"]')
       .click()
       .type('car{enter}')
     cy.url().should('include', 'en/et/car')
 
-    cy.get('[placeholder="search …"]')
+    cy.get('[placeholder="Search for a word …"]')
       .click()
       .type('{selectall}bus{enter}')
     cy.url().should('include', 'en/et/bus')
 
-    cy.get('[placeholder="search …"]')
+    cy.get('[placeholder="Search for a word …"]')
       .click()
       .type('{selectall}car{enter}')
     cy.url().should('include', 'en/et/car')
 
-    cy.contains('results').should('exist')
+    cy.contains('Results').should('exist')
     cy.contains('sõiduauto').should('exist')
 
     cy.visit('/about')
     cy.go('back')
     cy.go('back')
 
-    cy.contains('results').should('exist')
+    cy.contains('language').click()
+    cy.contains('English').click({ force: true })
+
+    cy.contains('Results').should('exist')
     cy.contains('autobuss').should('exist')
 
     cy.go('forward')
