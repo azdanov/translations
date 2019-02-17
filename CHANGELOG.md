@@ -1,3 +1,11 @@
+## [1.29.1](https://github.com/azdanov/translations/compare/v1.29.0...v1.29.1) (2019-02-17)
+
+
+### Bug Fixes
+
+* retry ci ([b3508a0](https://github.com/azdanov/translations/commit/b3508a0))
+* **deps:** pin dependency history to 4.7.2 ([709496f](https://github.com/azdanov/translations/commit/709496f))
+
 # [1.29.0](https://github.com/azdanov/translations/compare/v1.28.2...v1.29.0) (2019-02-17)
 
 
