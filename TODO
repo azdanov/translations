@@ -7,9 +7,8 @@ App:
     ☐ Show sidebar with history
   UX:
     ☐ Add settings (clear cache, clear history)
-    ☐ Regex validation for search form @critical 
     ☐ Add font size settings for main area
-    ☐ Make URL saveable. When user navigates to http://localhost:3000/en/cat for example. Add Persistance.
+    ☐ Sync global Search word and Term inside input
   Tests:
     ☐ Dedupe array in: {en: string, et: Array}
     ☐ Test for About
@@ -18,8 +17,10 @@ App:
     ☐ More tests
   Trivia:
     ☐ Add statistics for total phrases
-    ☐ Fix worker message, it should always be near the bottom of the screen
 Archive:
+  ✘ Regex validation for search form @cancelled(19-02-17 21:13) @project(App.UX)
+  ✔ Make URL savable. When user navigates to http://localhost:3000/en/cat for example. Add Persistence. @done(19-02-17 21:13) @project(App.UX)
+  ✔ Fix worker message, it should always be near the bottom of the screen @done(19-02-17 21:13) @project(App.Trivia)
   ✔ Use plugins for babel, webpack to speed up @done(19-02-15 15:59) @project(App.Performance)
   ✔ Add glosbe image with link @done(19-02-14 20:36) @project(App.Trivia)
   ✔ Other translation direction Estonian - English @done(19-02-14 16:13) @project(App.Estonian)

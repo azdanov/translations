@@ -33,6 +33,7 @@ export const Hero: React.FC<Props> = ({
               setResults([])
               setSearch('')
             }}
+            data-testid="order-action"
           >
             <Hidden>{t('change direction')}</Hidden>
             <i aria-hidden="true" className="exchange icon" />

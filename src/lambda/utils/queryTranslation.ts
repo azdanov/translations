@@ -6,12 +6,12 @@ import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
 import { EN as english, ET as estonian } from '../../i18n'
 import { Article } from '../../types/Article'
-import { EN, ET } from '../../types/Languages'
+import { en, et } from '../../types/Languages'
 import { JsonBody, Translation } from '../../types/QueryTranslation'
 
 export const queryTranslation = async (
   word: string,
-  lang: EN | ET,
+  lang: en | et,
 ): Promise<Article[]> => {
   const { api, similar } = pickApis(lang, word)
 
@@ -23,7 +23,7 @@ export const queryTranslation = async (
   return parseResponse(translationResponse, similarResponse, word)
 }
 
-function pickApis(lang: EN | ET, word: string): { api: string; similar: string } {
+function pickApis(lang: en | et, word: string): { api: string; similar: string } {
   if (
     !process.env.LAMBDA_TRANSLATE_EN_API ||
     !process.env.LAMBDA_TRANSLATE_ET_API ||

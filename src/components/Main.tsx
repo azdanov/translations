@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { RouteComponentProps } from 'react-router-dom'
 import useFetchTranslation from '../hooks/useFetchTranslation'
-import useLocalStorage from '../hooks/useLocalStorage'
 import useTitle from '../hooks/useTitle'
+import useDynamicPath from '../hooks/useDynamicPath'
 import { Article } from '../types/Article'
 import { Order } from '../types/Languages'
 import Hero from './Hero'
@@ -11,17 +12,35 @@ import Results from './Results'
 import Search from './Search'
 import WordOfTheDay from './WordOfTheDay'
 
-export const Main: React.FC = (): JSX.Element => {
-  const [order, setOrder] = useLocalStorage<Order>('direction', ['english', 'estonian'])
+export const orderKey = 'order'
+
+interface MatchProps {
+  word?: string
+}
+
+interface Props extends RouteComponentProps<MatchProps> {
+  order: Order
+  setOrder: (order: Order) => void
+}
+
+export const Main: React.FC<Props> = ({
+  order,
+  setOrder,
+  history,
+  match: {
+    params: { word = '' },
+  },
+}): JSX.Element => {
+  const searchEl = useRef<HTMLInputElement>(null)
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState([] as Article[])
-  const [search, setSearch] = useState('')
   const [error, setError] = useState('')
+  const [search, setSearch] = useState(word)
   const [t] = useTranslation()
-  const searchEl = useRef<HTMLInputElement>(null)
 
   useTitle(`${t('home')} | ${t('translations')}`)
   useFetchTranslation(search, order, setResults, setLoading, setError)
+  useDynamicPath(order, search, history, setOrder, setSearch)
 
   const showResults = (results.length > 0 || loading) && !error
   const showWordOfTheDay = !loading && results.length === 0

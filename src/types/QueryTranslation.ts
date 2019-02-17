@@ -1,6 +1,6 @@
 import { Article } from './Article'
 
-import { EN, ET } from './Languages'
+import { en, et } from './Languages'
 
 export interface Translation {
   articles: Articles
@@ -26,7 +26,7 @@ export interface Tuc {
 }
 
 export interface JsonBody {
-  from: EN | ET
+  from: en | et
   tuc: Tuc[]
   phrase: string
   meanings: Meaning[]

@@ -1,11 +1,17 @@
 import { Menu as ReachMenu, MenuButton, MenuItem, MenuList } from '@reach/menu-button'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { NavLink } from 'react-router-dom'
+import { NavLink, RouteComponentProps } from 'react-router-dom'
 import { EN, ET } from '../i18n'
+import { Order } from '../types/Languages'
+import chooseOrderPath from '../utils/choosePath'
 import Globe from './Globe'
 
-export const NavBar: React.FC = (): JSX.Element => {
+interface Props extends RouteComponentProps {
+  order: Order
+}
+
+export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
   const [t, i18n] = useTranslation()
   const [activeLanguage, setActiveLanguage] = useState(i18n.language)
 
@@ -15,6 +21,10 @@ export const NavBar: React.FC = (): JSX.Element => {
     i18n.changeLanguage(language, () => setActiveLanguage(language))
   }
 
+  const { from, to } = chooseOrderPath(order)
+
+  const homePath = `/${from}/${to}/`
+
   return (
     <div className="ui centered grid navbar">
       <div className="eight wide computer fourteen wide mobile nine wide tablet column">
@@ -23,7 +33,8 @@ export const NavBar: React.FC = (): JSX.Element => {
             <Globe width="3em" height="3em" />
           </div>
           <div className="ui pointing secondary menu">
-            <NavLink className="item" href="/" to="/" exact>
+            {/* TODO: remove flicker when changing (Need to use ref) */}
+            <NavLink className="item" href={homePath} to={homePath}>
               {t('home')}
             </NavLink>
             <NavLink className="item" href="/about" to="/about">
