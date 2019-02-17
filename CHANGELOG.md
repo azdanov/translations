@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/azdanov/translations/compare/v1.28.2...v1.29.0) (2019-02-17)
+
+
+### Features
+
+* **project:** add navigation persistence via url ([e978df6](https://github.com/azdanov/translations/commit/e978df6))
+
 ## [1.28.2](https://github.com/azdanov/translations/compare/v1.28.1...v1.28.2) (2019-02-16)
 
 
