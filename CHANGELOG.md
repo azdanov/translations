@@ -1,3 +1,10 @@
+## [1.29.2](https://github.com/azdanov/translations/compare/v1.29.1...v1.29.2) (2019-02-18)
+
+
+### Bug Fixes
+
+* **useDynamicPath:** edgecase of going to root from app ([ac49234](https://github.com/azdanov/translations/commit/ac49234))
+
 ## [1.29.1](https://github.com/azdanov/translations/compare/v1.29.0...v1.29.1) (2019-02-17)
 
 
