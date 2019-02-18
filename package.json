@@ -172,7 +172,33 @@
         }
       ],
       "react/prop-types": "off",
-      "unicorn/filename-case": "off"
+      "unicorn/filename-case": "off",
+      "padding-line-between-statements": [
+        "error",
+        {
+          "blankLine": "always",
+          "prev": [
+            "block",
+            "block-like",
+            "cjs-export",
+            "class",
+            "export",
+            "import"
+          ],
+          "next": "*"
+        },
+        {
+          "blankLine": "any",
+          "prev": [
+            "export",
+            "import"
+          ],
+          "next": [
+            "export",
+            "import"
+          ]
+        }
+      ]
     },
     "settings": {
       "import/resolver": {
