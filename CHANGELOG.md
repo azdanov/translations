@@ -1,3 +1,10 @@
+# [1.30.0](https://github.com/azdanov/translations/compare/v1.29.3...v1.30.0) (2019-02-18)
+
+
+### Features
+
+* **project:** use barrel pattern, refactor ([d257fe8](https://github.com/azdanov/translations/commit/d257fe8))
+
 ## [1.29.3](https://github.com/azdanov/translations/compare/v1.29.2...v1.29.3) (2019-02-18)
 
 
