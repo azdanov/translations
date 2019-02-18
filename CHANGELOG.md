@@ -1,3 +1,10 @@
+## [1.29.3](https://github.com/azdanov/translations/compare/v1.29.2...v1.29.3) (2019-02-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency i18next-browser-languagedetector to v3.0.1 ([37b051c](https://github.com/azdanov/translations/commit/37b051c))
+
 ## [1.29.2](https://github.com/azdanov/translations/compare/v1.29.1...v1.29.2) (2019-02-18)
 
 
