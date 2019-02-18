@@ -29,5 +29,3 @@ export const NoMatch: React.FC = (): JSX.Element => {
     </div>
   )
 }
-
-export default NoMatch

@@ -1,6 +1,6 @@
 import { head } from 'lodash'
 import { EN, ENGLISH, ESTONIAN, ET } from '../i18n'
-import { Order } from '../types/Languages'
+import { Order } from '../types'
 
 export function choosePath(order: Order): { from: string; to: string } {
   let from = ''
@@ -9,11 +9,10 @@ export function choosePath(order: Order): { from: string; to: string } {
   if (head(order) === ENGLISH) {
     ;[from, to] = [EN, ET]
   }
+
   if (head(order) === ESTONIAN) {
     ;[from, to] = [ET, EN]
   }
 
   return { from, to }
 }
-
-export default choosePath

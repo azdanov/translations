@@ -7,6 +7,7 @@ export interface ArticleEN {
   en: string
   et: string[]
 }
+
 export interface ArticleET {
   en: string[]
   et: string

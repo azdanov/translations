@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useState, useEffect } from 'react'
-import { isString, isObject, noop } from 'lodash'
+import { isObject, isString, noop } from 'lodash'
+import { useEffect, useState } from 'react'
 
 // @see https://github.com/streamich/react-use/blob/master/src/useLocalStorage.ts
 export const useLocalStorage = <T>(
@@ -22,6 +22,7 @@ export const useLocalStorage = <T>(
         )
         return initialValue
       }
+
       return raw ? localStorageValue : JSON.parse(localStorageValue || 'null')
     } catch {
       return initialValue
@@ -39,5 +40,3 @@ export const useLocalStorage = <T>(
 
   return [state, setState]
 }
-
-export default useLocalStorage

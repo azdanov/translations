@@ -1,8 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import useTitle from '../hooks/useTitle'
-import glosbe from '../images/glosbe.png'
-import wordnik from '../images/wordnik.png'
+import { useTitle } from '../hooks'
+import { glosbe, wordnik } from '../images'
 
 export const About: React.FC = (): JSX.Element => {
   const [t] = useTranslation()

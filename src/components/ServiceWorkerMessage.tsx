@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import Toast from './Toast'
+import { Toast } from './Toast'
 
 export const ServiceWorkerMessage: React.FC<{
   update?: boolean
@@ -32,5 +32,3 @@ export const ServiceWorkerMessage: React.FC<{
     </>
   )
 }
-
-export default ServiceWorkerMessage

@@ -64,5 +64,3 @@ export const Search: React.FC<Props> = ({
     </form>
   )
 }
-
-export default Search

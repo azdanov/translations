@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import useFetchWordOfTheDay from '../hooks/useFetchWordOfTheDay'
+import { useFetchWordOfTheDay } from '../hooks'
 
 export interface WordOfTheDayResult {
   word: string
@@ -67,5 +67,3 @@ export const WordOfTheDay: React.FC = (): JSX.Element => {
     </>
   )
 }
-
-export default WordOfTheDay

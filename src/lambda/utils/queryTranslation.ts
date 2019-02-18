@@ -1,13 +1,11 @@
 /* eslint-disable lodash/chaining */
 import got from 'got'
 import createHttpError from 'http-errors'
-import { mapValues, isEmpty, isObject, map, reject, groupBy, flattenDeep } from 'lodash'
+import { flattenDeep, groupBy, isEmpty, isObject, map, mapValues, reject } from 'lodash'
 import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
-import { EN as english, ET as estonian } from '../../i18n'
-import { Article } from '../../types/Article'
-import { en, et } from '../../types/Languages'
-import { JsonBody, Translation } from '../../types/QueryTranslation'
+import { EN, ET } from '../../i18n'
+import { Article, en, et, JsonBody, Translation } from '../../types'
 
 export const queryTranslation = async (
   word: string,
@@ -32,13 +30,13 @@ function pickApis(lang: en | et, word: string): { api: string; similar: string }
   )
     throw new createHttpError.InternalServerError('No ENV specified')
 
-  if (lang !== english && lang !== estonian)
+  if (lang !== EN && lang !== ET)
     throw new createHttpError.BadRequest('Correct language not specified')
 
   let api
   let similar
 
-  if (lang === english) {
+  if (lang === EN) {
     api = process.env.LAMBDA_TRANSLATE_EN_API.replace('%WORD%', word)
     similar = process.env.LAMBDA_SIMILAR_EN_API.replace('%WORD%', word)
   } else {
@@ -58,7 +56,7 @@ function parseResponse(
 
   const body = JSON.parse(translationResponse.body) as JsonBody
 
-  if (body.from === english) {
+  if (body.from === EN) {
     const results = [
       {
         en: body.phrase,
@@ -93,7 +91,7 @@ function parseResponse(
     })
   }
 
-  if (body.from === estonian) {
+  if (body.from === ET) {
     const results = [
       {
         et: body.phrase,
@@ -131,11 +129,9 @@ function parseResponse(
   return translation
 }
 
-function dedupe(translations: any[], key: string, value: string): any {
+const dedupe = (translations: Article[], key: string, value: string): Article[] => {
   return map(
     mapValues(groupBy(translations, key), v => flattenDeep(map(v, value))),
     (v, k) => ({ en: k, et: v }),
   )
 }
-
-export default queryTranslation

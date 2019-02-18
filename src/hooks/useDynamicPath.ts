@@ -1,9 +1,9 @@
 import { History } from 'history'
-import { split, trim, isEmpty } from 'lodash'
+import { isEmpty, split, trim } from 'lodash'
 import React, { useEffect, useRef } from 'react'
 import { languages } from '../i18n'
-import { Order } from '../types/Languages'
-import choosePath from '../utils/choosePath'
+import { Order } from '../types'
+import { choosePath } from '../utils'
 
 export const useDynamicPath = (
   order: Order,
@@ -31,6 +31,7 @@ export const useDynamicPath = (
         } else {
           history.push(path)
         }
+
         setOrder([languages[from], languages[to]] as Order)
         setSearch(word)
         pathRef.current = path
@@ -66,5 +67,3 @@ export const useDynamicPath = (
     })
   }, [])
 }
-
-export default useDynamicPath

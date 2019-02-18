@@ -1,8 +1,8 @@
 import 'jest-dom/extend-expect'
 import React from 'react'
-import { cleanup, render, fireEvent, act } from 'react-testing-library'
-import '../../i18n'
+import { act, cleanup, fireEvent, render } from 'react-testing-library'
 import { Hero } from '../Hero'
+import '../../i18n'
 
 afterEach(cleanup)
 

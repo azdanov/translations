@@ -1,13 +1,13 @@
 import { Handler } from 'aws-lambda'
 import { HttpError } from 'http-errors'
 import middy from 'middy'
-import Response from '../contracts/ResponseContract'
+import { ResponseContract } from '../contracts'
 
 export const handleErrors: middy.Middleware<
   null,
   Handler,
-  Response
-> = (): middy.MiddlewareObject<Handler, Response> => ({
+  ResponseContract
+> = (): middy.MiddlewareObject<Handler, ResponseContract> => ({
   onError: (handler, next) => {
     if (handler.error instanceof HttpError) {
       handler.response = {
@@ -16,8 +16,7 @@ export const handleErrors: middy.Middleware<
       }
       return next()
     }
+
     return next(handler.error)
   },
 })
-
-export default handleErrors

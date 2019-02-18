@@ -5,5 +5,3 @@ export const useTitle = (title: string): void => {
     document.title = title
   }, [title])
 }
-
-export default useTitle

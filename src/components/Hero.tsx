@@ -1,8 +1,7 @@
 import Hidden from '@reach/visually-hidden'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Article } from '../types/Article'
-import { Order } from '../types/Languages'
+import { Article, Order } from '../types'
 
 interface Props {
   order: Order
@@ -43,5 +42,3 @@ export const Hero: React.FC<Props> = ({
     </h1>
   )
 }
-
-export default Hero

@@ -1,8 +1,8 @@
 import { isEmpty, isString } from 'lodash'
 import React, { MutableRefObject } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Article, ArticleEN, ArticleET } from '../types/Article'
-import ResultsPlaceholder from './ResultsPlaceholder'
+import { ResultsPlaceholder } from '.'
+import { Article, ArticleEN, ArticleET } from '../types'
 
 export const Results: React.FC<{
   results?: Article[]
@@ -67,6 +67,7 @@ const createList = (result: Article): JSX.Element | null => {
       </div>
     )
   }
+
   if (isString(result.et)) {
     const r = result as ArticleET
     return (
@@ -83,6 +84,7 @@ const createList = (result: Article): JSX.Element | null => {
       </div>
     )
   }
+
   return null
 }
 
@@ -92,5 +94,3 @@ const addSeparator = (add: boolean): JSX.Element | null =>
       |
     </span>
   ) : null
-
-export default Results

@@ -1,40 +1,40 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="/eki.css" rel="stylesheet" type="text/css" />
     <link
-      rel="search"
-      type="application/opensearchdescription+xml"
-      title="Inglise-eesti"
       href="eki_ies.xml"
+      rel="search"
+      title="Inglise-eesti"
+      type="application/opensearchdescription+xml"
     />
-    <meta name="RA" content="http://www.eki.ee/dict/ies/index.cgi?Q=auto&F=M&C06=en" />
+    <meta content="http://www.eki.ee/dict/ies/index.cgi?Q=auto&F=M&C06=en" name="RA" />
     <title>[IES] English-Estonian MT dictionary</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <link
-      type="text/css"
-      rel="stylesheet"
       href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css"
     />
     <script
-      type="text/javascript"
       src="http://www.eki.ee/js/keypad.1.5.1/jquery.keypad.js"
+      type="text/javascript"
     ></script>
-    <script type="text/javascript" src="/js/kuki.js"></script>
-    <script type="text/javascript" src="/js/eelistused.js"></script>
-    <script type="text/javascript" src="/dict/dict.js"></script>
-    <script type="text/javascript" src="ies.js"></script>
-    <script type="text/javascript" src="glosbe.js"></script>
-    <meta http-equiv="content-language" content="et, en" />
-    <link type="text/css" rel="stylesheet" href="/js/keypad.1.5.1/jquery.keypad.css" />
+    <script src="/js/kuki.js" type="text/javascript"></script>
+    <script src="/js/eelistused.js" type="text/javascript"></script>
+    <script src="/dict/dict.js" type="text/javascript"></script>
+    <script src="ies.js" type="text/javascript"></script>
+    <script src="glosbe.js" type="text/javascript"></script>
+    <meta content="et, en" http-equiv="content-language" />
+    <link href="/js/keypad.1.5.1/jquery.keypad.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript">
       var soovitaja = 'http://kiisu.eki.ee/soovita'
       var sonastik = 'ies'
     </script>
-    <script type="text/javascript" src="/js/autocomplete.js"></script>
+    <script src="/js/autocomplete.js" type="text/javascript"></script>
     <script type="text/javascript">
       $.keypad.setDefaults($.keypad.regional[''])
     </script>
@@ -44,25 +44,25 @@
     <div class="pagecontent">
       <h1>
         <a href="http://www.eki.ee/dict/ies/ies.html"
-          ><span id="title" data-ulang="et"
+          ><span data-ulang="et" id="title"
             >[IES] English-Estonian MT dictionary</span
           ></a
         >
       </h1>
 
-      <table width="100%" cellpadding="6" border="1" bgcolor="#8ccb5e">
+      <table bgcolor="#8ccb5e" border="1" cellpadding="6" width="100%">
         <tr>
           <td>
             <br />
 
-            <form name="paring" action="/dict/ies/index.cgi" method="GET">
+            <form action="/dict/ies/index.cgi" method="GET" name="paring">
               <div id="oluline" style="padding-left:24">
-                <span id="query" class="taustal">Query</span>:
-                <input type="TEXT" name="Q" id="Q" size="24" value="car" />
-                <input type="submit" id="searchbutton" value="Search" />
-                <span id="art_part" class="taustal">in</span>
-                <select name="F" id="F">
-                  <option id="FM" value="M" selected> Headword</option>
+                <span class="taustal" id="query">Query</span>:
+                <input id="Q" name="Q" size="24" type="TEXT" value="car" />
+                <input id="searchbutton" type="submit" value="Search" />
+                <span class="taustal" id="art_part">in</span>
+                <select id="F" name="F">
+                  <option id="FM" selected value="M"> Headword</option>
                   <option id="FV" value="V"> Translation</option>
                   <option id="FA" value="A"> Full article</option>
                 </select>
@@ -70,8 +70,8 @@
               <div id="spikriymbris" style="position:relative">
                 <div id="menyyikoonidiv">
                   <img
-                    src="/dict/_ico/menyy.png"
                     id="teinepool"
+                    src="/dict/_ico/menyy.png"
                     title="Interface settings"
                   />
                 </div>
@@ -79,175 +79,175 @@
                 <div id="spikker" style="display:none;padding-left:24">
                   <div id="keeled">
                     <input
-                      id="keel_en"
-                      name="C06"
-                      type="radio"
-                      value="en"
                       checked
                       class="eelistused_keel"
                       data-keel="en"
                       data-sonastik="ies"
+                      id="keel_en"
+                      name="C06"
+                      type="radio"
+                      value="en"
                     />
-                    <label for="keel_en" class="taustal">in English</label><br />
+                    <label class="taustal" for="keel_en">in English</label><br />
                     <input
+                      class="eelistused_keel"
+                      data-keel="ru"
+                      data-sonastik="ies"
                       id="keel_ru"
                       name="C06"
                       type="radio"
                       value="ru"
-                      class="eelistused_keel"
-                      data-keel="ru"
-                      data-sonastik="ies"
                     />
-                    <label for="keel_ru" class="taustal">по-русски</label><br />
+                    <label class="taustal" for="keel_ru">по-русски</label><br />
                     <input
+                      class="eelistused_keel"
+                      data-keel="et"
+                      data-sonastik="ies"
                       id="keel_et"
                       name="C06"
                       type="radio"
                       value="et"
-                      class="eelistused_keel"
-                      data-keel="et"
-                      data-sonastik="ies"
                     />
-                    <label for="keel_et" class="taustal">eesti keeles</label><br />
+                    <label class="taustal" for="keel_et">eesti keeles</label><br />
                     <input
+                      class="eelistused_keel"
+                      data-keel="fi"
+                      data-sonastik="ies"
                       id="keel_fi"
                       name="C06"
                       type="radio"
                       value="fi"
-                      class="eelistused_keel"
-                      data-keel="fi"
-                      data-sonastik="ies"
                     />
-                    <label for="keel_fi" class="taustal">suomeksi</label><br />
+                    <label class="taustal" for="keel_fi">suomeksi</label><br />
                     <input
+                      class="eelistused_keel"
+                      data-keel="lv"
+                      data-sonastik="ies"
                       id="keel_lv"
                       name="C06"
                       type="radio"
                       value="lv"
-                      class="eelistused_keel"
-                      data-keel="lv"
-                      data-sonastik="ies"
                     />
-                    <label for="keel_lv" class="taustal">latviešu</label><br />
+                    <label class="taustal" for="keel_lv">latviešu</label><br />
                     <input
+                      class="eelistused_keel"
+                      data-keel="de"
+                      data-sonastik="ies"
                       id="keel_de"
                       name="C06"
                       type="radio"
                       value="de"
-                      class="eelistused_keel"
-                      data-keel="de"
-                      data-sonastik="ies"
                     />
-                    <label for="keel_de" class="taustal">auf Deutsch</label><br />
+                    <label class="taustal" for="keel_de">auf Deutsch</label><br />
                     <input
+                      class="eelistused_keel"
+                      data-keel="ud"
+                      data-sonastik="ies"
                       id="keel_ud"
                       name="C06"
                       type="radio"
                       value="ud"
-                      class="eelistused_keel"
-                      data-keel="ud"
-                      data-sonastik="ies"
                     />
-                    <label for="keel_ud" class="taustal">удмурт кыл</label><br />
+                    <label class="taustal" for="keel_ud">удмурт кыл</label><br />
                     <input
+                      class="eelistused_keel"
+                      data-keel="chm"
+                      data-sonastik="ies"
                       id="keel_chm"
                       name="C06"
                       type="radio"
                       value="chm"
-                      class="eelistused_keel"
-                      data-keel="chm"
-                      data-sonastik="ies"
                     />
-                    <label for="keel_chm" class="taustal">марий йылме</label><br />
+                    <label class="taustal" for="keel_chm">марий йылме</label><br />
                   </div>
                   <div id="valikud">
                     <input
+                      class="eelistused_kaitumine"
                       id="C01"
                       name="C01"
                       type="checkbox"
                       value="1"
-                      class="eelistused_kaitumine"
                     />
-                    <label for="C01" class="taustal"
+                    <label class="taustal" for="C01"
                       >Limit search with only the selected article part</label
                     ><br />
                     <input
+                      class="eelistused_kaitumine"
                       id="C02"
                       name="C02"
                       type="checkbox"
                       value="1"
-                      class="eelistused_kaitumine"
                     />
-                    <label for="C02" class="taustal"
+                    <label class="taustal" for="C02"
                       >Only search exact matches, disallow fuzzy search</label
                     ><br />
                     <input
+                      class="eelistused_kaitumine"
                       id="C03"
                       name="C03"
                       type="checkbox"
                       value="1"
-                      class="eelistused_kaitumine"
                     />
-                    <label for="C03" class="taustal"
+                    <label class="taustal" for="C03"
                       >With several searchwords, finding one suffices</label
                     ><br />
                     <input
+                      class="eelistused_kaitumine"
                       id="C04"
                       name="C04"
                       type="checkbox"
                       value="1"
-                      class="eelistused_kaitumine"
                     />
-                    <label for="C04" class="taustal"
+                    <label class="taustal" for="C04"
                       >Always restore focus on the query field</label
                     ><br />
                     <input
+                      class="eelistused_kaitumine"
                       id="C05"
                       name="C05"
                       type="checkbox"
                       value="1"
-                      class="eelistused_kaitumine"
                     />
-                    <label for="C05" class="taustal">Do not apply time limit</label
+                    <label class="taustal" for="C05">Do not apply time limit</label
                     ><br />
                     <input
+                      class="eelistused_kaitumine"
                       id="C08"
                       name="C08"
                       type="checkbox"
                       value="1"
-                      class="eelistused_kaitumine"
                     />
-                    <label for="C08" class="taustal">Case sensitive</label><br />
+                    <label class="taustal" for="C08">Case sensitive</label><br />
                     <input
+                      class="eelistused_kaitumine"
                       id="C09"
                       name="C09"
                       type="checkbox"
                       value="1"
-                      class="eelistused_kaitumine"
                     />
-                    <label for="C09" class="taustal">Underlined stress</label><br />
+                    <label class="taustal" for="C09">Underlined stress</label><br />
                     <input
+                      class="eelistused_kaitumine"
                       id="C12"
                       name="C12"
                       type="checkbox"
                       value="1"
-                      class="eelistused_kaitumine"
                     />
-                    <label for="C12" class="taustal"
+                    <label class="taustal" for="C12"
                       >Only close headwords list unless exact match</label
                     ><br />
                     <input
+                      class="eelistused_kaitumine"
                       id="C13"
                       name="C13"
                       type="checkbox"
                       value="1"
-                      class="eelistused_kaitumine"
                     />
-                    <label for="C13" class="taustal">Sort output by relevance</label
+                    <label class="taustal" for="C13">Sort output by relevance</label
                     ><br />
                   </div>
                   <div id="metainfo">
-                    <p id="spikritekst" class="taustal">Meta: * ? [abc-f] [^abc-f]</p>
+                    <p class="taustal" id="spikritekst">Meta: * ? [abc-f] [^abc-f]</p>
                     <p class="taustal">
                       Sõnastiku
                       <a href="http://www.eki.ee/dict/xp/index.cgi?dictid=ies"
@@ -264,9 +264,7 @@
                     (vajan tagasisidet reaalse kasutuskogemuse kohta)
                   </p>
                   <p class="pakukiirendit">
-                    <a
-                      onclick='javascript:window.external.addService("acc_ies.xml")'
-                      href="#"
+                    <a href="#" onclick='window.external.addService("acc_ies.xml")'
                       >beeta: Lisa IE kiirendi</a
                     >
                   </p>
@@ -294,525 +292,525 @@
       <p class="inf">Leitud 99 artiklit</p>
       <div class="tervikart">
         <p>
-          <span ID="i2011_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i2011_1_m" lang="en"
             >air cushion <span class="leitud_ss">car</span></span
           >
-          • <span ID="i2011_2_x" CLASS="x" lang="et">hõljukauto</span>
+          • <span CLASS="x" ID="i2011_2_x" lang="et">hõljukauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i4744_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i4744_1_m" lang="en"
             >armored <span class="leitud_ss">car</span></span
           >
-          • <span ID="i4744_2_x" CLASS="x" lang="et">soomusauto</span>
+          • <span CLASS="x" ID="i4744_2_x" lang="et">soomusauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i4758_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i4758_1_m" lang="en"
             >armoured <span class="leitud_ss">car</span></span
           >
-          • <span ID="i4758_2_x" CLASS="x" lang="et">soomusauto</span>
+          • <span CLASS="x" ID="i4758_2_x" lang="et">soomusauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i6870_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i6870_1_m" lang="en"
             >baggage <span class="leitud_ss">car</span></span
           >
-          • <span ID="i6870_2_x" CLASS="x" lang="et">pagasivagun</span>
+          • <span CLASS="x" ID="i6870_2_x" lang="et">pagasivagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i12682_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i12682_1_m" lang="en"
             >buffet <span class="leitud_ss">car</span></span
           >
-          • <span ID="i12682_2_x" CLASS="x" lang="et">restoranvagun</span>
+          • <span CLASS="x" ID="i12682_2_x" lang="et">restoranvagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i12852_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i12852_1_m" lang="en"
             >bumper <span class="leitud_ss">car</span></span
           >
           •
-          <span ID="i12852_2_x" CLASS="x" lang="et"
+          <span CLASS="x" ID="i12852_2_x" lang="et"
             >elektriauto (atraktsioon lõbustuspargis)</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i13322_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i13322_1_m" lang="en"
             >by <span class="leitud_ss">car</span></span
           >
-          • <span ID="i13322_2_x" CLASS="x" lang="et">autoga</span>
+          • <span CLASS="x" ID="i13322_2_x" lang="et">autoga</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i13496_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i13496_1_m" lang="en"
             >cable <span class="leitud_ss">car</span></span
           >
-          • <span ID="i13496_2_x" CLASS="x" lang="et">tõstuk (köisraudteel)</span>,
-          <span ID="i13496_3_x" CLASS="x" lang="et">köisraudtee vagun</span>
+          • <span CLASS="x" ID="i13496_2_x" lang="et">tõstuk (köisraudteel)</span>,
+          <span CLASS="x" ID="i13496_3_x" lang="et">köisraudtee vagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14401_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14401_1_m" lang="en"
             ><span class="leitud_ss">car</span></span
           >
-          • <span ID="i14401_2_x" CLASS="x" lang="et">auto</span>,
-          <span ID="i14401_3_x" CLASS="x" lang="et">vagun</span>,
-          <span ID="i14401_4_x" CLASS="x" lang="et">gondel</span>
+          • <span CLASS="x" ID="i14401_2_x" lang="et">auto</span>,
+          <span CLASS="x" ID="i14401_3_x" lang="et">vagun</span>,
+          <span CLASS="x" ID="i14401_4_x" lang="et">gondel</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14427_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14427_1_m" lang="en"
             ><span class="leitud_ss">car</span> battery</span
           >
-          • <span ID="i14427_2_x" CLASS="x" lang="et">aku</span>
+          • <span CLASS="x" ID="i14427_2_x" lang="et">aku</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14431_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14431_1_m" lang="en"
             ><span class="leitud_ss">car</span> body</span
           >
-          • <span ID="i14431_2_x" CLASS="x" lang="et">autokere</span>
+          • <span CLASS="x" ID="i14431_2_x" lang="et">autokere</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14464_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14464_1_m" lang="en"
             ><span class="leitud_ss">car</span> boot sale</span
           >
           •
-          <span ID="i14464_2_x" CLASS="x" lang="et">vanakraamimüük auto kapotilt</span>
+          <span CLASS="x" ID="i14464_2_x" lang="et">vanakraamimüük auto kapotilt</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14468_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14468_1_m" lang="en"
             ><span class="leitud_ss">car</span> brake</span
           >
-          • <span ID="i14468_2_x" CLASS="x" lang="et">autopidur</span>
+          • <span CLASS="x" ID="i14468_2_x" lang="et">autopidur</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14474_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14474_1_m" lang="en"
             ><span class="leitud_ss">car</span> carrier</span
           >
-          • <span ID="i14474_2_x" CLASS="x" lang="et">autotreiler</span>
+          • <span CLASS="x" ID="i14474_2_x" lang="et">autotreiler</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14483_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14483_1_m" lang="en"
             ><span class="leitud_ss">car</span> crash</span
           >
-          • <span ID="i14483_2_x" CLASS="x" lang="et">autoavarii</span>
+          • <span CLASS="x" ID="i14483_2_x" lang="et">autoavarii</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14588_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14588_1_m" lang="en"
             ><span class="leitud_ss">car</span> ferry</span
           >
-          • <span ID="i14588_2_x" CLASS="x" lang="et">autopraam</span>
+          • <span CLASS="x" ID="i14588_2_x" lang="et">autopraam</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14629_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14629_1_m" lang="en"
             ><span class="leitud_ss">car</span> insurance</span
           >
-          • <span ID="i14629_2_x" CLASS="x" lang="et">autokindlustus</span>
+          • <span CLASS="x" ID="i14629_2_x" lang="et">autokindlustus</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14640_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14640_1_m" lang="en"
             ><span class="leitud_ss">car</span> maker</span
           >
-          • <span ID="i14640_2_x" CLASS="x" lang="et">autotootja</span>
+          • <span CLASS="x" ID="i14640_2_x" lang="et">autotootja</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14646_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14646_1_m" lang="en"
             ><span class="leitud_ss">car</span> mileage</span
           >
-          • <span ID="i14646_2_x" CLASS="x" lang="et">läbisõit</span>
+          • <span CLASS="x" ID="i14646_2_x" lang="et">läbisõit</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14691_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14691_1_m" lang="en"
             ><span class="leitud_ss">car</span> park</span
           >
-          • <span ID="i14691_2_x" CLASS="x" lang="et">parkla</span>,
-          <span ID="i14691_3_x" CLASS="x" lang="et">parkimismaja</span>
+          • <span CLASS="x" ID="i14691_2_x" lang="et">parkla</span>,
+          <span CLASS="x" ID="i14691_3_x" lang="et">parkimismaja</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14714_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14714_1_m" lang="en"
             ><span class="leitud_ss">car</span> phone</span
           >
-          • <span ID="i14714_2_x" CLASS="x" lang="et">autotelefon</span>
+          • <span CLASS="x" ID="i14714_2_x" lang="et">autotelefon</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14717_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14717_1_m" lang="en"
             ><span class="leitud_ss">car</span> pool</span
           >
-          • <span ID="i14717_2_x" CLASS="x" lang="et">auto ühiskasutus</span>
+          • <span CLASS="x" ID="i14717_2_x" lang="et">auto ühiskasutus</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14721_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14721_1_m" lang="en"
             ><span class="leitud_ss">car</span> race</span
           >
-          • <span ID="i14721_2_x" CLASS="x" lang="et">autovõidusõit</span>
+          • <span CLASS="x" ID="i14721_2_x" lang="et">autovõidusõit</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14844_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14844_1_m" lang="en"
             ><span class="leitud_ss">car</span> wash</span
           >
-          • <span ID="i14844_2_x" CLASS="x" lang="et">autopesu</span>,
-          <span ID="i14844_3_x" CLASS="x" lang="et">autopesula</span>
+          • <span CLASS="x" ID="i14844_2_x" lang="et">autopesu</span>,
+          <span CLASS="x" ID="i14844_3_x" lang="et">autopesula</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i14852_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i14852_1_m" lang="en"
             ><span class="leitud_ss">car</span> wheel</span
           >
-          • <span ID="i14852_2_x" CLASS="x" lang="et">autoratas</span>
+          • <span CLASS="x" ID="i14852_2_x" lang="et">autoratas</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i15284_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i15284_1_m" lang="en"
             >cattle <span class="leitud_ss">car</span></span
           >
-          • <span ID="i15284_2_x" CLASS="x" lang="et">loomavagun</span>
+          • <span CLASS="x" ID="i15284_2_x" lang="et">loomavagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i15815_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i15815_1_m" lang="en"
             >chair <span class="leitud_ss">car</span></span
           >
-          • <span ID="i15815_2_x" CLASS="x" lang="et">-</span>,
-          <span ID="i15815_3_x" CLASS="x" lang="et">marsruuttakso</span>
+          • <span CLASS="x" ID="i15815_2_x" lang="et">-</span>,
+          <span CLASS="x" ID="i15815_3_x" lang="et">marsruuttakso</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i18072_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i18072_1_m" lang="en"
             >coal <span class="leitud_ss">car</span></span
           >
-          • <span ID="i18072_2_x" CLASS="x" lang="et">söevagun</span>
+          • <span CLASS="x" ID="i18072_2_x" lang="et">söevagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i19335_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i19335_1_m" lang="en"
             >compact <span class="leitud_ss">car</span></span
           >
-          • <span ID="i19335_2_x" CLASS="x" lang="et">väikeauto</span>
+          • <span CLASS="x" ID="i19335_2_x" lang="et">väikeauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i26108_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i26108_1_m" lang="en"
             >dining <span class="leitud_ss">car</span></span
           >
-          • <span ID="i26108_2_x" CLASS="x" lang="et">restoranvagun</span>
+          • <span CLASS="x" ID="i26108_2_x" lang="et">restoranvagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i27644_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i27644_1_m" lang="en"
             >dome <span class="leitud_ss">car</span></span
           >
           •
-          <span ID="i27644_2_x" CLASS="x" lang="et"
+          <span CLASS="x" ID="i27644_2_x" lang="et"
             >klaasvagun (kumera pleksiklaasist katusega)</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i28355_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i28355_1_m" lang="en"
             >drawing-room <span class="leitud_ss">car</span></span
           >
-          • <span ID="i28355_2_x" CLASS="x" lang="et">kupeevagun</span>,
-          <span ID="i28355_3_x" CLASS="x" lang="et">salongvagun</span>
+          • <span CLASS="x" ID="i28355_2_x" lang="et">kupeevagun</span>,
+          <span CLASS="x" ID="i28355_3_x" lang="et">salongvagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i29013_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i29013_1_m" lang="en"
             >dump <span class="leitud_ss">car</span></span
           >
-          • <span ID="i29013_2_x" CLASS="x" lang="et">kallur</span>
+          • <span CLASS="x" ID="i29013_2_x" lang="et">kallur</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i29021_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i29021_1_m" lang="en"
             >dumping <span class="leitud_ss">car</span></span
           >
-          • <span ID="i29021_2_x" CLASS="x" lang="et">kallur</span>
+          • <span CLASS="x" ID="i29021_2_x" lang="et">kallur</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i30086_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i30086_1_m" lang="en"
             >electric <span class="leitud_ss">car</span></span
           >
-          • <span ID="i30086_2_x" CLASS="x" lang="et">elektriauto</span>
+          • <span CLASS="x" ID="i30086_2_x" lang="et">elektriauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i30262_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i30262_1_m" lang="en"
             >elevator <span class="leitud_ss">car</span></span
           >
-          • <span ID="i30262_2_x" CLASS="x" lang="et">liftikabiin</span>
+          • <span CLASS="x" ID="i30262_2_x" lang="et">liftikabiin</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i31792_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i31792_1_m" lang="en"
             >estate <span class="leitud_ss">car</span></span
           >
-          • <span ID="i31792_2_x" CLASS="x" lang="et">kombiauto</span>
+          • <span CLASS="x" ID="i31792_2_x" lang="et">kombiauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i34764_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i34764_1_m" lang="en"
             >fill up the <span class="leitud_ss">car</span></span
           >
-          • <span ID="i34764_2_x" CLASS="x" lang="et">tankima</span>
+          • <span CLASS="x" ID="i34764_2_x" lang="et">tankima</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i37469_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i37469_1_m" lang="en"
             >freight <span class="leitud_ss">car</span></span
           >
-          • <span ID="i37469_2_x" CLASS="x" lang="et">kaubavagun</span>
+          • <span CLASS="x" ID="i37469_2_x" lang="et">kaubavagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i40581_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i40581_1_m" lang="en"
             >gondola <span class="leitud_ss">car</span></span
           >
-          • <span ID="i40581_2_x" CLASS="x" lang="et">poolvagun</span>,
-          <span ID="i40581_3_x" CLASS="x" lang="et">lahtine vagun</span>
+          • <span CLASS="x" ID="i40581_2_x" lang="et">poolvagun</span>,
+          <span CLASS="x" ID="i40581_3_x" lang="et">lahtine vagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i44977_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i44977_1_m" lang="en"
             >hired <span class="leitud_ss">car</span></span
           >
-          • <span ID="i44977_2_x" CLASS="x" lang="et">üüriauto</span>
+          • <span CLASS="x" ID="i44977_2_x" lang="et">üüriauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i45711_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i45711_1_m" lang="en"
             >hopper <span class="leitud_ss">car</span></span
           >
-          • <span ID="i45711_2_x" CLASS="x" lang="et">punkervagun</span>
+          • <span CLASS="x" ID="i45711_2_x" lang="et">punkervagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i46050_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i46050_1_m" lang="en"
             >house <span class="leitud_ss">car</span></span
           >
-          • <span ID="i46050_2_x" CLASS="x" lang="et">kinnine kaubavagun</span>
+          • <span CLASS="x" ID="i46050_2_x" lang="et">kinnine kaubavagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i55715_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i55715_1_m" lang="en"
             >matchbox <span class="leitud_ss">car</span></span
           >
-          • <span ID="i55715_2_x" CLASS="x" lang="et">mudelauto</span>
+          • <span CLASS="x" ID="i55715_2_x" lang="et">mudelauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i57741_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i57741_1_m" lang="en"
             >motor <span class="leitud_ss">car</span></span
           >
-          • <span ID="i57741_2_x" CLASS="x" lang="et">auto</span>
+          • <span CLASS="x" ID="i57741_2_x" lang="et">auto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i62763_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i62763_1_m" lang="en"
             >parlor <span class="leitud_ss">car</span></span
           >
-          • <span ID="i62763_2_x" CLASS="x" lang="et">salongvagun</span>
+          • <span CLASS="x" ID="i62763_2_x" lang="et">salongvagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i63120_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i63120_1_m" lang="en"
             >patrol <span class="leitud_ss">car</span></span
           >
-          • <span ID="i63120_2_x" CLASS="x" lang="et">patrullauto</span>
+          • <span CLASS="x" ID="i63120_2_x" lang="et">patrullauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i64554_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i64554_1_m" lang="en"
             >piggyback <span class="leitud_ss">car</span></span
           >
-          • <span ID="i64554_2_x" CLASS="x" lang="et">autovagun</span>
+          • <span CLASS="x" ID="i64554_2_x" lang="et">autovagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i65454_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i65454_1_m" lang="en"
             >police <span class="leitud_ss">car</span></span
           >
-          • <span ID="i65454_2_x" CLASS="x" lang="et">politseiauto</span>
+          • <span CLASS="x" ID="i65454_2_x" lang="et">politseiauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i68483_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i68483_1_m" lang="en"
             >race <span class="leitud_ss">car</span></span
           >
-          • <span ID="i68483_2_x" CLASS="x" lang="et">võidusõiduauto</span>
+          • <span CLASS="x" ID="i68483_2_x" lang="et">võidusõiduauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i68520_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i68520_1_m" lang="en"
             >racing <span class="leitud_ss">car</span></span
           >
-          • <span ID="i68520_2_x" CLASS="x" lang="et">võidusõiduauto</span>
+          • <span CLASS="x" ID="i68520_2_x" lang="et">võidusõiduauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i68724_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i68724_1_m" lang="en"
             >railway <span class="leitud_ss">car</span></span
           >
-          • <span ID="i68724_2_x" CLASS="x" lang="et">raudteevagun</span>
+          • <span CLASS="x" ID="i68724_2_x" lang="et">raudteevagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i70346_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i70346_1_m" lang="en"
             >restaurant <span class="leitud_ss">car</span></span
           >
-          • <span ID="i70346_2_x" CLASS="x" lang="et">restoranvagun</span>
+          • <span CLASS="x" ID="i70346_2_x" lang="et">restoranvagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i74877_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i74877_1_m" lang="en"
             >side <span class="leitud_ss">car</span></span
           >
-          • <span ID="i74877_2_x" CLASS="x" lang="et">(mootorratta) külgkorv</span>
+          • <span CLASS="x" ID="i74877_2_x" lang="et">(mootorratta) külgkorv</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i75565_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i75565_1_m" lang="en"
             >sleeping <span class="leitud_ss">car</span></span
           >
-          • <span ID="i75565_2_x" CLASS="x" lang="et">magamisvagun</span>
+          • <span CLASS="x" ID="i75565_2_x" lang="et">magamisvagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i77223_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i77223_1_m" lang="en"
             >sport <span class="leitud_ss">car</span></span
           >
-          • <span ID="i77223_2_x" CLASS="x" lang="et">sportauto</span>
+          • <span CLASS="x" ID="i77223_2_x" lang="et">sportauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i77229_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i77229_1_m" lang="en"
             >sports <span class="leitud_ss">car</span></span
           >
-          • <span ID="i77229_2_x" CLASS="x" lang="et">sportauto</span>
+          • <span CLASS="x" ID="i77229_2_x" lang="et">sportauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i81009_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i81009_1_m" lang="en"
             >tank <span class="leitud_ss">car</span></span
           >
-          • <span ID="i81009_2_x" CLASS="x" lang="et">tsisternvagun</span>
+          • <span CLASS="x" ID="i81009_2_x" lang="et">tsisternvagun</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i83361_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i83361_1_m" lang="en"
             >tow <span class="leitud_ss">car</span></span
           >
-          • <span ID="i83361_2_x" CLASS="x" lang="et">puksiirauto</span>
+          • <span CLASS="x" ID="i83361_2_x" lang="et">puksiirauto</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i84032_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i84032_1_m" lang="en"
             >trolley <span class="leitud_ss">car</span></span
           >
-          • <span ID="i84032_2_x" CLASS="x" lang="et">trollibuss</span>
+          • <span CLASS="x" ID="i84032_2_x" lang="et">trollibuss</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span ID="i88920_1_m" CLASS="m leitud_id" lang="en"
+          <span CLASS="m leitud_id" ID="i88920_1_m" lang="en"
             >vintage <span class="leitud_ss">car</span></span
           >
-          • <span ID="i88920_2_x" CLASS="x" lang="et">vana tüüpi auto</span>,
-          <span ID="i88920_3_x" CLASS="x" lang="et">„veteranauto“</span>
+          • <span CLASS="x" ID="i88920_2_x" lang="et">vana tüüpi auto</span>,
+          <span CLASS="x" ID="i88920_3_x" lang="et">„veteranauto“</span>
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x92198_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x92198_1_m"
             >A <span class="leitud_ss">car</span> at her disposal</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x92199_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x92199_1_m"
             >A <span class="leitud_ss">car</span> drove up alongside them</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x92402_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x92402_1_m"
             >A revenue officer let the <span class="leitud_ss">car</span> cross the
             border</span
           >
@@ -820,7 +818,7 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x92782_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x92782_1_m"
             >As a result of that crash the new <span class="leitud_ss">car</span> is
             beyond redemption</span
           >
@@ -828,21 +826,21 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x92830_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x92830_1_m"
             >As the <span class="leitud_ss">car</span> ate the road</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x93464_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x93464_1_m"
             >Draw up there! (speaking of a <span class="leitud_ss">car</span>)</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x93670_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x93670_1_m"
             >First advertisements to catch the eye are those which glamorize the
             <span class="leitud_ss">car</span></span
           >
@@ -850,7 +848,7 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x93932_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x93932_1_m"
             >He abandoned the <span class="leitud_ss">car</span> in favour of the
             bicycle</span
           >
@@ -858,42 +856,42 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x95249_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x95249_1_m"
             >He parked his <span class="leitud_ss">car</span> on the grass verge</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x95406_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x95406_1_m"
             >He set the <span class="leitud_ss">car</span> in motion</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x95813_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x95813_1_m"
             >He was intent on overtaking every <span class="leitud_ss">car</span></span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x97061_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x97061_1_m"
             >I drew the <span class="leitud_ss">car</span> into a lay-by</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x97063_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x97063_1_m"
             >I eased the <span class="leitud_ss">car</span> off on the grass</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x97839_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x97839_1_m"
             >I was to leave the <span class="leitud_ss">car</span> at the station
             against my return</span
           >
@@ -901,7 +899,7 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x98012_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x98012_1_m"
             >I’ll run you down, I have my <span class="leitud_ss">car</span> round the
             corner</span
           >
@@ -909,7 +907,7 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x98165_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x98165_1_m"
             >In actual fact the <span class="leitud_ss">car</span> never left the
             garage</span
           >
@@ -917,21 +915,21 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x98391_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x98391_1_m"
             >Inspect the <span class="leitud_ss">car</span> for rust</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x101138_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x101138_1_m"
             >Shall we go in the <span class="leitud_ss">car</span>?</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x101334_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x101334_1_m"
             >She fought a desire to doze off induced by the comfort of the
             <span class="leitud_ss">car</span></span
           >
@@ -939,42 +937,42 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x101666_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x101666_1_m"
             >She made good time in her <span class="leitud_ss">car</span></span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102701_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102701_1_m"
             >The <span class="leitud_ss">car</span> appeared to have taken no harm</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102702_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102702_1_m"
             >The <span class="leitud_ss">car</span> blew a tyre</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102703_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102703_1_m"
             >The <span class="leitud_ss">car</span> came to a halt</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102704_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102704_1_m"
             >The <span class="leitud_ss">car</span> came to a stop</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102705_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102705_1_m"
             >The <span class="leitud_ss">car</span> is at the local garage for a
             service</span
           >
@@ -982,70 +980,70 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102706_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102706_1_m"
             >The <span class="leitud_ss">car</span> is being serviced</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102707_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102707_1_m"
             >The <span class="leitud_ss">car</span> is drawn up beside the kerb</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102708_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102708_1_m"
             >The <span class="leitud_ss">car</span> reversed out and drove away</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102709_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102709_1_m"
             >The <span class="leitud_ss">car</span> stopped some yards short of us</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102710_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102710_1_m"
             >The <span class="leitud_ss">car</span> was doing 120</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102711_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102711_1_m"
             >The <span class="leitud_ss">car</span> was parked out of his view</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102712_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102712_1_m"
             >The <span class="leitud_ss">car</span> was running at low gear</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x102713_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x102713_1_m"
             >The <span class="leitud_ss">car</span> was taken in tow</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x103171_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x103171_1_m"
             >The petrol in the <span class="leitud_ss">car</span> is down to empty</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x103284_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x103284_1_m"
             >The road was just wide enough to take a
             <span class="leitud_ss">car</span></span
           >
@@ -1053,14 +1051,14 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x103498_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x103498_1_m"
             >The wheels of this <span class="leitud_ss">car</span> will not bite</span
           >
         </p>
       </div>
       <div class="tervikart">
         <p>
-          <span id="x104105_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x104105_1_m"
             >They insisted on running him to his hotel (in a
             <span class="leitud_ss">car</span>)</span
           >
@@ -1068,7 +1066,7 @@
       </div>
       <div class="tervikart">
         <p>
-          <span id="x106401_1_m" class="tiivel_en leitud_id"
+          <span class="tiivel_en leitud_id" id="x106401_1_m"
             >Will you give me a hand out of the
             <span class="leitud_ss">car</span>?</span
           >
@@ -1085,8 +1083,8 @@
         &nbsp;&nbsp;
         <img
           src="/dict/mousekbd.png"
-          width="24"
           style="vertical-align: bottom"
+          width="24"
         />&nbsp;<a href="http://www.eki.ee/dict/shs_liides.html">veebiliides</a>
         &nbsp;&nbsp; @&nbsp;<i
           ><a href="mailto:w&#101;bmaster@eki.&#101;e">veebihaldur</a></i

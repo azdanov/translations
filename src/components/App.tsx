@@ -1,12 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import useLocalStorage from '../hooks/useLocalStorage'
+import { Footer, NavBar, NoMatch, orderKey } from '.'
+import { useLocalStorage } from '../hooks'
 import { EN, ET } from '../i18n'
-import { Order } from '../types/Languages'
-import Footer from './Footer'
-import { orderKey } from './Main'
-import NavBar from './NavBar'
-import NoMatch from './NoMatch'
+import { Order } from '../types'
 
 const Main = React.lazy(() => import('./Main'))
 const About = React.lazy(() => import('./About'))
@@ -57,5 +54,3 @@ export const App: React.FC = (): JSX.Element => {
     </>
   )
 }
-
-export default App

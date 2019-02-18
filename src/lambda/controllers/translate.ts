@@ -2,14 +2,13 @@ import { APIGatewayEvent, Handler } from 'aws-lambda'
 import createError from 'http-errors'
 import { isEmpty } from 'lodash'
 import middy from 'middy'
-import Response from '../contracts/ResponseContract'
-import { handleErrors } from '../utils/handleErrors'
-import { queryTranslation } from '../utils/queryTranslation'
-import { ET, EN } from '../../i18n'
+import { EN, ET } from '../../i18n'
+import { ResponseContract } from '../contracts'
+import { handleErrors, queryTranslation } from '../utils'
 
 export const fetchTranslation: Handler = async (
   event: APIGatewayEvent,
-): Promise<Response> => {
+): Promise<ResponseContract> => {
   const [word, lang] = event.path.split('/').reverse()
 
   if (!word) {

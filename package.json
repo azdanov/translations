@@ -25,7 +25,7 @@
     "start:test": "concurrently npm:start:app npm:start:lambda:test || true",
     "sw": "node tools/modifyServiceWorker.js",
     "test": "concurrently -r -k -s=first npm:start:env npm:test:run",
-    "test:run": "npm-run-all wait --parallel cypress:run unit:no-watch",
+    "test:run": "NODE_ENV=test npm-run-all wait --parallel cypress:run unit:no-watch",
     "unit": "craco test",
     "unit:no-watch": "craco test --no-watch",
     "wait": "concurrently npm:wait:*",
@@ -102,6 +102,7 @@
     ],
     "root": true,
     "rules": {
+      "import/prefer-default-export": "off",
       "spaced-comment": [
         "error",
         "always",
@@ -246,6 +247,9 @@
     "typescript": "3.3.3"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.3.3",
     "@semantic-release/changelog": "3.0.2",
     "@semantic-release/git": "7.0.8",
     "@semantic-release/github": "5.2.10",

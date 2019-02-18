@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import ky from 'ky'
 import localCache from 'lscache'
-import { useLayoutEffect } from 'react'
+import React, { useLayoutEffect } from 'react'
 import { WordOfTheDayResult } from '../components/WordOfTheDay'
 
 const key = 'wordOfTheDay'
@@ -38,5 +38,3 @@ export const useFetchWordOfTheDay = (
       })
   }, [setResult, setLoading])
 }
-
-export default useFetchWordOfTheDay

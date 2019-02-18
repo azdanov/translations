@@ -40,5 +40,3 @@ export const Message: React.FC<Props> = ({
     </div>
   )
 }
-
-export default Message

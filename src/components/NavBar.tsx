@@ -2,10 +2,10 @@ import { Menu as ReachMenu, MenuButton, MenuItem, MenuList } from '@reach/menu-b
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink, RouteComponentProps } from 'react-router-dom'
+import { Globe } from '.'
 import { EN, ET } from '../i18n'
-import { Order } from '../types/Languages'
-import chooseOrderPath from '../utils/choosePath'
-import Globe from './Globe'
+import { Order } from '../types'
+import { choosePath } from '../utils'
 
 interface Props extends RouteComponentProps {
   order: Order
@@ -21,7 +21,7 @@ export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
     i18n.changeLanguage(language, () => setActiveLanguage(language))
   }
 
-  const { from, to } = chooseOrderPath(order)
+  const { from, to } = choosePath(order)
 
   const homePath = `/${from}/${to}/`
 
@@ -69,5 +69,3 @@ export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
     </div>
   )
 }
-
-export default NavBar

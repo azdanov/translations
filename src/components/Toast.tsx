@@ -14,5 +14,3 @@ export const Toast: React.FC<{
     </div>
   </div>
 )
-
-export default Toast

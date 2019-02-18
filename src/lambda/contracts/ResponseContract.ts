@@ -1,4 +1,4 @@
-export default interface ResponseContract {
+export interface ResponseContract {
   statusCode: number
   body: string
 }

@@ -3,8 +3,7 @@ import ky from 'ky'
 import { isEmpty } from 'lodash'
 import localCache from 'lscache'
 import React, { useEffect } from 'react'
-import { Article } from '../types/Article'
-import { Order } from '../types/Languages'
+import { Article, Order } from '../types'
 
 export const useFetchTranslation = (
   word: string,
@@ -55,9 +54,11 @@ export const useFetchTranslation = (
           setError(error.message)
           setLoading(false)
         }
+
         setResults([])
       }
     })()
+
     return () => controller.abort()
   }, [word, setResults, setLoading])
 }
@@ -68,7 +69,6 @@ function setPrefix(order: Order, word: string): string {
   } else {
     word = `et/${word}`
   }
+
   return word
 }
-
-export default useFetchTranslation

@@ -2,10 +2,10 @@ import { Handler } from 'aws-lambda'
 import got from 'got'
 import createError from 'http-errors'
 import middy from 'middy'
-import Response from '../contracts/ResponseContract'
-import { handleErrors } from '../utils/handleErrors'
+import { ResponseContract } from '../contracts'
+import { handleErrors } from '../utils'
 
-export const fetchWordOfTheDay: Handler = async (): Promise<Response> => {
+export const fetchWordOfTheDay: Handler = async (): Promise<ResponseContract> => {
   if (!process.env.LAMBDA_WORDNIK_DAY_API)
     throw new createError.InternalServerError('No env specified')
 
