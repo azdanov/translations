@@ -1,3 +1,10 @@
+## [1.30.1](https://github.com/azdanov/translations/compare/v1.30.0...v1.30.1) (2019-02-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency http-errors to v1.7.2 ([5c8750a](https://github.com/azdanov/translations/commit/5c8750a))
+
 # [1.30.0](https://github.com/azdanov/translations/compare/v1.29.3...v1.30.0) (2019-02-18)
 
 
