@@ -26,9 +26,13 @@ export const useDynamicPath = (
         isRootLoaded
 
       if (isNewPathOrAction) {
+        if (isRootLoaded) {
+          history.replace(path)
+        } else {
+          history.push(path)
+        }
         setOrder([languages[from], languages[to]] as Order)
         setSearch(word)
-        history.push(path)
         pathRef.current = path
         actionRef.current = history.action
       }
@@ -48,10 +52,14 @@ export const useDynamicPath = (
         pathRef.current !== location.pathname && action === 'POP'
 
       if (isManualNavigation) {
-        // eslint-disable-next-line no-shadow
-        const [from, to, word = ''] = split(trim(location.pathname, '/'), '/')
-        setOrder([languages[from], languages[to]] as Order)
-        setSearch(word)
+        const [pathFrom, pathTo, pathWord = ''] = split(
+          trim(location.pathname, '/'),
+          '/',
+        )
+        const orderFrom = [languages[pathFrom], languages[pathTo]] as Order
+
+        setOrder(orderFrom)
+        setSearch(pathWord)
 
         pathRef.current = location.pathname
       }

@@ -17,6 +17,8 @@ App:
     ☐ More tests
   Trivia:
     ☐ Add statistics for total phrases
+  Bug:
+    ☐ Error when going to Root from a page. (order becomes null, null) /en/et/car -> / @critical 
 Archive:
   ✘ Regex validation for search form @cancelled(19-02-17 21:13) @project(App.UX)
   ✔ Make URL savable. When user navigates to http://localhost:3000/en/cat for example. Add Persistence. @done(19-02-17 21:13) @project(App.UX)

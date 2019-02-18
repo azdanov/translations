@@ -11,8 +11,10 @@ import NoMatch from './NoMatch'
 const Main = React.lazy(() => import('./Main'))
 const About = React.lazy(() => import('./About'))
 
+export const DEFAULT_ORDER: Order = ['english', 'estonian']
+
 export const App: React.FC = (): JSX.Element => {
-  const [defaultOrder] = useLocalStorage<Order>(orderKey, ['english', 'estonian'])
+  const [defaultOrder] = useLocalStorage<Order>(orderKey, DEFAULT_ORDER)
   const [order, setOrder] = useLocalStorage<Order>(orderKey, defaultOrder)
 
   return (
