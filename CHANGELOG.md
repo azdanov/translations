@@ -1,3 +1,10 @@
+# [1.32.0](https://github.com/azdanov/translations/compare/v1.31.1...v1.32.0) (2019-02-19)
+
+
+### Features
+
+* **project:** add MainPanel with daily word, history and settings ([0dd92cf](https://github.com/azdanov/translations/commit/0dd92cf))
+
 ## [1.31.1](https://github.com/azdanov/translations/compare/v1.31.0...v1.31.1) (2019-02-19)
 
 ### Bug Fixes
