@@ -1,8 +1,8 @@
 App:
+  UX:
+    ☐ Use labels for translations results. On click open modal with additional definitions.
   Tests:
-    ☐ Test for About
-    ☐ Test for Search (cypress)
-    ☐ Test service worker update
+    ☐ Tests @high
 Archive:
   ✔ Show sidebar with history @done(19-02-20 00:23) @project(App.Sidebar)
   ✔ Add settings (clear cache, clear history) @done(19-02-20 00:23) @project(App.UX)
