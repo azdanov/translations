@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import localCache from 'lscache'
-import React, { useEffect } from 'react'
+import React, { useLayoutEffect } from 'react'
 
 const key = 'totalPhrases'
 
@@ -11,7 +11,7 @@ export const useFetchStatistics = (
     }>
   >,
 ): void => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const api = process.env.REACT_APP_WORDNIK_STATISTICS_API
 
     if (!api) return

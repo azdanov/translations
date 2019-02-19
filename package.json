@@ -12,7 +12,7 @@
     "build:lambda": "NODE_ENV=production npx netlify-lambda build src/lambda/controllers",
     "build:prod": "run-s build:app sw",
     "check:types": "tsc",
-    "cypress:open": "cypress open",
+    "cypress:open": "NODE_ENV=test cypress open",
     "cypress:run": "cypress run",
     "eject": "craco eject",
     "json": "json-server --delay 100 --port 3030 --static src/fixtures/scrape --watch src/fixtures/data.json",

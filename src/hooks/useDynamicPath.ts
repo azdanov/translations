@@ -17,8 +17,8 @@ export const useDynamicPath = (
   const pathRef = useRef(path)
   const actionRef = useRef(history.action)
 
-  /** Needs useLayoutEffect to disable flicker in NavBar */
-  useLayoutEffect(
+  /** Needs useLayoutEffect to disable flicker in NavBar, but has bug right now */
+  useEffect(
     function parsePathAndSearch() {
       const isRootLoaded = history.location.pathname === '/' && history.action === 'POP'
 
