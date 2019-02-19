@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/azdanov/translations/compare/v1.32.0...v1.33.0) (2019-02-19)
+
+
+### Features
+
+* **History:** add default message, update screenshot ([d26840f](https://github.com/azdanov/translations/commit/d26840f))
+
 # [1.32.0](https://github.com/azdanov/translations/compare/v1.31.1...v1.32.0) (2019-02-19)
 
 
