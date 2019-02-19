@@ -1,3 +1,10 @@
+## [1.31.1](https://github.com/azdanov/translations/compare/v1.31.0...v1.31.1) (2019-02-19)
+
+
+### Bug Fixes
+
+* **NavBar:** flicker when changing order ([ee8469d](https://github.com/azdanov/translations/commit/ee8469d))
+
 # [1.31.0](https://github.com/azdanov/translations/compare/v1.30.1...v1.31.0) (2019-02-19)
 
 
