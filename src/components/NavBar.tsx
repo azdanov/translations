@@ -1,7 +1,8 @@
 import { Menu as ReachMenu, MenuButton, MenuItem, MenuList } from '@reach/menu-button'
+import { Location } from 'history'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { NavLink, RouteComponentProps } from 'react-router-dom'
+import { match as Match, NavLink, RouteComponentProps } from 'react-router-dom'
 import { Globe } from '.'
 import { EN, ET } from '../i18n'
 import { Order } from '../types'
@@ -33,7 +34,12 @@ export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
             <Globe width="3em" height="3em" />
           </div>
           <div className="ui pointing secondary menu">
-            <NavLink className="item" href={homePath} to={homePath}>
+            <NavLink
+              className="item"
+              href={homePath}
+              to={homePath}
+              isActive={checkPathname}
+            >
               {t('home')}
             </NavLink>
             <NavLink className="item" href="/about" to="/about">
@@ -67,4 +73,8 @@ export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
       </div>
     </div>
   )
+}
+
+function checkPathname(match: Match, location: Location): boolean {
+  return new RegExp(`${EN}|${ET}`).test(location.pathname)
 }
