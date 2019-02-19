@@ -1,16 +1,15 @@
 language: node_js
 node_js:
   - '11'
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.13.0
-  - export PATH=$HOME/.yarn/bin:$PATH
 cache:
-  yarn: true
+  directories:
+    - ~/.npm
+    - ~/.cache
 install:
-  - yarn
+  - npm ci
 before_script:
   - npx cypress verify
 script:
-  - yarn test
+  - npm test
 after_success:
   - npx semantic-release
