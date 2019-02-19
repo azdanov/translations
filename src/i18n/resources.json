@@ -12,13 +12,15 @@
       "change direction": "Change translation direction",
       "close results": "Close Results",
       "close": "Close",
+      "settings": "Settings",
+      "history": "History",
       "definition": "Definition",
       "description": "Description",
       "dictionary": "Dictionary",
       "disclaimer": "Disclaimer",
       "english": "English",
       "error": "Error",
-      "contains over %WORD% phrases": "Contains over %WORD% translated phrases",
+      "contains over %WORD% phrases": "Contains over %WORD% translated phrases.",
       "estonian": "Estonian",
       "for developer": "For developers",
       "home": "Home",
@@ -34,7 +36,11 @@
       "sw-update": "A new update is available for this app. Please save any data before continuing.",
       "translations": "Translations",
       "update": "Update",
-      "word of the day": "Word of the day"
+      "day": "Daily Word",
+      "data": "Data",
+      "clear data description": "This will remove any saved history and cached data. Use this if you encounter any issues.",
+      "clear data": "Clear Data",
+      "success": "Success!"
     }
   },
   "et": {
@@ -45,6 +51,8 @@
       "about disclaimer": "See projekt on tehtud ainult haridusotstarbeks. Kõik õigused kuuluvad nende vastavatele omanikele.",
       "about this": "Selle äppi kohta",
       "about": "Sellest",
+      "settings": "Seaded",
+      "history": "Ajalugu",
       "at github": "GitHubis",
       "attributions": "Omistamine",
       "change direction": "Muuta tõlke suuna",
@@ -53,7 +61,7 @@
       "definition": "Määratlus",
       "description": "Kirjeldus",
       "dictionary": "Sõnastik",
-      "contains over %WORD% phrases": "Sisaldab üle %WORD% tõlgitud fraasi",
+      "contains over %WORD% phrases": "Sisaldab üle %WORD% tõlgitud fraasi.",
       "disclaimer": "Lahtiütlemine",
       "english": "Inglise",
       "error": "Viga",
@@ -71,7 +79,11 @@
       "sw-update": "Selle äppi jaoks on saadaval uus värskendus. Enne jätkamist salvestage andmed.",
       "translations": "Tõlked",
       "update": "Värskenda",
-      "word of the day": "Päeva sõna"
+      "day": "Päeva sõna",
+      "data": "Andmed",
+      "clear data description": "See eemaldab salvestatud ajaloo ja puhverdatud andmed. Kasutage seda, kui teil tekib probleeme.",
+      "clear data": "Tühjenda andmed",
+      "success": "Edu!"
     }
   }
 }

@@ -15,7 +15,7 @@ export const useLocalStorage = <T>(
   const [state, setState] = useState<T>(() => {
     try {
       const localStorageValue = localStorage.getItem(key)
-      if (!isString(localStorageValue)) {
+      if (!localStorageValue) {
         localStorage.setItem(
           key,
           raw ? String(initialValue) : JSON.stringify(initialValue),
@@ -23,7 +23,7 @@ export const useLocalStorage = <T>(
         return initialValue
       }
 
-      return raw ? localStorageValue : JSON.parse(localStorageValue || 'null')
+      return raw ? localStorageValue : JSON.parse(localStorageValue)
     } catch {
       return initialValue
     }

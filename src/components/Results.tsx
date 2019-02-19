@@ -26,7 +26,7 @@ export const Results: React.FC<{
       <h2 className="ui top attached header">
         {results.length} {t('results found')}
       </h2>
-      <div className="ui bottom attached segment">
+      <div className="ui bottom attached padded segment">
         <button
           type="button"
           className="ui floating label right aligned"
@@ -43,20 +43,20 @@ export const Results: React.FC<{
           <i aria-hidden="true" className="delete icon" />
         </button>
         <div role="list" className="ui relaxed list" style={{ marginTop: 0 }}>
-          {results.length && results.map(createList)}
+          {results.length && results.map(createListItem)}
         </div>
       </div>
     </>
   )
 }
 
-const createList = (result: Article): JSX.Element | null => {
+const createListItem = (result: Article): JSX.Element | null => {
   if (isString(result.en)) {
     const r = result as ArticleEN
     return (
       <div role="listitem" className="item" lang="en" key={r.en}>
-        <div className="header">{r.en}</div>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div className="header listitem">{r.en}</div>
+        <div className="listitem" style={{ display: 'flex', flexWrap: 'wrap' }}>
           {r.et.map((et, index, array) => (
             <span key={et}>
               <span lang="et">{et}</span>
@@ -72,8 +72,8 @@ const createList = (result: Article): JSX.Element | null => {
     const r = result as ArticleET
     return (
       <div role="listitem" className="item" lang="et" key={r.et}>
-        <div className="header">{r.et}</div>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div className="header listitem">{r.et}</div>
+        <div className="listitem" style={{ display: 'flex', flexWrap: 'wrap' }}>
           {r.en.map((en, index, array) => (
             <span key={en}>
               <span lang="et">{en}</span>

@@ -108,6 +108,10 @@ body,
   color: hsl(209, 14%, 37%);
 }
 
+.searchbar {
+  margin-bottom: 0.1rem;
+}
+
 /* Link */
 
 p > a,
@@ -144,10 +148,30 @@ p > a:hover,
   color: hsl(211, 12%, 43%);
 }
 
+.ui.tabular.menu .item {
+  color: hsl(211, 12%, 43%);
+  font-size: 1rem;
+}
+
+.ui.tabular.menu .active.item {
+  color: hsl(209, 20%, 25%);
+  font-size: 1rem;
+}
+
+.ui.tabular.menu .item:hover {
+  color: hsl(209, 18%, 30%);
+  cursor: pointer;
+}
+
+.ui.tabular.menu .item:active {
+  outline: none;
+}
+
 .ui.top.attached.header {
   background-color: hsl(0, 0%, 100%);
   color: hsl(211, 12%, 43%);
   font-size: 1rem;
+  padding: 0.81em 1.5em;
 }
 
 .ui.attached.header {
@@ -181,8 +205,27 @@ p > a:hover,
   border-color: hsl(211, 13%, 65%);
 }
 
+.ui.secondary.pointing.menu .item {
+  border-color: hsl(214, 15%, 91%);
+}
+
 .ui.secondary.pointing.menu .active.item {
   border-color: hsl(209, 14%, 37%);
+}
+
+.ui.tabular.menu {
+  background-color: hsl(214, 15%, 91%);
+  border-bottom: 1px solid hsl(214, 15%, 91%);
+}
+
+.ui.tabular.menu .active.item {
+  border: 1px solid hsl(214, 15%, 91%);
+}
+
+.ui.tabular.menu .item {
+  display: inline;
+  flex: 1;
+  white-space: nowrap;
 }
 
 /* Reach UI Dropdown */
@@ -237,6 +280,10 @@ p > a:hover,
   color: hsl(211, 12%, 43%);
 }
 
+.ui.label:active {
+  outline: none;
+}
+
 .ui.label:hover {
   background-color: hsl(210, 16%, 82%);
   color: hsl(209, 20%, 25%);
@@ -247,6 +294,10 @@ p > a:hover,
 
 .ui.list > .item .header {
   color: hsl(210, 24%, 16%);
+}
+
+.listitem {
+  font-size: 1.14285714rem;
 }
 
 /* Button */
@@ -277,4 +328,27 @@ i.circular.icon:hover {
   box-shadow: 0 0 0 0.1em hsl(210, 16%, 82%) inset;
   opacity: 1 !important;
   transition: opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* History */
+
+.ui.relaxed.list.history {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 154px));
+  grid-template-rows: auto;
+  justify-content: center;
+  justify-items: center;
+}
+
+.ui.relaxed.list.history .item {
+  padding-top: 0 !important;
+}
+
+.ui.relaxed.list.history .label {
+  font-weight: normal;
+}
+
+.ui.relaxed.list.history .label:hover {
+  background-color: hsl(216, 33%, 97%);
 }

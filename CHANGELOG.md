@@ -1,167 +1,144 @@
 ## [1.31.1](https://github.com/azdanov/translations/compare/v1.31.0...v1.31.1) (2019-02-19)
 
-
 ### Bug Fixes
 
-* **NavBar:** flicker when changing order ([ee8469d](https://github.com/azdanov/translations/commit/ee8469d))
+- **NavBar:** flicker when changing order ([ee8469d](https://github.com/azdanov/translations/commit/ee8469d))
 
 # [1.31.0](https://github.com/azdanov/translations/compare/v1.30.1...v1.31.0) (2019-02-19)
 
-
 ### Features
 
-* **project:** add statistics, remove ky ([ea0e21d](https://github.com/azdanov/translations/commit/ea0e21d))
-* **project:** fix test, change to yarn ([bb37186](https://github.com/azdanov/translations/commit/bb37186))
+- **project:** add statistics, remove ky ([ea0e21d](https://github.com/azdanov/translations/commit/ea0e21d))
+- **project:** fix test, change to yarn ([bb37186](https://github.com/azdanov/translations/commit/bb37186))
 
 ## [1.30.1](https://github.com/azdanov/translations/compare/v1.30.0...v1.30.1) (2019-02-18)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency http-errors to v1.7.2 ([5c8750a](https://github.com/azdanov/translations/commit/5c8750a))
+- **deps:** update dependency http-errors to v1.7.2 ([5c8750a](https://github.com/azdanov/translations/commit/5c8750a))
 
 # [1.30.0](https://github.com/azdanov/translations/compare/v1.29.3...v1.30.0) (2019-02-18)
 
-
 ### Features
 
-* **project:** use barrel pattern, refactor ([d257fe8](https://github.com/azdanov/translations/commit/d257fe8))
+- **project:** use barrel pattern, refactor ([d257fe8](https://github.com/azdanov/translations/commit/d257fe8))
 
 ## [1.29.3](https://github.com/azdanov/translations/compare/v1.29.2...v1.29.3) (2019-02-18)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency i18next-browser-languagedetector to v3.0.1 ([37b051c](https://github.com/azdanov/translations/commit/37b051c))
+- **deps:** update dependency i18next-browser-languagedetector to v3.0.1 ([37b051c](https://github.com/azdanov/translations/commit/37b051c))
 
 ## [1.29.2](https://github.com/azdanov/translations/compare/v1.29.1...v1.29.2) (2019-02-18)
 
-
 ### Bug Fixes
 
-* **useDynamicPath:** edgecase of going to root from app ([ac49234](https://github.com/azdanov/translations/commit/ac49234))
+- **useDynamicPath:** edgecase of going to root from app ([ac49234](https://github.com/azdanov/translations/commit/ac49234))
 
 ## [1.29.1](https://github.com/azdanov/translations/compare/v1.29.0...v1.29.1) (2019-02-17)
 
-
 ### Bug Fixes
 
-* retry ci ([b3508a0](https://github.com/azdanov/translations/commit/b3508a0))
-* **deps:** pin dependency history to 4.7.2 ([709496f](https://github.com/azdanov/translations/commit/709496f))
+- retry ci ([b3508a0](https://github.com/azdanov/translations/commit/b3508a0))
+- **deps:** pin dependency history to 4.7.2 ([709496f](https://github.com/azdanov/translations/commit/709496f))
 
 # [1.29.0](https://github.com/azdanov/translations/compare/v1.28.2...v1.29.0) (2019-02-17)
 
-
 ### Features
 
-* **project:** add navigation persistence via url ([e978df6](https://github.com/azdanov/translations/commit/e978df6))
+- **project:** add navigation persistence via url ([e978df6](https://github.com/azdanov/translations/commit/e978df6))
 
 ## [1.28.2](https://github.com/azdanov/translations/compare/v1.28.1...v1.28.2) (2019-02-16)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency middy to v0.22.1 ([a72afdc](https://github.com/azdanov/translations/commit/a72afdc))
+- **deps:** update dependency middy to v0.22.1 ([a72afdc](https://github.com/azdanov/translations/commit/a72afdc))
 
 ## [1.28.1](https://github.com/azdanov/translations/compare/v1.28.0...v1.28.1) (2019-02-16)
 
-
 ### Bug Fixes
 
-* **NavBar:** line up menus, move styles to index.css ([ff9cc94](https://github.com/azdanov/translations/commit/ff9cc94))
+- **NavBar:** line up menus, move styles to index.css ([ff9cc94](https://github.com/azdanov/translations/commit/ff9cc94))
 
 # [1.28.0](https://github.com/azdanov/translations/compare/v1.27.1...v1.28.0) (2019-02-16)
 
-
 ### Features
 
-* **project:** add unique styles ([5d0f7cc](https://github.com/azdanov/translations/commit/5d0f7cc))
+- **project:** add unique styles ([5d0f7cc](https://github.com/azdanov/translations/commit/5d0f7cc))
 
 ## [1.27.1](https://github.com/azdanov/translations/compare/v1.27.0...v1.27.1) (2019-02-16)
 
-
 ### Bug Fixes
 
-* **deps:** update dependency abortcontroller-polyfill to v1.2.4 ([9b04a4d](https://github.com/azdanov/translations/commit/9b04a4d))
+- **deps:** update dependency abortcontroller-polyfill to v1.2.4 ([9b04a4d](https://github.com/azdanov/translations/commit/9b04a4d))
 
 # [1.27.0](https://github.com/azdanov/translations/compare/v1.26.0...v1.27.0) (2019-02-15)
 
-
 ### Features
 
-* **project:** add styles ([d7d8b7b](https://github.com/azdanov/translations/commit/d7d8b7b))
+- **project:** add styles ([d7d8b7b](https://github.com/azdanov/translations/commit/d7d8b7b))
 
 # [1.26.0](https://github.com/azdanov/translations/compare/v1.25.1...v1.26.0) (2019-02-15)
 
-
 ### Features
 
-* **images:** add hi-res logo ([5f180ef](https://github.com/azdanov/translations/commit/5f180ef))
+- **images:** add hi-res logo ([5f180ef](https://github.com/azdanov/translations/commit/5f180ef))
 
 ## [1.25.1](https://github.com/azdanov/translations/compare/v1.25.0...v1.25.1) (2019-02-15)
 
-
 ### Bug Fixes
 
-* **style:** add important since critical adjusts cascade ([c6b0e66](https://github.com/azdanov/translations/commit/c6b0e66))
+- **style:** add important since critical adjusts cascade ([c6b0e66](https://github.com/azdanov/translations/commit/c6b0e66))
 
 # [1.25.0](https://github.com/azdanov/translations/compare/v1.24.0...v1.25.0) (2019-02-15)
 
-
 ### Features
 
-* **project:** adjust colors, and weights ([5f92b33](https://github.com/azdanov/translations/commit/5f92b33))
+- **project:** adjust colors, and weights ([5f92b33](https://github.com/azdanov/translations/commit/5f92b33))
 
 # [1.24.0](https://github.com/azdanov/translations/compare/v1.23.1...v1.24.0) (2019-02-15)
 
-
 ### Features
 
-* **project:** change icons ([aa86d6e](https://github.com/azdanov/translations/commit/aa86d6e))
+- **project:** change icons ([aa86d6e](https://github.com/azdanov/translations/commit/aa86d6e))
 
 ## [1.23.1](https://github.com/azdanov/translations/compare/v1.23.0...v1.23.1) (2019-02-15)
 
-
 ### Bug Fixes
 
-* try to break SW ([fbf2323](https://github.com/azdanov/translations/commit/fbf2323))
-* **webpack:** adjust critical css screen size ([9e598de](https://github.com/azdanov/translations/commit/9e598de))
+- try to break SW ([fbf2323](https://github.com/azdanov/translations/commit/fbf2323))
+- **webpack:** adjust critical css screen size ([9e598de](https://github.com/azdanov/translations/commit/9e598de))
 
 # [1.23.0](https://github.com/azdanov/translations/compare/v1.22.0...v1.23.0) (2019-02-15)
 
-
 ### Features
 
-* **About:** adjust layout ([de54b3d](https://github.com/azdanov/translations/commit/de54b3d))
+- **About:** adjust layout ([de54b3d](https://github.com/azdanov/translations/commit/de54b3d))
 
 # [1.22.0](https://github.com/azdanov/translations/compare/v1.21.0...v1.22.0) (2019-02-15)
 
-
 ### Features
 
-* **NavBar:** make smaller ([feb64e9](https://github.com/azdanov/translations/commit/feb64e9))
+- **NavBar:** make smaller ([feb64e9](https://github.com/azdanov/translations/commit/feb64e9))
 
 # [1.21.0](https://github.com/azdanov/translations/compare/v1.20.0...v1.21.0) (2019-02-15)
 
-
 ### Features
 
-* **project:** add bg-color ([c320ac9](https://github.com/azdanov/translations/commit/c320ac9))
+- **project:** add bg-color ([c320ac9](https://github.com/azdanov/translations/commit/c320ac9))
 
 # [1.20.0](https://github.com/azdanov/translations/compare/v1.19.4...v1.20.0) (2019-02-15)
 
-
 ### Features
 
-* **ResultsPlaceholder:** add segment around placeholder ([f3cebf0](https://github.com/azdanov/translations/commit/f3cebf0))
+- **ResultsPlaceholder:** add segment around placeholder ([f3cebf0](https://github.com/azdanov/translations/commit/f3cebf0))
 
 ## [1.19.4](https://github.com/azdanov/translations/compare/v1.19.3...v1.19.4) (2019-02-15)
 
-
 ### Performance Improvements
 
-* **project:** remove dependencies, add styled-components ([d1606e1](https://github.com/azdanov/translations/commit/d1606e1))
-* **project:** remove semantic-react, add webpack and babel plugins ([99fee54](https://github.com/azdanov/translations/commit/99fee54))
+- **project:** remove dependencies, add styled-components ([d1606e1](https://github.com/azdanov/translations/commit/d1606e1))
+- **project:** remove semantic-react, add webpack and babel plugins ([99fee54](https://github.com/azdanov/translations/commit/99fee54))
 
 ## [1.19.3](https://github.com/azdanov/translations/compare/v1.19.2...v1.19.3) (2019-02-15)
 
@@ -266,7 +243,7 @@
 ### Bug Fixes
 
 - **deps:** pin dependency [@reach](https://github.com/reach)/menu-button to 0.1.8 ([55526cf](https://github.com/azdanov/translations/commit/55526cf))
-- **Main:** hide WordOfTheDay immediately on search ([733e08b](https://github.com/azdanov/translations/commit/733e08b))
+- **Main:** hide MainPanel immediately on search ([733e08b](https://github.com/azdanov/translations/commit/733e08b))
 
 # [1.12.0](https://github.com/azdanov/translations/compare/v1.11.0...v1.12.0) (2019-02-13)
 
@@ -305,7 +282,7 @@
 
 ### Bug Fixes
 
-- **WordOfTheDay:** add delay to prevent flicker ([558750a](https://github.com/azdanov/translations/commit/558750a))
+- **MainPanel:** add delay to prevent flicker ([558750a](https://github.com/azdanov/translations/commit/558750a))
 
 # [1.8.0](https://github.com/azdanov/translations/compare/v1.7.0...v1.8.0) (2019-02-13)
 
@@ -363,7 +340,7 @@
 - **images:** add images for attributions ([075310e](https://github.com/azdanov/translations/commit/075310e))
 - **NavBar:** add NavLinks for Menu ([22f25fe](https://github.com/azdanov/translations/commit/22f25fe))
 - **NoMatch:** create 404 page ([4d9e0a8](https://github.com/azdanov/translations/commit/4d9e0a8))
-- **WordOfTheDay:** open link in new tab ([00089de](https://github.com/azdanov/translations/commit/00089de))
+- **MainPanel:** open link in new tab ([00089de](https://github.com/azdanov/translations/commit/00089de))
 
 ## [1.2.1](https://github.com/azdanov/translations/compare/v1.2.0...v1.2.1) (2019-02-12)
 

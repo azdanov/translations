@@ -29,7 +29,6 @@ export const About: React.FC = (): JSX.Element => {
                   '%WORD%',
                   statistics.phrases,
                 )}
-                .
               </p>
             )}
           </div>

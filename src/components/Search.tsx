@@ -3,9 +3,15 @@ import React, {
   FormEvent,
   MutableRefObject,
   SyntheticEvent,
+  useEffect,
   useState,
 } from 'react'
 import { useTranslation } from 'react-i18next'
+import lscache from 'lscache'
+import { useLocalStorage } from '../hooks'
+import { Order } from '../types'
+import { choosePath } from '../utils'
+import { DEFAULT_ORDER, ORDER_KEY } from './App'
 
 interface Props {
   loading: boolean
@@ -14,6 +20,8 @@ interface Props {
   searchEl: MutableRefObject<HTMLInputElement | null>
 }
 
+export const HISTORY_KEY = 'history'
+
 export const Search: React.FC<Props> = ({
   loading,
   search,
@@ -21,7 +29,23 @@ export const Search: React.FC<Props> = ({
   searchEl,
 }): JSX.Element => {
   const [term, setTerm] = useState(search)
+  const [saveHistory, setSaveHistory] = useState(false)
+  const [order] = useLocalStorage<Order>(ORDER_KEY)
   const [t] = useTranslation()
+
+  useEffect(() => {
+    if (!saveHistory) return
+
+    const history = lscache.get(HISTORY_KEY) || []
+    const { from, to } = choosePath(order)
+
+    lscache.set(HISTORY_KEY, [
+      ...history,
+      { time: Date.now(), term, order: { from, to } },
+    ])
+
+    setSaveHistory(false)
+  }, [saveHistory])
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault()
@@ -36,6 +60,7 @@ export const Search: React.FC<Props> = ({
 
   const handleSubmit = (event: FormEvent): void => {
     event.preventDefault()
+    setSaveHistory(true)
     handleSetSearch(term)
   }
 

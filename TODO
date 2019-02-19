@@ -1,14 +1,12 @@
 App:
-  Sidebar:
-    ☐ Show sidebar with history
-  UX:
-    ☐ Add settings (clear cache, clear history)
-    ☐ Add font size settings for main area
   Tests:
     ☐ Test for About
     ☐ Test for Search (cypress)
     ☐ Test service worker update
 Archive:
+  ✔ Show sidebar with history @done(19-02-20 00:23) @project(App.Sidebar)
+  ✔ Add settings (clear cache, clear history) @done(19-02-20 00:23) @project(App.UX)
+  ✘ Add font size settings for main area @cancelled(19-02-20 00:23) @project(App.UX)
   ✔ Add statistics for total phrases @done(19-02-19 15:37) @project(App.Trivia)
   ✔ Fix NavBar flicker when switching language order @done(19-02-19 15:01) @project(App.UX)
   ✘ Add russian @cancelled(19-02-19 13:47) @project(App.Language)

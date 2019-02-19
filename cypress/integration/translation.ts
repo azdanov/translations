@@ -4,7 +4,7 @@ describe('translation', () => {
     cy.visit('/')
     cy.wait(300) // Issues with i18next, doesn't change fast enough
     cy.contains('language').click()
-    cy.contains('Eesti').click({ force: true })
+    cy.contains('Eesti').click()
   })
 
   it('should have elements translated', () => {

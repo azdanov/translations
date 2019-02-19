@@ -1,9 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Footer, NavBar, NoMatch, orderKey } from '.'
+import { Footer, NavBar, NoMatch } from '.'
 import { useLocalStorage } from '../hooks'
 import { EN, ET } from '../i18n'
 import { Order } from '../types'
+
+export const ORDER_KEY = 'order'
 
 const Main = React.lazy(() => import('./Main'))
 const About = React.lazy(() => import('./About'))
@@ -11,8 +13,8 @@ const About = React.lazy(() => import('./About'))
 export const DEFAULT_ORDER: Order = ['english', 'estonian']
 
 export const App: React.FC = (): JSX.Element => {
-  const [defaultOrder] = useLocalStorage<Order>(orderKey, DEFAULT_ORDER)
-  const [order, setOrder] = useLocalStorage<Order>(orderKey, defaultOrder)
+  const [defaultOrder] = useLocalStorage<Order>(ORDER_KEY, DEFAULT_ORDER)
+  const [order, setOrder] = useLocalStorage<Order>(ORDER_KEY, defaultOrder)
 
   return (
     <>

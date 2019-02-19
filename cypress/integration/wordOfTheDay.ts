@@ -6,7 +6,7 @@ describe('word of the day', () => {
   })
 
   it('should show word of the day', () => {
-    cy.contains('Word of the day').should('exist')
+    cy.contains('Daily Word').should('exist')
   })
 
   it('should show definition', () => {

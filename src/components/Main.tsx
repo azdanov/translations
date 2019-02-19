@@ -1,11 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { RouteComponentProps } from 'react-router-dom'
-import { Hero, Message, Results, Search, WordOfTheDay } from '.'
+import { Hero, Message, Results, Search, MainPanel } from '.'
 import { useDynamicPath, useFetchTranslation, useTitle } from '../hooks'
 import { Article, Order } from '../types'
-
-export const orderKey = 'order'
 
 interface MatchProps {
   word?: string
@@ -36,7 +34,7 @@ export const Main: React.FC<Props> = ({
   useDynamicPath(order, search, history, setOrder, setSearch)
 
   const showResults = (results.length > 0 || loading) && !error
-  const showWordOfTheDay = !loading && results.length === 0
+  const displayPanel = !loading && results.length === 0
 
   return (
     <div className="ui basic segment" style={{ marginTop: 0 }}>
@@ -49,7 +47,7 @@ export const Main: React.FC<Props> = ({
         />
       </div>
       <div className="ui centered grid">
-        <div className="row">
+        <div className="row searchbar">
           <div className="eight wide computer fourteen wide mobile nine wide tablet column">
             <Search
               loading={loading}
@@ -84,10 +82,10 @@ export const Main: React.FC<Props> = ({
             </div>
           </div>
         )}
-        {showWordOfTheDay && (
+        {displayPanel && (
           <div className="row">
             <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-              <WordOfTheDay />
+              <MainPanel setSearch={setSearch} setOrder={setOrder} />
             </div>
           </div>
         )}

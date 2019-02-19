@@ -47,7 +47,7 @@ export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
             </NavLink>
           </div>
 
-          <div className="right menu">
+          <div className="right compact menu">
             <ReachMenu>
               <MenuButton className="ui dropdown item">
                 <div className="text">{t('language')}</div>{' '}
@@ -65,7 +65,7 @@ export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
                   onSelect={() => handleSelect(ET)}
                 >
                   <span className="text">Eesti</span>
-                </MenuItem>
+                </MenuItem>{' '}
               </MenuList>
             </ReachMenu>
           </div>

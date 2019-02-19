@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import localCache from 'lscache'
 import React, { useLayoutEffect } from 'react'
-import { WordOfTheDayResult } from '../components/WordOfTheDay'
+import { WordOfTheDayResult } from '../components'
 
 const key = 'wordOfTheDay'
 
