@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import ky from 'ky'
 import localCache from 'lscache'
 import React, { useLayoutEffect } from 'react'
 import { WordOfTheDayResult } from '../components/WordOfTheDay'
@@ -22,19 +21,27 @@ export const useFetchWordOfTheDay = (
       return
     }
 
-    ky(api, {
-      method: 'get',
-      hooks: { beforeRequest: [() => setLoading(true)] },
-    })
-      .then(res => res.json())
-      .then((translation: WordOfTheDayResult) => {
-        localCache.set(key, translation, 60 * 6)
-        setResult(translation)
+    setLoading(true)
+    ;(async () => {
+      try {
+        const response = await fetch(api, {
+          method: 'get',
+        })
+
+        if (!response.ok) {
+          const message = await response.text()
+          throw new Error(message)
+        }
+
+        const body = await response.json()
+
+        localCache.set(key, body, 60 * 6)
+        setResult(body)
         setLoading(false)
-      })
-      .catch(error => {
+      } catch (error) {
         console.error(error)
         setLoading(false)
-      })
+      }
+    })()
   }, [setResult, setLoading])
 }

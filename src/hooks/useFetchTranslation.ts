@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import ky from 'ky'
 import { isEmpty } from 'lodash'
 import localCache from 'lscache'
 import React, { useEffect } from 'react'
@@ -28,15 +27,14 @@ export const useFetchTranslation = (
         return
       }
 
+      setLoading(true)
+
       try {
-        const response = await ky(word, {
+        const response = await fetch(`${process.env.REACT_APP_TRANSLATE_API}/${word}`, {
           method: 'get',
           signal: controller.signal,
-          hooks: { beforeRequest: [() => setLoading(true)] },
-          prefixUrl: process.env.REACT_APP_TRANSLATE_API,
         })
 
-        // @see https://github.com/sindresorhus/ky/issues/96
         if (!response.ok) {
           const message = await response.text()
           throw new Error(message)

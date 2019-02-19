@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Toast } from './Toast'
+import { Toast } from '.'
 
 export const ServiceWorkerMessage: React.FC<{
   update?: boolean

@@ -1,6 +1,6 @@
 import { History } from 'history'
 import { isEmpty, split, trim } from 'lodash'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { languages } from '../i18n'
 import { Order } from '../types'
 import { choosePath } from '../utils'
@@ -17,7 +17,8 @@ export const useDynamicPath = (
   const pathRef = useRef(path)
   const actionRef = useRef(history.action)
 
-  useEffect(
+  /** Needs useLayoutEffect to disable flicker in NavBar */
+  useLayoutEffect(
     function parsePathAndSearch() {
       const isRootLoaded = history.location.pathname === '/' && history.action === 'POP'
 

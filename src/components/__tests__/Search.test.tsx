@@ -3,7 +3,7 @@ import 'jest-dom/extend-expect'
 import { noop } from 'lodash'
 import React from 'react'
 import { act, cleanup, fireEvent, render } from 'react-testing-library'
-import { Search } from '../Search'
+import { Search } from '..'
 import '../../i18n'
 
 afterEach(cleanup)

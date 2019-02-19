@@ -1,7 +1,7 @@
 import 'jest-dom/extend-expect'
 import React from 'react'
 import { act, cleanup, fireEvent, render } from 'react-testing-library'
-import { ServiceWorkerMessage } from '../ServiceWorkerMessage'
+import { ServiceWorkerMessage } from '..'
 import '../../i18n'
 
 afterEach(cleanup)

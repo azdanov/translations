@@ -1,25 +1,22 @@
 App:
-  Language:
-    ☐ Add russian
-    ☐ More english words, or meaning
-    ☐ More estonian words, or meaning
   Sidebar:
     ☐ Show sidebar with history
   UX:
     ☐ Add settings (clear cache, clear history)
     ☐ Add font size settings for main area
-    ☐ Sync global Search word and Term inside input
   Tests:
-    ☐ Dedupe array in: {en: string, et: Array}
     ☐ Test for About
     ☐ Test for Search (cypress)
     ☐ Test service worker update
-    ☐ More tests
-  Trivia:
-    ☐ Add statistics for total phrases
-  Bug:
-    ☐ Error when going to Root from a page. (order becomes null, null) /en/et/car -> / @critical 
 Archive:
+  ✔ Add statistics for total phrases @done(19-02-19 15:37) @project(App.Trivia)
+  ✔ Fix NavBar flicker when switching language order @done(19-02-19 15:01) @project(App.UX)
+  ✘ Add russian @cancelled(19-02-19 13:47) @project(App.Language)
+  ✘ More english words, or meaning @cancelled(19-02-19 13:47) @project(App.Language)
+  ✘ More estonian words, or meaning @cancelled(19-02-19 13:47) @project(App.Language)
+  ✘ Sync global Search word and Term inside input @cancelled(19-02-19 13:47) @project(App.UX)
+  ✘ Dedupe array in: {en: string, et: Array} @cancelled(19-02-19 13:47) @project(App.Tests)
+  ✔ Error when going to Root from a page. @done(19-02-19 13:47) @project(App.Bug)
   ✘ Regex validation for search form @cancelled(19-02-17 21:13) @project(App.UX)
   ✔ Make URL savable. When user navigates to http://localhost:3000/en/cat for example. Add Persistence. @done(19-02-17 21:13) @project(App.UX)
   ✔ Fix worker message, it should always be near the bottom of the screen @done(19-02-17 21:13) @project(App.Trivia)

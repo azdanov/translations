@@ -33,7 +33,6 @@ export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
             <Globe width="3em" height="3em" />
           </div>
           <div className="ui pointing secondary menu">
-            {/* TODO: remove flicker when changing (Need to use ref) */}
             <NavLink className="item" href={homePath} to={homePath}>
               {t('home')}
             </NavLink>

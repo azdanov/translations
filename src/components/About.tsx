@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useTitle } from '../hooks'
+import { useTitle, useFetchStatistics } from '../hooks'
 import { glosbe, wordnik } from '../images'
 
 export const About: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
+  const [statistics, setStatistics] = useState({ phrases: '' })
 
   useTitle(`${t('about')} | ${t('translations')}`)
+  useFetchStatistics(setStatistics)
 
   return (
     <div className="ui centered grid attached about">
@@ -21,6 +23,15 @@ export const About: React.FC = (): JSX.Element => {
           <h2 className="ui top attached header">{t('description')}</h2>
           <div className="ui segment bottom attached bg-white">
             <p>{t('about description')}</p>
+            {statistics.phrases && (
+              <p>
+                {t('contains over %WORD% phrases').replace(
+                  '%WORD%',
+                  statistics.phrases,
+                )}
+                .
+              </p>
+            )}
           </div>
         </div>
       </div>
