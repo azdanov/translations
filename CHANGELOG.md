@@ -1,3 +1,11 @@
+# [1.31.0](https://github.com/azdanov/translations/compare/v1.30.1...v1.31.0) (2019-02-19)
+
+
+### Features
+
+* **project:** add statistics, remove ky ([ea0e21d](https://github.com/azdanov/translations/commit/ea0e21d))
+* **project:** fix test, change to yarn ([bb37186](https://github.com/azdanov/translations/commit/bb37186))
+
 ## [1.30.1](https://github.com/azdanov/translations/compare/v1.30.0...v1.30.1) (2019-02-18)
 
 
