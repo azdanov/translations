@@ -31,7 +31,7 @@ export const Main: React.FC<Props> = ({
 
   useTitle(`${t('home')} | ${t('translations')}`)
   useFetchTranslation(search, order, setResults, setLoading, setError)
-  useDynamicPath(order, search, history, setOrder, setSearch)
+  useDynamicPath(order, search, history, setOrder, setSearch, setResults)
 
   const showResults = (results.length > 0 || loading) && !error
   const displayPanel = !loading && results.length === 0

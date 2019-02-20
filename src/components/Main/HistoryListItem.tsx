@@ -10,7 +10,7 @@ export const HistoryListItem: React.FC<{
   setOrder: (value: Order) => void
 }> = ({ history, setSearch, setOrder }): JSX.Element => {
   const [t] = useTranslation()
-  const path = `/${history.order.from}/${history.order.to}/${history.term}/`
+  const path = `/${history.order.from}/${history.order.to}/${history.term}`
   const first = history.order.from === EN ? ENGLISH : ESTONIAN
   const second = history.order.to === EN ? ENGLISH : ESTONIAN
 

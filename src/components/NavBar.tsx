@@ -1,12 +1,11 @@
 import { Menu as ReachMenu, MenuButton, MenuItem, MenuList } from '@reach/menu-button'
-import { Location } from 'history'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { match as Match, NavLink, RouteComponentProps } from 'react-router-dom'
-import { Globe } from './Svg'
+import { NavLink, RouteComponentProps } from 'react-router-dom'
 import { EN, ET } from '../constants'
 import { Order } from '../contracts'
 import { choosePath } from '../utils'
+import { Globe } from './Svg'
 
 interface Props extends RouteComponentProps {
   order: Order
@@ -38,7 +37,7 @@ export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
               className="item"
               href={homePath}
               to={homePath}
-              isActive={checkPathname}
+              isActive={(match, location) => checkMainPath(location.pathname)}
             >
               {t('home')}
             </NavLink>
@@ -75,6 +74,6 @@ export const NavBar: React.FC<Props> = ({ order }): JSX.Element => {
   )
 }
 
-function checkPathname(match: Match, location: Location): boolean {
-  return new RegExp(`${EN}|${ET}`).test(location.pathname)
+export function checkMainPath(path: string): boolean {
+  return new RegExp(`${EN}|${ET}`).test(path)
 }

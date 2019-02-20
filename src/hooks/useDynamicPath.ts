@@ -2,7 +2,7 @@ import { History } from 'history'
 import { isEmpty, split, trim } from 'lodash'
 import React, { useEffect, useRef } from 'react'
 import { LANGUAGES } from '../constants'
-import { Order } from '../contracts'
+import { Article, Order } from '../contracts'
 import { choosePath } from '../utils'
 
 export const useDynamicPath = (
@@ -11,6 +11,7 @@ export const useDynamicPath = (
   history: History,
   setOrder: (value: Order) => void,
   setSearch: React.Dispatch<React.SetStateAction<string>>,
+  setResults: React.Dispatch<React.SetStateAction<Article[]>>,
 ): void => {
   const { from, to } = choosePath(order)
   const path = `/${from}/${to}/${word}`
@@ -20,13 +21,13 @@ export const useDynamicPath = (
   useEffect(
     function parsePathAndSearch() {
       const isRootLoaded = history.location.pathname === '/' && history.action === 'POP'
-
+      const isInternalLink = history.action === 'PUSH'
       const isNewPathOrAction =
         (pathRef.current !== path && actionRef.current === history.action) ||
         isRootLoaded
 
       if (isNewPathOrAction) {
-        if (isRootLoaded) {
+        if (isRootLoaded || isInternalLink) {
           history.replace(path)
         } else {
           history.push(path)
@@ -50,7 +51,9 @@ export const useDynamicPath = (
 
     return history.listen((location, action) => {
       const isManualNavigation =
-        pathRef.current !== location.pathname && action === 'POP'
+        (pathRef.current !== location.pathname ||
+          pathRef.current === location.pathname) &&
+        action === 'POP'
 
       if (isManualNavigation) {
         const [pathFrom, pathTo, pathWord = ''] = split(
@@ -58,6 +61,9 @@ export const useDynamicPath = (
           '/',
         )
         const orderFrom = [LANGUAGES[pathFrom], LANGUAGES[pathTo]] as Order
+        if (!pathWord) {
+          setResults([])
+        }
 
         setOrder(orderFrom)
         setSearch(pathWord)
