@@ -24,7 +24,11 @@ export const WordOfTheDay: React.FC<{
         <div className="sub header">{result.note}</div>
       </h3>
       <p>{t('definition')}:</p>
-      <div role="list" className="ui bulleted relaxed list">
+      <div
+        role="list"
+        className="ui bulleted relaxed list"
+        style={{ marginBottom: '0.1rem' }}
+      >
         {result.definitions.map(definition => (
           <div role="listitem" className="item" key={definition.text}>
             {definition.text}
