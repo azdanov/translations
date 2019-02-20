@@ -1,3 +1,4 @@
+import lscache from 'lscache'
 import React, {
   ChangeEvent,
   FormEvent,
@@ -7,11 +8,10 @@ import React, {
   useState,
 } from 'react'
 import { useTranslation } from 'react-i18next'
-import lscache from 'lscache'
-import { useLocalStorage } from '../hooks'
-import { Order } from '../types'
-import { choosePath } from '../utils'
-import { DEFAULT_ORDER, ORDER_KEY } from './App'
+import { HISTORY_KEY, ORDER_KEY } from '../../constants'
+import { useLocalStorage } from '../../hooks'
+import { Order } from '../../contracts'
+import { choosePath } from '../../utils'
 
 interface Props {
   loading: boolean
@@ -19,8 +19,6 @@ interface Props {
   setSearch: React.Dispatch<React.SetStateAction<string>>
   searchEl: MutableRefObject<HTMLInputElement | null>
 }
-
-export const HISTORY_KEY = 'history'
 
 export const Search: React.FC<Props> = ({
   loading,

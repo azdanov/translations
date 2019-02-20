@@ -2,7 +2,7 @@
 import { isEmpty } from 'lodash'
 import localCache from 'lscache'
 import React, { useEffect } from 'react'
-import { Article, Order } from '../types'
+import { Article, Order } from '../contracts'
 
 export const useFetchTranslation = (
   word: string,

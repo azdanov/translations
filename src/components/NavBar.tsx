@@ -3,9 +3,9 @@ import { Location } from 'history'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { match as Match, NavLink, RouteComponentProps } from 'react-router-dom'
-import { Globe } from '.'
-import { EN, ET } from '../i18n'
-import { Order } from '../types'
+import { Globe } from './Svg'
+import { EN, ET } from '../constants'
+import { Order } from '../contracts'
 import { choosePath } from '../utils'
 
 interface Props extends RouteComponentProps {

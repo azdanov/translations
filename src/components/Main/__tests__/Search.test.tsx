@@ -4,7 +4,7 @@ import { noop } from 'lodash'
 import React from 'react'
 import { act, cleanup, fireEvent, render } from 'react-testing-library'
 import { Search } from '..'
-import '../../i18n'
+import '../../../i18n'
 
 afterEach(cleanup)
 

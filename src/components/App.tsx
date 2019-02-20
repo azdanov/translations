@@ -1,16 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Footer, NavBar, NoMatch } from '.'
+import { DEFAULT_ORDER, EN, ET, ORDER_KEY } from '../constants'
 import { useLocalStorage } from '../hooks'
-import { EN, ET } from '../i18n'
-import { Order } from '../types'
+import { Order } from '../contracts'
 
-export const ORDER_KEY = 'order'
-
-const Main = React.lazy(() => import('./Main'))
+const Main = React.lazy(() => import('./Main/Main'))
 const About = React.lazy(() => import('./About'))
-
-export const DEFAULT_ORDER: Order = ['english', 'estonian']
 
 export const App: React.FC = (): JSX.Element => {
   const [defaultOrder] = useLocalStorage<Order>(ORDER_KEY, DEFAULT_ORDER)

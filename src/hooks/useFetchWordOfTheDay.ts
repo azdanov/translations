@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
 import localCache from 'lscache'
 import React, { useLayoutEffect } from 'react'
-import { WordOfTheDayResult } from '../components'
-
-const key = 'wordOfTheDay'
+import { WordOfTheDayResult } from '../components/Main'
+import { WORD_OF_THE_DAY_KEY } from '../constants'
 
 export const useFetchWordOfTheDay = (
   setResult: React.Dispatch<React.SetStateAction<WordOfTheDayResult>>,
@@ -14,7 +13,7 @@ export const useFetchWordOfTheDay = (
 
     if (!api) return
 
-    const cached: WordOfTheDayResult | null = localCache.get(key)
+    const cached: WordOfTheDayResult | null = localCache.get(WORD_OF_THE_DAY_KEY)
 
     if (cached) {
       setResult(cached)
@@ -35,7 +34,7 @@ export const useFetchWordOfTheDay = (
 
         const body = await response.json()
 
-        localCache.set(key, body, 60 * 6)
+        localCache.set(WORD_OF_THE_DAY_KEY, body, 60 * 6)
         setResult(body)
         setLoading(false)
       } catch (error) {

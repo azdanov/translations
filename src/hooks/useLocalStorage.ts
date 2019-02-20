@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { isObject, isString, noop } from 'lodash'
+import { isObject, noop } from 'lodash'
 import { useEffect, useState } from 'react'
 
 // @see https://github.com/streamich/react-use/blob/master/src/useLocalStorage.ts

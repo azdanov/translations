@@ -1,19 +1,8 @@
 import i18next from 'i18next'
 import LngDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
-import { English, Estonian } from '../types'
+import { EN } from '../constants'
 import resources from './resources.json'
-
-export const EN = 'en'
-export const ET = 'et'
-
-export const ESTONIAN = 'estonian'
-export const ENGLISH = 'english'
-
-export const languages: { en: English; et: Estonian; [key: string]: string } = {
-  [EN]: ENGLISH,
-  [ET]: ESTONIAN,
-}
 
 i18next
   .use(initReactI18next)

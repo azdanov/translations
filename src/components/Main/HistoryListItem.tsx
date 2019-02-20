@@ -1,8 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { EN, ENGLISH, ESTONIAN } from '../i18n'
-import { HistoryContract, Order } from '../types'
+import { EN, ENGLISH, ESTONIAN } from '../../constants'
+import { HistoryContract, Order } from '../../contracts'
 
 export const HistoryListItem: React.FC<{
   history: HistoryContract

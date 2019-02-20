@@ -2,7 +2,7 @@ import { APIGatewayEvent, Handler } from 'aws-lambda'
 import createError from 'http-errors'
 import { isEmpty } from 'lodash'
 import middy from 'middy'
-import { EN, ET } from '../../i18n'
+import { EN, ET } from '../../constants'
 import { ResponseContract } from '../contracts'
 import { handleErrors, queryTranslation } from '../utils'
 

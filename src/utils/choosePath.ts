@@ -1,6 +1,6 @@
 import { head } from 'lodash'
-import { EN, ENGLISH, ESTONIAN, ET } from '../i18n'
-import { Order } from '../types'
+import { EN, ENGLISH, ESTONIAN, ET } from '../constants'
+import { Order } from '../contracts'
 
 export function choosePath(order: Order): { from: string; to: string } {
   let from = ''

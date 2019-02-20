@@ -2,7 +2,7 @@ import { isEmpty, isString } from 'lodash'
 import React, { MutableRefObject } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ResultsPlaceholder } from '.'
-import { Article, ArticleEN, ArticleET } from '../types'
+import { Article, ArticleEN, ArticleET } from '../../contracts'
 
 export const Results: React.FC<{
   results?: Article[]

@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { History, Settings, WordOfTheDay } from '.'
-import { useFetchWordOfTheDay, useLocalStorage } from '../hooks'
-import { Order } from '../types'
-
-const DAY = 'day'
-const HISTORY = 'history'
-const SETTINGS = 'settings'
-const MAIN_PANEL_KEY = 'main-panel'
+import { DAY, HISTORY, MAIN_PANEL_KEY, SETTINGS } from '../../constants'
+import { useFetchWordOfTheDay, useLocalStorage } from '../../hooks'
+import { Order } from '../../contracts'
 
 export const MainPanel: React.FC<{
   setSearch: React.Dispatch<React.SetStateAction<string>>

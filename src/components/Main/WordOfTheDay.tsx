@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { WordOfTheDayResult } from './MainPanel'
+import { WordOfTheDayResult } from '.'
 
 export const WordOfTheDay: React.FC<{
   result: WordOfTheDayResult

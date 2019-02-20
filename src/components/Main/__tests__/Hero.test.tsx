@@ -2,11 +2,11 @@ import 'jest-dom/extend-expect'
 import React from 'react'
 import { act, cleanup, fireEvent, render } from 'react-testing-library'
 import { Hero } from '..'
-import '../../i18n'
+import '../../../i18n'
 
 afterEach(cleanup)
 
-test('should have languages and dictionary', () => {
+test('should have LANGUAGES and dictionary', () => {
   const setOrder = jest.fn()
   const setSearch = jest.fn()
   const setResults = jest.fn()

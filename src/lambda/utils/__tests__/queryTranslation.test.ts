@@ -1,5 +1,5 @@
+import { EN } from '../../../constants'
 import mockFixture from '../../../fixtures/data.json'
-import { EN } from '../../../i18n'
 
 const mockBody = [{ en: 'car', et: ['vagun', 'auto', 'gondel', 'sõiduauto'] }]
 

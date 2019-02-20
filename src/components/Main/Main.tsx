@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { RouteComponentProps } from 'react-router-dom'
-import { Hero, Message, Results, Search, MainPanel } from '.'
-import { useDynamicPath, useFetchTranslation, useTitle } from '../hooks'
-import { Article, Order } from '../types'
+import { Hero, MainPanel, Message, Results, Search } from '.'
+import { useDynamicPath, useFetchTranslation, useTitle } from '../../hooks'
+import { Article, Order } from '../../contracts'
 
 interface MatchProps {
   word?: string

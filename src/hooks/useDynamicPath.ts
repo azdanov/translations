@@ -1,8 +1,8 @@
 import { History } from 'history'
 import { isEmpty, split, trim } from 'lodash'
 import React, { useEffect, useRef } from 'react'
-import { languages } from '../i18n'
-import { Order } from '../types'
+import { LANGUAGES } from '../constants'
+import { Order } from '../contracts'
 import { choosePath } from '../utils'
 
 export const useDynamicPath = (
@@ -32,7 +32,7 @@ export const useDynamicPath = (
           history.push(path)
         }
 
-        setOrder([languages[from], languages[to]] as Order)
+        setOrder([LANGUAGES[from], LANGUAGES[to]] as Order)
         setSearch(word)
         pathRef.current = path
         actionRef.current = history.action
@@ -57,7 +57,7 @@ export const useDynamicPath = (
           trim(location.pathname, '/'),
           '/',
         )
-        const orderFrom = [languages[pathFrom], languages[pathTo]] as Order
+        const orderFrom = [LANGUAGES[pathFrom], LANGUAGES[pathTo]] as Order
 
         setOrder(orderFrom)
         setSearch(pathWord)

@@ -4,8 +4,8 @@ import createHttpError from 'http-errors'
 import { flattenDeep, groupBy, isEmpty, isObject, map, mapValues, reject } from 'lodash'
 import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
-import { EN, ET } from '../../i18n'
-import { Article, en, et, JsonBody, Translation } from '../../types'
+import { EN, ET } from '../../constants'
+import { Article, en, et, JsonBody, Translation } from '../../contracts'
 
 export const queryTranslation = async (
   word: string,

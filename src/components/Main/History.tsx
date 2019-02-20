@@ -1,9 +1,9 @@
 import lscache from 'lscache'
 import React, { useLayoutEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { HistoryContract, Order } from '../types'
+import { HISTORY_KEY } from '../../constants'
+import { HistoryContract, Order } from '../../contracts'
 import { HistoryListItem } from './HistoryListItem'
-import { HISTORY_KEY } from './Search'
 
 export const History: React.FC<{
   setSearch: React.Dispatch<React.SetStateAction<string>>

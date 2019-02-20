@@ -1,6 +1,6 @@
+import lscache from 'lscache'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import lscache from 'lscache'
 
 export const Settings: React.FC = (): JSX.Element => {
   const [t] = useTranslation()

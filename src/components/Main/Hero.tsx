@@ -1,7 +1,7 @@
 import Hidden from '@reach/visually-hidden'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Article, Order } from '../types'
+import { Article, Order } from '../../contracts'
 
 interface Props {
   order: Order
