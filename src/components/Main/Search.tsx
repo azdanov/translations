@@ -2,30 +2,29 @@ import lscache from 'lscache'
 import React, {
   ChangeEvent,
   FormEvent,
-  MutableRefObject,
   SyntheticEvent,
   useEffect,
+  useRef,
   useState,
 } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HISTORY_KEY, ORDER_KEY } from '../../constants'
-import { useLocalStorage } from '../../hooks'
 import { Order } from '../../contracts'
+import { useLocalStorage } from '../../hooks'
 import { choosePath } from '../../utils'
 
 interface Props {
   loading: boolean
   search: string
   setSearch: React.Dispatch<React.SetStateAction<string>>
-  searchEl: MutableRefObject<HTMLInputElement | null>
 }
 
 export const Search: React.FC<Props> = ({
   loading,
   search,
   setSearch,
-  searchEl,
 }): JSX.Element => {
+  const searchEl = useRef<HTMLInputElement>(null)
   const [term, setTerm] = useState(search)
   const [saveHistory, setSaveHistory] = useState(false)
   const [order] = useLocalStorage<Order>(ORDER_KEY)
@@ -41,6 +40,8 @@ export const Search: React.FC<Props> = ({
       ...history,
       { time: Date.now(), term, order: { from, to } },
     ])
+
+    setTerm('')
 
     setSaveHistory(false)
   }, [saveHistory])
@@ -58,12 +59,16 @@ export const Search: React.FC<Props> = ({
 
   const handleSubmit = (event: FormEvent): void => {
     event.preventDefault()
-    setSaveHistory(true)
     handleSetSearch(term)
   }
 
   const handleSetSearch = (word: string): void => {
     setSearch(word)
+    setSaveHistory(true)
+
+    if (searchEl && searchEl.current) {
+      searchEl.current.blur()
+    }
   }
 
   return (

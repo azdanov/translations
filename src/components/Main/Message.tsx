@@ -5,14 +5,12 @@ interface Props {
   error: string
   setError: React.Dispatch<React.SetStateAction<string>>
   setSearch: React.Dispatch<React.SetStateAction<string>>
-  searchEl: MutableRefObject<HTMLInputElement | null>
 }
 
 export const Message: React.FC<Props> = ({
   error,
   setError,
   setSearch,
-  searchEl,
 }): JSX.Element => {
   const [t] = useTranslation()
 
@@ -27,9 +25,6 @@ export const Message: React.FC<Props> = ({
             event.preventDefault()
             setError('')
             setSearch('')
-            if (searchEl && searchEl.current) {
-              searchEl.current.focus()
-            }
           }}
         >
           {t('close')}

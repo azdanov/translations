@@ -1,5 +1,5 @@
 import { isEmpty, isString } from 'lodash'
-import React, { MutableRefObject } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { ResultsPlaceholder } from '.'
 import { Article, ArticleEN, ArticleET } from '../../contracts'
@@ -9,8 +9,7 @@ export const Results: React.FC<{
   loading: boolean
   setSearch: React.Dispatch<React.SetStateAction<string>>
   setResults: React.Dispatch<React.SetStateAction<Article[]>>
-  searchEl: MutableRefObject<HTMLInputElement | null>
-}> = ({ results, loading, setSearch, setResults, searchEl }): JSX.Element | null => {
+}> = ({ results, loading, setSearch, setResults }): JSX.Element | null => {
   const [t] = useTranslation()
 
   if (loading) {
@@ -34,9 +33,6 @@ export const Results: React.FC<{
             event.preventDefault()
             setResults([])
             setSearch('')
-            if (searchEl && searchEl.current) {
-              searchEl.current.focus()
-            }
           }}
         >
           {t('close results')}

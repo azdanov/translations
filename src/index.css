@@ -95,7 +95,7 @@ body,
 }
 
 .ui.input > input:focus {
-  border-color: hsl(208, 88%, 62%);
+  border-color: hsl(211, 10%, 53%);
 }
 
 .ui.input > input::placeholder {
@@ -367,11 +367,19 @@ i.circular.icon:hover {
 }
 
 .item.result-item .result-translation {
+  background-color: hsl(216, 33%, 97%);
+  border: 1px solid hsl(211, 13%, 65%);
   color: hsl(209, 18%, 30%);
   font-size: 1rem;
-  margin-right: 0.5rem;
+  font-weight: normal;
   margin-bottom: 1rem;
   margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.item.result-item .result-translation:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(209, 20%, 25%);
 }
 
 .result-item .listitem {
@@ -384,8 +392,7 @@ i.circular.icon:hover {
 }
 
 .result-item .ui.basic.ribbon.label {
-  background: none hsl(0, 0%, 100%);
-  color: hsl(209, 20%, 25%);
+  color: hsl(209, 18%, 30%);
   font-size: 1rem;
   left: calc(-1rem - 1.8em);
   padding-left: calc(1rem + 2.4em);

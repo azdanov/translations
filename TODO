@@ -1,12 +1,13 @@
 App:
   Bug:
-    ☐ History not working on mobile
+    ☐ History not working on some mobile
   UX:
-    ☐ Add color to results
-    ☐ Use labels for translations results. On click open modal with additional definitions.
+    ☐ On click open modal with additional definitions.
   Tests:
     ☐ Tests @high
 Archive:
+  ✔ Add color to results @done(19-02-20 19:56) @project(App.UX)
+  ✔ Use labels for translations results. @done(19-02-20 19:11) @project(App.UX)
   ✔ Overflow in MainPanel for settings @done(19-02-20 17:48) @project(App.UX)
   ✔ Lowercase search word @done(19-02-20 17:32) @project(App.Lambda)
   ✔ Cut words on comma and trim @done(19-02-20 17:30) @project(App.Lambda)

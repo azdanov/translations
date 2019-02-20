@@ -22,7 +22,6 @@ export const Main: React.FC<Props> = ({
     params: { word = '' },
   },
 }): JSX.Element => {
-  const searchEl = useRef<HTMLInputElement>(null)
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState([] as Article[])
   const [error, setError] = useState('')
@@ -49,12 +48,7 @@ export const Main: React.FC<Props> = ({
       <div className="ui centered grid">
         <div className="row searchbar">
           <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-            <Search
-              loading={loading}
-              search={search}
-              searchEl={searchEl}
-              setSearch={setSearch}
-            />
+            <Search loading={loading} search={search} setSearch={setSearch} />
           </div>
         </div>
         {showResults && (
@@ -63,7 +57,6 @@ export const Main: React.FC<Props> = ({
               <Results
                 loading={loading}
                 results={results}
-                searchEl={searchEl}
                 setResults={setResults}
                 setSearch={setSearch}
               />
@@ -73,12 +66,7 @@ export const Main: React.FC<Props> = ({
         {Boolean(error) && (
           <div className="row">
             <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-              <Message
-                error={error}
-                searchEl={searchEl}
-                setError={setError}
-                setSearch={setSearch}
-              />
+              <Message error={error} setError={setError} setSearch={setSearch} />
             </div>
           </div>
         )}
