@@ -1,3 +1,18 @@
+# [1.34.0](https://github.com/azdanov/translations/compare/v1.33.0...v1.34.0) (2019-02-20)
+
+
+### Bug Fixes
+
+* **index.css:** add margin-bottom to search results ([7d40600](https://github.com/azdanov/translations/commit/7d40600))
+* **project:** rename constants since netlify-lambda doesn't work with tsx ([09af288](https://github.com/azdanov/translations/commit/09af288))
+* **Results:** wrong style generated for estonian ([9e11649](https://github.com/azdanov/translations/commit/9e11649))
+
+
+### Features
+
+* **queryTranslation:** split translation result string on ',' ([a6514c1](https://github.com/azdanov/translations/commit/a6514c1))
+* **Results:** show results as labels and headers as badges ([bc81dec](https://github.com/azdanov/translations/commit/bc81dec))
+
 # [1.33.0](https://github.com/azdanov/translations/compare/v1.32.0...v1.33.0) (2019-02-19)
 
 ### Features
