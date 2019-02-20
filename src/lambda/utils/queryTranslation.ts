@@ -12,6 +12,7 @@ import {
   reject,
   split,
   trim,
+  uniq,
 } from 'lodash'
 import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
@@ -147,6 +148,9 @@ const splitAndDedupe = (
 ): Article[] => {
   return map(
     mapValues(groupBy(translations, key), v => flattenDeep(map(v, value))),
-    (v, k) => ({ en: k, et: flatMap(v, item => map(split(item, ','), trim)) }),
+    (v, k) => ({
+      en: k,
+      et: uniq(flatMap(v, item => map(split(item, ','), trim))),
+    }),
   )
 }
