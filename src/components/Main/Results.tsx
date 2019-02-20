@@ -54,13 +54,14 @@ const createListItem = (result: Article): JSX.Element | null => {
   if (isString(result.en)) {
     const r = result as ArticleEN
     return (
-      <div role="listitem" className="item" lang="en" key={r.en}>
-        <div className="header listitem">{r.en}</div>
-        <div className="listitem" style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {r.et.map((et, index, array) => (
-            <span key={et}>
-              <span lang="et">{et}</span>
-              {addSeparator(index < array.length - 1)}
+      <div role="listitem" className="item result-item" lang="en" key={r.en}>
+        <div className="header listitem">
+          <div className="ui basic ribbon label">{r.en}</div>
+        </div>
+        <div className="listitem">
+          {r.et.map(et => (
+            <span key={et} lang="et" className="ui basic label result-translation">
+              {et}
             </span>
           ))}
         </div>

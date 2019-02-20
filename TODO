@@ -1,4 +1,7 @@
 App:
+  Lambda:
+    ☐ Cut words on comma and trim
+    ☐ Lowercase and dedupe translations
   UX:
     ☐ Use labels for translations results. On click open modal with additional definitions.
   Tests:

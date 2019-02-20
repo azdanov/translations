@@ -352,3 +352,43 @@ i.circular.icon:hover {
 .ui.relaxed.list.history .label:hover {
   background-color: hsl(216, 33%, 97%);
 }
+
+/* Result */
+
+.item.result-item {
+  margin-bottom: 1.5rem;
+}
+
+.item.result-item:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.item.result-item .result-translation {
+  color: hsl(209, 18%, 30%);
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.result-item .listitem {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result-item .header.listitem {
+  margin-bottom: 1.5rem !important;
+}
+
+.result-item .ui.basic.ribbon.label {
+  background: none hsl(0, 0%, 100%);
+  color: hsl(209, 20%, 25%);
+  font-size: 1rem;
+  left: calc(-1rem - 1.8em);
+  padding-left: calc(1rem + 2.4em);
+}
+
+.result-item .ui.basic.ribbon.label:hover {
+  background: none hsl(0, 0%, 100%);
+  color: hsl(209, 20%, 25%);
+  cursor: initial;
+}
