@@ -15,6 +15,9 @@ i18next
     keySeparator: false,
     interpolation: {
       escapeValue: false,
+      format: value => {
+        return value
+      },
     },
   })
 

@@ -24,12 +24,7 @@ export const About: React.FC = (): JSX.Element => {
           <div className="ui segment bottom attached bg-white">
             <p>{t('about description')}</p>
             {statistics.phrases && (
-              <p>
-                {t('contains over %WORD% phrases').replace(
-                  '%WORD%',
-                  statistics.phrases,
-                )}
-              </p>
+              <p>{t('contains over phrases', { number: statistics.phrases })}</p>
             )}
           </div>
         </div>
