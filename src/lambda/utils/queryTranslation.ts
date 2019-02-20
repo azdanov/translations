@@ -13,6 +13,7 @@ import {
   split,
   trim,
   uniq,
+  lowerCase,
 } from 'lodash'
 import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
@@ -23,6 +24,8 @@ export const queryTranslation = async (
   word: string,
   lang: en | et,
 ): Promise<Article[]> => {
+  word = lowerCase(word)
+
   const { api, similar } = pickApis(lang, word)
 
   const [translationResponse, similarResponse] = await Promise.all([
