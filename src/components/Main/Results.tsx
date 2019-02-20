@@ -51,47 +51,40 @@ export const Results: React.FC<{
 }
 
 const createListItem = (result: Article): JSX.Element | null => {
-  if (isString(result.en)) {
-    const r = result as ArticleEN
+  const createItem = (
+    order: { from: string; to: string },
+    from: string,
+    to: string[],
+  ): JSX.Element => {
     return (
-      <div role="listitem" className="item result-item" lang="en" key={r.en}>
+      <div role="listitem" className="item result-item" lang={order.from} key={from}>
         <div className="header listitem">
-          <div className="ui basic ribbon label">{r.en}</div>
+          <div className="ui basic ribbon label">{from}</div>
         </div>
         <div className="listitem">
-          {r.et.map(et => (
-            <span key={et} lang="et" className="ui basic label result-translation">
-              {et}
+          {to.map((translation: string) => (
+            <span
+              key={translation}
+              lang={order.to}
+              className="ui basic label result-translation"
+            >
+              {translation}
             </span>
           ))}
         </div>
       </div>
     )
+  }
+
+  if (isString(result.en)) {
+    const r = result as ArticleEN
+    return createItem({ from: 'en', to: 'et' }, r.en, r.et)
   }
 
   if (isString(result.et)) {
     const r = result as ArticleET
-    return (
-      <div role="listitem" className="item" lang="et" key={r.et}>
-        <div className="header listitem">{r.et}</div>
-        <div className="listitem" style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {r.en.map((en, index, array) => (
-            <span key={en}>
-              <span lang="et">{en}</span>
-              {addSeparator(index < array.length - 1)}
-            </span>
-          ))}
-        </div>
-      </div>
-    )
+    return createItem({ from: 'et', to: 'en' }, r.et, r.en)
   }
 
   return null
 }
-
-const addSeparator = (add: boolean): JSX.Element | null =>
-  add ? (
-    <span aria-hidden style={{ userSelect: 'none', margin: '0 0.35em' }}>
-      |
-    </span>
-  ) : null
