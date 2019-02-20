@@ -356,10 +356,6 @@ i.circular.icon:hover {
 /* Result */
 
 .item.result-item {
-  margin-bottom: 1.5rem;
-}
-
-.item.result-item:last-child {
   margin-bottom: 0.5rem;
 }
 
@@ -367,6 +363,7 @@ i.circular.icon:hover {
   color: hsl(209, 18%, 30%);
   font-size: 1rem;
   margin-right: 0.5rem;
+  margin-bottom: 1rem;
   margin-left: 0;
 }
 
