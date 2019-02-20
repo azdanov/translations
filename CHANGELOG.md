@@ -1,3 +1,10 @@
+## [1.35.1](https://github.com/azdanov/translations/compare/v1.35.0...v1.35.1) (2019-02-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency abortcontroller-polyfill to v1.2.5 ([2b92dff](https://github.com/azdanov/translations/commit/2b92dff))
+
 # [1.35.0](https://github.com/azdanov/translations/compare/v1.34.0...v1.35.0) (2019-02-20)
 
 
