@@ -1,3 +1,18 @@
+# [1.35.0](https://github.com/azdanov/translations/compare/v1.34.0...v1.35.0) (2019-02-20)
+
+
+### Bug Fixes
+
+* **MainPanel:** overflow on small screen ([470e3fb](https://github.com/azdanov/translations/commit/470e3fb))
+
+
+### Features
+
+* **project:** add color to results ([4ff9dd6](https://github.com/azdanov/translations/commit/4ff9dd6))
+* **project:** adjust history ([32aaa71](https://github.com/azdanov/translations/commit/32aaa71))
+* **queryTranslation:** lowercase word ([5fa8db0](https://github.com/azdanov/translations/commit/5fa8db0))
+* **queryTranslation:** remove duplicates in results ([cca840a](https://github.com/azdanov/translations/commit/cca840a))
+
 # [1.34.0](https://github.com/azdanov/translations/compare/v1.33.0...v1.34.0) (2019-02-20)
 
 
