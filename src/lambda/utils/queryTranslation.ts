@@ -1,7 +1,18 @@
 /* eslint-disable lodash/chaining */
 import got from 'got'
 import createHttpError from 'http-errors'
-import { flattenDeep, groupBy, isEmpty, isObject, map, mapValues, reject } from 'lodash'
+import {
+  flatMap,
+  flattenDeep,
+  groupBy,
+  isEmpty,
+  isObject,
+  map,
+  mapValues,
+  reject,
+  split,
+  trim,
+} from 'lodash'
 import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
 import { EN, ET } from '../../constants'
@@ -85,7 +96,7 @@ function parseResponse(
       ),
     )
 
-    translation = dedupe(translation, 'en', 'et')
+    translation = splitAndDedupe(translation, 'en', 'et')
     translation = matchSort(translation, word, {
       keys: ['en', 'et'],
     })
@@ -120,7 +131,7 @@ function parseResponse(
       ),
     )
 
-    translation = dedupe(translation, 'et', 'en')
+    translation = splitAndDedupe(translation, 'et', 'en')
     translation = matchSort(translation, word, {
       keys: ['et', 'en'],
     })
@@ -129,9 +140,13 @@ function parseResponse(
   return translation
 }
 
-const dedupe = (translations: Article[], key: string, value: string): Article[] => {
+const splitAndDedupe = (
+  translations: Article[],
+  key: string,
+  value: string,
+): Article[] => {
   return map(
     mapValues(groupBy(translations, key), v => flattenDeep(map(v, value))),
-    (v, k) => ({ en: k, et: v }),
+    (v, k) => ({ en: k, et: flatMap(v, item => map(split(item, ','), trim)) }),
   )
 }
