@@ -1,12 +1,16 @@
 App:
-  Lambda:
-    ☐ Cut words on comma and trim
-    ☐ Lowercase and dedupe translations
+  Bug:
+    ☐ History not working on mobile
   UX:
+    ☐ Add color to results
+    ☐ Overflow in MainPanel for settings
     ☐ Use labels for translations results. On click open modal with additional definitions.
   Tests:
     ☐ Tests @high
 Archive:
+  ✔ Lowercase search word @done(19-02-20 17:32) @project(App.Lambda)
+  ✔ Cut words on comma and trim @done(19-02-20 17:30) @project(App.Lambda)
+  ✔ Lowercase and dedupe translations @done(19-02-20 17:30) @project(App.Lambda)
   ✔ Show sidebar with history @done(19-02-20 00:23) @project(App.Sidebar)
   ✔ Add settings (clear cache, clear history) @done(19-02-20 00:23) @project(App.UX)
   ✘ Add font size settings for main area @cancelled(19-02-20 00:23) @project(App.UX)
