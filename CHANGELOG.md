@@ -1,3 +1,10 @@
+## [1.38.1](https://github.com/azdanov/translations/compare/v1.38.0...v1.38.1) (2019-02-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency typescript to v3.3.3333 ([a69f8a2](https://github.com/azdanov/translations/commit/a69f8a2))
+
 # [1.38.0](https://github.com/azdanov/translations/compare/v1.37.0...v1.38.0) (2019-02-21)
 
 
