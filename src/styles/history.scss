@@ -1,0 +1,24 @@
+@import 'color';
+
+/* History */
+
+.ui.relaxed.list.history {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 154px));
+  grid-template-rows: auto;
+  justify-content: center;
+  justify-items: center;
+}
+
+.ui.relaxed.list.history .item {
+  padding-top: 0 !important;
+}
+
+.ui.relaxed.list.history .label {
+  font-weight: normal;
+}
+
+.ui.relaxed.list.history .label:hover {
+  background-color: $white;
+}

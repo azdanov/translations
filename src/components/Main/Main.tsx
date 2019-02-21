@@ -36,7 +36,7 @@ export const Main: React.FC<Props> = ({
   const displayPanel = !loading && results.length === 0
 
   return (
-    <div className="ui basic segment" style={{ marginTop: 0 }}>
+    <div className="ui basic segment main">
       <div className="ui basic segment padded">
         <Hero
           order={order}
@@ -52,7 +52,7 @@ export const Main: React.FC<Props> = ({
           </div>
         </div>
         {showResults && (
-          <div className="row">
+          <div className="row results">
             <div className="eight wide computer fourteen wide mobile nine wide tablet column">
               <Results
                 loading={loading}
@@ -64,14 +64,14 @@ export const Main: React.FC<Props> = ({
           </div>
         )}
         {Boolean(error) && (
-          <div className="row">
+          <div className="row message">
             <div className="eight wide computer fourteen wide mobile nine wide tablet column">
               <Message error={error} setError={setError} setSearch={setSearch} />
             </div>
           </div>
         )}
         {displayPanel && (
-          <div className="row">
+          <div className="row main-panel">
             <div className="eight wide computer fourteen wide mobile nine wide tablet column">
               <MainPanel setSearch={setSearch} setOrder={setOrder} />
             </div>

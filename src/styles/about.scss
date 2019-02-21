@@ -1,0 +1,22 @@
+@import 'color';
+
+/* About */
+
+.about {
+  &.ui.grid {
+    margin-top: 0.5rem;
+  }
+
+  .row {
+    padding-bottom: 0.5rem !important;
+    padding-top: 0 !important;
+  }
+
+  .ui.header {
+    color: $blue-grey-10;
+  }
+
+  .ui.header .sub.header {
+    color: $blue-grey-8;
+  }
+}

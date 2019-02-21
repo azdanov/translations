@@ -1,0 +1,37 @@
+@import 'color';
+
+/* Sticky Footer */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.footer .ui.segment {
+  color: $blue-grey-8;
+  margin-bottom: 0.5rem;
+}
+
+.footer-backdrop {
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  background: $blue-grey-3;
+}

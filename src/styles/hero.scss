@@ -1,0 +1,36 @@
+@import 'color';
+
+/* Hero Swap Button */
+
+.hero.ui.header {
+  color: $blue-grey-10;
+}
+
+.hero.ui.header .sub.header {
+  color: $blue-grey-8;
+}
+
+.hero .ui.tertiary.button {
+  box-shadow: inset 0 -0.09em 0 $cyan-8;
+  color: $cyan-8;
+}
+
+.hero .ui.tertiary.button:active {
+  box-shadow: inset 0 -0.09em 0 $cyan-9;
+}
+
+.hero .ui.tertiary.button:hover {
+  box-shadow: inset 0 -0.09em 0 $cyan-9;
+  color: $cyan-9;
+}
+
+.hero .ui.tertiary.button:focus {
+  box-shadow: inset 0 -0.09em 0 $cyan-9;
+  color: $cyan-9;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.hero .ui.tertiary.button {
+  margin: 0 0.3rem !important;
+  padding: 0.1rem !important;
+}

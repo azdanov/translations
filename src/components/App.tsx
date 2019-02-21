@@ -14,14 +14,7 @@ export const App: React.FC = (): JSX.Element => {
 
   return (
     <>
-      <div
-        style={{
-          width: '100%',
-          height: '205px',
-          position: 'absolute',
-          background: 'white',
-        }}
-      />
+      <div className="backdrop" />
       <div className="ui container content">
         <Router>
           <>

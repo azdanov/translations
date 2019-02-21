@@ -152,8 +152,8 @@ const splitAndDedupe = (
   return map(
     mapValues(groupBy(translations, key), v => flattenDeep(map(v, value))),
     (v, k) => ({
-      en: k,
-      et: uniq(flatMap(v, item => map(split(item, ','), trim))),
+      en: k.toLowerCase(),
+      et: uniq(flatMap(v, item => map(split(item.toLowerCase(), ','), trim))),
     }),
   )
 }

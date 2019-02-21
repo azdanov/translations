@@ -1,0 +1,29 @@
+@import 'color';
+
+/* Button */
+
+.ui.button {
+  background-color: $blue-grey-10;
+  color: $blue-grey-3;
+}
+
+.ui.button:focus,
+.ui.button:hover {
+  background-color: $blue-grey-9;
+  color: hsl(209, 18%, 30%);
+}
+
+.ui.button:active {
+  background-color: hsl(211, 13%, 65%);
+  color: $blue-grey-2;
+}
+
+.ui.basic.button {
+  box-shadow: 0 0 0 1px $blue-grey-8 inset;
+  color: $blue-grey-4;
+}
+
+.ui.basic.button:hover {
+  box-shadow: 0 0 0 1px $blue-grey-6 inset;
+  color: $blue-grey-3;
+}

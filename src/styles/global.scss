@@ -1,0 +1,27 @@
+@import 'color';
+
+/* Global */
+
+body {
+  background-color: $blue-grey-10 !important;
+  color: $blue-grey-2;
+}
+
+/* Link */
+
+p > a,
+.word-of-the-day {
+  color: $blue-grey-4 !important;
+  font-weight: bold;
+}
+
+p > a:hover,
+.word-of-the-day:hover {
+  text-decoration: underline;
+}
+
+/* BG Color */
+
+.bg-white {
+  background-color: $white !important;
+}

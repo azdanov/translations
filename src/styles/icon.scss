@@ -1,0 +1,19 @@
+@import 'color';
+
+/* NavBar SVG */
+
+.navbar svg {
+  color: $cyan-8;
+}
+
+/* Icon */
+
+i.circular.icon {
+  color: $blue-grey-3;
+  box-shadow: 0 0 0 0.1em $blue-grey-7 inset;
+}
+
+i.circular.icon:hover {
+  box-shadow: 0 0 0 0.1em $blue-grey-6 inset;
+  opacity: 1 !important;
+}

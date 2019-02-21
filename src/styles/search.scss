@@ -1,0 +1,34 @@
+@import 'color';
+
+/* Search */
+
+.ui.input,
+.ui.input > input {
+  color: $blue-grey-2;
+}
+
+.ui.input > input {
+  border: 1px solid $blue-grey-9;
+}
+
+.ui.input > input:focus {
+  border-color: $blue-grey-7;
+}
+
+.ui.input > input::placeholder {
+  color: $blue-grey-6;
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
+}
+
+.ui.input > input:focus::placeholder {
+  color: $blue-grey-5;
+}
+
+.ui.input > input:focus {
+  color: $blue-grey-3;
+}
+
+.searchbar {
+  margin-bottom: 0.1rem;
+}

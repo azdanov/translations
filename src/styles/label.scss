@@ -1,0 +1,29 @@
+@import 'color';
+
+/* Label */
+
+.ui.basic.label {
+  border: 1px solid $blue-grey-9;
+  color: $blue-grey-4;
+}
+
+.ui.basic.label:hover {
+  border: 1px solid $blue-grey-8;
+  color: $blue-grey-3;
+}
+
+.ui.label {
+  background-color: $blue-grey-10;
+  border: 1px solid $blue-grey-9;
+  color: $blue-grey-4;
+}
+
+.ui.label:active {
+  outline: none;
+}
+
+.ui.label:hover {
+  background-color: $blue-grey-9;
+  color: $blue-grey-3;
+  cursor: pointer;
+}

@@ -5,7 +5,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { ServiceWorkerMessage } from '../components/Toast'
 import '../i18n'
-import '../index.css'
+import '../styles/index.scss'
 import { register } from './serviceWorker'
 
 const worker = document.querySelector('#worker') as Element

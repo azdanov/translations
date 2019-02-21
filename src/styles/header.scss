@@ -1,0 +1,48 @@
+@import 'color';
+
+/* Header */
+
+.ui.header {
+  color: $blue-grey-1;
+}
+
+.ui.header .sub.header {
+  color: hsl(211, 12%, 43%);
+}
+
+.ui.tabular.menu .item {
+  color: hsl(211, 12%, 43%);
+  font-size: 1rem;
+}
+
+.ui.tabular.menu .active.item {
+  color: $blue-grey-2;
+  font-size: 1rem;
+}
+
+.ui.tabular.menu .item:hover {
+  color: hsl(209, 18%, 30%);
+  cursor: pointer;
+}
+
+.ui.tabular.menu .item:active {
+  outline: none;
+}
+
+@media screen and (max-width: 400px) {
+  .ui.tabular.menu .item {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.ui.top.attached.header {
+  background-color: $white;
+  color: $blue-grey-4;
+  font-size: 1rem;
+  padding: 0.81em 1.5em;
+}
+
+.ui.attached.header {
+  border: 1px solid $blue-grey-9;
+}

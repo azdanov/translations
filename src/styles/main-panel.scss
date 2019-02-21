@@ -1,0 +1,35 @@
+@import 'color';
+
+.main-panel {
+  .ui.tabular.menu .active.item {
+    background-color: $blue-grey-8;
+    border-bottom: 0;
+    color: $blue-grey-3;
+  }
+
+  .ui.tabular.menu .item {
+    background-color: $blue-grey-9;
+    border: 0;
+    color: $blue-grey-4;
+  }
+
+  .ui.tabular.menu .item:focus {
+    z-index: 1;
+  }
+
+  .ui.tabular.menu .item:hover {
+    color: $blue-grey-3;
+  }
+
+  .ui.tabular.menu .item:last-of-type {
+    border-top-right-radius: 0.285714rem;
+  }
+
+  .ui.header .sub.header {
+    color: $blue-grey-4;
+  }
+}
+
+.ui.attached.segment {
+  border: 1px solid $blue-grey-9;
+}

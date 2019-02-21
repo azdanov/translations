@@ -1,0 +1,47 @@
+@import 'color';
+
+/* Result */
+
+.item.result-item {
+  margin-bottom: 0.5rem;
+}
+
+.item.result-item .result-translation {
+  background-color: $white;
+  border: 1px solid hsl(211, 13%, 65%);
+  color: $blue-grey-3;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.item.result-item .result-translation:hover {
+  background-color: $blue-grey-10;
+  color: $blue-grey-2;
+}
+
+.result-item .listitem {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result-item .header.listitem {
+  margin-bottom: 1.5rem !important;
+}
+
+.result-item .ui.basic.ribbon.label {
+  background: $blue-grey-10;
+  border-color: $blue-grey-9;
+  color: $blue-grey-3;
+  font-size: 1rem;
+  left: calc(-1rem - 1.8em);
+  padding-left: calc(1rem + 2.4em);
+}
+
+.result-item .ui.basic.ribbon.label:hover {
+  border-color: $blue-grey-9;
+  color: $blue-grey-2;
+  cursor: initial;
+}

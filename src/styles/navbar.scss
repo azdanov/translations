@@ -1,0 +1,101 @@
+@import 'color';
+
+/* Menu */
+
+.navbar .ui.secondary.menu .fitted.item:first-child {
+  padding: 0 0.92857143em 0 0;
+}
+
+.navbar .ui.secondary.menu {
+  margin-bottom: 0.3rem;
+}
+
+.navbar .column > .ui.secondary.menu {
+  margin-top: 0.8rem;
+}
+
+.ui.menu .item,
+.ui.secondary.pointing.menu .active.item {
+  color: $blue-grey-9;
+  font-weight: normal;
+  transition: all 0.15s;
+}
+
+.ui.secondary.pointing.menu {
+  border-bottom: 2px solid $blue-grey-5;
+}
+
+.ui.secondary.pointing.menu a.item:hover {
+  border-color: $blue-grey-6;
+  color: $blue-grey-10;
+}
+
+.ui.secondary.pointing.menu .item {
+  color: $blue-grey-9;
+}
+
+.ui.secondary.pointing.menu .active.item:hover,
+.ui.secondary.pointing.menu .active.item {
+  border-color: $blue-grey-10;
+  color: $blue-grey-10;
+}
+
+.ui.tabular.menu {
+  background-color: $blue-grey-9;
+  border-bottom: 1px solid $blue-grey-9;
+}
+
+.ui.tabular.menu .active.item {
+  border: 1px solid $blue-grey-9;
+}
+
+.ui.tabular.menu .item {
+  display: inline;
+  flex: 1;
+  white-space: nowrap;
+}
+
+/* Reach UI Dropdown */
+
+.ui.secondary.menu .ui.dropdown.item {
+  margin-bottom: 0.5rem;
+  transition: all 0.15s;
+}
+
+.ui.secondary.menu .dropdown.item:hover,
+.ui.dropdown.item:focus {
+  background-color: $blue-grey-10;
+  color: $blue-grey-1;
+}
+
+[data-reach-menu-list] {
+  background-color: $blue-grey-10;
+  border: 1px solid $blue-grey-10;
+  border-radius: 0.28571429rem;
+  color: $blue-grey-3;
+  margin-top: 0.35714286em;
+  padding: 0;
+}
+
+[data-reach-menu-item] {
+  font-size: 1rem;
+  padding: 0.67857143em 1em;
+}
+
+[data-reach-menu-item][data-selected] {
+  background: $blue-grey-8;
+  color: $blue-grey-2;
+}
+
+[data-reach-menu-item][data-current='true'] {
+  font-weight: bold;
+}
+
+/* Backdrop */
+
+.backdrop {
+  background: $blue-grey-3;
+  height: 198px;
+  position: absolute;
+  width: 100%;
+}
