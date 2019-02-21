@@ -1,3 +1,10 @@
+# [1.36.0](https://github.com/azdanov/translations/compare/v1.35.2...v1.36.0) (2019-02-21)
+
+
+### Features
+
+* **project:** change styles, use scss ([e5cd87a](https://github.com/azdanov/translations/commit/e5cd87a))
+
 ## [1.35.2](https://github.com/azdanov/translations/compare/v1.35.1...v1.35.2) (2019-02-21)
 
 
