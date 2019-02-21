@@ -10,7 +10,6 @@ import { register } from './serviceWorker'
 
 const worker = document.querySelector('#worker') as Element
 
-render(<ServiceWorkerMessage />, worker)
 register({
   onSuccess: () => {
     render(<ServiceWorkerMessage />, worker)
