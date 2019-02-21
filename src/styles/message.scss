@@ -12,13 +12,21 @@
   margin: 0 auto;
 }
 
-.ui.button.toast {
+.toast .ui.basic.label {
+  border-color: $blue-grey-9;
+  border-right: 0;
   cursor: initial;
 }
 
 .toast .ui.basic.label:hover {
+  border-color: $blue-grey-9;
+  border-right: 0;
   background-color: $white;
   cursor: initial;
+}
+
+.toast .ui.button {
+  border: 1px solid $blue-grey-9;
 }
 
 /* Message */
