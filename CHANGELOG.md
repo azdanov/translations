@@ -1,3 +1,15 @@
+# [1.38.0](https://github.com/azdanov/translations/compare/v1.37.0...v1.38.0) (2019-02-21)
+
+
+### Bug Fixes
+
+* **bootstrap:** remove extra render ([9a31d1e](https://github.com/azdanov/translations/commit/9a31d1e))
+
+
+### Features
+
+* **Toast:** update styles to new ([037ea29](https://github.com/azdanov/translations/commit/037ea29))
+
 # [1.37.0](https://github.com/azdanov/translations/compare/v1.36.0...v1.37.0) (2019-02-21)
 
 
