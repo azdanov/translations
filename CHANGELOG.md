@@ -1,3 +1,11 @@
+## [1.35.2](https://github.com/azdanov/translations/compare/v1.35.1...v1.35.2) (2019-02-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-i18next to v10.2.0 ([944d19a](https://github.com/azdanov/translations/commit/944d19a))
+* **deps:** update react monorepo to v16.8.3 ([ab643b8](https://github.com/azdanov/translations/commit/ab643b8))
+
 ## [1.35.1](https://github.com/azdanov/translations/compare/v1.35.0...v1.35.1) (2019-02-20)
 
 
