@@ -1,11 +1,14 @@
 App:
-  Bug:
-    ☐ History not working on some mobile
+  Lambda:
+    ☐ Add Estonian definitions
+    ☐ Add English definitions
   UX:
     ☐ On click open modal with additional definitions.
   Tests:
     ☐ Tests @high
 Archive:
+  ✔ Make design better @done(19-02-21 22:32) @project(App.UX)
+  ✘ History not working on some mobile @cancelled(19-02-21 22:32) @project(App.Bug)
   ✔ Add color to results @done(19-02-20 19:56) @project(App.UX)
   ✔ Use labels for translations results. @done(19-02-20 19:11) @project(App.UX)
   ✔ Overflow in MainPanel for settings @done(19-02-20 17:48) @project(App.UX)
