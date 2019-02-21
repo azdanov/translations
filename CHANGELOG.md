@@ -1,3 +1,10 @@
+# [1.37.0](https://github.com/azdanov/translations/compare/v1.36.0...v1.37.0) (2019-02-21)
+
+
+### Features
+
+* **favicons:** update ([5d625cc](https://github.com/azdanov/translations/commit/5d625cc))
+
 # [1.36.0](https://github.com/azdanov/translations/compare/v1.35.2...v1.36.0) (2019-02-21)
 
 
