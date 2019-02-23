@@ -18,31 +18,31 @@ cp .env.example .env
 
 ```bash
 # Setup
-npm install
+yarn
 
 # Compiles and hot-reloads will use .env with 'production' variables
-npm start
+yarn start
 
 # Use local environment from .env.test + json-server with src/fixtures/data.json
-npm run start:env
+yarn start:env
 
 # Compiles and minifies for production
-npm build
+yarn build
 
 # Run your tests
-npm test
+yarn test
 
 # Open cypress
-npm run cypress:open
+yarn cypress:open
 
 # Run jest
-npm run unit
+yarn unit
 
 # Run cypress once
-npm run cypress:run
+yarn cypress:run
 
 # Run jest once
-npm run unit:no-watch
+yarn unit:no-watch
 ```
 
 ## More Information
