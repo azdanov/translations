@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/azdanov/translations/compare/v2.0.0...v2.1.0) (2019-02-23)
+
+
+### Features
+
+* **About:** add additional images ([91b915a](https://github.com/azdanov/translations/commit/91b915a))
+
 # [2.0.0](https://github.com/azdanov/translations/compare/v1.40.0...v2.0.0) (2019-02-23)
 
 
