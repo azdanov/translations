@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/azdanov/translations/compare/v1.40.0...v2.0.0) (2019-02-23)
+
+
+### Features
+
+* **project:** finish initial specs ([7e3587f](https://github.com/azdanov/translations/commit/7e3587f))
+* **queryDefinition:** remove empty '.' definitions ([0914489](https://github.com/azdanov/translations/commit/0914489))
+
+
+### BREAKING CHANGES
+
+* **project:** Bump version
+
 # [1.40.0](https://github.com/azdanov/translations/compare/v1.39.0...v1.40.0) (2019-02-23)
 
 
