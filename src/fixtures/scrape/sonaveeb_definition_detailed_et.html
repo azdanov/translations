@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <title>Otsing</title>
+    <!-- Common styles and scripts -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="/view/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/view/css/bootstrap-wordweb.css" />
+    <link rel="stylesheet" href="/view/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="/view/css/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="/view/css/font-import.css" />
+    <link rel="stylesheet" href="/view/css/wordweb.css" />
+    <link rel="stylesheet" href="/view/css/eki-markup.css" />
+
+    <script type="text/javascript" src="/view/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/view/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/view/js/popper.min.js"></script>
+    <script type="text/javascript" src="/view/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/view/js/ww-common-app.js"></script>
+
+    <script type="text/javascript" src="/view/js/recorder.js"></script>
+    <script type="text/javascript" src="/view/js/ww-common-search.js"></script>
+    <script type="text/javascript" src="/view/js/ww-search.js"></script>
+
+    <script>
+      var applicationUrl = '\/'
+      var sessionTimeoutSec = 3600
+      var feedbackServiceUrl = 'https:\/\/ekilex.eki.ee\/send_feedback'
+      var messages = {
+        this_is_form: 'see on ka vorm s\u00F5nadest',
+        sound_generation_failure:
+          'Heli genereerimise teenus hetkel ei toimi, proovige hiljem uuesti',
+        search_failure:
+          'Detailide p\u00E4ring eba\u00F5nnestus, proovige hiljem uuesti',
+        fb_service_error: 'Tagasiside teenus ei ole seadistatud',
+      }
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-134441495-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'UA-134441495-1')
+    </script>
+  </head>
+  <body>
+    <div>
+      <a class="skip-link" role="button" href="#search">Otsingu juurde</a>
+
+      <a class="skip-link" role="button" href="#main">Põhisisu juurde</a>
+    </div>
+
+    <div class="container-fluid header-container">
+      <div class="row header-wrap">
+        <div class="col-12">
+          <a href="/" aria-label="Pealehele" role="link" class="logo">
+            <span class="icon icon-logo-s d-md-none"></span>
+            <span class="icon icon-logo d-none d-md-block"></span>
+          </a>
+          <a
+            class="eki-logo-wrapper"
+            aria-label="portaal.eki.ee Avab uues aknas"
+            href="http://portaal.eki.ee/"
+            target="_blank"
+          >
+            <span class="eki-logo mini-logo"></span>
+          </a>
+          <div class="back mt-2">
+            <span class="icon icon-back"></span>
+          </div>
+          <button
+            role="button"
+            aria-expanded="false"
+            data-toggle="collapse"
+            data-target="#headerLinks"
+            class="btn menu-btn"
+          >
+            <span class="icon icon-menu"></span>
+          </button>
+
+          <div id="headerLinks">
+            <div class="header-links" role="navbar">
+              <div class="dropdown lang-btn">
+                <a
+                  href="#"
+                  aria-label="Vali keel"
+                  role="button"
+                  class="dropdown-toggle d-none"
+                  id="langDropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  EST
+                  <span class="icon icon-chevron-left"></span>
+                </a>
+                <div
+                  class="dropdown-menu"
+                  data-target="langDropdownMenuButton"
+                  aria-expanded="true"
+                  aria-labelledby="langDropdownMenuButton"
+                >
+                  <a role="link" class="dropdown-item" href="#">EST</a>
+                  <a role="link" class="dropdown-item" href="#">RUS</a>
+                  <a role="link" class="dropdown-item" href="#">ENG</a>
+                </div>
+              </div>
+              <button
+                class="btn menu-btn float-right clear-both"
+                data-toggle="collapse"
+                data-target="#headerLinks"
+              >
+                <span>Sulge</span>
+                <span class="icon icon-close"></span>
+              </button>
+              <a href="/" class="menu-item" data-item-name="search">
+                <span>Otsing</span>
+              </a>
+              <a href="/learn" class="menu-item" data-item-name="learn">
+                <span>Õpi eesti keelt</span>
+              </a>
+              <a
+                aria-hidden="true"
+                href="/games"
+                class="menu-item"
+                data-item-name="games"
+              >
+                <span>Keelemängud</span>
+              </a>
+              <a href="/about" class="menu-item" data-item-name="about">
+                <span>Portaalist</span>
+              </a>
+              <a href="/contacts" class="menu-item" data-item-name="contacts">
+                <span>Kontakt</span>
+              </a>
+              <a
+                href="/#"
+                role="button"
+                data-toggle="modal"
+                data-target="#feedbackModal"
+                class="menu-item"
+                data-item-name="feedback"
+              >
+                <span>Tagasiside</span>
+              </a>
+              <a class="menu-item" href="#">
+                <!-- For WCAG focus trap. Not to be removed -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="feedbackModal"
+      tabindex="-1"
+      aria-model="true"
+      role="dialog"
+      aria-labelledby="feedbackModal"
+      aria-hidden="false"
+      aria-describedby="feebackMaterial"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="feedbackModal" class="modal-title">Tagasiside</h5>
+            <a
+              href="#"
+              class="close"
+              data-dismiss="modal"
+              tabindex="0"
+              aria-label="Close"
+            >
+              <span class="icon icon-close"></span>
+            </a>
+          </div>
+          <div class="modal-body">
+            <div class="modal-radio" id="feedbackMaterial">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input
+                  type="radio"
+                  id="feedbackWordRadio"
+                  checked
+                  name="feedbackRadio"
+                  class="custom-control-input"
+                />
+                <label class="custom-control-label" for="feedbackWordRadio"
+                  >Lisa uus sõna</label
+                >
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input
+                  type="radio"
+                  id="feedbackCommentRadio"
+                  name="feedbackRadio"
+                  class="custom-control-input"
+                />
+                <label class="custom-control-label" for="feedbackCommentRadio"
+                  >Kommentaar</label
+                >
+              </div>
+            </div>
+            <div class="has-error mt-2">
+              Tagasiside saatmine ebaõnnestus, proovige hiljem uuesti
+            </div>
+            <div id="feedWord" class="formarea show-section">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label class="positive-feedback" hidden name="ok_message"
+                      >Aitäh, oleme uue sõna kätte saanud</label
+                    >
+                    <label class="negative-feedback" hidden name="error_message"
+                      >Saadetud andmed on vigased. Kontrollige palun andmeid ning
+                      proovige uuesti</label
+                    >
+                    <input type="hidden" name="feedbackType" value="new_word" />
+                    <input type="hidden" name="lastSearch" value="auto" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12 col-md-6">
+                    <label class="col-form-label">Sõna</label>
+                    <input type="text" class="form-control" name="word" />
+                    <div class="errors">
+                      <div
+                        role="error"
+                        type="text"
+                        aria-live="alert"
+                        aria-hidden="false"
+                        class="alert alert-danger hide"
+                      >
+                        Väli on kohustuslik!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-12 col-md-6">
+                    <label class="col-form-label">Tähendus</label>
+                    <input type="text" class="form-control" name="definition" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label class="col-form-label">Näitelaused</label>
+                    <input type="text" class="form-control" name="usages" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label class="col-form-label">Muu info</label>
+                    <input type="text" class="form-control" name="otherInfo" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12 col-md-6">
+                    <label class="col-form-label">Nimi</label>
+                    <input type="text" class="form-control" name="sender" />
+                    <div class="errors">
+                      <div
+                        role="error"
+                        type="text"
+                        aria-hidden="false"
+                        class="alert alert-danger hide"
+                      >
+                        Väli on kohustuslik!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-12 col-md-6">
+                    <label class="col-form-label">E-post</label>
+                    <input type="email" class="form-control form-email" name="email" />
+                    <div class="errors">
+                      <div
+                        role="error"
+                        type="text"
+                        aria-live="alert"
+                        aria-hidden="false"
+                        class="alert alert-danger hide"
+                      >
+                        Väli on kohustuslik!
+                      </div>
+                      <div
+                        role="error"
+                        type="text"
+                        aria-live="alert"
+                        aria-hidden="false"
+                        class="alert alert-mail hide"
+                      >
+                        Palun sisestage e-post
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <div class="custom-control custom-checkbox mt-2">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input modal-check"
+                        id="modalCheck1"
+                      />
+                      <label class="custom-control-label" for="modalCheck1">
+                        <span>Postitades uue sõna või kommentaari nõustud</span>
+                        <a role="link" href="/regulations" data-item-name="regulations"
+                          >kasutus- ja privaatsustingimustega</a
+                        >
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-12 p-0 mt-2">
+                    <div class="text-right">
+                      <a role="button" href="#" class="mr-3" data-dismiss="modal"
+                        >Sulge</a
+                      >
+                      <button
+                        role="button"
+                        type="button"
+                        class="btn btn-primary disabled"
+                        name="feedbackSendBtn"
+                      >
+                        Saada
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div id="feedComment" class="formarea">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label class="positive-feedback" hidden name="ok_message"
+                      >Aitäh, oleme kommentaari kätte saanud. Vastame paari päeva
+                      jooksul</label
+                    >
+                    <label class="negative-feedback" hidden name="error_message"
+                      >Saadetud andmed on vigased. Kontrollige palun andmeid ning
+                      proovige uuesti</label
+                    >
+                    <input type="hidden" name="feedbackType" value="comment" />
+                    <input type="hidden" name="lastSearch" value="auto" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label class="col-form-label">Sõna</label>
+                    <input type="text" class="form-control" name="word" />
+                    <div class="errors">
+                      <div
+                        role="error"
+                        type="text"
+                        aria-live="alert"
+                        aria-hidden="false"
+                        class="alert alert-danger hide"
+                      >
+                        Väli on kohustuslik!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label class="col-form-label">Kommentaar</label>
+                    <textarea
+                      type="text"
+                      class="form-control"
+                      name="comments"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12 col-md-6">
+                    <label class="col-form-label">Nimi</label>
+                    <input type="text" class="form-control" name="sender" />
+                    <div class="errors">
+                      <div
+                        role="error"
+                        type="text"
+                        aria-live="alert"
+                        aria-hidden="false"
+                        class="alert alert-danger hide"
+                      >
+                        Väli on kohustuslik!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-12 col-md-6">
+                    <label class="col-form-label">E-post</label>
+                    <input type="email" class="form-control form-email" name="email" />
+                    <div class="errors">
+                      <div
+                        role="error"
+                        type="text"
+                        aria-hidden="false"
+                        class="alert alert-danger hide"
+                      >
+                        Väli on kohustuslik!
+                      </div>
+                      <div
+                        role="error"
+                        aria-hidden="false"
+                        type="text"
+                        class="alert alert-mail hide"
+                      >
+                        Palun sisestage e-post
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <div class="custom-control custom-checkbox mt-2">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input modal-check"
+                        id="modalCheck2"
+                      />
+                      <label class="custom-control-label" for="modalCheck2">
+                        <span>Postitades uue sõna või kommentaari nõustud</span>
+                        <a role="link" href="/regulations" data-item-name="regulations"
+                          >kasutus- ja privaatsustingimustega</a
+                        >
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-12 p-0 mt-2">
+                    <div class="text-right">
+                      <a role="button" href="#" class="mr-3" data-dismiss="modal"
+                        >Sulge</a
+                      >
+                      <button
+                        role="button"
+                        type="button"
+                        class="btn btn-primary disabled"
+                        name="feedbackSendBtn"
+                      >
+                        Saada
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid search-wrap">
+      <div class="search-panel">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="search-main">
+              <form action="/search" method="post">
+                <div>
+                  <input
+                    type="text"
+                    id="search"
+                    role="search"
+                    class="form-control search-phrase"
+                    name="searchWord"
+                    value="auto"
+                    placeholder="Kirjuta otsitav sõna"
+                  />
+                  <input type="hidden" name="sourceLang" value="est" />
+                  <input type="hidden" name="destinLang" value="est" />
+                  <input type="hidden" name="searchMode" value="detail" />
+                </div>
+                <div class="extra-buttons">
+                  <button
+                    aria-label="Puhasta otsing"
+                    id="clear-search-btn"
+                    type="button"
+                    class="btn btn-light clear-btn"
+                    style="display: none;"
+                  >
+                    <span class="icon icon-close"></span>
+                  </button>
+                  <button
+                    type="button"
+                    id="start-rec-btn"
+                    class="btn btn-light speak-btn"
+                    title="Dikteeri"
+                  >
+                    <span class="icon icon-mic"></span>
+                  </button>
+                  <button
+                    type="button"
+                    aria-label="Lõpeta otsimine"
+                    id="stop-rec-btn"
+                    class="btn btn-light speak-btn"
+                    hidden
+                  >
+                    Lõpeta
+                  </button>
+                </div>
+                <button
+                  aria-label="Otsi"
+                  id="search-btn"
+                  type="submit"
+                  class="btn btn-green search-btn"
+                >
+                  <span class="icon icon-search"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 p-0" id="language-detail-panel">
+            <div class="row align-items-center">
+              <div class="col-12 p-1 col-md-6">
+                <div class="search-lang dropdown">
+                  <button
+                    id="lang-selector-btn"
+                    aria-label="Vali otsingu lähte- ja sihtkeel"
+                    class="btn btn-light lang-btn float-right"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <span id="source-lang-lbl">eesti</span>
+                    <span class="icon icon-arrow-right"></span>
+                    <span id="destin-lang-lbl">vene</span>
+                  </button>
+                  <form class="dropdown-menu p-4 container">
+                    <div class="row">
+                      <div class="col-6">
+                        <button
+                          name="source-lang-btn"
+                          aria-label="Lähtekeel eesti keel"
+                          value="est"
+                          class="dropdown-item"
+                          type="button"
+                        >
+                          eesti keel
+                        </button>
+                        <button
+                          name="source-lang-btn"
+                          aria-label="Lähtekeel vene keel"
+                          value="rus"
+                          class="dropdown-item"
+                          type="button"
+                        >
+                          vene keel
+                        </button>
+                      </div>
+                      <div class="col-6">
+                        <button
+                          name="destin-lang-btn"
+                          value="est"
+                          aria-label="Sihtkeel eesti keel"
+                          class="dropdown-item"
+                          type="button"
+                        >
+                          eesti keel
+                        </button>
+                        <button
+                          name="destin-lang-btn"
+                          value="rus"
+                          aria-label="Sihtkeel vene keel"
+                          class="dropdown-item"
+                          type="button"
+                        >
+                          vene keel
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 p-0">
+                <div id="detail-toggle-container" class="detail-toggle-container">
+                  <div class="inner-container">
+                    <div
+                      tabindex="0"
+                      aria-label="Täpne otsing"
+                      role="button"
+                      class="toggle active"
+                      id="toggle-detail"
+                    >
+                      <p>Detailne</p>
+                    </div>
+                    <div
+                      tabindex="0"
+                      aria-label="Lihtne otsing"
+                      role="button"
+                      class="toggle"
+                      id="toggle-simple"
+                    >
+                      <p>Lihtne</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid homonym-page bottom-gutter">
+      <div class="row homonym-wrap">
+        <div class="homonym-container container-fluid">
+          <div class="col-12 homonym-innerwrap" id="form-words"></div>
+        </div>
+        <div class="col-12 homonym-panel d-none">
+          <ul class="homonym-list">
+            <li>
+              <form>
+                <input type="hidden" name="word-id" value="138214" />
+                <input type="hidden" name="word-value" value="auto" />
+                <input type="hidden" name="word-selected" value="true" />
+                <input
+                  type="hidden"
+                  name="word-select-url"
+                  value="/search/est-est/detail/auto/1"
+                />
+                <a
+                  href="#"
+                  role="button"
+                  tabindex="0"
+                  id="word-details-link-138214"
+                  class="homonym-item"
+                >
+                  <span class="homonym-item-wrap">
+                    <span class="homonym-header">
+                      <span class="homonym-name-container">
+                        <span class="homonym-name pr-2">auto</span>
+                      </span>
+                      <span class="homonym-nr d-none">1</span>
+                    </span>
+                    <span class="homonym-matches"></span>
+                    <span class="homonym-intro"
+                      >mootorveok või -sõiduk veoste või inimeste transportimiseks
+                      maanteedel või tänavail</span
+                    >
+                  </span>
+                </a>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="word-details"></div>
+    </div>
+
+    <footer role="contentinfo" class="footer">
+      <div class="container footer-wrapper">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4">
+            <p>
+              <strong>Eesti Keele Instituut</strong>
+              <br />
+              Roosikrantsi 6, 10119 Tallinn
+              <br />
+              tel: 617 7500
+              <br />
+              e-post:
+              <a class="text-underline" href="mailto:eki@eki.ee">eki@eki.ee</a>
+              <br />
+              reg-kood: 70004011
+            </p>
+          </div>
+          <div class="col-12 col-md-4 order-2 order-md-1 col-reverse">
+            <span class="last-update">
+              <span>Sõnaveeb 2019</span>
+              <span style="color: gray">(Wordweb App-1.3.0)</span>
+            </span>
+            <span class="copyright">
+              &copy;&nbsp;
+              <span>Eesti Keele Instituut 2019</span>
+            </span>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-4 order-1 order-md-2 justify-content-md-end d-flex"
+          >
+            <div class="social-list">
+              <span class="helper-text">Jaga meid:</span>
+              <a
+                aria-label="Jaga lehte Facebookis"
+                class="fb-icon icon"
+                href="http://www.facebook.com/sharer.php?u=https://sonaveeb.ee/"
+                target="_blank"
+                title="Share this in Facebook"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var sourceLang = 'est'
+      var destinLang = 'est'
+      var currentPage = '\/search'
+      var searchWordsByPrefixUrl = '\/prefix'
+      var speechRecognitionServiceUrl =
+        'ws:\/\/bark.phon.ioc.ee:82\/dev\/duplex-speech-api\/ws\/speech'
+      setActiveMenuItem('search')
+    </script>
+  </body>
+</html>

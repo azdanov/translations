@@ -158,7 +158,9 @@
             "replace",
             "startsWith",
             "find",
-            "toLower"
+            "toLower",
+            "trim",
+            "endsWith"
           ]
         }
       ],
@@ -236,12 +238,14 @@
     "match-sorter": "2.3.0",
     "middy": "0.22.1",
     "node-sass": "4.11.0",
+    "p-settle": "2.1.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-i18next": "10.2.0",
     "react-router-dom": "4.3.1",
     "react-scripts": "2.1.5",
     "scrape-it": "5.1.4",
+    "tough-cookie": "3.0.1",
     "typescript": "3.3.3333"
   },
   "devDependencies": {
@@ -259,6 +263,7 @@
     "@types/lscache": "1.0.29",
     "@types/match-sorter": "2.3.0",
     "@types/node": "11.9.5",
+    "@types/p-settle": "2.0.1",
     "@types/react": "16.8.4",
     "@types/react-dom": "16.8.2",
     "@types/react-router-dom": "4.3.1",
