@@ -1,12 +1,8 @@
-App:
-  Lambda:
-    ☐ Add Estonian definitions
-    ☐ Add English definitions
-  UX:
-    ☐ On click open modal with additional definitions.
-  Tests:
-    ☐ Tests @high
 Archive:
+  ✔ Tests @done(19-02-23 22:45) @project(App.Tests)
+  ✔ Add Estonian definitions @done(19-02-23 22:45) @project(App.Lambda)
+  ✔ Add English definitions @done(19-02-23 22:45) @project(App.Lambda)
+  ✔ On click open modal with additional definitions. @done(19-02-23 22:45) @project(App.UX)
   ✔ Make design better @done(19-02-21 22:32) @project(App.UX)
   ✘ History not working on some mobile @cancelled(19-02-21 22:32) @project(App.Bug)
   ✔ Add color to results @done(19-02-20 19:56) @project(App.UX)
