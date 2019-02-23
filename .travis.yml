@@ -1,12 +1,15 @@
 language: node_js
 node_js:
   - '11'
-cache: yarn
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
 install:
-  - yarn
+  - npm ci
 before_script:
   - npx cypress verify
 script:
-  - yarn test
+  - npm test
 after_success:
-  - yarn semantic-release
+  - npx semantic-release
