@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useTitle, useFetchStatistics } from '../hooks'
-import { glosbe, wordnik } from '../images'
+import { eki, glosbe, sonaveeb, wordnik } from '../images'
 
 export const About: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
@@ -75,6 +75,24 @@ export const About: React.FC = (): JSX.Element => {
               href="https://www.wordnik.com/"
             >
               <img alt="Wordnik Logo" src={wordnik} />
+            </a>
+            <div className="ui hidden divider" />
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              className="ui medium image"
+              href="http://portaal.eki.ee/"
+            >
+              <img alt="EKI Logo" src={eki} />
+            </a>
+            <div className="ui hidden divider" />
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              className="ui medium image"
+              href="https://sonaveeb.ee/"
+            >
+              <img alt="Sõnaveeb Logo" src={sonaveeb} />
             </a>
           </div>
         </div>
