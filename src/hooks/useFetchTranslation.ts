@@ -2,6 +2,7 @@
 import { isEmpty } from 'lodash'
 import localCache from 'lscache'
 import React, { useEffect } from 'react'
+import { WEEK } from '../constants'
 import { Article, Order } from '../contracts'
 
 export const useFetchTranslation = (
@@ -42,7 +43,7 @@ export const useFetchTranslation = (
 
         const body = await response.json()
 
-        localCache.set(word, body, 60 * 24 * 7)
+        localCache.set(word, body, WEEK)
         setResults(body)
         setLoading(false)
       } catch (error) {

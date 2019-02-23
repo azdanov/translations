@@ -26,13 +26,13 @@ export const Hero: React.FC<Props> = ({
           {t('dictionary')}
           <button
             type="button"
+            data-testid="order-action"
             className="ui icon button tertiary"
             onClick={() => {
               setOrder([second, first] as Order)
               setResults([])
               setSearch('')
             }}
-            data-testid="order-action"
           >
             <Hidden>{t('change direction')}</Hidden>
             <i aria-hidden="true" className="exchange icon" />

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import localCache from 'lscache'
 import React, { useLayoutEffect } from 'react'
-import { TOTAL_PHRASES_KEY } from '../constants'
+import { HALF_DAY, TOTAL_PHRASES_KEY } from '../constants'
 
 export const useFetchStatistics = (
   setStatistics: React.Dispatch<
@@ -37,7 +37,7 @@ export const useFetchStatistics = (
 
         const body = await response.json()
 
-        localCache.set(TOTAL_PHRASES_KEY, body, 60 * 6)
+        localCache.set(TOTAL_PHRASES_KEY, body, HALF_DAY)
         setStatistics(body)
       } catch (error) {
         console.error(error)

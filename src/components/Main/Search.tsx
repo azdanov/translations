@@ -1,4 +1,4 @@
-import lscache from 'lscache'
+import localCache from 'lscache'
 import React, {
   ChangeEvent,
   FormEvent,
@@ -8,43 +8,43 @@ import React, {
   useState,
 } from 'react'
 import { useTranslation } from 'react-i18next'
-import { HISTORY_KEY, ORDER_KEY } from '../../constants'
+import { HISTORY_KEY } from '../../constants'
 import { Order } from '../../contracts'
-import { useLocalStorage } from '../../hooks'
 import { choosePath } from '../../utils'
 
 interface Props {
   loading: boolean
+  order: Order
   search: string
   setSearch: React.Dispatch<React.SetStateAction<string>>
 }
 
 export const Search: React.FC<Props> = ({
   loading,
+  order,
   search,
   setSearch,
 }): JSX.Element => {
-  const searchEl = useRef<HTMLInputElement>(null)
+  const [t] = useTranslation()
   const [term, setTerm] = useState(search)
   const [saveHistory, setSaveHistory] = useState(false)
-  const [order] = useLocalStorage<Order>(ORDER_KEY)
-  const [t] = useTranslation()
+  const searchEl = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     if (!saveHistory) return
 
-    const history = lscache.get(HISTORY_KEY) || []
+    const history = localCache.get(HISTORY_KEY) || []
     const { from, to } = choosePath(order)
 
-    lscache.set(HISTORY_KEY, [
-      ...history,
+    localCache.set(HISTORY_KEY, [
       { time: Date.now(), term, order: { from, to } },
+      ...history,
     ])
 
     setTerm('')
 
     setSaveHistory(false)
-  }, [saveHistory])
+  }, [order, saveHistory, term])
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault()

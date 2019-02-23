@@ -11,8 +11,8 @@
     "build:app": "craco build",
     "build:lambda": "NODE_ENV=production npx netlify-lambda build src/lambda/controllers",
     "build:prod": "run-s build:app sw",
-    "check:types": "tsc",
     "check:lint": "eslint src --ext .js,.ts,.tsx",
+    "check:types": "tsc",
     "cypress:open": "NODE_ENV=test cypress open",
     "cypress:run": "cypress run",
     "eject": "craco eject",
@@ -135,6 +135,7 @@
       "jest/lowercase-name": [
         "error"
       ],
+      "no-shadow": "off",
       "jest/no-test-return-statement": "error",
       "jest/prefer-spy-on": "error",
       "jest/prefer-to-be-null": "error",
@@ -168,7 +169,6 @@
       "no-underscore-dangle": "off",
       "no-use-before-define": "off",
       "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "error",
       "react/jsx-filename-extension": [
         "warn",
         {

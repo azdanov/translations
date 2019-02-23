@@ -1,4 +1,4 @@
-import lscache from 'lscache'
+import localCache from 'lscache'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -9,7 +9,7 @@ export const Settings: React.FC = (): JSX.Element => {
 
   useEffect(() => {
     if (clear) {
-      lscache.flush()
+      localCache.flush()
       setClear(false)
       setLabel(true)
     }
@@ -24,7 +24,12 @@ export const Settings: React.FC = (): JSX.Element => {
     <div>
       <h3 className="ui header">{t('data')}</h3>
       <p>{t('clear data description')}</p>
-      <button type="button" className="ui basic button" onClick={() => setClear(true)}>
+      <button
+        type="button"
+        data-testid="clear-action"
+        className="ui basic button"
+        onClick={() => setClear(true)}
+      >
         <i className="icon erase" />
         {t('clear data')}
       </button>

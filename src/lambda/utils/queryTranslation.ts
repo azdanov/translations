@@ -17,7 +17,7 @@ import {
 } from 'lodash'
 import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
-import { EN, ET } from '../../constants'
+import { EN, ET, WORD_REPLACE_KEY } from '../../constants'
 import { Article, en, et, JsonBody, Translation } from '../../contracts'
 
 export const queryTranslation = async (
@@ -27,7 +27,6 @@ export const queryTranslation = async (
   word = lowerCase(word)
 
   const { api, similar } = pickApis(lang, word)
-
   const [translationResponse, similarResponse] = await Promise.all([
     got(api),
     got(similar),
@@ -52,11 +51,11 @@ function pickApis(lang: en | et, word: string): { api: string; similar: string }
   let similar
 
   if (lang === EN) {
-    api = process.env.LAMBDA_TRANSLATE_EN_API.replace('%WORD%', word)
-    similar = process.env.LAMBDA_SIMILAR_EN_API.replace('%WORD%', word)
+    api = process.env.LAMBDA_TRANSLATE_EN_API.replace(WORD_REPLACE_KEY, word)
+    similar = process.env.LAMBDA_SIMILAR_EN_API.replace(WORD_REPLACE_KEY, word)
   } else {
-    api = process.env.LAMBDA_TRANSLATE_ET_API.replace('%WORD%', word)
-    similar = process.env.LAMBDA_SIMILAR_ET_API.replace('%WORD%', word)
+    api = process.env.LAMBDA_TRANSLATE_ET_API.replace(WORD_REPLACE_KEY, word)
+    similar = process.env.LAMBDA_SIMILAR_ET_API.replace(WORD_REPLACE_KEY, word)
   }
 
   return { api, similar }
@@ -100,7 +99,7 @@ function parseResponse(
       ),
     )
 
-    translation = splitAndDedupe(translation, 'en', 'et')
+    translation = splitAndDedupe(translation, 'en', 'et') as Article[]
     translation = matchSort(translation, word, {
       keys: ['en', 'et'],
     })
@@ -135,7 +134,7 @@ function parseResponse(
       ),
     )
 
-    translation = splitAndDedupe(translation, 'et', 'en')
+    translation = splitAndDedupe(translation, 'et', 'en') as Article[]
     translation = matchSort(translation, word, {
       keys: ['et', 'en'],
     })
@@ -148,12 +147,12 @@ const splitAndDedupe = (
   translations: Article[],
   key: string,
   value: string,
-): Article[] => {
+): unknown[] => {
   return map(
     mapValues(groupBy(translations, key), v => flattenDeep(map(v, value))),
     (v, k) => ({
-      en: k.toLowerCase(),
-      et: uniq(flatMap(v, item => map(split(item.toLowerCase(), ','), trim))),
+      [key]: k.toLowerCase(),
+      [value]: uniq(flatMap(v, item => map(split(item.toLowerCase(), ','), trim))),
     }),
   )
 }

@@ -48,7 +48,12 @@ export const Main: React.FC<Props> = ({
       <div className="ui centered grid">
         <div className="row searchbar">
           <div className="eight wide computer fourteen wide mobile nine wide tablet column">
-            <Search loading={loading} search={search} setSearch={setSearch} />
+            <Search
+              loading={loading}
+              order={order}
+              search={search}
+              setSearch={setSearch}
+            />
           </div>
         </div>
         {showResults && (

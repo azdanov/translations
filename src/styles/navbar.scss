@@ -18,7 +18,6 @@
 .ui.secondary.pointing.menu .active.item {
   color: $blue-grey-9;
   font-weight: normal;
-  transition: all 0.15s;
 }
 
 .ui.secondary.pointing.menu {
@@ -59,7 +58,6 @@
 
 .ui.secondary.menu .ui.dropdown.item {
   margin-bottom: 0.5rem;
-  transition: all 0.15s;
 }
 
 .ui.secondary.menu .dropdown.item:hover,

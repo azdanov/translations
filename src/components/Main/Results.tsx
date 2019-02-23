@@ -1,7 +1,7 @@
 import { isEmpty, isString } from 'lodash'
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ResultsPlaceholder } from '.'
+import { Definition, ResultsPlaceholder } from '.'
 import { Article, ArticleEN, ArticleET } from '../../contracts'
 
 export const Results: React.FC<{
@@ -11,6 +11,7 @@ export const Results: React.FC<{
   setResults: React.Dispatch<React.SetStateAction<Article[]>>
 }> = ({ results, loading, setSearch, setResults }): JSX.Element | null => {
   const [t] = useTranslation()
+  const [modal, setModal] = useState({ state: false, lang: '', word: '' })
 
   if (loading) {
     return <ResultsPlaceholder />
@@ -22,6 +23,13 @@ export const Results: React.FC<{
 
   return (
     <>
+      {modal.state && (
+        <Definition
+          close={() => setModal({ state: false, lang: '', word: '' })}
+          lang={modal.lang}
+          word={modal.word}
+        />
+      )}
       <h2 className="ui top attached header">
         {results.length} {t('results found')}
       </h2>
@@ -39,14 +47,19 @@ export const Results: React.FC<{
           <i aria-hidden="true" className="delete icon" />
         </button>
         <div role="list" className="ui relaxed list" style={{ marginTop: 0 }}>
-          {results.length && results.map(createListItem)}
+          {results.length && results.map(result => createListItem(result, setModal))}
         </div>
       </div>
     </>
   )
 }
 
-const createListItem = (result: Article): JSX.Element | null => {
+const createListItem = (
+  result: Article,
+  setModal: React.Dispatch<
+    React.SetStateAction<{ state: boolean; lang: string; word: string }>
+  >,
+): JSX.Element | null => {
   const createItem = (
     order: { from: string; to: string },
     from: string,
@@ -59,13 +72,17 @@ const createListItem = (result: Article): JSX.Element | null => {
         </div>
         <div className="listitem">
           {to.map((translation: string) => (
-            <span
+            <button
+              type="button"
               key={translation}
               lang={order.to}
               className="ui basic label result-translation"
+              onClick={() => {
+                setModal({ state: true, lang: order.to, word: translation })
+              }}
             >
               {translation}
-            </span>
+            </button>
           ))}
         </div>
       </div>

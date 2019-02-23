@@ -1,4 +1,4 @@
-import lscache from 'lscache'
+import localCache from 'lscache'
 import React, { useLayoutEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HISTORY_KEY } from '../../constants'
@@ -13,7 +13,7 @@ export const History: React.FC<{
   const [t] = useTranslation()
 
   useLayoutEffect(() => {
-    setHistory(lscache.get(HISTORY_KEY))
+    setHistory(localCache.get(HISTORY_KEY))
   }, [])
 
   return !history ? (

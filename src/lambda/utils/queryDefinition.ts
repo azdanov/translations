@@ -5,7 +5,7 @@ import { capitalize, lowerCase } from 'lodash'
 import pSettle from 'p-settle'
 import scrapeIt from 'scrape-it'
 import { CookieJar } from 'tough-cookie'
-import { EN, ET } from '../../constants'
+import { EN, ET, WORD_REPLACE_KEY } from '../../constants'
 import { en, et } from '../../contracts'
 
 export const queryDefinition = async (
@@ -26,8 +26,9 @@ export const queryDefinition = async (
 
   let definitions: string[] = []
   if (lang === EN) {
+    console.log(process.env.LAMBDA_DEFINITION_EN_API.replace(WORD_REPLACE_KEY, word))
     const { body, $ } = await scrapeIt(
-      process.env.LAMBDA_DEFINITION_EN_API.replace('%WORD$', word),
+      process.env.LAMBDA_DEFINITION_EN_API.replace(WORD_REPLACE_KEY, word),
       {},
     )
 
@@ -42,12 +43,14 @@ export const queryDefinition = async (
     definitions = Array.from(
       new Set(
         definitions.map(d => {
-          const removedBraces = d.match(
-            /^(?:\(.*\)|\[.*] \(.*\)|\[.*] )?(.*)/,
-          ) as RegExpMatchArray
-          const trimmed = removedBraces[1].trim()
-          const addedPeriod = trimmed.endsWith('.') ? trimmed : `${trimmed}.`
-          return capitalize(addedPeriod)
+          // @ts-ignore
+          const clean = d
+            .replace(/\s\s+/g, ' ')
+            .trim()
+            .match(/^(?:\(.*\)|\[.*] \(.*\)|\[.*] )?(.*)/)[1]
+            .trim()
+          // TODO: TRIM [i]word[/i]
+          return capitalize(clean.endsWith('.') ? clean : `${clean}.`)
         }),
       ),
     ).sort()
@@ -55,12 +58,15 @@ export const queryDefinition = async (
 
   if (lang === ET) {
     const responses = await pSettle([
-      got(process.env.LAMBDA_DEFINITION_ET_SIMPLE_API.replace('%WORD$', word), {
+      got(process.env.LAMBDA_DEFINITION_ET_SIMPLE_API.replace(WORD_REPLACE_KEY, word), {
         cookieJar: new CookieJar(),
       }),
-      got(process.env.LAMBDA_DEFINITION_ET_DETAILED_API.replace('%WORD$', word), {
-        cookieJar: new CookieJar(),
-      }),
+      got(
+        process.env.LAMBDA_DEFINITION_ET_DETAILED_API.replace(WORD_REPLACE_KEY, word),
+        {
+          cookieJar: new CookieJar(),
+        },
+      ),
     ])
 
     const [simple, detailed] = responses.map(res =>

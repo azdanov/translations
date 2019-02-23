@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { WordOfTheDayResult } from '.'
+import { useFetchWordOfTheDay } from '../../hooks'
 
-export const WordOfTheDay: React.FC<{
-  result: WordOfTheDayResult
-  loading: boolean
-}> = ({ result, loading }): JSX.Element => {
+export const WordOfTheDay: React.FC = (): JSX.Element => {
   const [t] = useTranslation()
+  const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState<WordOfTheDayResult>({
+    word: '',
+    note: '',
+    definitions: [],
+  })
 
-  return loading ? (
+  useFetchWordOfTheDay(setResult, setLoading)
+
+  return !loading ? (
     <>
       <h3 className="ui medium header">
         <div className="content">

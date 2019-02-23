@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { History, Settings, WordOfTheDay } from '.'
 import { DAY, HISTORY, MAIN_PANEL_KEY, SETTINGS } from '../../constants'
-import { useFetchWordOfTheDay, useLocalStorage } from '../../hooks'
 import { Order } from '../../contracts'
+import { useLocalStorage } from '../../hooks'
 
 export const MainPanel: React.FC<{
   setSearch: React.Dispatch<React.SetStateAction<string>>
@@ -12,16 +12,6 @@ export const MainPanel: React.FC<{
   const [t] = useTranslation()
   const [panel, setPanel] = useLocalStorage(MAIN_PANEL_KEY, DAY)
   const [active, setActive] = useState(panel)
-  const [loading, setLoading] = useState(false)
-  const [result, setResult] = useState<WordOfTheDayResult>({
-    word: '',
-    note: '',
-    definitions: [],
-  })
-
-  useFetchWordOfTheDay(setResult, setLoading)
-
-  const isReady = Boolean(!loading && result.word && result.definitions && result.note)
 
   return (
     <>
@@ -60,8 +50,8 @@ export const MainPanel: React.FC<{
           {t(SETTINGS)}
         </button>
       </div>
-      <div className={`ui bottom attached padded segment ${loading ? 'loading' : ''}`}>
-        {active === DAY && <WordOfTheDay loading={isReady} result={result} />}
+      <div className="ui bottom attached padded segment">
+        {active === DAY && <WordOfTheDay />}
         {active === HISTORY && <History setSearch={setSearch} setOrder={setOrder} />}
         {active === SETTINGS && <Settings />}
       </div>

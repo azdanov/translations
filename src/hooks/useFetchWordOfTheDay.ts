@@ -2,7 +2,7 @@
 import localCache from 'lscache'
 import React, { useLayoutEffect } from 'react'
 import { WordOfTheDayResult } from '../components/Main'
-import { WORD_OF_THE_DAY_KEY } from '../constants'
+import { HALF_DAY, WORD_OF_THE_DAY_KEY } from '../constants'
 
 export const useFetchWordOfTheDay = (
   setResult: React.Dispatch<React.SetStateAction<WordOfTheDayResult>>,
@@ -20,8 +20,8 @@ export const useFetchWordOfTheDay = (
       return
     }
 
-    setLoading(true)
     ;(async () => {
+      setLoading(true)
       try {
         const response = await fetch(api, {
           method: 'get',
@@ -34,9 +34,9 @@ export const useFetchWordOfTheDay = (
 
         const body = await response.json()
 
-        localCache.set(WORD_OF_THE_DAY_KEY, body, 60 * 6)
-        setResult(body)
+        localCache.set(WORD_OF_THE_DAY_KEY, body, HALF_DAY)
         setLoading(false)
+        setResult(body)
       } catch (error) {
         console.error(error)
         setLoading(false)
