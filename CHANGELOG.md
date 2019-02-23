@@ -1,3 +1,11 @@
+# [2.2.0](https://github.com/azdanov/translations/compare/v2.1.0...v2.2.0) (2019-02-23)
+
+
+### Features
+
+* **project:** add perf script for google fonts, extract semantic to styles ([6f2dcc1](https://github.com/azdanov/translations/commit/6f2dcc1))
+* **PWA:** add missing options ([4f969a1](https://github.com/azdanov/translations/commit/4f969a1))
+
 # [2.1.0](https://github.com/azdanov/translations/compare/v2.0.0...v2.1.0) (2019-02-23)
 
 
