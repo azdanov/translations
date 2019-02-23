@@ -46,10 +46,10 @@ export const queryDefinition = async (
           // @ts-ignore
           const clean = d
             .replace(/\s\s+/g, ' ')
+            .replace(/\[[^\]]*]/g, '')
             .trim()
             .match(/^(?:\(.*\)|\[.*] \(.*\)|\[.*] )?(.*)/)[1]
             .trim()
-          // TODO: TRIM [i]word[/i]
           return capitalize(clean.endsWith('.') ? clean : `${clean}.`)
         }),
       ),
