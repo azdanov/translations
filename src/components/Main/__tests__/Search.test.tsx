@@ -10,7 +10,12 @@ afterEach(cleanup)
 
 test('should have search placeholder and action', () => {
   const { getByPlaceholderText, getByTestId } = render(
-    <Search loading={false} search="" setSearch={noop} />,
+    <Search
+      order={['english', 'estonian']}
+      loading={false}
+      search=""
+      setSearch={noop}
+    />,
   )
 
   expect(getByPlaceholderText('search …')).toBeInTheDocument()
@@ -20,7 +25,12 @@ test('should have search placeholder and action', () => {
 test('should search on submit', () => {
   const mockSetSearch = jest.fn()
   const { getByPlaceholderText } = render(
-    <Search loading={false} search="" setSearch={mockSetSearch} />,
+    <Search
+      order={['english', 'estonian']}
+      loading={false}
+      search=""
+      setSearch={mockSetSearch}
+    />,
   )
 
   act(() => {
@@ -34,7 +44,12 @@ test('should search on submit', () => {
 test('should search on click', () => {
   const mockSetSearch = jest.fn()
   const { getByPlaceholderText, getByTestId } = render(
-    <Search loading={false} search="" setSearch={mockSetSearch} />,
+    <Search
+      order={['english', 'estonian']}
+      loading={false}
+      search=""
+      setSearch={mockSetSearch}
+    />,
   )
 
   act(() => {
