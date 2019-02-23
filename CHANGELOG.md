@@ -1,3 +1,10 @@
+# [1.40.0](https://github.com/azdanov/translations/compare/v1.39.0...v1.40.0) (2019-02-23)
+
+
+### Features
+
+* **queryDefinition:** strip bracket tags ([38f1fca](https://github.com/azdanov/translations/commit/38f1fca))
+
 # [1.39.0](https://github.com/azdanov/translations/compare/v1.38.1...v1.39.0) (2019-02-23)
 
 
