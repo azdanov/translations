@@ -1,3 +1,11 @@
+# [1.39.0](https://github.com/azdanov/translations/compare/v1.38.1...v1.39.0) (2019-02-23)
+
+
+### Features
+
+* **project:** add definition view, test, lambda ([d4d1884](https://github.com/azdanov/translations/commit/d4d1884))
+* **project:** add lambda for definitions with cypress tests and fixtures ([266e8cd](https://github.com/azdanov/translations/commit/266e8cd))
+
 ## [1.38.1](https://github.com/azdanov/translations/compare/v1.38.0...v1.38.1) (2019-02-21)
 
 
