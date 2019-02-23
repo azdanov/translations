@@ -149,22 +149,7 @@
         "member"
       ],
       "one-var": "off",
-      "lodash/prefer-lodash-method": [
-        "error",
-        {
-          "ignoreMethods": [
-            "map",
-            "split",
-            "includes",
-            "replace",
-            "startsWith",
-            "find",
-            "toLower",
-            "trim",
-            "endsWith"
-          ]
-        }
-      ],
+      "lodash/prefer-lodash-method": "off",
       "no-param-reassign": "off",
       "no-underscore-dangle": "off",
       "no-use-before-define": "off",

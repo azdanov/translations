@@ -42,16 +42,18 @@ export const queryDefinition = async (
 
     definitions = Array.from(
       new Set(
-        definitions.map(d => {
-          // @ts-ignore
-          const clean = d
-            .replace(/\s\s+/g, ' ')
-            .replace(/\[[^\]]*]/g, '')
-            .trim()
-            .match(/^(?:\(.*\)|\[.*] \(.*\)|\[.*] )?(.*)/)[1]
-            .trim()
-          return capitalize(clean.endsWith('.') ? clean : `${clean}.`)
-        }),
+        definitions
+          .map(d => {
+            // @ts-ignore
+            const clean = d
+              .replace(/\s\s+/g, ' ')
+              .replace(/\[[^\]]*]/g, '')
+              .trim()
+              .match(/^(?:\(.*\)|\[.*] \(.*\)|\[.*] )?(.*)/)[1]
+              .trim()
+            return capitalize(clean.endsWith('.') ? clean : `${clean}.`)
+          })
+          .filter(d => d !== '.'),
       ),
     ).sort()
   }
