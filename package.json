@@ -252,7 +252,7 @@
     "@types/react": "16.8.4",
     "@types/react-dom": "16.8.2",
     "@types/react-router-dom": "4.3.1",
-    "@typescript-eslint/eslint-plugin": "1.4.1",
+    "@typescript-eslint/eslint-plugin": "1.4.2",
     "@typescript-eslint/parser": "1.4.2",
     "babel-plugin-lodash": "3.3.4",
     "babel-preset-react-app": "7.0.1",
