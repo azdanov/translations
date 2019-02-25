@@ -1,0 +1,39 @@
+@import 'color';
+
+.no-match {
+  .ui.header {
+    color: $blue-grey-9;
+
+    .sub.header {
+      color: $blue-grey-7;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    color: $blue-grey-9;
+  }
+
+  &__link {
+    color: $blue-grey-9 !important;
+  }
+
+  &__icon {
+    position: relative;
+    svg {
+      color: $blue-grey-3;
+      z-index: 1;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 20rem;
+      height: 2rem;
+      bottom: 0.4rem;
+      border-radius: 7.5px;
+      box-shadow: inset 0 -2rem $blue-grey-6;
+    }
+  }
+}
