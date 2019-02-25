@@ -18,7 +18,7 @@ import {
 import matchSort from 'match-sorter'
 import scrapeIt from 'scrape-it'
 import { EN, ET, WORD_REPLACE_KEY } from '../../constants'
-import { Article, en, et, JsonBody, Translation } from '../../contracts'
+import { Article, en, et, Translation } from '../../contracts'
 
 export const queryTranslation = async (
   word: string,
@@ -26,61 +26,60 @@ export const queryTranslation = async (
 ): Promise<Article[]> => {
   word = lowerCase(word)
 
-  const { api, similar } = pickApis(lang, word)
-  const [translationResponse, similarResponse] = await Promise.all([
-    got(api),
-    got(similar),
-  ])
+  const { api } = pickApis(lang, word)
+  const translationResponse = await got(api)
 
-  return parseResponse(translationResponse, similarResponse, word)
+  return parseResponse(translationResponse, word, lang)
 }
 
-function pickApis(lang: en | et, word: string): { api: string; similar: string } {
-  if (
-    !process.env.LAMBDA_TRANSLATE_EN_API ||
-    !process.env.LAMBDA_TRANSLATE_ET_API ||
-    !process.env.LAMBDA_SIMILAR_ET_API ||
-    !process.env.LAMBDA_SIMILAR_EN_API
-  )
+function pickApis(lang: en | et, word: string): { api: string } {
+  if (!process.env.LAMBDA_TRANSLATE_EN_API || !process.env.LAMBDA_TRANSLATE_ET_API)
     throw new createHttpError.InternalServerError('No ENV specified')
 
   if (lang !== EN && lang !== ET)
     throw new createHttpError.BadRequest('Correct language not specified')
 
   let api
-  let similar
 
   if (lang === EN) {
     api = process.env.LAMBDA_TRANSLATE_EN_API.replace(WORD_REPLACE_KEY, word)
-    similar = process.env.LAMBDA_SIMILAR_EN_API.replace(WORD_REPLACE_KEY, word)
   } else {
     api = process.env.LAMBDA_TRANSLATE_ET_API.replace(WORD_REPLACE_KEY, word)
-    similar = process.env.LAMBDA_SIMILAR_ET_API.replace(WORD_REPLACE_KEY, word)
   }
 
-  return { api, similar }
+  return { api }
 }
 
 function parseResponse(
   translationResponse: got.Response<string>,
-  similarResponse: got.Response<string>,
   word: string,
+  lang: en | et,
 ): Article[] {
   let translation: Article[] = []
 
-  const body = JSON.parse(translationResponse.body) as JsonBody
+  if (lang === EN) {
+    const { translations } = scrapeIt.scrapeHTML<{ translations: { item: string }[] }>(
+      translationResponse.body,
+      {
+        translations: {
+          listItem: '.phraseMeaning .text-info',
+          data: {
+            item: '.phr',
+          },
+        },
+      },
+    )
 
-  if (body.from === EN) {
     const results = [
       {
-        en: body.phrase,
-        et: reject(map(body.tuc, item => item.phrase && item.phrase.text), isEmpty),
+        en: word,
+        et: reject(map(translations, 'item'), isEmpty),
       },
     ]
 
     translation = reject(results, item => isEmpty(item.en) || isEmpty(item.et))
 
-    const { articles } = scrapeIt.scrapeHTML<Translation>(similarResponse.body, {
+    const { articles } = scrapeIt.scrapeHTML<Translation>(translationResponse.body, {
       articles: {
         listItem: '#simmilarPhrasesTable .tableRow',
         data: {
@@ -105,17 +104,29 @@ function parseResponse(
     })
   }
 
-  if (body.from === ET) {
+  if (lang === ET) {
+    const { translations } = scrapeIt.scrapeHTML<{ translations: { item: string }[] }>(
+      translationResponse.body,
+      {
+        translations: {
+          listItem: '.phraseMeaning .text-info',
+          data: {
+            item: '.phr',
+          },
+        },
+      },
+    )
+
     const results = [
       {
-        et: body.phrase,
-        en: reject(map(body.tuc, item => item.phrase && item.phrase.text), isEmpty),
+        et: word,
+        en: reject(map(translations, 'item'), isEmpty),
       },
     ]
 
     translation = reject(results, item => isEmpty(item.et) || isEmpty(item.en))
 
-    const { articles } = scrapeIt.scrapeHTML<Translation>(similarResponse.body, {
+    const { articles } = scrapeIt.scrapeHTML<Translation>(translationResponse.body, {
       articles: {
         listItem: '#simmilarPhrasesTable .tableRow',
         data: {
