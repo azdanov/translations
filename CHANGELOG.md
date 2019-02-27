@@ -1,3 +1,15 @@
+# [2.3.0](https://github.com/azdanov/translations/compare/v2.2.0...v2.3.0) (2019-02-27)
+
+
+### Bug Fixes
+
+* **queryTranslation:** use scraper instead of rest api ([65f5ee5](https://github.com/azdanov/translations/commit/65f5ee5))
+
+
+### Features
+
+* **NoMatch:** add image for 404 and styles ([a75828b](https://github.com/azdanov/translations/commit/a75828b))
+
 # [2.2.0](https://github.com/azdanov/translations/compare/v2.1.0...v2.2.0) (2019-02-23)
 
 
