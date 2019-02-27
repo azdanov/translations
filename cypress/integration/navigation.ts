@@ -52,7 +52,7 @@ describe('navigation', () => {
     cy.contains('English').click({ force: true })
 
     cy.contains('Results').should('exist')
-    cy.contains('autobuss').should('exist')
+    cy.contains('vagun').should('exist')
 
     cy.go('forward')
     cy.go('forward')
