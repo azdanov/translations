@@ -243,7 +243,7 @@
     "@types/http-proxy-middleware": "0.19.2",
     "@types/i18next": "12.1.0",
     "@types/i18next-browser-languagedetector": "3.0.0",
-    "@types/jest": "24.0.9",
+    "@types/jest": "24.0.11",
     "@types/lodash": "4.14.122",
     "@types/lscache": "1.0.29",
     "@types/match-sorter": "2.3.0",
