@@ -206,7 +206,7 @@
     }
   },
   "dependencies": {
-    "@craco/craco": "3.5.0",
+    "@craco/craco": "3.6.0",
     "@reach/menu-button": "0.1.8",
     "@reach/visually-hidden": "0.1.2",
     "abortcontroller-polyfill": "1.2.5",
