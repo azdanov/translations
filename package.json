@@ -231,7 +231,7 @@
     "react-scripts": "^2.1.8",
     "scrape-it": "5.1.4",
     "tough-cookie": "3.0.1",
-    "typescript": "3.3.3333"
+    "typescript": "3.3.4000"
   },
   "devDependencies": {
     "@semantic-release/changelog": "3.0.2",
