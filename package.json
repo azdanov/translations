@@ -211,7 +211,7 @@
     "@reach/visually-hidden": "0.1.2",
     "abortcontroller-polyfill": "^1.2.9",
     "aws-lambda": "0.1.2",
-    "fomantic-ui-css": "2.7.2",
+    "fomantic-ui-css": "2.7.4",
     "got": "9.6.0",
     "history": "^4.9.0",
     "http-errors": "1.7.2",
