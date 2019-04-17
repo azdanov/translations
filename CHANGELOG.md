@@ -1,3 +1,11 @@
+## [2.3.6](https://github.com/azdanov/translations/compare/v2.3.5...v2.3.6) (2019-04-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency match-sorter to v3 ([5a2c0c1](https://github.com/azdanov/translations/commit/5a2c0c1))
+* **deps:** update dependency react-i18next to v10.8.1 ([a2241fc](https://github.com/azdanov/translations/commit/a2241fc))
+
 ## [2.3.5](https://github.com/azdanov/translations/compare/v2.3.4...v2.3.5) (2019-03-06)
 
 
