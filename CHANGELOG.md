@@ -1,3 +1,10 @@
+## [2.3.7](https://github.com/azdanov/translations/compare/v2.3.6...v2.3.7) (2019-04-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency middy to v0.25.0 ([8e1aba5](https://github.com/azdanov/translations/commit/8e1aba5))
+
 ## [2.3.6](https://github.com/azdanov/translations/compare/v2.3.5...v2.3.6) (2019-04-17)
 
 
