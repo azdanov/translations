@@ -1,3 +1,10 @@
+## [2.3.8](https://github.com/azdanov/translations/compare/v2.3.7...v2.3.8) (2019-04-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency typescript to v3.4.4 ([696f8d1](https://github.com/azdanov/translations/commit/696f8d1))
+
 ## [2.3.7](https://github.com/azdanov/translations/compare/v2.3.6...v2.3.7) (2019-04-17)
 
 
