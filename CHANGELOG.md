@@ -1,3 +1,10 @@
+## [2.3.10](https://github.com/azdanov/translations/compare/v2.3.9...v2.3.10) (2019-04-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @craco/craco to v5 ([f87d082](https://github.com/azdanov/translations/commit/f87d082))
+
 ## [2.3.9](https://github.com/azdanov/translations/compare/v2.3.8...v2.3.9) (2019-04-20)
 
 
