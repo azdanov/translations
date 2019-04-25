@@ -1,3 +1,10 @@
+## [2.3.14](https://github.com/azdanov/translations/compare/v2.3.13...v2.3.14) (2019-04-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency i18next to v15.1.0 ([67c3ff9](https://github.com/azdanov/translations/commit/67c3ff9))
+
 ## [2.3.13](https://github.com/azdanov/translations/compare/v2.3.12...v2.3.13) (2019-04-23)
 
 
