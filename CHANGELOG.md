@@ -1,3 +1,10 @@
+## [2.3.15](https://github.com/azdanov/translations/compare/v2.3.14...v2.3.15) (2019-04-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-i18next to v10.9.0 ([2e4d6fc](https://github.com/azdanov/translations/commit/2e4d6fc))
+
 ## [2.3.14](https://github.com/azdanov/translations/compare/v2.3.13...v2.3.14) (2019-04-25)
 
 
