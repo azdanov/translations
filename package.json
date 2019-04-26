@@ -238,7 +238,7 @@
     "@semantic-release/git": "7.0.8",
     "@semantic-release/github": "5.2.10",
     "@types/aws-lambda": "8.10.24",
-    "@types/got": "9.4.3",
+    "@types/got": "9.4.4",
     "@types/http-errors": "1.6.1",
     "@types/http-proxy-middleware": "0.19.2",
     "@types/i18next": "12.1.0",
