@@ -1,3 +1,10 @@
+## [2.3.17](https://github.com/azdanov/translations/compare/v2.3.16...v2.3.17) (2019-04-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency node-sass to v4.12.0 ([1f79ff4](https://github.com/azdanov/translations/commit/1f79ff4))
+
 ## [2.3.16](https://github.com/azdanov/translations/compare/v2.3.15...v2.3.16) (2019-04-26)
 
 
