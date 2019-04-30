@@ -1,3 +1,10 @@
+## [2.3.20](https://github.com/azdanov/translations/compare/v2.3.19...v2.3.20) (2019-04-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @reach/menu-button to v0.1.17 ([c231e04](https://github.com/azdanov/translations/commit/c231e04))
+
 ## [2.3.19](https://github.com/azdanov/translations/compare/v2.3.18...v2.3.19) (2019-04-29)
 
 
