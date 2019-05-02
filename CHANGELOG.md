@@ -1,3 +1,10 @@
+## [2.3.21](https://github.com/azdanov/translations/compare/v2.3.20...v2.3.21) (2019-05-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @reach/visually-hidden to v0.1.4 ([4288951](https://github.com/azdanov/translations/commit/4288951))
+
 ## [2.3.20](https://github.com/azdanov/translations/compare/v2.3.19...v2.3.20) (2019-04-30)
 
 
