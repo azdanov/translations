@@ -216,7 +216,7 @@
     "history": "4.9.0",
     "http-errors": "1.7.2",
     "http-proxy-middleware": "0.19.1",
-    "i18next": "15.1.0",
+    "i18next": "15.1.3",
     "i18next-browser-languagedetector": "3.0.1",
     "lodash": "4.17.11",
     "lscache": "1.3.0",
